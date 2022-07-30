@@ -1,3 +1,120 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components{
+
+}
+  /*********** BarNav ************/
+  .BarNav-container {
+    @apply w-full flex absolute top-0 py-5 px-10 bg-light_blue
+  }
+  .BarNav-container ol {
+    @apply w-full flex justify-end
+  }
+  .BarNav-container li {
+    @apply ml-7 text-white
+  }
+
+  /*********** Home ************/
+  .Home-container {
+    @apply w-full h-screen flex flex-col justify-center items-center bg-dark_blue
+  }
+  .Home-container h1 {
+    @apply mb-5
+  }
+  .Home-container h1, p {
+    @apply text-white text-3xl
+  }
+
+  /**************** About *****************/
+  .About-container {
+    @apply w-full h-screen bg-dark_blue
+  }
+  .About-container article {
+    @apply h-1/2 flex place-content-center items-center text-center
+  }
+  .About-container aside {
+    @apply w-1/2 flex-col mx-10
+  }
+
+  .About-container p, h2 {
+    @apply text-base mx-5
+  }
+  .About-container h2 {
+    @apply w-72 pb-2 mx-auto border-b text-xl text-center text-white mb-3 
+  }
+
+  .About-container div {
+    @apply w-1/2 h-60 flex place-content-center p-5
+  }
+
+  .About-container img {
+    @apply w-72 h-full bg-white
+  }
+
+  /************ Skills *************/
+
+  .Skills-container {
+    @apply flex w-full h-screen place-content-center items-center bg-dark_blue
+  }
+
+  /* HardSkills */
+
+  .HardSkills-container {
+    @apply bg-dark_blue w-full
+  }
+
+  .HardSkills-container h2 {
+    @apply text-white text-3xl text-center mb-6 pb-2 border-b w-60 mx-auto
+  }
+
+  .HardSkills-container aside {
+    @apply grid grid-cols-2 md:grid-cols-3 gap-4 place-content-center
+  }
+
+  .HardSkills-container div {
+    @apply grid-cols-1 mx-auto my-5
+  }
+
+  .HardSkills-container h3 {
+    @apply mx-5 mb-3 text-xl text-white object-center
+  }
+
+  .HardSkills-container img {
+    @apply w-16 md:w-20 h-12 md:h-16 mx-auto
+  }
+
+  /************ Contact *************/
+
+  .Contact-container {
+    @apply w-full h-screen flex flex-col pt-10 lg:pt-0 items-center bg-dark_blue
+  }
+
+  .Contact-container p {
+    @apply text-lg lg:text-2xl text-white text-center h-1/6 mt-10 mx-1 mb-5
+  }
+
+  .Contact-container section {
+    @apply w-10/12 xl:w-7/12 bg-dark_blue h-5/6 mb-5  py-8
+  }
+
+  .Contact-container form {
+    @apply grid grid-cols-1 h-full w-7/12 mx-auto
+  }
+
+  .Contact-container label {
+    @apply h-2 mt-5 mb-5 text-white
+  }
+
+  .Contact-container input {
+    @apply py-0.5
+  }
+
+  .Contact-container textarea {
+    @apply h-36
+  }
+
+
+
