@@ -86,6 +86,35 @@
     @apply w-16 md:w-20 h-12 md:h-16 mx-auto
   }
 
+  /************ Contact *************/
+
+  .Contact-container {
+    @apply w-full h-screen flex flex-col pt-10 lg:pt-0 items-center shadow-2xl bg-black
+  }
+
+  .Contact-container p {
+    @apply text-lg lg:text-2xl text-white text-center h-1/6 mt-10 mx-1 mb-5
+  }
+
+  .Contact-container section {
+    @apply w-10/12 xl:w-7/12 bg-dark_blue rounded-2xl h-5/6 mb-5  py-8 shadow-2xl
+  }
+
+  .Contact-container form {
+    @apply grid grid-cols-1 h-full w-7/12 mx-auto
+  }
+
+  .Contact-container label {
+    @apply h-2 mt-5 mb-5 text-white
+  }
+
+  .Contact-container input {
+    @apply py-0.5
+  }
+
+  .Contact-container textarea {
+    @apply h-36
+  }
 
 
 
