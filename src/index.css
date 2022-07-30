@@ -6,7 +6,7 @@
 @layer components{
 
 }
-  /****** BarNav *******/
+  /*********** BarNav ************/
   .BarNav-container {
     @apply w-full flex absolute top-0 py-5 px-10 bg-light_blue
   }
@@ -17,7 +17,7 @@
     @apply ml-7 text-white
   }
 
-  /****** Home *******/
+  /*********** Home ************/
   .Home-container {
     @apply w-full h-screen flex flex-col justify-center items-center bg-dark_blue
   }
@@ -28,7 +28,7 @@
     @apply text-white text-3xl
   }
 
-  /****** About *******/
+  /**************** About *****************/
   .About-container {
     @apply w-full h-screen bg-dark_blue
   }
@@ -51,5 +51,41 @@
   }
 
   .About-container img {
-    @apply w-72 h-full  bg-white
+    @apply w-72 h-full bg-white
   }
+
+  /************ Skills *************/
+
+  .Skills-container {
+    @apply flex w-full h-screen place-content-center items-center bg-dark_blue
+  }
+
+  /* HardSkills */
+
+  .HardSkills-container {
+    @apply bg-dark_blue w-full
+  }
+
+  .HardSkills-container h2 {
+    @apply text-white text-3xl text-center mb-6 pb-2 border-b w-60 mx-auto
+  }
+
+  .HardSkills-container aside {
+    @apply grid grid-cols-2 md:grid-cols-3 gap-4 place-content-center
+  }
+
+  .HardSkills-container div {
+    @apply grid-cols-1 mx-auto my-5
+  }
+
+  .HardSkills-container h3 {
+    @apply mx-5 mb-3 text-xl text-white object-center
+  }
+
+  .HardSkills-container img {
+    @apply w-16 md:w-20 h-12 md:h-16 mx-auto
+  }
+
+
+
+
