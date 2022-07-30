@@ -89,7 +89,7 @@
   /************ Contact *************/
 
   .Contact-container {
-    @apply w-full h-screen flex flex-col pt-10 lg:pt-0 items-center shadow-2xl bg-black
+    @apply w-full h-screen flex flex-col pt-10 lg:pt-0 items-center bg-dark_blue
   }
 
   .Contact-container p {
@@ -97,7 +97,7 @@
   }
 
   .Contact-container section {
-    @apply w-10/12 xl:w-7/12 bg-dark_blue rounded-2xl h-5/6 mb-5  py-8 shadow-2xl
+    @apply w-10/12 xl:w-7/12 bg-dark_blue h-5/6 mb-5  py-8
   }
 
   .Contact-container form {
