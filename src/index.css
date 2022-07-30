@@ -4,14 +4,52 @@
 
 
 @layer components{
-  .BarNav-container {
-    @apply w-full flex py-5 px-10 bg-light_blue
-  }
 
+}
+  /****** BarNav *******/
+  .BarNav-container {
+    @apply w-full flex absolute top-0 py-5 px-10 bg-light_blue
+  }
   .BarNav-container ol {
     @apply w-full flex justify-end
   }
   .BarNav-container li {
     @apply ml-7 text-white
   }
-}
+
+  /****** Home *******/
+  .Home-container {
+    @apply w-full h-screen flex flex-col justify-center items-center bg-dark_blue
+  }
+  .Home-container h1 {
+    @apply mb-5
+  }
+  .Home-container h1, p {
+    @apply text-white text-3xl
+  }
+
+  /****** About *******/
+  .About-container {
+    @apply w-full h-screen bg-dark_blue
+  }
+  .About-container article {
+    @apply h-1/2 flex place-content-center items-center text-center
+  }
+  .About-container aside {
+    @apply w-1/2 flex-col mx-10
+  }
+
+  .About-container p, h2 {
+    @apply text-base mx-5
+  }
+  .About-container h2 {
+    @apply w-72 pb-2 mx-auto border-b text-xl text-center text-white mb-3 
+  }
+
+  .About-container div {
+    @apply w-1/2 h-60 flex place-content-center p-5
+  }
+
+  .About-container img {
+    @apply w-72 h-full  bg-white
+  }
