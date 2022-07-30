@@ -1,9 +1,12 @@
 import "./App.css";
 
+// Components
+import BarNav from "./components/navigation/BarNav";
+
 function App() {
   return (
     <>
-      <div>App page</div>
+      <BarNav />
     </>
   );
 }

@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components{
+  .BarNav-container {
+    @apply w-full flex py-5 px-10 bg-light_blue
+  }
+
+  .BarNav-container ol {
+    @apply w-full flex justify-end
+  }
+  .BarNav-container li {
+    @apply ml-7 text-white
+  }
+}
