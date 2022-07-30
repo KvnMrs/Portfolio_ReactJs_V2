@@ -11,10 +11,12 @@ function App() {
   return (
     <>
       <BarNav />
-      <Home />
-      <About />
-      <Skills />
-      <Contact />
+      <div className="scroll-smooth">
+        <Home />
+        <About />
+        <Skills />
+        <Contact />
+      </div>
     </>
   );
 }
