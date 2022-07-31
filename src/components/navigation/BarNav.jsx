@@ -4,12 +4,26 @@ function BarNav() {
   return (
     <>
       <nav className="BarNav-container">
+        <h1 className="w-20 text-3xl bold">
+          <span className="text-blue-400">K</span>
+          <span className="text-green-400">M</span>
+        </h1>
         <ol>
-          <li>Accueil</li>
-          <li>A propos de moi</li>
-          <li>Mes experiences</li>
-          <li>Mes Projets</li>
-          <li>Contactez moi</li>
+          <li>
+            <a href="#home">Accueil</a>
+          </li>
+          <li>
+            <a href="#about">A propos de moi</a>
+          </li>
+          <li>
+            <a href="#skills">Mes experiences</a>
+          </li>
+          <li>
+            <a href="">Mes Projets</a>
+          </li>
+          <li>
+            <a href="#contact">Contactez moi</a>
+          </li>
         </ol>
       </nav>
     </>
