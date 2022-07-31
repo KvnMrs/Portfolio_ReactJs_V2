@@ -8,10 +8,10 @@
 }
   /*********** BarNav ************/
   .BarNav-container {
-    @apply w-full flex sticky top-0 py-5 px-10 bg-light_blue
+    @apply w-full flex sticky top-0 py-5 px-10 bg-light_blue  shadow-sm shadow-blue-500/50
   }
   .BarNav-container ol {
-    @apply w-full flex justify-end
+    @apply w-full flex justify-end items-center
   }
   .BarNav-container li {
     @apply ml-7 text-white
@@ -115,6 +115,3 @@
   .Contact-container textarea {
     @apply h-36
   }
-
-
-
