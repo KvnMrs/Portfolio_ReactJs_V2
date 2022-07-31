@@ -4,7 +4,7 @@ import HardSkills from "../../sub-components/skills/HardSkills";
 function Skills() {
   return (
     <>
-      <section className="Skills-container">
+      <section id="skills" className="Skills-container">
         <HardSkills />
       </section>
     </>
