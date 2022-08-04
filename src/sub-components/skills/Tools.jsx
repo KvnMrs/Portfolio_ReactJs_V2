@@ -1,15 +1,14 @@
 import React from "react";
 import dataSkills from "../../datas/DatasSkills";
 
-const HardSkills = ({ toggleSkills }) => {
+function Tools({ toggleSkills }) {
   return (
     <>
       <article className="HardSkills-container">
         <header>
-          <h2 className="ml-20">Compétences</h2>
           <button
             type="button"
-            className="group ml-5"
+            className="group mr-5"
             onClick={() => {
               toggleSkills();
             }}
@@ -21,14 +20,15 @@ const HardSkills = ({ toggleSkills }) => {
               style={{ enableBackground: "new 0 0 500 500" }}
               fill="white"
             >
-              <path d="M329.4 248.4c-2.4-1.8-5.1-3.4-7.2-5.5C256 176.8 189.8 110.6 123.6 44.5c-4.7-4.7-9.1-9.4-10-16.4-1.4-10.2 1.9-18.4 10.5-24.2 8.1-5.5 18.9-5.1 27 .7 2.4 1.8 4.6 3.9 6.7 6 73 72.9 145.9 145.8 218.8 218.9 4 4 7.5 9 9.4 14.2 2.8 7.8.7 15.4-4.7 21.9-1.3 1.5-2.7 3-4.2 4.4-73.5 73.6-147 147-220.4 220.6-5.6 5.5-11.6 9.6-19.8 9.4-9.8-.2-17-4.6-21.2-13.3-4.2-8.6-3.4-17.2 2.3-25 1.8-2.4 4-4.5 6.2-6.6 66.2-66.2 132.3-132.4 198.5-198.5 1.9-1.9 4.4-3.4 6.6-5 0-1.1.1-2.1.1-3.2z" />
+              <path d="M170.6 249.1c3.1 3.2 4.8 5.1 6.5 6.8l198.5 198.5c2.1 2.1 4.3 4.3 6.2 6.6 7.4 9.4 6.9 22.6-1 31.2-8.1 8.8-21.7 10.4-31.6 3.4-2.3-1.6-4.3-3.5-6.2-5.5-73.4-73.2-146.7-146.5-220-219.8-1.6-1.6-3.2-3.2-4.6-5-7.6-9.6-7.5-21.8.4-31.2 1.3-1.5 2.8-2.9 4.2-4.4C196.3 156.4 269.6 83.1 342.8 9.8c5.5-5.5 11.4-9.8 19.7-9.8 10.1 0 17.5 4.4 22 13.3 4.4 8.9 3.4 17.6-2.6 25.6-2 2.6-4.4 4.8-6.7 7.2-65.6 65.6-131.2 131.2-196.9 196.8-2.2 2.1-4.7 3.8-7.7 6.2z" />
             </svg>
           </button>
+          <h2 className="mr-20">Outils</h2>
         </header>
 
         <aside>
           {dataSkills
-            .filter((compétence) => compétence.catégorie === "Compétence")
+            .filter((outil) => outil.catégorie === "Outil")
             .map((el) => (
               <div>
                 <h3>{el.element}</h3>
@@ -39,6 +39,6 @@ const HardSkills = ({ toggleSkills }) => {
       </article>
     </>
   );
-};
+}
 
-export default HardSkills;
+export default Tools;

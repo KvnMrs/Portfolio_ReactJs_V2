@@ -7,7 +7,10 @@ import img_MySQL from "../assets/imgHardSkills/MySQL.png";
 import img_NodeJs from "../assets/imgHardSkills/NodeJs.png";
 import img_ReactJs from "../assets/imgHardSkills/ReactJs.png";
 import img_Angular from "../assets/imgHardSkills/Angular.png";
+import img_TypeScript from "../assets/imgHardSkills/TypeScript.png";
 import img_Firebase from "../assets/imgHardSkills/Firebase.png";
+
+// Tools
 import img_ESlint from "../assets/imgTool/ESlint.png";
 import img_Git from "../assets/imgTool/Git.png";
 import img_GitHub from "../assets/imgTool/GitHub.png";
@@ -15,6 +18,7 @@ import img_VScode from "../assets/imgTool/VScode.png";
 import img_Figma from "../assets/imgTool/Figma.png";
 import img_Airtable from "../assets/imgTool/Airtable.png";
 import img_Trello from "../assets/imgTool/Trello.png";
+import img_ZenHub from "../assets/imgTool/ZenHub.png";
 
 // Soft Skillss
 import img_autonome from "../assets/imgSoftSkills/autonome.png";
@@ -91,6 +95,11 @@ const dataSkills = [
   },
   {
     catégorie: "Compétence",
+    element: "TypeScript",
+    image: img_TypeScript,
+  },
+  {
+    catégorie: "Compétence",
     element: "Firebase",
     image: img_Firebase,
   },
@@ -146,6 +155,11 @@ const dataSkills = [
     catégorie: "Outil",
     element: "Airtable",
     image: img_Airtable,
+  },
+  {
+    catégorie: "Outil",
+    element: "ZenHub",
+    image: img_ZenHub,
   },
 ];
 

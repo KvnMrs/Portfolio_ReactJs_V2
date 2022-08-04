@@ -2,13 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer components{
 
 }
   /*********** BarNav ************/
   .BarNav-container {
-    @apply w-full flex sticky top-0 py-5 px-10 bg-light_blue  shadow-sm shadow-blue-500/50
+    @apply w-full flex fixed top-0 z-10 py-5 px-10 bg-light_blue  shadow-sm shadow-blue-500/50
   }
   .BarNav-container ol {
     @apply w-full flex justify-end items-center
@@ -63,19 +62,27 @@
   /* HardSkills */
 
   .HardSkills-container {
-    @apply bg-dark_blue w-full
+    @apply bg-dark_blue w-full h-auto text-center
+  }
+
+  .HardSkills-container header {
+    @apply bg-dark_blue flex place-content-center text-center w-60 mx-auto pt-20 pb-10
+  }
+
+  .HardSkills-container button {
+    @apply bg-cyan-600 w-10 h-10 flex place-items-center self-center duration-500 ease-in-out lg:transform hover:bg-white p-3 mt-auto rounded-full hover:shadow-2xl
   }
 
   .HardSkills-container h2 {
-    @apply text-white text-3xl text-center mb-6 pb-2 border-b w-60 mx-auto
+    @apply text-white text-3xl pb-2 border-b
   }
 
   .HardSkills-container aside {
-    @apply grid grid-cols-2 md:grid-cols-3 gap-4 place-content-center
+    @apply w-2/4 grid grid-cols-2 md:grid-cols-3 gap-4 place-content-center mx-auto
   }
 
   .HardSkills-container div {
-    @apply grid-cols-1 mx-auto my-5
+    @apply grid-cols-1 mx-auto my-3
   }
 
   .HardSkills-container h3 {
