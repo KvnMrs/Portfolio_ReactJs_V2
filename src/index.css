@@ -41,28 +41,51 @@
 
   /**************** About *****************/
   .About-container {
-    @apply w-full h-screen bg-dark_blue
+    @apply flex flex-col w-full h-screen bg-dark_blue pt-28
   }
   .About-container article {
-    @apply h-1/2 flex place-content-center items-center text-center
+    @apply w-4/6 flex place-content-between items-center text-center mx-auto
   }
   .About-container aside {
-    @apply w-1/2 flex-col mx-10
+    @apply w-1/2
   }
 
-  .About-container p, h2 {
-    @apply text-base mx-5
-  }
   .About-container h2 {
-    @apply w-72 pb-2 mx-auto border-b text-xl text-center text-white mb-3 
+    @apply w-72 pb-2 mx-auto border-b text-2xl text-center text-white mb-5
+  }
+
+  .About-container p {
+    @apply text-lg
   }
 
   .About-container div {
-    @apply w-1/2 h-60 flex place-content-center p-5
+    @apply flex place-content-center p-5 mx-auto
   }
 
   .About-container img {
-    @apply w-72 h-full bg-white
+    @apply w-80 h-80 object-fill rounded-full bg-white drop-shadow-2xl ml-20
+  }
+
+  /* About - SoftSkills */
+
+  .About-container .SoftSkills-container {
+    @apply w-full flex h-full
+  }
+
+  .About-container .SoftSkills-container aside {
+    @apply flex flex-col text-center  mx-auto
+  }
+
+  .About-container .SoftSkills-container h4 {
+    @apply text-lg
+  }
+
+  .About-container .SoftSkills-container div {
+    @apply items-center object-cover border p-0 bg-dark_blue rounded-lg
+  }
+
+  .About-container .SoftSkills-container img {
+    @apply w-full h-20 mx-auto bg-black object-cover rounded
   }
 
   /************ Skills *************/
