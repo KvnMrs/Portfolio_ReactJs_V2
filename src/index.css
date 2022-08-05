@@ -105,6 +105,47 @@
     @apply w-16 md:w-20 h-12 md:h-16 mx-auto
   }
 
+  /************ Projects *************/
+
+  .Projects-container {
+    @apply w-full h-full bg-dark_blue pt-36 flex flex-col flex-wrap justify-center
+  }
+
+   .Projects-container h2 {
+    @apply text-white text-3xl pb-2 mb-10 border-b place-content-center text-center w-24 mx-auto
+  }
+
+  .Projects-container div {
+    @apply flex flex-wrap justify-center
+  }
+  .Projects-container article {
+    @apply max-w-sm h-5/6 mx-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700
+  }
+
+  .Projects-container aside {
+    @apply p-5
+  }
+
+   .Projects-container h3, h4 {
+    @apply mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white
+  }
+
+  .Projects-container h4 {
+    @apply text-xl
+  }
+
+  .Projects-container p {
+    @apply mb-3 font-normal text-xl text-gray-700 dark:text-gray-400
+  }
+
+  .Projects-container a {
+    @apply inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none duration-500 ease-in-out focus:ring-blue-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800
+  }
+
+  .Projects-container svg {
+    @apply ml-2 -mr-1 w-4 h-4
+  }
+
   /************ Contact *************/
 
   .Contact-container {
