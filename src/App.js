@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <BarNav />
-      <div className="scroll-smooth">
+      <div className="scroll-smooth global-bg">
         <Home />
         <About />
         <Skills />

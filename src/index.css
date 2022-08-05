@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .block-size {
   block-size: auto;
 }
@@ -14,191 +13,175 @@
   background: radial-gradient(#141e30, #243b55);
 }
 
-@layer components{
+@layer components{}
 
-}
-  /*********** BarNav ************/
-  .BarNav-container {
-    @apply w-full flex fixed top-0 z-10 py-5 px-10 bg-light_blue  shadow-sm shadow-blue-500/50
+  * {
+    @apply text-white
   }
-  .BarNav-container ol {
+
+  /*********** Global ************/
+
+.global-bg {
+  @apply bg-dark_blue
+}
+
+  /*********** BarNav ************/
+
+  .BarNav-container {
+    @apply w-full flex py-5 px-10 fixed top-0 z-10 bg-light_blue shadow-sm shadow-blue-500/50
+  }
+  .logo {
+    @apply w-20 text-3xl
+  }
+  .links {
     @apply w-full flex justify-end items-center
   }
   .BarNav-container li {
-    @apply ml-7 text-white
+    @apply pl-7
   }
 
   /*********** Home ************/
+
   .Home-container {
-    @apply w-full h-screen flex flex-col justify-center items-center bg-dark_blue
+    @apply w-full h-screen flex flex-col justify-center items-center text-3xl
   }
-  .Home-container h1 {
+  .title {
     @apply mb-5
-  }
-  .Home-container h1, p {
-    @apply text-white text-3xl
   }
 
   /**************** About *****************/
+
   .About-container {
-    @apply flex flex-col w-full h-screen bg-dark_blue pt-28
+    @apply w-full h-screen flex flex-col pt-28
   }
-  .About-container article {
-    @apply w-4/6 flex place-content-between items-center text-center mx-auto
+
+  /* Description part */
+
+  .description-part {
+    @apply w-4/6 flex mx-auto place-content-between items-center text-center
   }
-  .About-container aside {
+  .description-part aside {
     @apply w-1/2
   }
-
-  .About-container h2 {
-    @apply w-72 pb-2 mx-auto border-b text-2xl text-center text-white mb-5
+  .description-part h2 {
+    @apply w-72 pb-2 mb-5 mx-auto border-b text-2xl text-center
   }
-
-  .About-container p {
+  .description-part p {
     @apply text-lg
   }
-
-  .About-container div {
-    @apply flex place-content-center p-5 mx-auto
+  .description-part img {
+    @apply w-80 h-80 ml-28 object-fill rounded-full
   }
 
-  .About-container img {
-    @apply w-80 h-80 object-fill rounded-full bg-white drop-shadow-2xl ml-20
+  /* SoftSkills part */
+
+  .softskills-part {
+    @apply w-4/6 h-full flex self-center items-center
   }
-
-  /* About - SoftSkills */
-
-  .About-container .SoftSkills-container {
-    @apply w-full flex h-full
+  .softskill {
+    @apply flex flex-col mx-auto text-center
   }
-
-  .About-container .SoftSkills-container aside {
-    @apply flex flex-col text-center  mx-auto
+  .softskill h4 {
+    @apply text-lg font-bold mb-1
   }
-
-  .About-container .SoftSkills-container h4 {
-    @apply text-lg
+  .softskill div {
+    @apply w-20 p-2 self-center border rounded-lg gradiant-light
   }
-
-  .About-container .SoftSkills-container div {
-    @apply items-center object-cover border p-0 bg-dark_blue rounded-lg
-  }
-
-  .About-container .SoftSkills-container img {
-    @apply w-full h-20 mx-auto bg-black object-cover rounded
+  .softskill img {
+    @apply mx-auto rounded
   }
 
   /************ Skills *************/
 
   .Skills-container {
-    @apply flex w-full h-screen place-content-center items-center bg-dark_blue
+    @apply w-full h-screen flex pt-8 place-content-center items-center
   }
 
   /* HardSkills */
 
   .HardSkills-container {
-    @apply bg-dark_blue w-full h-auto text-center
+    @apply w-full text-center
   }
-
   .HardSkills-container header {
-    @apply bg-dark_blue flex place-content-center text-center w-60 mx-auto pt-20 pb-10
+    @apply w-60 flex mx-auto pb-10 place-content-center
   }
-
   .HardSkills-container button {
-    @apply bg-cyan-600 w-10 h-10 flex place-items-center self-center duration-500 ease-in-out lg:transform hover:bg-white p-3 mt-auto rounded-full hover:shadow-2xl
+    @apply w-10 h-10 flex p-3 mt-auto duration-500 ease-in-out lg:transform rounded-full bg-cyan-600 hover:bg-white hover:shadow-2xl
   }
-
   .HardSkills-container h2 {
-    @apply text-white text-3xl pb-2 border-b
+    @apply pb-2 text-3xl border-b
   }
-
   .HardSkills-container aside {
-    @apply w-2/4 grid grid-cols-2 md:grid-cols-3 gap-4 place-content-center mx-auto
+    @apply w-2/4 grid grid-cols-2 gap-4 mx-auto md:grid-cols-3
   }
-
   .HardSkills-container div {
     @apply grid-cols-1 mx-auto my-3
   }
-
   .HardSkills-container h3 {
-    @apply mx-5 mb-3 text-xl text-white object-center
+    @apply mx-5 mb-3 text-xl object-center
   }
-
   .HardSkills-container img {
-    @apply w-16 md:w-20 h-12 md:h-16 mx-auto
+    @apply w-20 h-12 mx-auto object-contain md:w-20 md:h-16
   }
 
   /************ Projects *************/
 
   .Projects-container {
-    @apply w-full h-full bg-dark_blue pt-36 flex flex-col flex-wrap justify-center
+    @apply w-full h-full flex-col pt-28 flex flex-wrap justify-center
   }
 
    .Projects-container h2 {
     @apply text-white text-3xl pb-2 mb-10 border-b place-content-center text-center w-24 mx-auto
   }
 
-  .Projects-container div {
+  .Projects-part {
     @apply flex flex-wrap justify-center
   }
-  .Projects-container article {
+  .Project {
     @apply max-w-sm h-5/6 mx-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700
   }
-
-  .Projects-container aside {
+  .Project aside {
     @apply p-5
   }
-
-   .Projects-container h3, h4 {
-    @apply mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white
+   .Project-title {
+    @apply mb-2 text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white
   }
-
-  .Projects-container h4 {
-    @apply text-xl
+  .Project-techno {
+    @apply text-xl text-center
   }
-
-  .Projects-container p {
-    @apply mb-3 font-normal text-xl text-gray-700 dark:text-gray-400
+  .Project-description {
+    @apply py-4 px-2 text-justify text-lg text-gray-700 dark:text-gray-400
   }
-
-  .Projects-container a {
-    @apply inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none duration-500 ease-in-out focus:ring-blue-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800
+  .Project-link {
+    @apply inline-flex items-center my-1 py-2 px-3 text-sm font-medium rounded-lg hover:ring-2 duration-500 ease-in-out dark:bg-cyan-600 dark:hover:bg-cyan-700
   }
-
-  .Projects-container svg {
-    @apply ml-2 -mr-1 w-4 h-4
+  .Projects-svg {
+    @apply ml-2 mr-1 w-4 h-4
   }
 
   /************ Contact *************/
 
   .Contact-container {
-    @apply w-full h-screen flex flex-col pt-10 lg:pt-0 justify-center items-center bg-dark_blue
+    @apply w-full h-screen flex flex-col pt-28 justify-center
   }
-
-  .Contact-container p {
-    @apply text-lg lg:text-2xl text-white text-center mb-10
+  .Contact-text {
+    @apply text-lg text-center mb-10 lg:text-2xl
   }
-
-  .Contact-container section {
+  .form-container {
     @apply w-full h-2/3 block-size
   }
-
-  .Contact-container form {
+  .form {
     @apply  h-full w-2/3 flex mx-auto gradiant-light rounded-2xl p-5 mt-8
   }
-
   .Contact-container div {
     @apply w-full self-center px-8 flex flex-col
   }
-
   .Contact-container label {
-    @apply mb-1 text-white
+    @apply mb-1
   }
-
-  .Contact-container input, select {
-    @apply px-2 mb-5 text-white rounded-lg
+  .Contact-container input, select, option {
+    @apply px-2 mb-5 text-black rounded-lg
   }
-
   .Contact-container textarea {
     @apply h-64 rounded-lg
   }

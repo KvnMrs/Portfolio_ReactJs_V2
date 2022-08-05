@@ -4,11 +4,11 @@ function BarNav() {
   return (
     <>
       <nav className="BarNav-container">
-        <h1 className="w-20 text-3xl bold">
+        <h1 className="logo">
           <span className="text-blue-400">K</span>
           <span className="text-green-400">M</span>
         </h1>
-        <ol>
+        <ol className="links">
           <li>
             <a href="#home">Accueil</a>
           </li>
