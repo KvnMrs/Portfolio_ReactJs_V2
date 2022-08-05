@@ -19,7 +19,7 @@ function BarNav() {
             <a href="#skills">Mes experiences</a>
           </li>
           <li>
-            <a href="">Mes Projets</a>
+            <a href="#projects">Mes Projets</a>
           </li>
           <li>
             <a href="#contact">Contactez moi</a>
