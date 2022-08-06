@@ -7,7 +7,7 @@ function Projects() {
     <>
       <section id="projects" className="Projects-container">
         <h2>Projets</h2>
-        <div>
+        <div className="Projects-part">
           {DatasProjects.map((el) => (
             <>
               <ProjectCard

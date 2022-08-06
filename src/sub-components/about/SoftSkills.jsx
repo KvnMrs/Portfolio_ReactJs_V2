@@ -8,7 +8,7 @@ const SoftSkills = () => {
         .filter((atout) => atout.catégorie === "Atout")
         .map((el) => (
           <>
-            <aside>
+            <aside className="softskill">
               <h4>{el.element}</h4>
               <div>
                 <img alt={el.catégorie} src={el.image} />

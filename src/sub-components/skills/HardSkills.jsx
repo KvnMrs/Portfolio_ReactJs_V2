@@ -6,7 +6,7 @@ const HardSkills = ({ toggleSkills }) => {
     <>
       <article className="HardSkills-container">
         <header>
-          <h2 className="ml-20">Compétences</h2>
+          <h2 className="ml-16">Compétences</h2>
           <button
             type="button"
             className="group ml-5"

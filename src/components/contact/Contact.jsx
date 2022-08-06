@@ -11,12 +11,12 @@ const Contact = () => {
   return (
     <>
       <div id="contact" className="Contact-container">
-        <p>
+        <p className="Contact-text">
           Un contact professionel, une question, un feedback <br />
           contactez-moi 📝
-        </p>{" "}
-        <section>
-          <form>
+        </p>
+        <section className="form-container">
+          <form className="form">
             <div>
               <label htmlFor="reason">Motif :</label>
               <select id="reason" onChange={(e) => setReason(e.target.value)}>

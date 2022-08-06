@@ -6,7 +6,7 @@ function About() {
   return (
     <>
       <section id="about" className="About-container">
-        <article>
+        <article className="description-part">
           <aside>
             <h2>En quelques mots...</h2>
             <p>
@@ -21,11 +21,9 @@ function About() {
               lacinia, in placerat elit mattis. Suspendisse et lacinia leo.
             </p>
           </aside>
-          <div>
-            <img src={imgProfil} />
-          </div>
+          <img src={imgProfil} />
         </article>
-        <article className="SoftSkills-container">
+        <article className="softskills-part">
           <SoftSkills />
         </article>
       </section>
