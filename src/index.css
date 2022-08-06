@@ -70,7 +70,7 @@
     @apply text-lg
   }
   .description-part img {
-    @apply w-80 h-80 ml-28 object-fill rounded-full
+    @apply w-80 h-80 ml-28 object-cover rounded-full
   }
 
   /* SoftSkills part */
