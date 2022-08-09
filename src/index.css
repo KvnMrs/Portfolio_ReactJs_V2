@@ -28,7 +28,7 @@
   /*********** BarNav ************/
 
   .BarNav-container {
-    @apply w-full flex py-5 px-10 fixed top-0 z-10 bg-light_blue shadow-sm shadow-blue-500/50
+    @apply w-full flex py-5 px-10 top-0 z-10 bg-light_blue shadow-sm shadow-blue-500/50
   }
   .logo {
     @apply w-20 text-3xl
