@@ -51,7 +51,6 @@ function About() {
                       viewBox="0 0 416.979 416.979"
                       style={{ enableBackground: "new 0 0 416.979 416.979" }}
                       fill="white"
-                      className="hover:fill-cyan-500 duration-500 ease-in-out "
                     >
                       <g>
                         <path
