@@ -6,6 +6,10 @@
   block-size: auto;
 }
 
+.h-modal-content {
+  height: 15em;
+}
+
 .gradiant-dark {
   background: radial-gradient(#243b55, #141e30);
 }

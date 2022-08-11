@@ -23,14 +23,14 @@ function WeatherCity() {
   return (
     <>
       {" "}
-      <div className="w-full flex flex-col h-full">
+      <div className="w-full h-modal-content pt-6 flex flex-col bg-[url('https://static9.depositphotos.com/1003434/1158/i/450/depositphotos_11586368-stock-photo-beautiful-sky.jpg')] bg-cover bg-no-repeat  rounded-2xl">
         {/* SEARCH */}
         <div className="flex justify-center">
           <div className="mb-3 xl:w-96">
             <div className="input-group relative flex items-stretch w-full mb-4 rounded">
               <input
                 type="text"
-                className="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                className="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-lg transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 placeholder="Search location"
                 aria-label="Search"
                 aria-describedby="button-addon2"
@@ -63,7 +63,7 @@ function WeatherCity() {
         </div>
 
         {/* container cards */}
-        <div className="flex overflow-scroll scrollbar-hide justify-center flex-wrap h-auto">
+        <div className="flex p-2 justify-center h-full">
           {/* cards */}
           {datas.main ? <CardWeather key={datas.name} datas={datas} /> : null}
         </div>
