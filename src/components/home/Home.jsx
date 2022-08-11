@@ -6,8 +6,7 @@ function Home() {
   const [openModal, setOpenModal] = useState(false);
 
   function showModal() {
-    setOpenModal(true);
-    console.log(openModal);
+    setOpenModal(!openModal);
   }
   return (
     <>
@@ -43,7 +42,7 @@ function Home() {
             </svg>
           }
         />
-        {openModal ? <Modal /> : null}
+        {openModal ? <Modal showModal={showModal} /> : null}
       </div>
     </>
   );
