@@ -1,22 +1,17 @@
 import React from "react";
 
-// Components
-import WeatherCity from "../meteo/WeatherCity";
-import Profile from "../about/Profile";
-
 // Packages
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
-function Modal({ showModal }) {
+function Modal({ showModal, component, tab }) {
   return (
     <>
-      <div className="absolute z-1 p-2 bg-gradient-to-r from-cyan-800 to-cyan-200 w-4/6 h-auto rounded-2xl">
+      <div className="absolute modal-center z-1 p-2 bg-gradient-to-r from-cyan-800 to-cyan-200 w-4/6 h-auto rounded-2xl">
         <Tabs className={"h-auto"}>
           <TabList className={"mb-1 pb-1"}>
             <div className="flex">
-              <Tab>Profil</Tab>
-              <Tab>Méteo</Tab>
+              <Tab>{tab}</Tab>
 
               <button onClick={showModal} className=" w-9 ml-auto">
                 x
@@ -24,12 +19,7 @@ function Modal({ showModal }) {
             </div>
           </TabList>
 
-          <TabPanel>
-            <Profile />
-          </TabPanel>
-          <TabPanel>
-            <WeatherCity />
-          </TabPanel>
+          <TabPanel>{component}</TabPanel>
         </Tabs>
       </div>
     </>
