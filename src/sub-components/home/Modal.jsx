@@ -1,43 +1,56 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import CardWeather from "./CardWeather";
+import { fetchWeatherCities } from "../../services/citiesWeather";
 
 function Modal() {
-  const [data, setData] = useState("");
-  const cities = ["Nantes", "Lyon", "Paris"];
+  const [datas, setDatas] = useState([]);
+  const [location, setLocation] = useState("");
+  const cities = ["Nantes", "Lyon", "Paris", "Lille", "Strasbourg"];
+  const [activeSearch, setActiveSearch] = useState(false);
 
-  // useEffect(() => {
-  //   const API_key = "f73f4c58cad8bb66bdf181120b97237b";
-  //   // setInterval(() => {}, 3600000);
-  //   cities.map((city) => {
-  //     axios
-  //       .get(
-  //         `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_key}`
-  //       )
-  //       .then((res) => setData(res.data.main))
-  //       .catch((err) => console.log("err -->", err));
-  //   });
-  // }, [cities]);
+  useEffect(() => {
+    const test = [];
+    if (location === "") {
+      setActiveSearch(false);
+      cities.forEach((city) => test.push(fetchWeatherCities(city)));
+      Promise.all(test).then((data) => setDatas(data));
+    }
+    return () => {
+      clearInterval();
+    };
+  }, [activeSearch, location]);
 
-  // console.log("data --->", data);
+  const searchLocation = (event) => {
+    if (event.key === "Enter") {
+      fetchWeatherCities(location).then((data) => setDatas(data));
+      setActiveSearch(true);
+
+      // setLocation("");
+    } else return;
+  };
+
+  console.log("activeSearch ->>", activeSearch);
 
   return (
     <>
-      <div className="absolute z-1 bg-black w-4/6 h-4/6 p-10 rounded-2xl">
+      <div className="absolute z-1 bg-gradient-to-r from-cyan-800 to-cyan-200 w-4/6 h-4/6 p-10 rounded-2xl">
         <div className="w-full flex flex-col h-full">
           {/* SEARCH */}
-          <div class="flex justify-center">
-            <div class="mb-3 xl:w-96">
-              <div class="input-group relative flex items-stretch w-full mb-4 rounded">
+          <div className="flex justify-center">
+            <div className="mb-3 xl:w-96">
+              <div className="input-group relative flex items-stretch w-full mb-4 rounded">
                 <input
-                  type="search"
-                  class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                  placeholder="Search"
+                  type="text"
+                  className="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                  placeholder="Search location"
                   aria-label="Search"
                   aria-describedby="button-addon2"
+                  value={location}
+                  onKeyPress={(event) => searchLocation(event)}
+                  onChange={(event) => setLocation(event.target.value)}
                 />
                 <span
-                  class="input-group-text items-center px-3 py-1.5 text-base font-normal text-gray-700 text-center whitespace-nowrap rounded"
+                  className="input-group-text items-center px-3 py-1.5 text-base font-normal text-gray-700 text-center whitespace-nowrap rounded"
                   id="basic-addon2"
                 >
                   <svg
@@ -45,7 +58,7 @@ function Modal() {
                     focusable="false"
                     data-prefix="fas"
                     data-icon="search"
-                    class="w-4"
+                    className="w-4"
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
@@ -63,7 +76,15 @@ function Modal() {
           {/* container cards */}
           <div className="flex overflow-scroll scrollbar-hide justify-center flex-wrap h-auto">
             {/* cards */}
-            <CardWeather />
+            {datas ? (
+              location !== "" && datas.main ? (
+                <CardWeather key={datas.name} datas={datas} />
+              ) : (
+                datas.map((city) => (
+                  <CardWeather key={city.name} datas={city} />
+                ))
+              )
+            ) : null}
           </div>
         </div>
       </div>
