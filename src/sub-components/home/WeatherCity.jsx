@@ -5,28 +5,20 @@ import { fetchWeatherCities } from "../../services/citiesWeather";
 function WeatherCity() {
   const [datas, setDatas] = useState([]);
   const [location, setLocation] = useState("");
-  const cities = ["Nantes", "Lyon", "Paris", "Lille", "Strasbourg"];
-  const [activeSearch, setActiveSearch] = useState(false);
+  const city = "Nantes";
 
   useEffect(() => {
-    const test = [];
-    if (location === "") {
-      setActiveSearch(false);
-      cities.forEach((city) => test.push(fetchWeatherCities(city)));
-      Promise.all(test).then((data) => setDatas(data));
-    }
+    fetchWeatherCities(city).then((data) => setDatas(data));
     return () => {
       clearInterval();
     };
-  }, [activeSearch, location]);
+  }, []);
 
   const searchLocation = (event) => {
-    if (event.key === "Enter") {
+    if (event.key === "Enter" && location !== "") {
       fetchWeatherCities(location).then((data) => setDatas(data));
-      setActiveSearch(true);
-
-      // setLocation("");
-    } else return;
+      setLocation("");
+    }
   };
   return (
     <>
@@ -73,13 +65,7 @@ function WeatherCity() {
         {/* container cards */}
         <div className="flex overflow-scroll scrollbar-hide justify-center flex-wrap h-auto">
           {/* cards */}
-          {datas ? (
-            location !== "" && datas.main ? (
-              <CardWeather key={datas.name} datas={datas} />
-            ) : (
-              datas.map((city) => <CardWeather key={city.name} datas={city} />)
-            )
-          ) : null}
+          {datas.main ? <CardWeather key={datas.name} datas={datas} /> : null}
         </div>
       </div>
     </>
