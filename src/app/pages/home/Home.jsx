@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+
+// Components
+import Modal from "../../components/modal/Modal";
+
+// Sub-components
 import ButtonsSvg from "../../sub-components/buttons/ButtonsSvg";
-import Modal from "../../sub-components/home/Modal";
 
 function Home() {
   const [openModal, setOpenModal] = useState(false);

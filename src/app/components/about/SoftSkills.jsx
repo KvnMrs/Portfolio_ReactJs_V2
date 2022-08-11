@@ -1,5 +1,7 @@
 import React from "react";
-import dataSkills from "../../datas/DatasSkills";
+
+// Datas
+import dataSkills from "../../../datas/DatasSkills";
 
 const SoftSkills = () => {
   return (

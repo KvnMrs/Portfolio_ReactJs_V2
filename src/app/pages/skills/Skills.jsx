@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import HardSkills from "../../sub-components/skills/HardSkills";
-import Tools from "../../sub-components/skills/Tools";
+
+// Components
+import HardSkills from "../../components/skills/HardSkills";
+import Tools from "../../components/skills/Tools";
 
 function Skills() {
   const [showOthersSkills, setShowOthersSkills] = useState(false);

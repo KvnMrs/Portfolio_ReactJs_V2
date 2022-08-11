@@ -1,6 +1,10 @@
 import React from "react";
-import WeatherCity from "./WeatherCity";
-import Profile from "./Profile";
+
+// Components
+import WeatherCity from "../meteo/WeatherCity";
+import Profile from "../about/Profile";
+
+// Packages
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
