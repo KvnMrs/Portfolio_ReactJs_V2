@@ -24,7 +24,7 @@ function Modal({ showModal }) {
             <Profile />
           </TabPanel>
           <TabPanel>
-            <WeatherCity className={"h-modal-tabs"} />
+            <WeatherCity />
           </TabPanel>
         </Tabs>
       </div>
