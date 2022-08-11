@@ -1,6 +1,10 @@
 import React from "react";
-import imgProfil from "../../assets/imgAbout/Kevin.jpg";
-import SoftSkills from "../../sub-components/about/SoftSkills";
+
+// Components
+import SoftSkills from "../../components/about/SoftSkills";
+
+// Assets
+import imgProfil from "../../../assets/imgAbout/Kevin.jpg";
 
 function About() {
   return (

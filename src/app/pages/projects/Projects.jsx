@@ -1,6 +1,10 @@
 import React from "react";
-import DatasProjects from "../../datas/DatasProjects";
-import ProjectCard from "../../sub-components/projects/ProjectCard";
+
+// Components
+import ProjectCard from "../../components/projects/ProjectCard";
+
+// Datas
+import DatasProjects from "../../../datas/DatasProjects";
 
 function Projects() {
   return (

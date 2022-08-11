@@ -1,12 +1,12 @@
 import "./App.css";
 
-// Components
-import BarNav from "./components/navigation/BarNav";
-import Home from "./components/home/Home";
-import About from "./components/about/About";
-import Skills from "./components/skills/Skills";
-import Contact from "./components/contact/Contact";
-import Projects from "./components/projects/Projects";
+// pages
+import BarNav from "./app/components/navigation/BarNav";
+import Home from "./app/pages/home/Home";
+import About from "./app/pages/about/About";
+import Skills from "./app/pages/skills/Skills";
+import Contact from "./app/pages/contact/Contact";
+import Projects from "./app/pages/projects/Projects";
 
 function App() {
   return (

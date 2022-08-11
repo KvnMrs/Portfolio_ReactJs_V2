@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
+
+// Somponents
 import CardWeather from "./CardWeather";
-import { fetchWeatherCities } from "../../services/citiesWeather";
+
+// Service
+import { fetchWeatherCities } from "../../../services/citiesWeather";
 
 function WeatherCity() {
   const [datas, setDatas] = useState([]);
