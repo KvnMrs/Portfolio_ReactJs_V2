@@ -1,92 +1,11 @@
-import React, { useState, useEffect } from "react";
-import CardWeather from "./CardWeather";
-import { fetchWeatherCities } from "../../services/citiesWeather";
+import React from "react";
+import WeatherCity from "./WeatherCity";
 
 function Modal() {
-  const [datas, setDatas] = useState([]);
-  const [location, setLocation] = useState("");
-  const cities = ["Nantes", "Lyon", "Paris", "Lille", "Strasbourg"];
-  const [activeSearch, setActiveSearch] = useState(false);
-
-  useEffect(() => {
-    const test = [];
-    if (location === "") {
-      setActiveSearch(false);
-      cities.forEach((city) => test.push(fetchWeatherCities(city)));
-      Promise.all(test).then((data) => setDatas(data));
-    }
-    return () => {
-      clearInterval();
-    };
-  }, [activeSearch, location]);
-
-  const searchLocation = (event) => {
-    if (event.key === "Enter") {
-      fetchWeatherCities(location).then((data) => setDatas(data));
-      setActiveSearch(true);
-
-      // setLocation("");
-    } else return;
-  };
-
-  console.log("activeSearch ->>", activeSearch);
-
   return (
     <>
       <div className="absolute z-1 bg-gradient-to-r from-cyan-800 to-cyan-200 w-4/6 h-4/6 p-10 rounded-2xl">
-        <div className="w-full flex flex-col h-full">
-          {/* SEARCH */}
-          <div className="flex justify-center">
-            <div className="mb-3 xl:w-96">
-              <div className="input-group relative flex items-stretch w-full mb-4 rounded">
-                <input
-                  type="text"
-                  className="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                  placeholder="Search location"
-                  aria-label="Search"
-                  aria-describedby="button-addon2"
-                  value={location}
-                  onKeyPress={(event) => searchLocation(event)}
-                  onChange={(event) => setLocation(event.target.value)}
-                />
-                <span
-                  className="input-group-text items-center px-3 py-1.5 text-base font-normal text-gray-700 text-center whitespace-nowrap rounded"
-                  id="basic-addon2"
-                >
-                  <svg
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fas"
-                    data-icon="search"
-                    className="w-4"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
-                    ></path>
-                  </svg>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* container cards */}
-          <div className="flex overflow-scroll scrollbar-hide justify-center flex-wrap h-auto">
-            {/* cards */}
-            {datas ? (
-              location !== "" && datas.main ? (
-                <CardWeather key={datas.name} datas={datas} />
-              ) : (
-                datas.map((city) => (
-                  <CardWeather key={city.name} datas={city} />
-                ))
-              )
-            ) : null}
-          </div>
-        </div>
+        <WeatherCity />
       </div>
     </>
   );
