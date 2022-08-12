@@ -13,8 +13,8 @@
 .duration-2000 {
   transition-duration: 2000ms;
 }
-/******* SideBar *******/
 
+/******* SideBar *******/
 .sidebar-center {
   top:50%;
   transform: translateY(-50%);
@@ -43,18 +43,15 @@
 .gradiant-dark {
   background: radial-gradient(#243b55, #141e30);
 }
+
 .gradiant-light {
   background: radial-gradient(#141e30, #243b55);
 }
 
-@layer components{}
-
-  * {
-    @apply text-white
-  }
-
-  /*********** Global ************/
-
+/*********** Global ************/
+* {
+  @apply text-white
+}
 .global-bg {
   @apply bg-dark_blue
 }
