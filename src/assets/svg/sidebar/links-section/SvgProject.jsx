@@ -10,7 +10,7 @@ function SvgProject() {
       fill-rule="evenodd"
       clip-rule="evenodd"
       viewBox="0 0 411 512.07"
-      width="24"
+      width="28"
       fill="white"
       className="sidebar-svg"
     >
