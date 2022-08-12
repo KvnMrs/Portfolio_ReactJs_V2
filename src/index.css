@@ -6,13 +6,19 @@
   block-size: auto;
 }
 
+.margin-block {
+  margin-block: auto;
+}
+
+.duration-2000 {
+  transition-duration: 2000ms;
+}
 /******* SideBar *******/
 
 .sidebar-center {
   top:50%;
   transform: translateY(-50%);
 }
-
 
 /******* Modal *******/
 .modal-center{
@@ -50,19 +56,25 @@
 }
 
  /*********** SVGs ************/
+
  .sidebar-svg {
-  @apply duration-500 ease-in-out hover:fill-cyan-300 hover:shadow-lg hover:shadow-cyan-300/50
+  @apply duration-500 ease-in-out hover:scale-125 hover:fill-cyan-300 hover:shadow-lg hover:shadow-cyan-300/50
 }
 
   /*********** SideBar ************/
 
   .sideBar-container {
-    @apply w-16 h-4/6 fixed left-4 flex flex-col sidebar-center content-center bg-black shadow-lg shadow-cyan-300/50 rounded-full
+    @apply w-16 h-4/6 fixed left-4 flex flex-col sidebar-center content-center duration-2000 bg-black shadow-lg shadow-cyan-300/50 rounded-full
+  }
+  .sideBar-closed {
+    @apply duration-1000 top-4 h-auto fixed left-4 flex flex-col content-center rounded-full p-3
+  }
+  .burger-button-container {
+    @apply h-1/6 flex self-center
   }
   .nav {
-    @apply h-2/4 block-size
+    @apply h-2/4 block-size margin-block duration-1000
   }
-
   .links {
     @apply mx-auto my-5 flex justify-center
   }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Assets
 import SvgHome from "../../../assets/svg/sidebar/links-section/SvgHome";
@@ -6,13 +6,25 @@ import SvgProfile from "../../../assets/svg/sidebar/links-section/SvgProfile";
 import SvgSkills from "../../../assets/svg/sidebar/links-section/SvgSkills";
 import SvgProject from "../../../assets/svg/sidebar/links-section/SvgProject";
 import SvgContact from "../../../assets/svg/sidebar/links-section/SvgContact";
+import SvgBurger from "../../../assets/svg/sidebar/SvgBurger";
 
 function BarNav() {
+  const [openSidebar, setOpenSideBar] = useState(false);
+
+  const toggleSidebar = () => {
+    setOpenSideBar(!openSidebar);
+  };
   return (
     <>
-      <div className="sideBar-container ">
+      <div className={openSidebar ? "sideBar-container " : "sideBar-closed "}>
+        <div className="burger-button-container">
+          <button type="button" onClick={toggleSidebar}>
+            <SvgBurger />
+          </button>
+        </div>
+
         {/* Links Section */}
-        <nav className="nav">
+        <nav className={openSidebar ? "nav" : "hidden"}>
           <ol>
             <li>
               <a className="links" href="#home">
