@@ -9,7 +9,7 @@ import DatasProjects from "../../../datas/DatasProjects";
 function Projects() {
   return (
     <>
-      <section id="projects" className="Projects-container">
+      <section id="projects" className="Projects-container bg-section-card">
         <h2>Projets</h2>
         <div className="Projects-part">
           {DatasProjects.map((el) => (

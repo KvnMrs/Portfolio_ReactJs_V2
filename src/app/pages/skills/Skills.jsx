@@ -12,7 +12,7 @@ function Skills() {
   };
   return (
     <>
-      <section id="skills" className="Skills-container">
+      <section id="skills" className="Skills-container bg-section-card">
         {showOthersSkills ? (
           <Tools toggleSkills={toggleSkills} />
         ) : (

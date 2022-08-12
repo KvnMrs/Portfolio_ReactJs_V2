@@ -20,34 +20,36 @@ function About() {
   };
   return (
     <>
-      <section id="about" className="About-container">
-        <article className="description-part">
-          <aside className="text">
-            <h2>En quelques mots...</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-              auctor lacus nec sem volutpat tristique. Interdum et malesuada
-              fames ac ante ipsum primis in faucibus. Aenean rutrum eros vitae
-              metus mollis bibendum. Aenean ultricies euismod turpis, et maximus
-              ex. Mauris blandit, est accumsan molestie rutrum, nisl urna
-              maximus ligula, nec condimentum lectus mauris eu leo. Morbi
-              euismod, magna id auctor volutpat, sem tellus pulvinar eros, vel
-              accumsan arcu felis et nibh. Nulla convallis massa in lacus
-              lacinia, in placerat elit mattis. Suspendisse et lacinia leo.
-            </p>
-          </aside>
-          <aside>
-            <aside className="picture">
-              <img className="group-hover:ring-4" src={imgProfil} />
-              <div className="text-end ">
-                <ButtonsSvg fct={openModal} svg={<SvgInfo />} />
-              </div>
+      <section id="about" className="about-container">
+        <div className="card">
+          <article className="description-part">
+            <aside className="text">
+              <h2>En quelques mots...</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                auctor lacus nec sem volutpat tristique. Interdum et malesuada
+                fames ac ante ipsum primis in faucibus. Aenean rutrum eros vitae
+                metus mollis bibendum. Aenean ultricies euismod turpis, et
+                maximusex. Mauris blandit, est accumsan molestie rutrum, nisl
+                urnamaximus ligula, nec condimentum lectus mauris eu leo. Morbi
+                euismod, magna id auctor volutpat, sem tellus pulvinar eros, vel
+                accumsan arcu felis et nibh. Nulla convallis massa in lacus
+                lacinia, in placerat elit mattis. Suspendisse et lacinia leo.
+              </p>
             </aside>
-          </aside>
-        </article>
-        <article className="softskills-part">
-          <SoftSkills />
-        </article>
+            <aside>
+              <aside className="picture">
+                <img src={imgProfil} />
+                <div className="text-end ">
+                  <ButtonsSvg fct={openModal} svg={<SvgInfo />} />
+                </div>
+              </aside>
+            </aside>
+          </article>
+          <article className="softskills-part">
+            <SoftSkills />
+          </article>
+        </div>
         {activeModal ? (
           <Modal showModal={openModal} component={<Profil />} tab={"Profil"} />
         ) : null}

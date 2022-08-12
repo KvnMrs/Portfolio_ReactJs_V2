@@ -14,10 +14,12 @@ function App() {
       <SideBar />
       <div className="scroll-smooth global-bg">
         <Home />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+        <div className="main-container">
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+        </div>
       </div>
     </>
   );
