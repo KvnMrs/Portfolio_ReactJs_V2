@@ -6,6 +6,14 @@
   block-size: auto;
 }
 
+/******* SideBar *******/
+
+.sidebar-center {
+  top:50%;
+  transform: translateY(-50%);
+}
+
+
 /******* Modal *******/
 .modal-center{
   right: 0;
@@ -41,19 +49,22 @@
   @apply bg-dark_blue
 }
 
-  /*********** BarNav ************/
+ /*********** SVGs ************/
+ .sidebar-svg {
+  @apply duration-500 ease-in-out hover:fill-cyan-300 hover:shadow-lg hover:shadow-cyan-300/50
+}
 
-  .BarNav-container {
-    @apply w-full flex py-5 px-10 top-0 z-10 bg-light_blue shadow-sm shadow-blue-500/50
+  /*********** SideBar ************/
+
+  .sideBar-container {
+    @apply w-16 h-4/6 fixed left-4 flex flex-col sidebar-center content-center bg-black shadow-lg shadow-cyan-300/50 rounded-full
   }
-  .logo {
-    @apply w-20 text-3xl
+  .nav {
+    @apply h-2/4 block-size
   }
+
   .links {
-    @apply w-full flex justify-end items-center
-  }
-  .BarNav-container li {
-    @apply pl-7
+    @apply mx-auto my-5 flex justify-center
   }
 
   /*********** Home ************/
