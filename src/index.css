@@ -185,7 +185,7 @@
   @apply flex flex-wrap justify-center
 }
 .Project {
-  @apply max-w-sm h-5/6 mx-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700
+  @apply max-w-sm h-auto mx-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700
 }
 .Project aside {
   @apply p-5
