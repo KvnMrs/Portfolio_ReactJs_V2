@@ -1,7 +1,7 @@
 import "./App.css";
 
 // pages
-import BarNav from "./app/components/navigation/BarNav";
+import SideBar from "./app/components/navigation/SideBar";
 import Home from "./app/pages/home/Home";
 import About from "./app/pages/about/About";
 import Skills from "./app/pages/skills/Skills";
@@ -11,7 +11,7 @@ import Projects from "./app/pages/projects/Projects";
 function App() {
   return (
     <>
-      <BarNav />
+      <SideBar />
       <div className="scroll-smooth global-bg">
         <Home />
         <About />
