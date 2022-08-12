@@ -20,6 +20,10 @@
   transform: translateY(-50%);
 }
 
+.bg-section-card {
+ @apply bg-black bg-opacity-50 rounded-3xl
+}
+
 /******* Modal *******/
 .modal-center{
   right: 0;
@@ -54,179 +58,180 @@
 .global-bg {
   @apply bg-dark_blue
 }
+.main-container {
+  @apply py-10 bg-[url('./assets/imgBackground/main-bg.jpg')] bg-cover bg-fixed bg-no-repeat
+}
 
  /*********** SVGs ************/
 
- .sidebar-svg {
-  @apply duration-500 ease-in-out hover:scale-125 hover:fill-cyan-300 hover:shadow-lg hover:shadow-cyan-300/50
+.sidebar-svg {
+@apply duration-500 ease-in-out hover:scale-125 hover:fill-cyan-300 hover:shadow-lg hover:shadow-cyan-300/50
 }
 
-  /*********** SideBar ************/
+/*********** SideBar ************/
 
-  .sideBar-container {
-    @apply w-16 h-4/6 fixed left-4 flex flex-col sidebar-center content-center duration-2000 bg-black shadow-lg shadow-cyan-300/50 rounded-full
-  }
-  .sideBar-closed {
-    @apply duration-1000 top-4 h-auto fixed left-4 flex flex-col content-center rounded-full p-3
-  }
-  .burger-button-container {
-    @apply h-1/6 flex self-center
-  }
-  .nav {
-    @apply h-2/4 block-size margin-block duration-1000
-  }
-  .links {
-    @apply mx-auto my-5 flex justify-center
-  }
+.sideBar-container {
+  @apply w-16 h-4/6 fixed left-4 flex flex-col sidebar-center content-center duration-2000 bg-black shadow-lg shadow-cyan-300/50 rounded-full
+}
+.sideBar-closed {
+  @apply duration-1000 top-4 h-auto fixed left-4 flex flex-col content-center rounded-full p-3
+}
+.burger-button-container {
+  @apply h-1/6 flex self-center
+}
+.nav {
+  @apply h-2/4 block-size margin-block duration-1000
+}
+.links {
+  @apply mx-auto my-5 flex justify-center
+}
 
-  /*********** Home ************/
+/*********** Home ************/
 
-  .Home-container {
-    @apply w-full h-screen flex flex-col justify-center text-center items-center text-3xl
-  }
-  .title {
-    @apply mb-5
-  }
+.Home-container {
+  @apply w-full h-screen flex flex-col justify-center text-center items-center text-3xl
+}
+.title {
+  @apply mb-5
+}
 
-  /**************** About *****************/
+/**************** About *****************/
 
-  .About-container {
-    @apply w-full h-screen flex flex-col pt-28
-  }
+.about-container {
+  @apply w-full h-auto flex flex-col 
+}
+.about-container .card {
+  @apply w-5/6 h-screen mx-auto py-28 bg-section-card
+}
 
-  /* Description part */
+/* Description part */
 
-  .description-part {
-    @apply w-4/6 flex mx-auto place-content-between items-center text-center
-  }
-  .description-part .text {
-    @apply w-1/2
-  }
-  .description-part h2 {
-    @apply w-72 pb-2 mb-5 mx-auto border-b text-2xl text-center
-  }
-  .description-part p {
-    @apply text-lg
-  }
-  .description-part img {
-    @apply w-80 h-80 ml-4 mb-about-img rounded-full
-  }
-  .description-part img {
-    @apply w-80 h-80 object-cover rounded-full border border-white group-hover:ring-4 duration-500 ease-in-out ring-cyan-800
-  }
+.description-part {
+  @apply w-4/6 flex mx-auto mb-20 place-content-between items-center text-center
+}
+.description-part .text {
+  @apply w-1/2
+}
+.description-part h2 {
+  @apply w-80 pb-2 mb-5 mx-auto border-b text-2xl text-center
+}
+.description-part p {
+  @apply text-lg
+}
+.description-part img {
+  @apply w-64 h-64 mb-about-img object-cover rounded-full border border-white group-hover:ring-4 duration-500 ease-in-out ring-cyan-800
+}
 
-  /* SoftSkills part */
+/* SoftSkills part */
 
-  .softskills-part {
-    @apply w-4/6 h-full flex self-center items-center
-  }
-  .softskill {
-    @apply flex flex-col mx-auto text-center
-  }
-  .softskill h4 {
-    @apply text-lg font-bold mb-1
-  }
-  .softskill div {
-    @apply w-20 p-2 self-center border rounded-lg gradiant-light
-  }
-  .softskill img {
-    @apply mx-auto rounded
-  }
+.softskills-part {
+  @apply w-4/6 mx-auto mt-10 flex self-center items-center
+}
+.softskill {
+  @apply flex flex-col mx-auto text-center
+}
+.softskill h4 {
+  @apply text-lg font-bold mb-1
+}
+.softskill div {
+  @apply w-20 p-2 self-center border rounded-lg gradiant-light
+}
+.softskill img {
+  @apply mx-auto rounded
+}
 
-  /************ Skills *************/
+/************ Skills *************/
 
-  .Skills-container {
-    @apply w-full h-screen flex pt-8 place-content-center items-center
-  }
+.Skills-container {
+  @apply w-5/6 h-screen mx-auto my-10 pt-8 flex place-content-center items-center
+}
 
-  /* HardSkills */
+/* HardSkills */
 
-  .HardSkills-container {
-    @apply w-full text-center
-  }
-  .HardSkills-container header {
-    @apply w-60 flex mx-auto pb-10 place-content-center
-  }
-  .HardSkills-container button {
-    @apply w-10 h-10 flex p-3 mt-auto duration-500 ease-in-out lg:transform rounded-full bg-cyan-600 hover:bg-white hover:shadow-2xl
-  }
-  .HardSkills-container h2 {
-    @apply pb-2 text-3xl border-b
-  }
-  .HardSkills-container aside {
-    @apply w-2/4 grid grid-cols-2 gap-4 mx-auto md:grid-cols-3
-  }
-  .HardSkills-container div {
-    @apply grid-cols-1 mx-auto my-3
-  }
-  .HardSkills-container h3 {
-    @apply mx-5 mb-3 text-xl object-center
-  }
-  .HardSkills-container img {
-    @apply w-20 h-12 mx-auto object-contain md:w-20 md:h-16
-  }
+.HardSkills-container {
+  @apply w-full text-center
+}
+.HardSkills-container header {
+  @apply w-60 flex mx-auto pb-10 place-content-center
+}
+.HardSkills-container button {
+  @apply w-10 h-10 flex p-3 mt-auto duration-500 ease-in-out lg:transform rounded-full bg-cyan-600 hover:bg-white hover:shadow-2xl
+}
+.HardSkills-container h2 {
+  @apply pb-2 text-3xl border-b
+}
+.HardSkills-container aside {
+  @apply w-2/4 grid grid-cols-2 gap-4 mx-auto md:grid-cols-3
+}
+.HardSkills-container div {
+  @apply grid-cols-1 mx-auto my-3
+}
+.HardSkills-container h3 {
+  @apply mx-5 mb-3 text-xl object-center
+}
+.HardSkills-container img {
+  @apply w-20 h-12 mx-auto object-contain md:w-20 md:h-16
+}
 
-  /************ Projects *************/
+/************ Projects *************/
 
-  .Projects-container {
-    @apply w-full h-full flex-col pt-28 flex flex-wrap justify-center
-  }
+.Projects-container {
+  @apply w-5/6 h-screen my-10 mx-auto py-10 flex-col flex flex-wrap justify-center
+}
+  .Projects-container h2 {
+  @apply text-white text-3xl pb-2 mb-10 border-b place-content-center text-center w-24 mx-auto
+}
+.Projects-part {
+  @apply flex flex-wrap justify-center
+}
+.Project {
+  @apply max-w-sm h-5/6 mx-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700
+}
+.Project aside {
+  @apply p-5
+}
+  .Project-title {
+  @apply mb-2 text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white
+}
+.Project-techno {
+  @apply text-xl text-center
+}
+.Project-description {
+  @apply py-4 px-2 text-justify text-lg text-gray-700 dark:text-gray-400
+}
+.Project-link {
+  @apply inline-flex items-center my-1 py-2 px-3 text-sm font-medium rounded-lg hover:ring-2 duration-500 ease-in-out dark:bg-cyan-600 dark:hover:bg-cyan-700
+}
+.Projects-svg {
+  @apply ml-2 mr-1 w-4 h-4
+}
 
-   .Projects-container h2 {
-    @apply text-white text-3xl pb-2 mb-10 border-b place-content-center text-center w-24 mx-auto
-  }
+/************ Contact *************/
 
-  .Projects-part {
-    @apply flex flex-wrap justify-center
-  }
-  .Project {
-    @apply max-w-sm h-5/6 mx-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700
-  }
-  .Project aside {
-    @apply p-5
-  }
-   .Project-title {
-    @apply mb-2 text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white
-  }
-  .Project-techno {
-    @apply text-xl text-center
-  }
-  .Project-description {
-    @apply py-4 px-2 text-justify text-lg text-gray-700 dark:text-gray-400
-  }
-  .Project-link {
-    @apply inline-flex items-center my-1 py-2 px-3 text-sm font-medium rounded-lg hover:ring-2 duration-500 ease-in-out dark:bg-cyan-600 dark:hover:bg-cyan-700
-  }
-  .Projects-svg {
-    @apply ml-2 mr-1 w-4 h-4
-  }
-
-  /************ Contact *************/
-
-  .Contact-container {
-    @apply w-full h-screen flex flex-col pt-28 justify-center
-  }
-  .Contact-text {
-    @apply text-lg text-center mb-10 lg:text-2xl
-  }
-  .form-container {
-    @apply w-full h-2/3 block-size
-  }
-  .form {
-    @apply h-full w-2/3 flex mx-auto gradiant-light rounded-2xl p-5 mt-8
-  }
-  .form div {
-    @apply w-full self-center px-8 flex flex-col
-  }
-  .form label {
-    @apply mb-1
-  }
-  .form input, select, option {
-    @apply px-2 mb-5 text-black rounded-lg
-  }
-  .form textarea {
-    @apply h-64 rounded-lg
-  }
-  .form button {
-    @apply w-40 self-center text-lg mt-8 mx-2 py-1 px-4 rounded-lg bg-cyan-600 duration-500 ease-in-out hover:bg-cyan-700 hover:ring-2 md:text-xl lg:px-7 lg:transform xl:text-2xl
-  }
+.Contact-container {
+  @apply w-5/6 h-screen flex flex-col mt-10 mx-auto justify-center
+}
+.Contact-text {
+  @apply text-lg text-center mb-10 lg:text-2xl
+}
+.form-container {
+  @apply w-full h-2/3 block-size
+}
+.form {
+  @apply h-full w-2/3 flex mx-auto gradiant-light rounded-2xl p-5 mt-8
+}
+.form div {
+  @apply w-full self-center px-8 flex flex-col
+}
+.form label {
+  @apply mb-1
+}
+.form input, select, option {
+  @apply px-2 mb-5 text-black rounded-lg
+}
+.form textarea {
+  @apply h-64 rounded-lg
+}
+.form button {
+  @apply w-40 self-center text-lg mt-8 mx-2 py-1 px-4 rounded-lg bg-cyan-600 duration-500 ease-in-out hover:bg-cyan-700 hover:ring-2 md:text-xl lg:px-7 lg:transform xl:text-2xl
+}

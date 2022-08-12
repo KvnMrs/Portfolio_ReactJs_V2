@@ -10,7 +10,7 @@ const Contact = () => {
 
   return (
     <>
-      <div id="contact" className="Contact-container">
+      <div id="contact" className="Contact-container bg-section-card">
         <p className="Contact-text">
           Un contact professionel, une question, un feedback <br />
           contactez-moi 📝
