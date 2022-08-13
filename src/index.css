@@ -56,7 +56,7 @@
   @apply bg-dark_blue
 }
 .main-container {
-  @apply py-10 bg-[url('./assets/imgBackground/main-bg.jpg')] bg-cover bg-fixed bg-no-repeat
+  @apply py-10 bg-[url('./assets/img/imgBackground/main-bg.jpg')] bg-cover bg-fixed bg-no-repeat
 }
 
  /*********** SVGs ************/
