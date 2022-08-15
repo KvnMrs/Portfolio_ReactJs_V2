@@ -92,10 +92,18 @@
   @apply mb-5
 }
 
+/* .social-medias {
+  @apply flex justify-center pt-10
+} */
+
+.social-medias-onscroll {
+  @apply fixed top-2 right-4 flex flex-col
+}
+
 /**************** About *****************/
 
 .about-container {
-  @apply w-full h-auto flex flex-col 
+  @apply w-full h-auto flex flex-col
 }
 .about-container .card {
   @apply w-5/6 h-screen mx-auto py-28 bg-section-card
