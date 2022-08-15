@@ -55,6 +55,12 @@
 .global-bg {
   @apply bg-dark_blue
 }
+
+/*********** App ************/
+
+.scroll-control {
+  @apply h-screen w-screen snap-y snap-mandatory overflow-scroll scroll-smooth global-bg
+}
 .main-container {
   @apply py-10 bg-[url('./assets/img/imgBackground/main-bg.jpg')] bg-cover bg-fixed bg-no-repeat
 }
@@ -85,17 +91,12 @@
 
 /*********** Home ************/
 
-.Home-container {
+.home-container {
   @apply w-full h-screen flex flex-col justify-center text-center items-center text-3xl snap-center
 }
 .title {
   @apply mb-5
 }
-
-/* .social-medias {
-  @apply flex justify-center pt-10
-} */
-
 .social-medias-onscroll {
   @apply fixed top-2 right-4 flex flex-col
 }
