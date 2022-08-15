@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <SideBar />
-      <div className="scroll-smooth global-bg">
+      <div className="snap-y snap-mandatory overflow-scroll h-screen w-screen global-bg">
         <Home />
         <div className="main-container">
           <About />

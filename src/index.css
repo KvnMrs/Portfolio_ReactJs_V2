@@ -86,7 +86,7 @@
 /*********** Home ************/
 
 .Home-container {
-  @apply w-full h-screen flex flex-col justify-center text-center items-center text-3xl
+  @apply w-full h-screen flex flex-col justify-center text-center items-center text-3xl snap-center
 }
 .title {
   @apply mb-5
@@ -103,7 +103,7 @@
 /**************** About *****************/
 
 .about-container {
-  @apply w-full h-auto flex flex-col
+  @apply w-full h-auto flex flex-col snap-center
 }
 .about-container .card {
   @apply w-5/6 h-screen mx-auto py-28 bg-section-card
@@ -148,7 +148,7 @@
 /************ Skills *************/
 
 .Skills-container {
-  @apply w-5/6 h-screen mx-auto my-10 pt-8 flex place-content-center items-center
+  @apply w-5/6 h-screen mx-auto my-10 pt-8 flex place-content-center items-center snap-center
 }
 
 /* HardSkills */
@@ -181,7 +181,7 @@
 /************ Projects *************/
 
 .Projects-container {
-  @apply w-5/6 h-screen my-10 mx-auto py-10 flex-col flex flex-wrap justify-center
+  @apply w-5/6 h-screen my-10 mx-auto py-10 flex-col flex flex-wrap justify-center snap-center
 }
   .Projects-container h2 {
   @apply text-white text-3xl pb-2 mb-10 border-b place-content-center text-center w-24 mx-auto
@@ -214,7 +214,7 @@
 /************ Contact *************/
 
 .Contact-container {
-  @apply w-5/6 h-screen flex flex-col mt-10 mx-auto justify-center
+  @apply w-5/6 h-screen flex flex-col mt-10 mx-auto justify-center snap-center
 }
 .Contact-text {
   @apply text-lg text-center mb-10 lg:text-2xl
