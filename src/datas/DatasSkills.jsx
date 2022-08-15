@@ -1,31 +1,31 @@
 // Hard Skills
-import img_tailwindcss from "../assets/imgHardSkills/Tailwindcss.png";
-import img_CSS from "../assets/imgHardSkills/css-3.png";
-import img_HTML from "../assets/imgHardSkills/html.png";
-import img_JS from "../assets/imgHardSkills/JavaScript.png";
-import img_MySQL from "../assets/imgHardSkills/MySQL.png";
-import img_NodeJs from "../assets/imgHardSkills/NodeJs.png";
-import img_ReactJs from "../assets/imgHardSkills/ReactJs.png";
-import img_Angular from "../assets/imgHardSkills/Angular.png";
-import img_TypeScript from "../assets/imgHardSkills/TypeScript.png";
-import img_Firebase from "../assets/imgHardSkills/Firebase.png";
+import img_tailwindcss from "../assets/img/imgHardSkills/Tailwindcss.png";
+import img_CSS from "../assets/img/imgHardSkills/css-3.png";
+import img_HTML from "../assets/img/imgHardSkills/html.png";
+import img_JS from "../assets/img/imgHardSkills/JavaScript.png";
+import img_MySQL from "../assets/img/imgHardSkills/MySQL.png";
+import img_NodeJs from "../assets/img/imgHardSkills/NodeJs.png";
+import img_ReactJs from "../assets/img/imgHardSkills/ReactJs.png";
+import img_Angular from "../assets/img/imgHardSkills/Angular.png";
+import img_TypeScript from "../assets/img/imgHardSkills/TypeScript.png";
+import img_Firebase from "../assets/img/imgHardSkills/Firebase.png";
 
 // Tools
-import img_ESlint from "../assets/imgTool/ESlint.png";
-import img_Git from "../assets/imgTool/Git.png";
-import img_GitHub from "../assets/imgTool/GitHub.png";
-import img_VScode from "../assets/imgTool/VScode.png";
-import img_Figma from "../assets/imgTool/Figma.png";
-import img_Airtable from "../assets/imgTool/Airtable.png";
-import img_Trello from "../assets/imgTool/Trello.png";
-import img_ZenHub from "../assets/imgTool/ZenHub.png";
+import img_ESlint from "../assets/img/imgTools/ESlint.png";
+import img_Git from "../assets/img/imgTools/Git.png";
+import img_GitHub from "../assets/img/imgTools/GitHub.png";
+import img_VScode from "../assets/img/imgTools/VScode.png";
+import img_Figma from "../assets/img/imgTools/Figma.png";
+import img_Airtable from "../assets/img/imgTools/Airtable.png";
+import img_Trello from "../assets/img/imgTools/Trello.png";
+import img_ZenHub from "../assets/img/imgTools/ZenHub.png";
 
 // Soft Skillss
-import img_autonome from "../assets/imgSoftSkills/autonome.png";
-import img_curieux from "../assets/imgSoftSkills/curieux.png";
-import img_esprit_equipe from "../assets/imgSoftSkills/espritEquipe.png";
-import img_logique from "../assets/imgSoftSkills/logique.png";
-import img_ecoute from "../assets/imgSoftSkills/ecoute.png";
+import img_autonome from "../assets/img/imgSoftSkills/autonome.png";
+import img_curieux from "../assets/img/imgSoftSkills/curieux.png";
+import img_esprit_equipe from "../assets/img/imgSoftSkills/espritEquipe.png";
+import img_logique from "../assets/img/imgSoftSkills/logique.png";
+import img_ecoute from "../assets/img/imgSoftSkills/ecoute.png";
 
 const dataSkills = [
   /********** SOFTS SKILLS ***************/

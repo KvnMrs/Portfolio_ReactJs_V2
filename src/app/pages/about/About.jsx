@@ -9,7 +9,7 @@ import Profil from "../../components/about/Profile";
 import ButtonsSvg from "../../sub-components/buttons/ButtonsSvg";
 
 // Assets
-import imgProfil from "../../../assets/imgAbout/Kevin.jpg";
+import imgProfil from "../../../assets/img/imgAbout/Kevin.jpg";
 import SvgInfo from "../../../assets/svg/SvgInfo.jsx";
 
 function About() {

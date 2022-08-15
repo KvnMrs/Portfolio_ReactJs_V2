@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <SideBar />
-      <div className="scroll-smooth global-bg">
+      <div className="scroll-control">
         <Home />
         <div className="main-container">
           <About />

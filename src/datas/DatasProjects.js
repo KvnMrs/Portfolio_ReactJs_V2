@@ -1,5 +1,5 @@
-import img_Project1 from "../assets/imgPortfolio/img_Project1.png";
-import img_Project2 from "../assets/imgPortfolio/img_Project2.png";
+import img_Project1 from "../assets/img/imgProjects/img_Project1.png";
+import img_Project2 from "../assets/img/imgProjects/img_Project2.png";
 
 const dataPortfolio = [
   {
