@@ -14,34 +14,6 @@
   transition-duration: 2000ms;
 }
 
-/******* SideBar *******/
-.sidebar-center {
-  top:50%;
-  transform: translateY(-50%);
-}
-
-.bg-section-card {
- @apply bg-black bg-opacity-50 rounded-3xl
-}
-
-/******* Modal *******/
-.modal-container {
- @apply absolute bg-opacity-60 bg-black h-screen w-screen inset-0
-}
-
-.modal-sub-container {
-  @apply absolute inset-10 m-auto p-2 bg-gradient-to-r from-cyan-800 to-cyan-200 w-4/6 h-fit rounded-2xl
- }
-
-.h-modal-content {
-  @apply w-auto;
-  height: 35em;
-}
-
-.mb-about-img{
-  margin-bottom: -35px;
-}
-
 .gradiant-dark {
   background: radial-gradient(#243b55, #141e30);
 }
@@ -56,6 +28,41 @@
 }
 .global-bg {
   @apply bg-dark_blue
+}
+
+/******* SideBar *******/
+.sidebar-center {
+  top:50%;
+  transform: translateY(-50%);
+}
+
+.bg-section-card {
+ @apply bg-black bg-opacity-50 rounded-3xl
+}
+
+/******* Modal *******/
+
+.h-modal-content {
+  @apply w-auto;
+  height: 35em;
+}
+.modal-container {
+ @apply absolute bg-opacity-60 bg-black h-screen w-screen inset-0
+}
+.modal-sub-container {
+  @apply absolute inset-10 m-auto p-2 bg-gradient-to-r from-cyan-800 to-cyan-200 w-4/6 h-fit rounded-2xl
+}
+.button-close {
+  @apply w-9 ml-auto text-3xl text-black font-bold 
+}
+.tab-panels-container {
+  @apply w-auto h-auto flex flex-col rounded-2xl
+}
+
+/* about - profile tab */
+
+.information-part {
+  @apply w-1/2 h-auto my-auto flex flex-col p-2 justify-center rounded-lg shadow-lg bg-slate-800 bg-opacity-25
 }
 
 /*********** App ************/
@@ -125,6 +132,9 @@
 }
 .description-part p {
   @apply text-lg
+}
+.mb-about-img{
+  margin-bottom: -35px;
 }
 .description-part img {
   @apply w-64 h-64 mb-about-img object-cover rounded-full border border-white group-hover:ring-4 duration-500 ease-in-out ring-cyan-800
