@@ -47,22 +47,25 @@
   height: 35em;
 }
 .modal-container {
- @apply absolute bg-opacity-60 bg-black h-screen w-screen inset-0
+ @apply absolute h-screen w-screen bg-opacity-60 bg-black inset-0
 }
 .modal-sub-container {
-  @apply absolute inset-10 m-auto p-2 bg-gradient-to-r from-cyan-800 to-cyan-200 w-4/6 h-fit rounded-2xl
+  @apply absolute h-fit w-3/6 inset-10 m-auto p-2 bg-gradient-to-r from-cyan-800 to-cyan-200  rounded-2xl
 }
 .button-close {
   @apply w-9 ml-auto text-3xl text-black font-bold 
 }
 .tab-panels-container {
-  @apply w-auto h-auto flex flex-col rounded-2xl
+  @apply w-auto h-auto flex rounded-2xl
 }
 
 /* about - profile tab */
 
 .information-part {
-  @apply w-1/2 h-auto my-auto flex flex-col p-2 justify-center rounded-lg shadow-lg bg-slate-800 bg-opacity-25
+  @apply h-auto my-auto flex flex-col p-2 justify-center rounded-lg shadow-lg bg-slate-800 bg-opacity-25
+}
+.img-part {
+  @apply w-1/2 h-full my-auto p-2 justify-center rounded-lg shadow-lg bg-slate-800 bg-opacity-25
 }
 
 /*********** App ************/
