@@ -14,32 +14,6 @@
   transition-duration: 2000ms;
 }
 
-/******* SideBar *******/
-.sidebar-center {
-  top:50%;
-  transform: translateY(-50%);
-}
-
-.bg-section-card {
- @apply bg-black bg-opacity-50 rounded-3xl
-}
-
-/******* Modal *******/
-.modal-center{
-  right: 0;
-  left: 0;
-  margin: auto;
-}
-
-.h-modal-content {
-  width: auto;
-  height: 35em;
-}
-
-.mb-about-img{
-  margin-bottom: -35px;
-}
-
 .gradiant-dark {
   background: radial-gradient(#243b55, #141e30);
 }
@@ -56,10 +30,48 @@
   @apply bg-dark_blue
 }
 
+/******* SideBar *******/
+.sidebar-center {
+  top:50%;
+  transform: translateY(-50%);
+}
+
+.bg-section-card {
+ @apply bg-black bg-opacity-50 rounded-3xl
+}
+
+/******* Modal *******/
+
+.h-modal-content {
+  @apply w-auto;
+  height: 35em;
+}
+.modal-container {
+ @apply absolute h-screen w-screen bg-opacity-60 bg-black inset-0
+}
+.modal-sub-container {
+  @apply absolute h-fit w-3/6 inset-10 m-auto p-2 bg-gradient-to-r from-cyan-800 to-cyan-200  rounded-2xl
+}
+.button-close {
+  @apply w-9 ml-auto text-3xl text-black font-bold 
+}
+.tab-panels-container {
+  @apply w-auto h-auto flex rounded-2xl
+}
+
+/* about - profile tab */
+
+.information-part {
+  @apply h-auto my-auto flex flex-col p-2 justify-center rounded-lg shadow-lg bg-slate-800 bg-opacity-25
+}
+.img-part {
+  @apply w-1/2 h-full my-auto p-2 justify-center rounded-lg shadow-lg bg-slate-800 bg-opacity-25
+}
+
 /*********** App ************/
 
 .scroll-control {
-  @apply h-screen w-screen snap-y snap-mandatory overflow-scroll scroll-smooth global-bg
+  @apply h-screen w-screen snap-y snap-mandatory overflow-auto scroll-smooth global-bg
 }
 .main-container {
   @apply py-10 bg-[url('./assets/img/imgBackground/main-bg.jpg')] bg-cover bg-fixed bg-no-repeat
@@ -123,6 +135,9 @@
 }
 .description-part p {
   @apply text-lg
+}
+.mb-about-img{
+  margin-bottom: -35px;
 }
 .description-part img {
   @apply w-64 h-64 mb-about-img object-cover rounded-full border border-white group-hover:ring-4 duration-500 ease-in-out ring-cyan-800
