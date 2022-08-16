@@ -4,7 +4,7 @@ import React from "react";
 import ProjectCard from "../../components/projects/ProjectCard";
 
 // Datas
-import DatasProjects from "../../../datas/DatasProjects";
+import DatasProjects from "../../../datas/datasProjects";
 
 function Projects() {
   return (
