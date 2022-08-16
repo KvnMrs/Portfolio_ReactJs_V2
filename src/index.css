@@ -25,14 +25,16 @@
 }
 
 /******* Modal *******/
-.modal-center{
-  right: 0;
-  left: 0;
-  margin: auto;
+.modal-container {
+ @apply absolute bg-opacity-60 bg-black h-screen w-screen inset-0
 }
 
+.modal-sub-container {
+  @apply absolute inset-10 m-auto p-2 bg-gradient-to-r from-cyan-800 to-cyan-200 w-4/6 h-fit rounded-2xl
+ }
+
 .h-modal-content {
-  width: auto;
+  @apply w-auto;
   height: 35em;
 }
 
@@ -59,7 +61,7 @@
 /*********** App ************/
 
 .scroll-control {
-  @apply h-screen w-screen snap-y snap-mandatory overflow-scroll scroll-smooth global-bg
+  @apply h-screen w-screen snap-y snap-mandatory overflow-auto scroll-smooth global-bg
 }
 .main-container {
   @apply py-10 bg-[url('./assets/img/imgBackground/main-bg.jpg')] bg-cover bg-fixed bg-no-repeat
