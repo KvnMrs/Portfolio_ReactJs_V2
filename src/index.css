@@ -42,30 +42,29 @@
 
 /******* Modal *******/
 
-.h-modal-content {
-  @apply w-auto;
-  height: 35em;
-}
 .modal-container {
- @apply absolute h-screen w-screen bg-opacity-60 bg-black inset-0
+ @apply absolute w-screen bg-opacity-60 bg-black inset-0
 }
 .modal-sub-container {
-  @apply absolute h-fit w-3/6 inset-10 m-auto p-2 bg-gradient-to-r from-cyan-800 to-cyan-200  rounded-2xl
+  @apply w-5/6 h-screen flex flex-col absolute inset-10 m-auto bg-gradient-to-r from-cyan-800 to-cyan-200 rounded-2xl
+}
+.content-tabs {
+  @apply h-20 flex px-5 items-center bg-black bg-opacity-70
+}
+.tab-buttons {
+  @apply w-24 h-10 text-center p-2 rounded-t-xl mx-1 my-2 py-1 px-2 text-sm font-bold rounded-lg hover:ring-2 duration-500 ease-in-out dark:bg-cyan-600 dark:hover:bg-cyan-700
 }
 .button-close {
-  @apply w-9 ml-auto text-3xl text-black font-bold 
+  @apply w-10 ml-auto text-3xl text-black font-bold
 }
-.tab-panels-container {
-  @apply w-auto h-5/6 flex rounded-2xl
+.content-modal {
+  @apply w-5/6 h-5/6 max-h-fit flex m-auto items-center
 }
-
-/* about - profile tab */
-
-.information-part {
-  @apply h-5/6 w-full my-auto flex flex-col p-2 justify-center rounded-lg shadow-lg bg-slate-800 bg-opacity-25
+.content-profile {
+  @apply flex flex-col p-2 mx-auto justify-center rounded-lg shadow-lg bg-slate-800 bg-opacity-25
 }
-.img-part {
-  @apply w-1/2 h-full my-auto p-2 justify-center rounded-lg shadow-lg bg-slate-800 bg-opacity-25
+.content-experiences {
+  @apply max-h-full mx-auto overflow-scroll scrollbar-hide bg-slate-700 rounded-lg divide-y divide-white
 }
 
 /*********** App ************/

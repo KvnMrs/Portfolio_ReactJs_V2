@@ -14,7 +14,7 @@ import HobbiesSvg from "../../../assets/svg/profile/HobbiesSvg";
 function Profile() {
   return (
     <>
-      <div className="information-part ">
+      <div className="content-profile">
         <ProfileInformation svg={<ProfileSvg />} text={"Kévin Marais"} />
         <ProfileInformation
           svg={<CitySvg />}
