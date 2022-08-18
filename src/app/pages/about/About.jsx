@@ -3,8 +3,8 @@ import React, { useState } from "react";
 // Components
 import SoftSkills from "../../components/about/SoftSkills";
 import Modal from "../../components/modal/Modal";
-import Experiences from "../../components/about/modal/Experiences";
-import Profile from "../../components/about/modal/Profile";
+import Experiences from "../../components/about/Experiences";
+import Profile from "../../components/about/Profile";
 
 //Sub-components
 import ButtonsSvg from "../../sub-components/buttons/ButtonsSvg";
