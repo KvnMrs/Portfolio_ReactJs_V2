@@ -58,13 +58,13 @@
   @apply w-10 ml-auto text-3xl text-black font-bold
 }
 .content-modal {
-  @apply w-5/6 h-5/6 max-h-fit flex m-auto items-center
+  @apply w-11/12 h-5/6 max-h-fit flex m-auto items-center
 }
 .content-profile {
   @apply flex flex-col p-2 mx-auto justify-center rounded-lg shadow-lg bg-slate-800 bg-opacity-25
 }
 .content-experiences {
-  @apply max-h-full mx-auto overflow-scroll scrollbar-hide bg-slate-700 rounded-lg divide-y divide-white
+  @apply w-full max-h-full min-h-full overflow-scroll scrollbar-hide  rounded-lg
 }
 
 /*********** App ************/
