@@ -3,7 +3,8 @@ import React, { useState } from "react";
 // Components
 import SoftSkills from "../../components/about/SoftSkills";
 import Modal from "../../components/modal/Modal";
-import Profil from "../../components/about/modal/Profile";
+import Experiences from "../../components/about/Experiences";
+import Profile from "../../components/about/Profile";
 
 //Sub-components
 import ButtonsSvg from "../../sub-components/buttons/ButtonsSvg";
@@ -51,7 +52,13 @@ function About() {
           </article>
         </div>
         {activeModal ? (
-          <Modal showModal={openModal} component={<Profil />} tab={"Profil"} />
+          <Modal
+            showModal={openModal}
+            component={<Profile />}
+            component2={<Experiences />}
+            tab={"Profil"}
+            tab2={"Expériences"}
+          />
         ) : null}
       </section>
     </>

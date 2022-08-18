@@ -1,27 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 
-// Packages
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import "react-tabs/style/react-tabs.css";
+// Components
+import ModalTabButtons from "./ModalTabButtons";
+import ModalContent from "./ModalContent";
 
-function Modal({ showModal, component, tab }) {
+function Modal({ showModal, component, component2, tab, tab2 }) {
+  const [activeTab, setActiveTab] = useState(1);
   return (
     <>
       <div className="modal-container">
         <div className="modal-sub-container">
-          <Tabs className={"h-auto"}>
-            <TabList className={"mb-1 pb-1"}>
-              <div className="flex">
-                <Tab>{tab}</Tab>
-
-                <button onClick={showModal} className="button-close">
-                  x
-                </button>
-              </div>
-            </TabList>
-
-            <TabPanel>{component}</TabPanel>
-          </Tabs>
+          <div className="content-tabs">
+            <ModalTabButtons tab={tab} fct={() => setActiveTab(1)} />
+            <ModalTabButtons tab={tab2} fct={() => setActiveTab(2)} />
+            <button onClick={showModal} className="button-close">
+              x
+            </button>
+          </div>
+          {activeTab === 1 ? (
+            <ModalContent content={component} />
+          ) : (
+            <ModalContent content={component2} />
+          )}
         </div>
       </div>
     </>
