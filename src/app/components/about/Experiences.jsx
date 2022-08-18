@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // Datas
-import dataCv from "../../../datas/datasExperiences";
+import datasExperiences from "../../../datas/datasExperiences";
 
 // Sub-Component
 import OtherExperiences from "../../sub-components/modal/OtherExperiences";
@@ -29,10 +29,10 @@ function Experiences() {
       <div className="content-experiences">
         {showExperienceDev === 1 ? (
           <div className="min-h-screen bg-slate-700 bg-opacity-50">
-            <WebDevelopmentExperiences datas={dataCv[0]} />
+            <WebDevelopmentExperiences datas={datasExperiences[0]} />
           </div>
         ) : (
-          dataCv.map((experience) => (
+          datasExperiences.map((experience) => (
             <div className="bg-slate-700  divide-black divide-y-8">
               <OtherExperiences datas={experience} />
             </div>
