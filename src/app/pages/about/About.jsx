@@ -5,6 +5,7 @@ import SoftSkills from "../../components/about/SoftSkills";
 import Modal from "../../components/modal/Modal";
 import Experiences from "../../components/about/Experiences";
 import Profile from "../../components/about/Profile";
+import Training from "../../components/about/Training";
 
 //Sub-components
 import ButtonsSvg from "../../sub-components/buttons/ButtonsSvg";
@@ -19,6 +20,7 @@ function About() {
   const openModal = () => {
     setActiveModal(!activeModal);
   };
+
   return (
     <>
       <section id="about" className="about-container">
@@ -54,10 +56,12 @@ function About() {
         {activeModal ? (
           <Modal
             showModal={openModal}
-            component={<Profile />}
+            component1={<Profile />}
             component2={<Experiences />}
+            component3={<Training />}
             tab={"Profil"}
             tab2={"Expériences"}
+            tab3={"Formations"}
           />
         ) : null}
       </section>
