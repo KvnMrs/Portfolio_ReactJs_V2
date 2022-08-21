@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.block-size {
-  block-size: auto;
-}
-
-.margin-block {
-  margin-block: auto;
-}
-
 .duration-2000 {
   transition-duration: 2000ms;
 }
@@ -31,17 +23,11 @@
 }
 
 /******* SideBar *******/
-.sidebar-center {
-  top:50%;
-  transform: translateY(-50%);
-}
-
 .bg-section-card {
  @apply bg-black bg-opacity-50 rounded-3xl
 }
 
 /******* Modal *******/
-
 .modal-container {
  @apply absolute w-screen bg-opacity-60 bg-black inset-0
 }
@@ -76,29 +62,53 @@
   @apply py-10 bg-[url('./assets/img/imgBackground/main-bg.jpg')] bg-cover bg-fixed bg-no-repeat
 }
 
- /*********** SVGs ************/
-
-.sidebar-svg {
-@apply duration-500 ease-in-out hover:scale-125 hover:fill-cyan-300 hover:shadow-lg hover:shadow-cyan-300/50
-}
-
 /*********** SideBar ************/
 
-.sideBar-container {
-  @apply w-16 h-4/6 fixed left-4 flex flex-col sidebar-center content-center duration-2000 bg-black shadow-lg shadow-cyan-300/50 rounded-full
+@media screen and (min-width: 780px)
+{
+  .sidebar-center {
+    top:50%;
+    transform: translateY(-50%);
+  }
+  .block-size {
+    block-size: auto;
+  }
+  .margin-block {
+    margin-block: auto;
+  }
 }
 .sideBar-closed {
-  @apply duration-1000 top-4 h-auto fixed left-4 flex flex-col content-center rounded-full p-3
+  @apply w-auto h-14 p-3 fixed flex shadow-cyan-300/50 rounded-sm
+/* MD */ md:duration-1000 md:top-4 md:h-auto md:left-4 md:flex-col md:content-center md:rounded-full
+}
+.sideBar-container {
+  @apply bg-black w-full h-14 fixed flex ease-in-out duration-1000 shadow-lg shadow-cyan-300/50 rounded-sm
+/* MD */ md:w-16 md:h-4/6 md:left-4 sidebar-center md:flex-col duration-2000 md:content-center md:rounded-full
 }
 .burger-button-container {
-  @apply h-1/6 flex self-center
+  @apply flex self-center mx-auto
+/* MD */ md:h-1/6 md:mx-0
+}
+.burger-button-container svg {
+  @apply w-5
+/* MD */ md:w-7
 }
 .nav {
-  @apply h-2/4 block-size margin-block duration-1000
+  @apply w-5/6 mx-auto duration-1000
+/* MD */ md:h-2/4 margin-block
+}
+.links-container {
+  @apply h-full flex justify-end items-center
+/* MD */ md:h-auto md:flex-col md:mx-auto
 }
 .links {
-  @apply mx-auto my-5 flex justify-center
+  @apply flex mx-3
+/* MD */ md:mx-auto md:my-5 md:justify-center
 }
+.sidebar-svg {
+  @apply w-5
+/* MD */ md:w-7 md:duration-500 md:ease-in-out md:hover:scale-125 md:hover:fill-cyan-300 md:hover:shadow-lg md:hover:shadow-cyan-300/50
+  }
 
 /*********** Home ************/
 

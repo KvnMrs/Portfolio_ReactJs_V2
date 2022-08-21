@@ -6,7 +6,6 @@ function SvgProfile() {
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
-      width="28"
       viewBox="0 0 122.9 122.9"
       style={{ enableBackground: "new 0 0 122.9 122.9" }}
       fill="white"

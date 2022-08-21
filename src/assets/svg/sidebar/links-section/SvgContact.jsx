@@ -8,7 +8,6 @@ function SvgContact() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 122.88 84.04"
       fill="white"
-      width="28"
       className="sidebar-svg"
     >
       <title>call-message</title>

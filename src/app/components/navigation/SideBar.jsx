@@ -25,7 +25,7 @@ function BarNav() {
 
         {/* Links Section */}
         <nav className={openSidebar ? "nav" : "hidden"}>
-          <ol>
+          <ol className="links-container">
             <li>
               <a className="links" href="#home">
                 <SvgHome />
