@@ -106,8 +106,8 @@
 /* MD */ md:mx-auto md:my-5 md:justify-center
 }
 .sidebar-svg {
-  @apply
-/* MD */ md:duration-500 md:ease-in-out md:hover:scale-125 md:hover:fill-cyan-300 md:hover:shadow-lg md:hover:shadow-cyan-300/50
+  @apply w-5
+/* MD */ md:w-7 md:duration-500 md:ease-in-out md:hover:scale-125 md:hover:fill-cyan-300 md:hover:shadow-lg md:hover:shadow-cyan-300/50
   }
 
 /*********** Home ************/
