@@ -8,11 +8,10 @@ import Profile from "../../components/about/Profile";
 import Training from "../../components/about/Training";
 
 //Sub-components
-import ButtonsSvg from "../../sub-components/buttons/ButtonsSvg";
+import ButtonCallToAction from "../../sub-components/buttons/ButtonCallToAction";
 
 // Assets
 import imgProfil from "../../../assets/img/imgAbout/Kevin.jpg";
-import SvgInfo from "../../../assets/svg/SvgInfo.jsx";
 
 function About() {
   const [activeModal, setActiveModal] = useState(false);
@@ -41,12 +40,14 @@ function About() {
               </p>
             </aside>
             <aside>
-              <aside className="picture">
-                <img src={imgProfil} />
-                <div className="text-end ">
-                  <ButtonsSvg fct={openModal} svg={<SvgInfo />} />
-                </div>
-              </aside>
+              <img src={imgProfil} />
+              <ButtonCallToAction
+                text={"Plus d'informations"}
+                customClass="mt-10"
+                fct={openModal}
+              >
+                Plus d'informations
+              </ButtonCallToAction>
             </aside>
           </article>
           <article className="softskills-part">
