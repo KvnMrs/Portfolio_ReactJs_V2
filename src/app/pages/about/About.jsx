@@ -25,9 +25,9 @@ function About() {
       <section id="about" className="about-container">
         <div className="card">
           <article className="description-part">
-            <aside className="text">
-              <h2>En quelques mots...</h2>
-              <p>
+            <aside className="text-part">
+              <h2 className="text-title">En quelques mots...</h2>
+              <p className="description-text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
                 auctor lacus nec sem volutpat tristique. Interdum et malesuada
                 fames ac ante ipsum primis in faucibus. Aenean rutrum eros vitae
@@ -39,18 +39,18 @@ function About() {
                 lacinia, in placerat elit mattis. Suspendisse et lacinia leo.
               </p>
             </aside>
-            <aside>
+            <aside className="img-infos-part">
               <img src={imgProfil} />
               <ButtonCallToAction
                 text={"Plus d'informations"}
-                customClass="mt-10"
+                customClass="md:mt-16"
                 fct={openModal}
               >
                 Plus d'informations
               </ButtonCallToAction>
             </aside>
           </article>
-          <article className="softskills-part">
+          <article className="softSkills-part">
             <SoftSkills />
           </article>
         </div>
