@@ -21,8 +21,6 @@
 .global-bg {
   @apply bg-dark_blue
 }
-
-/******* SideBar *******/
 .bg-section-card {
  @apply bg-black bg-opacity-50 rounded-3xl
 }
@@ -59,7 +57,8 @@
   @apply h-screen w-screen snap-y snap-mandatory overflow-auto scroll-smooth global-bg
 }
 .main-container {
-  @apply py-10 bg-[url('./assets/img/imgBackground/main-bg.jpg')] bg-cover bg-fixed bg-no-repeat
+  @apply w-screen bg-[url('./assets/img/imgBackground/main-bg.jpg')] bg-cover bg-fixed bg-no-repeat
+/* MD */ md:w-full md:py-10
 }
 
 /*********** SideBar ************/
@@ -82,7 +81,7 @@
 /* MD */ md:duration-1000 md:top-4 md:h-auto md:left-4 md:flex-col md:content-center md:rounded-full
 }
 .sideBar-container {
-  @apply bg-black w-full h-14 fixed flex ease-in-out duration-1000 shadow-lg shadow-cyan-300/50 rounded-sm
+  @apply w-full h-14 fixed flex ease-in-out duration-1000 bg-black shadow-lg shadow-cyan-300/50 rounded-sm
 /* MD */ md:w-16 md:h-4/6 md:left-4 sidebar-center md:flex-col duration-2000 md:content-center md:rounded-full
 }
 .burger-button-container {
@@ -108,7 +107,7 @@
 .sidebar-svg {
   @apply w-5
 /* MD */ md:w-7 md:duration-500 md:ease-in-out md:hover:scale-125 md:hover:fill-cyan-300 md:hover:shadow-lg md:hover:shadow-cyan-300/50
-  }
+}
 
 /*********** Home ************/
 
@@ -125,48 +124,60 @@
 /**************** About *****************/
 
 .about-container {
-  @apply w-full h-auto flex flex-col snap-center
+  @apply w-full h-screen flex flex-col snap-center
+/* MD */ md:h-auto
 }
 .about-container .card {
-  @apply w-5/6 h-screen mx-auto py-28 bg-section-card
+  @apply w-screen h-screen bg-section-card py-5
+/* MD */ md:w-5/6 md:mx-auto md:py-20
 }
 
 /* Description part */
 
 .description-part {
-  @apply w-4/6 flex mx-auto mb-20 place-content-between items-center text-center
+  @apply flex flex-col
+/* MD */ md:w-5/6 md:mx-auto md:flex-row md:items-center md:text-center
 }
-.description-part .text {
-  @apply w-1/2
+.description-part .text-part {
+  @apply w-4/6 mx-auto
+  /* MD */ md:w-1/2
 }
-.description-part h2 {
-  @apply w-80 pb-2 mb-5 mx-auto border-b text-2xl text-center
+.description-part .text-title {
+  @apply w-80 pb-2 mb-5 mx-auto border-b text-xl text-center
 }
-.description-part p {
-  @apply text-lg
-}
-.description-part .text {
-  @apply w-1/2
+.description-part .description-text {
+  @apply w-full
+/* MD */ md:text-lg
 }
 .description-part img {
-  @apply w-64 h-64 mt-10 object-cover rounded-full border border-white group-hover:ring-4 duration-500 ease-in-out ring-cyan-800
+  @apply w-32 h-32 object-cover rounded-full border border-white
+/* MD */ md:w-64 md:h-64
+}
+.description-part .img-infos-part {
+  @apply w-full h-full mx-auto mt-8 flex items-center place-content-evenly
+/* MD */ md:w-2/6 md:h-auto md:flex-col md:mt-5 md:p-0
 }
 
 /* SoftSkills part */
 
-.softskills-part {
-  @apply w-4/6 mx-auto mt-10 flex self-center items-center
+.softSkills-part {
+  @apply w-full mt-5 flex flex-wrap mx-auto self-center items-center
+/* MD */ md:w-4/6 md:h-3/6
 }
-.softskill {
-  @apply flex flex-col mx-auto text-center
+.softSkill {
+  @apply w-36 flex flex-col mx-auto mt-5 text-center
+/* MD */ md:mt-0
 }
-.softskill h4 {
-  @apply text-lg font-bold mb-1
+.softSkill .title-softSkill {
+  @apply font-semibold mb-1
+/* MD */ md:text-lg md:mx-auto md:mt-5
 }
-.softskill div {
-  @apply w-20 p-2 self-center border rounded-lg gradiant-light
+.softSkill .img-content {
+  @apply w-14 p-2 self-center border rounded-lg gradiant-light
+/* MD */ md:w-20 md:mx-auto md:mt-5
+
 }
-.softskill img {
+.softSkill .softSkill-img {
   @apply mx-auto rounded
 }
 
@@ -269,6 +280,7 @@
 /************ Sub-Components *************/
 
 .callToAction {
-  @apply w-auto h-10 mx-auto py-2 px-4 flex items-center font-bold duration-500 ease-in-out bg-cyan-600 hover:bg-cyan-700 rounded-lg hover:ring-2
+  @apply w-auto h-10 py-2 px-4 flex items-center font-bold duration-500 ease-in-out bg-cyan-600 hover:bg-cyan-700 rounded-lg hover:ring-2
+/* MD */ md:mx-auto
 }
 
