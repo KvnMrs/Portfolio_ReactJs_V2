@@ -143,10 +143,11 @@
   /* MD */ md:w-1/2
 }
 .description-part .text-title {
-  @apply w-80 pb-2 mb-5 mx-auto border-b text-xl text-center
+  @apply w-4/6 pb-2 mb-5 mx-auto border-b text-xl text-center
+/* MD */ md:w-80
 }
 .description-part .description-text {
-  @apply w-full
+  @apply w-full text-center
 /* MD */ md:text-lg
 }
 .description-part img {
