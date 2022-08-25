@@ -5,7 +5,7 @@ function ButtonsSvg({ svg, fct, customClass }) {
     <button
       onClick={fct}
       className={
-        "w-8 h-8 animate-pulse hover:animate-none hover:ring-2 duration-200 ease-in-out ring-white rounded-full" +
+        "w-10 h-10 p-3 animate-pulse duration-500 ease-in-out rounded-full hover:animate-none hover:ring-2" +
         ` ${customClass}`
       }
     >

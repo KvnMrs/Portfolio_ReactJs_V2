@@ -7,28 +7,28 @@ import dataSkills from "../../../datas/datasSkills";
 import ButtonsSvg from "../../sub-components/buttons/ButtonsSvg";
 
 // Assets
-import RightArrowSvg from "../../../assets/svg/global/RightArrowSvg";
+import LeftArrowSvg from "../../../assets/svg/global/LeftArrowSvg";
 
 function Tools({ toggleSkills }) {
   return (
     <>
       <article className="hardSkills-container">
-        <header>
+        <header className="hardSkills-header">
           <ButtonsSvg
-            svg={<RightArrowSvg />}
+            svg={<LeftArrowSvg />}
             fct={() => toggleSkills()}
-            customClass={"group ml-5"}
+            customClass={"toggle-hardSkills-btn mr-5"}
           />
-          <h2 className="mr-20">Outils</h2>
+          <h2 className="hardSkills-title mr-8 md:mr-16">Outils</h2>
         </header>
 
-        <aside>
+        <aside className="skill-container">
           {dataSkills
             .filter((outil) => outil.catégorie === "Outil")
             .map((el) => (
-              <div>
-                <h3>{el.element}</h3>
-                <img alt={el.catégorie} src={el.image} />
+              <div className="skill">
+                <h3 className="skill-name">{el.element}</h3>
+                <img className="skill-img" alt={el.catégorie} src={el.image} />
               </div>
             ))}
         </aside>
