@@ -125,7 +125,6 @@
 
 .about-container {
   @apply w-full h-screen flex flex-col snap-center
-/* MD */ md:h-auto
 }
 .about-container .card {
   @apply w-screen h-screen bg-section-card py-5
@@ -176,7 +175,6 @@
 .softSkill .img-content {
   @apply w-14 p-2 self-center border rounded-lg gradiant-light
 /* MD */ md:w-20 md:mx-auto md:mt-5
-
 }
 .softSkill .softSkill-img {
   @apply mx-auto rounded
@@ -184,35 +182,38 @@
 
 /************ Skills *************/
 
-.Skills-container {
-  @apply w-5/6 h-screen mx-auto my-10 pt-8 flex place-content-center items-center snap-center
+.skills-container {
+  @apply w-full h-screen mx-auto my-10 pt-8 flex place-content-center items-center snap-center
+/* MD */ md:w-5/6
 }
 
 /* HardSkills */
 
-.HardSkills-container {
+.hardSkills-container {
   @apply w-full text-center
 }
-.HardSkills-container header {
-  @apply w-60 flex mx-auto pb-10 place-content-center
+.hardSkills-container .hardSkills-header {
+  @apply flex mx-auto mb-10 justify-center items-center
 }
-.HardSkills-container button {
-  @apply w-10 h-10 flex p-3 mt-auto duration-500 ease-in-out lg:transform rounded-full bg-cyan-600 hover:bg-white hover:shadow-2xl
+.hardSkills-container .hardSkills-title {
+  @apply w-auto flex pb-5 place-content-center text-3xl border-b
 }
-.HardSkills-container h2 {
-  @apply pb-2 text-3xl border-b
+.hardSkills-container .toggle-hardSkills-btn {
+  @apply flex bg-cyan-600 hover:bg-cyan-700
 }
-.HardSkills-container aside {
-  @apply w-2/4 grid grid-cols-2 gap-4 mx-auto md:grid-cols-3
+.hardSkills-container .skill-container {
+  @apply w-3/4 grid grid-cols-2 gap-4 mx-auto
+/* MD */ md:grid-cols-3 md:w-2/4
 }
-.HardSkills-container div {
+.hardSkills-container .skill {
   @apply grid-cols-1 mx-auto my-3
 }
-.HardSkills-container h3 {
-  @apply mx-5 mb-3 text-xl object-center
+.hardSkills-container .skill-name {
+  @apply mx-auto mb-3 text-xl
 }
-.HardSkills-container img {
-  @apply w-20 h-12 mx-auto object-contain md:w-20 md:h-16
+.hardSkills-container .skill-img {
+  @apply w-20 h-14 mx-auto object-contain
+/* MD */ md:h-16
 }
 
 /************ Projects *************/
