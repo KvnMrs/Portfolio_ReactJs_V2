@@ -1,7 +1,7 @@
 import img_Project1 from "../assets/img/imgProjects/img_Project1.png";
 import img_Project2 from "../assets/img/imgProjects/img_Project2.png";
 
-const dataPortfolio = [
+const dataProjects = [
   {
     img: img_Project2,
     link: "https://wcs-weather.netlify.app/",
@@ -20,4 +20,4 @@ const dataPortfolio = [
   },
 ];
 
-export default dataPortfolio;
+export default dataProjects;
