@@ -17,7 +17,7 @@ function Tools({ toggleSkills }) {
           <ButtonsSvg
             svg={<LeftArrowSvg />}
             fct={() => toggleSkills()}
-            customClass={"toggle-hardSkills-btn mr-5"}
+            customClass={"mr-5"}
           />
           <h2 className="hardSkills-title mr-8 md:mr-16">Outils</h2>
         </header>
