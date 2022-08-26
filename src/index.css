@@ -69,9 +69,6 @@
     top:50%;
     transform: translateY(-50%);
   }
-  .block-size {
-    block-size: auto;
-  }
   .margin-block {
     margin-block: auto;
   }
@@ -252,16 +249,20 @@
 /************ Contact *************/
 
 .Contact-container {
-  @apply w-5/6 h-screen flex flex-col mt-10 mx-auto justify-center snap-center
+  @apply w-screen h-screen flex flex-col  mx-auto justify-center snap-center
+/* MD */ md:w-5/6
 }
 .Contact-text {
-  @apply text-lg text-center mb-10 lg:text-2xl
+  @apply w-5/6 text-lg text-center self-center lg:text-2xl
+/* MD */ md:mb-10
 }
 .form-container {
-  @apply w-full h-2/3 block-size
+  @apply w-full
+/* MD */ md:h-2/3
 }
 .form {
-  @apply h-full w-2/3 flex mx-auto gradiant-light rounded-2xl p-5 mt-8
+  @apply w-5/6 h-auto flex flex-col mx-auto gradiant-light rounded-2xl p-5 mt-8
+/* MD */ md:w-2/3 md:flex-row
 }
 .form div {
   @apply w-full self-center px-8 flex flex-col
@@ -270,7 +271,8 @@
   @apply mb-1
 }
 .form input, select, option {
-  @apply px-2 mb-5 text-black rounded-lg
+  @apply px-2 mb-2 text-black rounded-lg
+/* MD */ md:mb-5
 }
 .form textarea {
   @apply h-64 rounded-lg
