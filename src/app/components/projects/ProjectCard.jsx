@@ -5,13 +5,13 @@ const ProjectCard = ({ img, title, category, description, link }) => {
     <>
       <article className="Project">
         <img alt={title} src={img} />
-        <aside>
+        <aside className="project-content">
           <h3 className="Project-title">{title}</h3>
           <h4 className="Project-techno">{category}</h4>
           <p className="Project-description">{description}</p>
 
           <a className="Project-link" href={link} blank="">
-            Read more
+            Visiter
             <svg
               className="Projects-svg"
               aria-hidden="true"

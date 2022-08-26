@@ -18,7 +18,7 @@ const HardSkills = ({ toggleSkills }) => {
           <ButtonsSvg
             svg={<RightArrowSvg />}
             fct={() => toggleSkills()}
-            customClass={"toggle-hardSkills-btn ml-5"}
+            customClass={"ml-5"}
           />
         </header>
 

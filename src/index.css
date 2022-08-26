@@ -198,9 +198,6 @@
 .hardSkills-container .hardSkills-title {
   @apply w-auto flex pb-5 place-content-center text-3xl border-b
 }
-.hardSkills-container .toggle-hardSkills-btn {
-  @apply flex bg-cyan-600 hover:bg-cyan-700
-}
 .hardSkills-container .skill-container {
   @apply w-3/4 grid grid-cols-2 gap-4 mx-auto
 /* MD */ md:grid-cols-3 md:w-2/4
@@ -219,34 +216,37 @@
 /************ Projects *************/
 
 .Projects-container {
-  @apply w-5/6 h-screen my-10 mx-auto py-10 flex-col flex flex-wrap justify-center snap-center
+  @apply  h-screen my-10 mx-auto py-10 flex flex-col justify-center snap-center
+/* MD */ md:w-5/6
 }
-  .Projects-container h2 {
-  @apply text-white text-3xl pb-2 mb-10 border-b place-content-center text-center w-24 mx-auto
+.Projects-container .title-section {
+  @apply w-24 mx-auto pb-2 mb-10 border-b place-content-center text-center text-3xl
 }
 .Projects-part {
-  @apply flex flex-wrap justify-center
+  @apply  mx-auto relative flex flex-wrap justify-center
 }
 .Project {
-  @apply max-w-sm h-auto mx-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700
+  @apply h-auto mx-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700
+/* MD */ md:w-1/2
 }
-.Project aside {
+.Project .project-content {
   @apply p-5
 }
-  .Project-title {
-  @apply mb-2 text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white
+.Project .Project-title {
+@apply mb-2 text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white
 }
-.Project-techno {
+.Project .Project-techno {
   @apply text-xl text-center
 }
-.Project-description {
-  @apply py-4 px-2 text-justify text-lg text-gray-700 dark:text-gray-400
+.Project .Project-description {
+  @apply py-4 px-5 text-justify text-lg text-gray-700 dark:text-gray-400
+/* MD */ md:px-2
 }
-.Project-link {
-  @apply inline-flex items-center my-1 py-2 px-3 text-sm font-medium rounded-lg hover:ring-2 duration-500 ease-in-out dark:bg-cyan-600 dark:hover:bg-cyan-700
+.Project .Project-link {
+  @apply my-1 py-2 px-3 inline-flex items-center text-sm font-medium rounded-lg hover:ring-2 duration-500 ease-in-out dark:bg-cyan-600 dark:hover:bg-cyan-700
 }
-.Projects-svg {
-  @apply ml-2 mr-1 w-4 h-4
+.Project .Projects-svg {
+  @apply w-4 h-4 ml-2 mr-1
 }
 
 /************ Contact *************/
