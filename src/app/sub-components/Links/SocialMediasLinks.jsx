@@ -4,7 +4,7 @@ function SocialMediasLinks({ link, img, alt }) {
   return (
     <>
       <a
-        className="bg-white rounded-2xl duration-700 m-3 hover:scale-125"
+        className="w-fit bg-white rounded-2xl duration-700 m-3 hover:scale-125"
         href={link}
         target="blank"
       >
