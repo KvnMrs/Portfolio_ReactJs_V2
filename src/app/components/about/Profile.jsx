@@ -36,8 +36,7 @@ function Profile() {
           svg={<HobbiesSvg />}
           text={`Passionné par les technologies et le code, qui parfois nous font beaucoup réfléchir,
               Je libère mon esprit par quelques séances de fitness.
-              J'aime reprendre des forces dans un bon restaurant (de préférence italien).
-              Lorsque je le peux, je voyage, j'accorde beaucoup d'importance, à la découverte et la compréhention de nouvelles cultures, l'ouverture d'esprit et aux moments partagés.`}
+              `}
         />
       </div>
     </>

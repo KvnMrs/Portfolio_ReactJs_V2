@@ -42,7 +42,7 @@ function About() {
             <aside className="img-infos-part">
               <img src={imgProfil} />
               <ButtonCallToAction
-                text={"Plus d'informations"}
+                text={"En savoir plus"}
                 customClass="md:mt-16"
                 fct={openModal}
               >
