@@ -90,7 +90,7 @@ const dataSkills = [
   },
   {
     catégorie: "Compétence",
-    element: "AngularJs",
+    element: "Angular",
     image: img_Angular,
   },
   {

@@ -18,18 +18,12 @@ function WebDevelopmentExperiences() {
         </div>
         <p className="text-lg text-gray-800 italic my-2">
           blablablablabla blablablablabla blablablablabla blablablablabla
-          blablablablabla blablablablabla blablablablabla blablablablabla
-          blablablablablablablablablablablablablablabla
         </p>
         <p className="text-lg text-gray-800 italic my-2">
           blablablablabla blablablablabla blablablablabla blablablablabla
-          blablablablabla blablablablabla blablablablabla blablablablabla
-          blablablablablablablablablablablablablablabla
         </p>
         <p className="text-lg text-gray-800 italic my-2">
           blablablablabla blablablablabla blablablablabla blablablablabla
-          blablablablabla blablablablabla blablablablabla blablablablabla
-          blablablablablablablablablablablablablablabla
         </p>
       </div>
     </>
