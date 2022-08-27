@@ -121,13 +121,19 @@
 /*********** Home ************/
 
 .home-container {
-  @apply w-full h-screen flex flex-col justify-center text-center items-center text-3xl snap-center
+  @apply w-full h-screen flex flex-col justify-center text-center items-center text-xl snap-center
 }
-.title {
-  @apply mb-5
+.home-container .welcome {
+  @apply mb-5 text-2xl
+/* MD */ md:text-3xl
+}
+.home-container .name {
+  @apply mb-5 text-2xl
+/* MD */ md:text-3xl
 }
 .social-medias-onscroll {
-  @apply fixed top-2 right-4 flex flex-col
+  @apply mt-5 top-2 right-4 flex justify-center
+/* MD */ md:fixed md:flex-col md:mt-0
 }
 
 /**************** About *****************/

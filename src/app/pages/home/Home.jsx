@@ -22,10 +22,11 @@ function Home() {
     <>
       <div id="home" className="home-container">
         <header className="home-header">
-          <h1 className="home-title">
-            Bonjour et bienvenue sur mon Portfolio. 🙂
-          </h1>
-          <p>Je suis Kévin Marais Développeur Web full stack.</p>
+          <h1 className="welcome">Bienvenue sur mon Portfolio</h1>
+          <p>
+            <span className="name">Kévin Marais</span> <br />
+            Développeur Web full stack.
+          </p>
           <div
             className={
               activeScroll
