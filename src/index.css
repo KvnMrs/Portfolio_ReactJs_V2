@@ -19,7 +19,7 @@
   @apply text-white
 }
 .global-bg {
-  @apply bg-dark_blue
+  @apply bg-black
 }
 .bg-section-card {
  @apply bg-black bg-opacity-50 rounded-3xl
