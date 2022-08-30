@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 // Assets
 import Github from "../../../assets/img/imgSocialMedias/Github.png";
@@ -8,8 +8,13 @@ import videoBg from "../../../assets/video/video-bg.webm";
 //Sub-component
 import SocialMediasLinks from "../../sub-components/Links/SocialMediasLinks";
 
+//Modules
+import { gsap } from "gsap";
+
 function Home() {
   const [activeScroll, setActiveScroll] = useState(false);
+
+  const homeRef = useRef();
 
   useEffect(() => {
     window.addEventListener(
@@ -32,12 +37,12 @@ function Home() {
           loop
           className="absolute w-full h-full object-cover"
         />
-        <header className="home-header z-10">
+        <header ref={homeRef} className="home-header z-10">
           <h1 className="welcome">Bienvenue sur mon Portfolio</h1>
-          <p>
+          {/* <p>
             <span className="name">Kévin Marais</span> <br />
             Développeur Web full stack.
-          </p>
+          </p> */}
           <div
             className={
               activeScroll
