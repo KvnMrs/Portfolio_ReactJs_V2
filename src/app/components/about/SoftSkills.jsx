@@ -1,27 +1,16 @@
 import React from "react";
 
-// Datas
-import dataSkills from "../../../datas/datasSkills";
-
-const SoftSkills = () => {
+const SoftSkills = ({ softSkill, categorie, img }) => {
   return (
     <>
-      {dataSkills
-        .filter((atout) => atout.catégorie === "Atout")
-        .map((el) => (
-          <>
-            <aside className="softSkill">
-              <h4 className="title-softSkill">{el.element}</h4>
-              <div className="img-content">
-                <img
-                  className="softSkill-img"
-                  alt={el.catégorie}
-                  src={el.image}
-                />
-              </div>
-            </aside>
-          </>
-        ))}
+      <>
+        <aside className="softSkill">
+          <h4 className="title-softSkill">{softSkill}</h4>
+          <div className="img-content">
+            <img className="softSkill-img" alt={categorie} src={img} />
+          </div>
+        </aside>
+      </>
     </>
   );
 };

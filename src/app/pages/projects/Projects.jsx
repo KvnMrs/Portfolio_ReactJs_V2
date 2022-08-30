@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 
 // Components
 import ProjectCard from "../../components/projects/ProjectCard";
@@ -45,7 +45,7 @@ function Projects() {
             <>
               {currentProject === index ? (
                 <ProjectCard
-                  key={index}
+                  key={el.title}
                   img={el.img}
                   title={el.title}
                   category={el.category}

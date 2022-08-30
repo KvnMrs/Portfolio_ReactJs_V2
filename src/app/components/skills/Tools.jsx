@@ -1,10 +1,11 @@
 import React from "react";
 
-// Datas
+//Datas
 import dataSkills from "../../../datas/datasSkills";
 
-// Sub-component
+//Sub-component
 import ButtonsSvg from "../../sub-components/buttons/ButtonsSvg";
+import Tool from "../../sub-components/skills/Tool";
 
 // Assets
 import LeftArrowSvg from "../../../assets/svg/global/LeftArrowSvg";
@@ -24,12 +25,14 @@ function Tools({ toggleSkills }) {
 
         <aside className="skill-container">
           {dataSkills
-            .filter((outil) => outil.catégorie === "Outil")
-            .map((el) => (
-              <div className="skill">
-                <h3 className="skill-name">{el.element}</h3>
-                <img className="skill-img" alt={el.catégorie} src={el.image} />
-              </div>
+            .filter((category) => category.catégorie === "Outil")
+            .map((tool) => (
+              <Tool
+                key={tool.element}
+                tool={tool.element}
+                categorie={tool.catégorie}
+                img={tool.image}
+              />
             ))}
         </aside>
       </article>
