@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 // Assets
 import Github from "../../../assets/img/imgSocialMedias/Github.png";
 import Linkedin from "../../../assets/img/imgSocialMedias/Linkedin.png";
-import videoBg from "../../../assets/video/video-bg.mp4";
+import videoBg from "../../../assets/video/video-bg.webm";
 
 //Sub-component
 import SocialMediasLinks from "../../sub-components/Links/SocialMediasLinks";
