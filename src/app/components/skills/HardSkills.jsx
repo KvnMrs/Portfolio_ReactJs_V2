@@ -5,6 +5,7 @@ import dataSkills from "../../../datas/datasSkills";
 
 // Sub-components
 import ButtonsSvg from "../../sub-components/buttons/ButtonsSvg";
+import HardSkill from "../../sub-components/skills/HardSkill";
 
 // Assets
 import RightArrowSvg from "../../../assets/svg/global/RightArrowSvg";
@@ -24,12 +25,14 @@ const HardSkills = ({ toggleSkills }) => {
 
         <aside className="skill-container">
           {dataSkills
-            .filter((compétence) => compétence.catégorie === "Compétence")
-            .map((el) => (
-              <div className="skill">
-                <h3 className="skill-name">{el.element}</h3>
-                <img className="skill-img" alt={el.catégorie} src={el.image} />
-              </div>
+            .filter((category) => category.catégorie === "Compétence")
+            .map((hardSkill) => (
+              <HardSkill
+                key={hardSkill.element}
+                hardSkill={hardSkill.element}
+                catégorie={hardSkill.catégorie}
+                img={hardSkill.image}
+              />
             ))}
         </aside>
       </article>
