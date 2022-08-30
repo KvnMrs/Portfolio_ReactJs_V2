@@ -50,7 +50,7 @@
   @apply w-full min-h-full flex flex-col px-2 mx-auto justify-center items-center rounded-lg shadow-lg bg-slate-800 bg-opacity-25
 }
 .modal-sub-container .content-experiences-traing {
-  @apply h-full w-auto flex 
+  @apply h-full w-auto flex
 }
 .modal-sub-container .nav-experiences-training {
   @apply flex h-full mb-5
@@ -86,11 +86,11 @@
   }
 }
 .sideBar-closed {
-  @apply w-auto h-14 p-3 fixed flex shadow-cyan-300/50 rounded-sm
+  @apply w-auto h-14 p-3 fixed flex z-50 shadow-cyan-300/50 rounded-sm
 /* MD */ md:duration-1000 md:top-4 md:h-auto md:left-4 md:flex-col md:content-center md:rounded-full
 }
 .sideBar-container {
-  @apply w-full h-14 fixed flex ease-in-out duration-1000 bg-black shadow-lg shadow-cyan-300/50 rounded-sm
+  @apply w-full h-14 fixed flex z-50 ease-in-out duration-1000 bg-black shadow-lg shadow-cyan-300/50 rounded-sm
 /* MD */ md:w-16 md:h-4/6 md:left-4 sidebar-center md:flex-col duration-2000 md:content-center md:rounded-full
 }
 .burger-button-container {
