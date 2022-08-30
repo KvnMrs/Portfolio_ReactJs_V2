@@ -10,8 +10,11 @@ import Training from "../../components/about/Training";
 //Sub-components
 import ButtonCallToAction from "../../sub-components/buttons/ButtonCallToAction";
 
-// Assets
+//Assets
 import imgProfil from "../../../assets/img/imgAbout/Kevin.jpg";
+
+//Datas
+import dataSkills from "../../../datas/datasSkills";
 
 function About() {
   const [activeModal, setActiveModal] = useState(false);
@@ -40,7 +43,7 @@ function About() {
               </p>
             </aside>
             <aside className="img-infos-part">
-              <img className="prolfile-img" src={imgProfil} />
+              <img className="prolfile-img" alt="Profil" src={imgProfil} />
               <ButtonCallToAction
                 text={"En savoir plus"}
                 customClass="md:mt-16"
@@ -51,7 +54,16 @@ function About() {
             </aside>
           </article>
           <article className="softSkills-part">
-            <SoftSkills />
+            {dataSkills
+              .filter((atout) => atout.catégorie === "Atout")
+              .map((el) => (
+                <SoftSkills
+                  key={el.element}
+                  softSkill={el.element}
+                  categorie={el.catégorie}
+                  img={el.image}
+                />
+              ))}
           </article>
         </div>
         {activeModal ? (
