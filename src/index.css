@@ -160,17 +160,17 @@
   @apply w-4/6 pb-2 mb-5 mx-auto border-b text-xl text-center
 /* MD */ md:w-80
 }
-.description-part .description-text {
+.description-part .text-description {
   @apply w-full text-center
 /* MD */ md:text-lg
-}
-.description-part img {
-  @apply w-32 h-32 object-cover rounded-full border border-white
-/* MD */ md:w-64 md:h-64
 }
 .description-part .img-infos-part {
   @apply w-full h-full mx-auto mt-8 flex items-center place-content-evenly
 /* MD */ md:w-2/6 md:h-auto md:flex-col md:mt-5 md:p-0
+}
+.description-part .prolfile-img {
+  @apply w-32 h-32 object-cover rounded-full border border-white
+/* MD */ md:w-64 md:h-64
 }
 
 /* SoftSkills part */
