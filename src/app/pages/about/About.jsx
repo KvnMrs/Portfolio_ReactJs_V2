@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
+
 //Modules
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 // Components
 import SoftSkills from "../../components/about/SoftSkills";
@@ -23,15 +22,12 @@ import dataSkills from "../../../datas/datasSkills";
 //Hooks
 import { useOnScreen } from "../../hooks/useOnScreen";
 
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-
 function About() {
   const [activedAnimation, setActivedAnimation] = useState(false);
   const [activeModal, setActiveModal] = useState(false);
   const refAbout = useRef();
 
   const onScreen = useOnScreen(refAbout);
-  console.log("onScreen -->", onScreen);
 
   // OpenModal
   const openModal = () => {
@@ -47,11 +43,6 @@ function About() {
         {
           opacity: 0,
           scale: 0.1,
-          // scrollTrigger: {
-          //   trigger: element,
-          //   start: "top center",
-          //   end: "bottom center",
-          // },
         },
         {
           duration: 1,
@@ -70,11 +61,6 @@ function About() {
       {
         opacity: 0,
         scale: 0.1,
-        // scrollTrigger: {
-        //   trigger: element,
-        //   start: "top center",
-        //   end: "bottom center",
-        // },
       },
       {
         delay: 1,
@@ -92,11 +78,6 @@ function About() {
       {
         opacity: 0,
         scale: 0.1,
-        // scrollTrigger: {
-        //   trigger: element,
-        //   start: "top center",
-        //   end: "bottom center",
-        // },
       },
       {
         delay: 2,
