@@ -27,10 +27,10 @@
 
 /******* Modal *******/
 .modal-container {
- @apply absolute w-full bg-opacity-60 bg-black inset-0
+ @apply w-full absolute inset-0 z-50 bg-opacity-60 bg-black
 }
 .modal-sub-container {
-  @apply w-full h-screen flex flex-col absolute m-auto bg-gradient-to-r from-cyan-800 to-cyan-200 
+  @apply w-full h-screen flex flex-col absolute z-50 m-auto bg-gradient-to-r from-cyan-800 to-cyan-200
 /* MD */ md:w-5/6 md:inset-10 md:rounded-2xl
 }
 .modal-sub-container .content-tabs {
@@ -86,11 +86,11 @@
   }
 }
 .sideBar-closed {
-  @apply w-auto h-14 p-3 fixed flex z-50 shadow-cyan-300/50 rounded-sm
+  @apply w-auto h-14 p-3 fixed flex z-30 shadow-cyan-300/50 rounded-sm
 /* MD */ md:duration-1000 md:top-4 md:h-auto md:left-4 md:flex-col md:content-center md:rounded-full
 }
 .sideBar-container {
-  @apply w-full h-14 fixed flex z-50 ease-in-out duration-1000 bg-black shadow-lg shadow-cyan-300/50 rounded-sm
+  @apply w-full h-14 fixed flex z-30 ease-in-out duration-1000 bg-black shadow-lg shadow-cyan-300/50 rounded-sm
 /* MD */ md:w-16 md:h-4/6 md:left-4 sidebar-center md:flex-col duration-2000 md:content-center md:rounded-full
 }
 .burger-button-container {
