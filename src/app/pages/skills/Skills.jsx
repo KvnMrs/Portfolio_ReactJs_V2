@@ -10,6 +10,7 @@ function Skills() {
   const toggleSkills = () => {
     return setShowOthersSkills(!showOthersSkills);
   };
+
   return (
     <>
       <section id="skills" className="skills-container bg-section-card">
