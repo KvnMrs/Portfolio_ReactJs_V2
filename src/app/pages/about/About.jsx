@@ -121,7 +121,7 @@ function About() {
               </p>
             </aside>
             <aside className="img-infos-part" id="box2">
-              <img className="prolfile-img" alt="Profil" src={imgProfil} />
+              <img className="profile-img" alt="Profil" src={imgProfil} />
 
               <ButtonCallToAction
                 text={"En savoir plus"}

@@ -168,9 +168,9 @@
   @apply w-full h-full mx-auto mt-8 flex items-center place-content-evenly
 /* MD */ md:w-2/6 md:h-auto md:flex-col md:mt-5 md:p-0
 }
-.description-part .prolfile-img {
+.description-part .profile-img {
   @apply w-32 h-32 object-cover rounded-full border border-white
-/* MD */ md:w-64 md:h-64
+/* MD */ md:w-56 md:h-56
 }
 
 /* SoftSkills part */
