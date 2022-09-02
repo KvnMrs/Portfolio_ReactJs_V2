@@ -28,7 +28,7 @@ function Training() {
           </button>
         </div>
       </div>
-      <div className="experiences-training-list">
+      <div className="experiences-training-list boxModalContent">
         {showTrainingDev === 1 ? (
           <div className="min-h-screen bg-slate-700 bg-opacity-50">
             <WebDevelopmentTraining datas={dataTraining[0]} />
