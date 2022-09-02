@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
 // Assets
 import Github from "../../../assets/img/imgSocialMedias/Github.png";
@@ -14,7 +14,21 @@ import { gsap } from "gsap";
 function Home() {
   const [activeScroll, setActiveScroll] = useState(false);
 
-  const homeRef = useRef();
+  const animationHome = (element) => {
+    gsap.fromTo(
+      element,
+      { opacity: 0, x: -400 },
+      {
+        duration: 3,
+        opacity: 1,
+        x: "center",
+      }
+    );
+  };
+
+  useEffect(() => {
+    animationHome(".boxHome");
+  }, []);
 
   useEffect(() => {
     window.addEventListener(
@@ -37,31 +51,32 @@ function Home() {
           loop
           className="absolute w-full h-full object-cover"
         />
-        <header ref={homeRef} className="home-header z-10">
+        <header className="home-header z-10">
           <h1 className="welcome">Bienvenue sur mon Portfolio</h1>
-          {/* <p>
-            <span className="name">Kévin Marais</span> <br />
+          <p className="boxHome">
+            <span className="name">Kévin Marais</span>
+            <br />
             Développeur Web full stack.
-          </p> */}
-          <div
-            className={
-              activeScroll
-                ? "social-medias-onscroll transition-opacity duration-2000 opacity-100"
-                : "social-medias-onscroll opacity-0"
-            }
-          >
-            <SocialMediasLinks
-              link={"https://www.linkedin.com/in/k%C3%A9vin-marais-861314216/"}
-              img={Linkedin}
-              alt={"Lien vers Linkedin"}
-            />
-            <SocialMediasLinks
-              link={"https://github.com/KvnMrs"}
-              img={Github}
-              alt={"Lien vers Github"}
-            />
-          </div>
+          </p>
         </header>
+        <div
+          className={
+            activeScroll
+              ? "social-medias-onscroll transition-opacity duration-2000 opacity-100"
+              : "social-medias-onscroll opacity-0"
+          }
+        >
+          <SocialMediasLinks
+            link={"https://www.linkedin.com/in/k%C3%A9vin-marais-861314216/"}
+            img={Linkedin}
+            alt={"Lien vers Linkedin"}
+          />
+          <SocialMediasLinks
+            link={"https://github.com/KvnMrs"}
+            img={Github}
+            alt={"Lien vers Github"}
+          />
+        </div>
       </div>
     </>
   );
