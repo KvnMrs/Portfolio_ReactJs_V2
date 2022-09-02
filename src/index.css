@@ -40,7 +40,7 @@
   @apply w-24 h-10 text-center p-2 rounded-t-xl mx-1 my-2 py-1 px-2 text-sm font-bold rounded-lg hover:ring-2 duration-500 ease-in-out dark:bg-cyan-600 dark:hover:bg-cyan-700
 }
 .modal-sub-container .button-close {
-  @apply w-10 ml-auto text-3xl text-black font-bold
+  @apply ml-auto text-3xl text-black font-bold
 }
 .modal-sub-container .content-modal {
   @apply w-screen h-5/6 flex flex-col items-center m-auto
