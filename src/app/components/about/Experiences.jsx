@@ -12,7 +12,7 @@ function Experiences() {
 
   return (
     <>
-      <div className="content-experiences-traing">
+      <div className="content-experiences-training">
         <div className="nav-experiences-training">
           <button
             className="buttons-nav-experiences-training"
