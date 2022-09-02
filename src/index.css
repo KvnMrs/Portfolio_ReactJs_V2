@@ -59,6 +59,7 @@
 }
 .modal-sub-container .profile-hobbies {
   @apply h-2/5 flex flex-col m-2 items-center justify-center bg-slate-800 bg-opacity-50 rounded-lg shadow-xl
+/* MD */ md:px-4
 }
 
 .modal-sub-container .profile-title-cards {
