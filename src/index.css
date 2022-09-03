@@ -37,7 +37,7 @@
   @apply h-20 flex px-5 items-center bg-gradient-to-tr from-slate-700 to-cyan-600 bg-opacity-70
 }
 .modal-sub-container .tab-buttons {
-  @apply w-24 h-10 text-center p-2 rounded-t-xl mx-1 my-2 py-1 px-2 text-sm font-bold rounded-lg hover:ring-2 duration-500 ease-in-out dark:bg-cyan-600 dark:hover:bg-cyan-700
+  @apply w-24 h-auto hover:h-10 focus:h-10 transition text-center p-2 rounded-t-xl mx-1 my-2 py-1 px-2 text-sm font-bold rounded-lg  duration-500 ease-in-out hover:ring-2 focus:ring-2 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:bg-cyan-700 focus:border-b border-white
 }
 .modal-sub-container .button-close {
   @apply ml-auto text-3xl text-black font-bold
