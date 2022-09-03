@@ -39,7 +39,8 @@
   @apply h-20 flex px-5 items-center bg-gradient-to-tr from-dark_blue to-slate-700 bg-opacity-70
 }
 .modal-sub-container .tab-buttons {
-  @apply w-24 h-auto hover:h-10 focus:h-10 transition text-center p-2 rounded-t-xl mx-1 my-2 py-1 px-2 text-sm font-bold rounded-lg  duration-500 ease-in-out hover:ring-2 focus:ring-2 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:bg-cyan-800 focus:border-b border-white
+  @apply w-24 border-b p-2 py-1 px-2 mx-1 my-2 transition text-center rounded-t-xl text-sm font-bold rounded-lg duration-500 ease-in-out
+/* MD */ md:hover:h-10 md:dark:hover:bg-cyan-700
 }
 .modal-sub-container .button-close {
   @apply ml-auto text-3xl text-white font-semibold font-sans transition-all hover:scale-125 hover:font-light
@@ -79,14 +80,18 @@
 /* MD */ md:flex-col md:mr-3 md:mb-0
 }
 .modal-sub-container .buttons-nav-experiences-training {
-  @apply w-44 h-10 mx-1 py-2 px-4 self-start justify-center bg-black rounded-sm hover:h-10 focus:h-10 transition text-center p-2 rounded-t-xl my-2 text-sm font-bold  duration-500 ease-in-out hover:ring-2 focus:ring-2 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:bg-cyan-800 focus:border-b border-white
-  
+  @apply w-44 h-10 mx-1 my-2 py-2 px-4 self-start justify-center text-center rounded-md text-sm font-bold transition duration-500 ease-in-out focus:ring-2 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:bg-cyan-800 focus:border-b border-white
 }
 .modal-sub-container .experiences-training-container-list {
   @apply w-full max-h-full min-h-full overflow-scroll scrollbar-hide  rounded-lg border-b border-white
 }
 .modal-sub-container .experiences-training-list {
   @apply bg-gradient-to-r from-slate-700 to-slate-800 rounded-lg shadow-xl
+}
+
+.modal-sub-container .experience {
+  @apply w-full h-full  mt-1 m-auto text-center py-8 
+/* MD */ md:w-3/4 md:px-20
 }
 /********************** App ***********************/
 
