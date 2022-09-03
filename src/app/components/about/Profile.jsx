@@ -22,11 +22,11 @@ function Profile() {
       <div className="content-profile boxModalContent">
         <div className="profile-infos-contact">
           <div className="infos-contact-cards">
-            <h1 className="profile-title-cards">Infos</h1>
+            <h1 className="profile-card-titles">Infos</h1>
             <ProfileInformation svg={<ProfileSvg />} text={"Kévin Marais"} />
             <ProfileInformation
               svg={<CitySvg />}
-              text={"France, Loire-Atlantique, Nantes"}
+              text={"Nantes, Loire-Atlantique, France"}
             />
             <ProfileInformation
               svg={<BirthdaySvg />}
@@ -38,7 +38,7 @@ function Profile() {
             />
           </div>
           <div className="infos-contact-cards">
-            <h1 className="profile-title-cards">Contact</h1>
+            <h1 className="profile-card-titles">Contact</h1>
             <ProfileInformation
               svg={<EmailAdressSvg />}
               text={"kevin.mrs2020@gmail.com"}
@@ -55,7 +55,7 @@ function Profile() {
           </div>
         </div>
         <div className="profile-hobbies">
-          <h1 className="profile-title-cards">Centres d'intêret</h1>
+          <h1 className="profile-card-titles">Centres d'intêret</h1>
           <ProfileInformation
             svg={<HobbiesSvg />}
             text={`Passionné par les technologies et le code, qui parfois nous font beaucoup réfléchir,
