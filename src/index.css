@@ -14,7 +14,7 @@
   background: radial-gradient(#141e30, #243b55);
 }
 
-/*********** Global ************/
+/********************** Global ***********************/
 * {
   @apply text-white
 }
@@ -30,40 +30,70 @@
  @apply w-full absolute inset-0 z-50 bg-opacity-60 bg-black
 }
 .modal-sub-container {
-  @apply w-full h-screen flex flex-col absolute z-50 m-auto bg-gradient-to-r from-cyan-800 to-cyan-200
+  @apply w-full h-screen flex flex-col absolute z-50 m-auto bg-gradient-to-r from-slate-800 to-dark_blue
 /* MD */ md:w-5/6 md:inset-10 md:rounded-2xl
 }
+
+/* Tabs-Modal */
 .modal-sub-container .content-tabs {
-  @apply h-20 flex px-5 items-center bg-black bg-opacity-70
+  @apply h-20 flex px-5 items-center bg-gradient-to-tr from-dark_blue to-slate-700 bg-opacity-70
 }
 .modal-sub-container .tab-buttons {
-  @apply w-24 h-10 text-center p-2 rounded-t-xl mx-1 my-2 py-1 px-2 text-sm font-bold rounded-lg hover:ring-2 duration-500 ease-in-out dark:bg-cyan-600 dark:hover:bg-cyan-700
+  @apply w-24 border-b p-2 py-1 px-2 mx-1 my-2 transition text-center rounded-t-xl text-sm font-bold rounded-lg duration-500 ease-in-out
+/* MD */ md:hover:h-10 md:dark:hover:bg-cyan-700
 }
 .modal-sub-container .button-close {
-  @apply w-10 ml-auto text-3xl text-black font-bold
+  @apply ml-auto text-3xl text-white font-semibold font-sans transition-all hover:scale-125 hover:font-light
 }
 .modal-sub-container .content-modal {
   @apply w-screen h-5/6 flex flex-col items-center m-auto
-/* MD */ md:w-11/12 md:max-h-fit md:flex-row
+/* MD */ md:w-11/12 md:flex-row
 }
+
+/* Profile-Modal */
 .modal-sub-container .content-profile {
-  @apply w-full min-h-full flex flex-col px-2 mx-auto justify-center items-center rounded-lg shadow-lg bg-slate-800 bg-opacity-25
+  @apply w-full h-full flex flex-col mx-auto justify-center items-center  rounded-lg
 }
-.modal-sub-container .content-experiences-traing {
+.modal-sub-container .profile-infos-contact {
+  @apply min-w-full h-4/5
+/* MD */ md:flex
+}
+.modal-sub-container .infos-contact-cards {
+  @apply h-56 m-2 flex flex-col items-center overflow-y-scroll scrollbar-hide bg-gradient-to-r from-cyan-900 to-slate-600 rounded-lg shadow-xl border-b border-white
+/* MD */ md:w-1/2 md:h-auto md:justify-center
+}
+.modal-sub-container .profile-hobbies {
+  @apply h-2/5 flex flex-col m-2 items-center justify-center bg-gradient-to-r from-cyan-900 to-slate-600 rounded-lg shadow-xl border-b border-white
+/* MD */ md:px-4
+}
+.modal-sub-container .profile-card-titles {
+  @apply mt-1 text-2xl border-b-2 border-white
+}
+.modal-sub-container .content-experiences-training {
   @apply h-full w-auto flex
 }
+
+/* experiences-training-Modal */
+
 .modal-sub-container .nav-experiences-training {
   @apply flex h-full mb-5
 /* MD */ md:flex-col md:mr-3 md:mb-0
 }
 .modal-sub-container .buttons-nav-experiences-training {
-  @apply w-44 h-10 mx-1 py-2 px-4 self-start justify-center bg-black rounded-sm
+  @apply w-44 h-10 mx-1 my-2 py-2 px-4 self-start justify-center text-center rounded-md text-sm font-bold transition duration-500 ease-in-out focus:ring-2 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:bg-cyan-800 focus:border-b border-white
+}
+.modal-sub-container .experiences-training-container-list {
+  @apply w-full max-h-full min-h-full overflow-scroll scrollbar-hide  rounded-lg border-b border-white
 }
 .modal-sub-container .experiences-training-list {
-  @apply w-full max-h-full min-h-full overflow-scroll scrollbar-hide  rounded-lg
+  @apply bg-gradient-to-r from-slate-700 to-slate-800 rounded-lg shadow-xl
 }
 
-/*********** App ************/
+.modal-sub-container .experience {
+  @apply w-full h-full  mt-1 m-auto text-center py-8 
+/* MD */ md:w-3/4 md:px-20
+}
+/********************** App ***********************/
 
 .scroll-control {
   @apply h-screen w-screen snap-y snap-mandatory overflow-auto scroll-smooth global-bg
@@ -73,7 +103,7 @@
 /* MD */ md:w-full md:py-10
 }
 
-/*********** SideBar ************/
+/********************** SideBar ***********************/
 
 @media screen and (min-width: 780px)
 {
@@ -118,7 +148,7 @@
 /* MD */ md:w-7 md:duration-500 md:ease-in-out md:hover:scale-125 md:hover:fill-cyan-300 md:hover:shadow-lg md:hover:shadow-cyan-300/50
 }
 
-/*********** Home ************/
+/********************** Home ***********************/
 
 .home-container {
   @apply w-full h-screen flex flex-col justify-center text-center items-center text-xl snap-center
@@ -136,7 +166,7 @@
 /* MD */ md:fixed md:flex-col md:mt-0
 }
 
-/**************** About *****************/
+/*************************** About ****************************/
 
 .about-container {
   @apply w-full h-screen flex flex-col snap-center
@@ -195,7 +225,7 @@
   @apply mx-auto rounded
 }
 
-/************ Skills *************/
+/*********************** Skills ************************/
 
 .skills-container {
   @apply w-full h-screen mx-auto my-10 pt-8 flex place-content-center items-center snap-center
@@ -228,7 +258,7 @@
 /* MD */ md:h-16
 }
 
-/************ Projects *************/
+/*********************** Projects ************************/
 
 .Projects-container {
   @apply  h-screen my-10 mx-auto py-10 flex flex-col justify-center snap-center
@@ -264,7 +294,7 @@
   @apply w-4 h-4 ml-2 mr-1
 }
 
-/************ Contact *************/
+/*********************** Contact ************************/
 
 .Contact-container {
   @apply w-screen h-screen flex flex-col  mx-auto justify-center snap-center
@@ -299,10 +329,10 @@
   @apply w-40 self-center text-lg mt-8 mx-2 py-1 px-4 rounded-lg bg-cyan-600 duration-500 ease-in-out hover:bg-cyan-700 hover:ring-2 md:text-xl lg:px-7 lg:transform xl:text-2xl
 }
 
-/************ Sub-Components *************/
+/*********************** Sub-Components ************************/
 
 .callToAction {
-  @apply w-auto h-10 py-2 px-4 flex items-center font-bold duration-500 ease-in-out bg-cyan-600 hover:bg-cyan-700 rounded-lg hover:ring-2
+  @apply w-auto h-10 py-2 px-4 flex items-center font-bold duration-500 ease-in-out bg-cyan-600 hover:bg-cyan-700 hover:scale-105 rounded-lg hover:ring-2
 /* MD */ md:mx-auto
 }
 

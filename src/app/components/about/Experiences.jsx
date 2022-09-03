@@ -12,7 +12,7 @@ function Experiences() {
 
   return (
     <>
-      <div className="content-experiences-traing">
+      <div className="content-experiences-training">
         <div className="nav-experiences-training">
           <button
             className="buttons-nav-experiences-training"
@@ -28,14 +28,14 @@ function Experiences() {
           </button>
         </div>
       </div>
-      <div className="experiences-training-list boxModalContent">
+      <div className="experiences-training-container-list boxModalContent">
         {showExperienceDev === 1 ? (
-          <div className="min-h-screen bg-slate-700 bg-opacity-50">
+          <div className="experiences-training-list min-h-screen">
             <WebDevelopmentExperiences datas={datasExperiences[0]} />
           </div>
         ) : (
           datasExperiences.map((experience) => (
-            <div className="bg-slate-700  divide-black divide-y-8">
+            <div className="experiences-training-list">
               <OtherExperiences datas={experience} />
             </div>
           ))

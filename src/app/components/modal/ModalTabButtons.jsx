@@ -1,9 +1,12 @@
 import React from "react";
 
-const TabsModalButton = ({ tab, fct }) => {
+const TabsModalButton = ({ tab, fct, customClass }) => {
   return (
     <>
-      <button className="tab-buttons" onClick={fct}>
+      <button
+        className={`${customClass.activeClass} ` + "tab-buttons"}
+        onClick={fct}
+      >
         {tab}
       </button>
     </>
