@@ -23,7 +23,7 @@
   @apply bg-black
 }
 .bg-section-card {
- @apply bg-black bg-opacity-50 rounded-3xl
+ @apply bg-black bg-opacity-50 rounded-3xl h-full
 }
 
 /********************** SideBar ***********************/
@@ -177,17 +177,19 @@
 }
 .card {
   @apply w-screen h-screen bg-section-card py-5
-/* MD */ md:w-5/6 md:mx-auto md:py-20
+/* MD */ md:w-5/6 md:mx-auto md:pt-20
+/* LG */ lg:pb-10
 }
 
 /* Description part */
 
 .description-part {
   @apply flex flex-col
+/* SM */ sm:h-4/6
 /* MD */ md:w-5/6 md:mx-auto md:flex-row md:items-center md:text-center
 }
 .text-part {
-  @apply w-5/6 mx-auto
+  @apply w-5/6 h-4/6  flex flex-col justify-center mx-auto
   /* MD */ md:w-1/2
 }
 .text-title {
@@ -199,23 +201,26 @@
 /* MD */ md:text-lg
 }
 .img-infos-part {
-  @apply w-full h-full mx-auto mt-5 flex items-center place-content-evenly
+  @apply w-full h-2/6 mx-auto mt-5 flex items-center place-content-evenly
 /* MD */ md:w-2/6 md:h-auto md:flex-col md:p-0
 }
 .profile-img {
   @apply w-24 h-24 object-cover rounded-full border border-white
+/* SM */ sm:w-36 sm:h-36
 /* MD */ md:w-56 md:h-56
 }
 
 /* SoftSkills part */
 
 .softSkills-part {
-  @apply w-5/6 flex mx-auto self-center items-center overflow-x-auto
-/* LG */ lg:w-4/6 lg:h-3/6 lg:mt-5 lg:flex-wrap
+  @apply w-5/6 h-auto flex mx-auto self-center items-center overflow-x-auto
+/* SM */ sm:w-fit sm:h-2/6
+/* MD */ md:w-5/6
+/* LG */ lg:mt-5 lg:flex-wrap
 }
 .softSkill {
-  @apply min-w-max mx-3 flex flex-col mt-5 text-center pb-3
-/* MD */ md:w-36 md:mt-0 md:mx-auto md:pb-0
+  @apply w-max mx-3 flex flex-col mt-5 text-center pb-3
+/* MD */ md:min-w-max md:mx-auto xl:w-36 md:mt-0 md:pb-0
 }
 .title-softSkill {
   @apply font-semibold mb-1 min-w-max
@@ -223,7 +228,7 @@
 }
 .img-content {
   @apply w-12 p-2 self-center border rounded-lg gradiant-light
-/* MD */ md:w-16 md:mx-auto md:mt-5
+/* MD */ md:w-16 md:mx-auto md:mt-3
 }
 .softSkill-img {
   @apply mx-auto rounded
@@ -232,8 +237,8 @@
 /*********************** Skills ************************/
 
 .skills-container {
-  @apply w-full h-screen mx-auto my-10 pt-8 flex place-content-center items-center snap-center
-/* MD */ md:w-5/6
+  @apply w-full h-screen mx-auto my-10 flex place-content-center items-center snap-center
+/* MD */ md:w-5/6 md:pt-8
 }
 
 /* HardSkills */
@@ -254,7 +259,8 @@
 /* MD */ md:grid-cols-3 md:w-2/4
 }
 .skill {
-  @apply grid-cols-1 mx-auto my-3
+  @apply w-max grid-cols-1 mx-auto my-1
+/* MD */ md:my-3
 }
 .skill-name {
   @apply mx-auto mb-3 text-lg
@@ -306,7 +312,7 @@
 /*********************** Contact ************************/
 
 .Contact-container {
-  @apply w-screen h-screen flex flex-col mx-auto justify-center snap-center
+  @apply w-screen h-screen flex flex-col mx-auto pt-5 justify-center snap-center
 /* MD */ md:w-5/6
 }
 .Contact-text {
@@ -314,11 +320,11 @@
 /* MD */ md:mb-10 md:text-lg
 }
 .form-container {
-  @apply w-full
+  @apply w-full h-full
 /* MD */ md:h-2/3
 }
 .form {
-  @apply w-5/6 h-auto p-5 mt-3 flex flex-col mx-auto gradiant-light rounded-2xl
+  @apply w-5/6 p-5 mt-3 flex flex-col mx-auto gradiant-light rounded-2xl
 /* MD */ md:w-2/3 md:mt-8 md:flex-row
 }
 .form div {

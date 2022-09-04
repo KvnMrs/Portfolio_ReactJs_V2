@@ -15,7 +15,7 @@ const HardSkills = ({ toggleSkills }) => {
     <>
       <article className="hardSkills-container">
         <header className="hardSkills-header">
-          <h2 className="hardSkills-title ml-16">Compétences</h2>
+          <h2 className="hardSkills-title ml-10 md:ml-16">Compétences</h2>
           <ButtonCallToActionSvg
             svg={<RightArrowSvg />}
             fct={() => toggleSkills()}
