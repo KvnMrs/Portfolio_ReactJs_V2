@@ -27,12 +27,12 @@
 /* LG */ lg:py-5
 }
 .section-surface {
-  @apply w-screen h-full flex flex-col mx-auto py-3 bg-slate-700 bg-opacity-50
+  @apply w-screen h-full flex flex-col mx-auto py-3 justify-center bg-slate-700 bg-opacity-50
 /* MD */ md:py-0
 /* LG */ lg:w-10/12 lg:rounded-3xl
 }
 .section-sub-container {
-  @apply w-full m-auto text-center
+  @apply w-full h-3/4 m-auto text-center
 /* MD */ md:h-5/6
 }
 .section-header {
@@ -256,7 +256,7 @@
   @apply mx-auto mb-3 text-lg
 }
 .skill-img {
-  @apply w-10 h-10 mx-auto object-contain
+  @apply w-14 h-14 mx-auto object-contain
 /* MD */ md:w-20 md:h-16
 }
 
