@@ -1,14 +1,19 @@
 import React from "react";
 
-const ButtonCallToActionText = ({ text, fct, customClass, type }) => {
+const ButtonCallToActionText = ({ children, text, fct, customClass, type }) => {
   return (
     <>
       <button
         type={type ? type : "button"}
-        onClick={fct}
-        className={"callToAction-text" + ` ${customClass}`}
+        onClick={fct ? fct : null}
+        className={
+          customClass
+            ? "callToAction-text" + ` ${customClass}`
+            : "callToAction-text"
+        }
       >
-        {text}
+        {children ? children : null}
+        <p className="text-sm md:text-lg">{text}</p>
       </button>
     </>
   );
