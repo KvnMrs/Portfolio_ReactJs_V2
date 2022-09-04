@@ -210,8 +210,8 @@
 /* SoftSkills part */
 
 .softSkills-part {
-  @apply w-5/6 mt-5 flex  mx-auto self-center items-center overflow-x-auto
-/* LG */ lg:w-4/6 lg:h-3/6 lg:flex-wrap
+  @apply w-5/6 flex mx-auto self-center items-center overflow-x-auto
+/* LG */ lg:w-4/6 lg:h-3/6 lg:mt-5 lg:flex-wrap
 }
 .softSkill {
   @apply min-w-max mx-3 flex flex-col mt-5 text-center pb-3
@@ -310,41 +310,45 @@
 /* MD */ md:w-5/6
 }
 .Contact-text {
-  @apply w-5/6 text-lg text-center self-center lg:text-2xl
-/* MD */ md:mb-10
+  @apply w-5/6 text-center self-center
+/* MD */ md:mb-10 md:text-lg
 }
 .form-container {
   @apply w-full
 /* MD */ md:h-2/3
 }
 .form {
-  @apply w-5/6 h-auto flex flex-col mx-auto gradiant-light rounded-2xl p-5 mt-8
-/* MD */ md:w-2/3 md:flex-row
+  @apply w-5/6 h-auto p-5 mt-3 flex flex-col mx-auto gradiant-light rounded-2xl
+/* MD */ md:w-2/3 md:mt-8 md:flex-row
 }
 .form div {
   @apply w-full self-center px-8 flex flex-col
 }
 .form label {
-  @apply mb-1
+  @apply mb-1 text-sm
+/* MD */ md:text-base
 }
 .form input, select, option {
   @apply px-2 mb-2 rounded-lg text-black
 /* MD */ md:mb-5
 }
 .form textarea {
-  @apply h-4/6 rounded-lg text-black
+  @apply h-28 rounded-lg text-black
 /* MD */ md:h-64
 }
-.form button {
-  @apply w-40 self-center text-lg mt-8 mx-2 py-1 px-4 rounded-lg bg-cyan-600 duration-500 ease-in-out hover:bg-cyan-700 hover:ring-2 md:text-xl lg:px-7 lg:transform xl:text-2xl
+.submit-button {
+  @apply text-lg mt-5 mx-2 py-1 px-4
+/* MD */ md:text-xl md:mt-8
+/* LG */ lg:px-7
 }
 
 /*********************** Sub-Components ************************/
 
 .callToAction-text {
-  @apply w-auto h-8 py-2 px-4 flex items-center font-semibold duration-500 ease-in-out bg-cyan-600 hover:bg-cyan-700 hover:scale-105 rounded-lg hover:ring-2
+  @apply w-auto h-8 py-2 px-4 flex justify-center items-center font-semibold duration-500 ease-in-out bg-cyan-600 hover:bg-cyan-700 hover:scale-105 rounded-lg hover:ring-2
 /* MD */ md:mx-auto md:h-10 md:font-bold
 }
+
 .callToAction-svg {
   @apply w-8 h-8 flex items-center animate-pulse duration-500 ease-in-out rounded-full bg-cyan-600
 /* MD */ md:w-10 md:h-10 md:ml-5 md:p-3 md:hover:animate-none md:hover:ring-2 md:hover:bg-cyan-700
