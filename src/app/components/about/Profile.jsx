@@ -19,7 +19,7 @@ function Profile() {
     <>
       {/* <div className=""></div> */}
 
-      <div className="content-profile boxModalContent">
+      <div className="content-profile">
         <div className="profile-infos-contact">
           <div className="infos-contact-cards">
             <h1 className="profile-card-titles">Infos</h1>
