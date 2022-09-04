@@ -293,28 +293,19 @@
 }
 
 /*********************** Contact ************************/
-
-.Contact-container {
-  @apply w-screen h-screen flex flex-col mx-auto pt-5 justify-center snap-center
-/* MD */ md:w-5/6
-}
-.Contact-text {
-  @apply w-5/6 text-center self-center
-/* MD */ md:mb-10 md:text-lg
-}
-.form-container {
-  @apply w-full h-full
-/* MD */ md:h-2/3
+.contact-text {
+  @apply w-5/6 text-center self-center text-xl
+/* MD */ md:mb-5 md:text-xl
 }
 .form {
-  @apply w-5/6 p-5 mt-3 flex flex-col mx-auto gradiant-light rounded-2xl
-/* MD */ md:w-2/3 md:mt-8 md:flex-row
+  @apply w-5/6 p-5 flex flex-col mx-auto gradiant-light rounded-2xl
+/* MD */ md:w-10/12 md:mt-8 md:flex-row
 }
 .form div {
   @apply w-full self-center px-8 flex flex-col
 }
 .form label {
-  @apply mb-1 text-sm
+  @apply w-fit mb-1 text-sm
 /* MD */ md:text-base
 }
 .form input, select, option {
@@ -334,7 +325,7 @@
 /*********************** Sub-Components ************************/
 
 .callToAction-text {
-  @apply w-auto h-8 py-2 px-4 flex justify-center items-center font-semibold duration-500 ease-in-out bg-cyan-600 hover:bg-cyan-700 hover:scale-105 rounded-lg hover:ring-2
+  @apply w-fit h-8 py-2 px-4 flex justify-center self-center items-center font-semibold duration-500 ease-in-out bg-cyan-600 hover:bg-cyan-700 hover:scale-105 rounded-lg hover:ring-2
 /* MD */ md:mx-auto md:h-10 md:font-bold
 }
 
