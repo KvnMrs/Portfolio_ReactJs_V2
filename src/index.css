@@ -33,6 +33,13 @@
 .sections-sub-container {
   @apply w-full h-5/6 m-auto text-center
 }
+.sections-header {
+  @apply flex mx-auto justify-center items-center pb-6
+}
+.sections-title {
+  @apply w-auto flex pb-2 place-content-center text-2xl border-b
+/* MD */ md:pb-3 md:text-3xl
+}
 .bg-section-card {
  @apply bg-black bg-opacity-50 rounded-3xl h-full
 }
@@ -236,15 +243,6 @@
 /*********************** Skills ************************/
 
 /* HardSkills */
-
-.hardSkills-header {
-  @apply flex mx-auto justify-center items-center pb-6
-/* MD */
-}
-.hardSkills-title {
-  @apply w-auto flex pb-2 place-content-center text-2xl border-b
-/* MD */ md:pb-3 md:text-3xl
-}
 .skills-list {
   @apply w-3/4 grid grid-cols-2 gap-4 mx-auto
 /* MD */ md:grid-cols-3 md:gap-2
@@ -263,10 +261,6 @@
 
 /*********************** Projects ************************/
 
-.title-section {
-  @apply w-24 mx-auto pb-2 mb-5 border-b place-content-center text-center text-2xl
-/* MD */ md:pb-3 md:text-3xl
-}
 .Projects-part {
   @apply mx-auto relative flex flex-wrap justify-center
 }

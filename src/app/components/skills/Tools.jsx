@@ -14,13 +14,13 @@ function Tools({ toggleSkills }) {
   return (
     <>
       <article className="sections-sub-container">
-        <header className="hardSkills-header">
+        <header className="sections-header">
           <ButtonCallToActionSvg
             svg={<LeftArrowSvg />}
             fct={() => toggleSkills()}
             customClass={"mr-5"}
           />
-          <h2 className="hardSkills-title mr-8 md:mr-16">Outils</h2>
+          <h2 className="sections-title mr-8 md:mr-16">Outils</h2>
         </header>
 
         <aside className="skills-list">
