@@ -26,8 +26,8 @@ function About() {
 
   return (
     <>
-      <section id="about" className="sections-container">
-        <div className="sections-surface">
+      <section id="about" className="section-container">
+        <div className="section-surface">
           <article className="description-part">
             <aside className="description-text">
               <h1 className="description-title">En quelques mots...</h1>

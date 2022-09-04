@@ -22,21 +22,21 @@
 .global-bg {
   @apply bg-black
 }
-.sections-container {
+.section-container {
   @apply w-full h-screen flex flex-col snap-center
 /* LG */ lg:py-5
 }
-.sections-surface {
+.section-surface {
   @apply w-screen h-full flex flex-col mx-auto py-3 bg-slate-700 bg-opacity-50
 /* LG */ lg:w-10/12 lg:pb-8 lg:rounded-3xl
 }
-.sections-sub-container {
+.section-sub-container {
   @apply w-full h-5/6 m-auto text-center
 }
-.sections-header {
+.section-header {
   @apply flex mx-auto justify-center items-center pb-6
 }
-.sections-title {
+.section-title {
   @apply w-auto flex pb-2 place-content-center text-2xl border-b
 /* MD */ md:pb-3 md:text-3xl
 }
