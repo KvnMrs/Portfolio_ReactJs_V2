@@ -1,6 +1,6 @@
 import React from "react";
 
-function ButtonsSvg({ svg, fct, customClass }) {
+function ButtonCallToActionSvg({ svg, fct, customClass }) {
   return (
     <button onClick={fct} className={"callToAction-svg" + ` ${customClass}`}>
       {svg}
@@ -8,4 +8,4 @@ function ButtonsSvg({ svg, fct, customClass }) {
   );
 }
 
-export default ButtonsSvg;
+export default ButtonCallToActionSvg;

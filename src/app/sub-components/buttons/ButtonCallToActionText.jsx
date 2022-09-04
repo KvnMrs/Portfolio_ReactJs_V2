@@ -1,10 +1,10 @@
 import React from "react";
 
-const ButtonCallToAction = ({ text, fct, customClass }) => {
+const ButtonCallToActionText = ({ text, fct, customClass, type }) => {
   return (
     <>
       <button
-        type="button"
+        type={type ? type : "button"}
         onClick={fct}
         className={"callToAction-text" + ` ${customClass}`}
       >
@@ -14,4 +14,4 @@ const ButtonCallToAction = ({ text, fct, customClass }) => {
   );
 };
 
-export default ButtonCallToAction;
+export default ButtonCallToActionText;

@@ -328,11 +328,12 @@
   @apply mb-1
 }
 .form input, select, option {
-  @apply px-2 mb-2 text-black rounded-lg
+  @apply px-2 mb-2 rounded-lg text-black
 /* MD */ md:mb-5
 }
 .form textarea {
-  @apply h-64 rounded-lg
+  @apply h-4/6 rounded-lg text-black
+/* MD */ md:h-64
 }
 .form button {
   @apply w-40 self-center text-lg mt-8 mx-2 py-1 px-4 rounded-lg bg-cyan-600 duration-500 ease-in-out hover:bg-cyan-700 hover:ring-2 md:text-xl lg:px-7 lg:transform xl:text-2xl

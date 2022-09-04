@@ -8,7 +8,7 @@ import Profile from "../../components/about/Profile";
 import Training from "../../components/about/Training";
 
 //Sub-components
-import ButtonCallToAction from "../../sub-components/buttons/ButtonCallToAction";
+import ButtonCallToActionText from "../../sub-components/buttons/ButtonCallToActionText";
 
 //Assets
 import imgProfil from "../../../assets/img/imgAbout/Kevin.jpg";
@@ -46,13 +46,13 @@ function About() {
             <aside className="img-infos-part">
               <img className="profile-img" alt="Profil" src={imgProfil} />
 
-              <ButtonCallToAction
+              <ButtonCallToActionText
                 text={"En savoir plus"}
                 customClass="md:mt-16"
                 fct={openModal}
               >
                 Plus d'informations
-              </ButtonCallToAction>
+              </ButtonCallToActionText>
             </aside>
           </article>
           <article className="softSkills-part">
