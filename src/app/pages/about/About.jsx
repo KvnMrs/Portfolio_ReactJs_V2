@@ -50,9 +50,7 @@ function About() {
                 text={"En savoir plus"}
                 customClass="md:mt-16"
                 fct={openModal}
-              >
-                Plus d'informations
-              </ButtonCallToActionText>
+              ></ButtonCallToActionText>
             </aside>
           </article>
           <article className="softSkills-part">
