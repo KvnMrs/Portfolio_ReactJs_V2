@@ -8,27 +8,8 @@ import videoBg from "../../../assets/video/video-bg.webm";
 //Sub-component
 import SocialMediasLinks from "../../sub-components/Links/SocialMediasLinks";
 
-//Modules
-import { gsap } from "gsap";
-
 function Home() {
   const [activeScroll, setActiveScroll] = useState(false);
-
-  const animationHome = (element) => {
-    gsap.fromTo(
-      element,
-      { opacity: 0, x: -400 },
-      {
-        duration: 3,
-        opacity: 1,
-        x: "center",
-      }
-    );
-  };
-
-  useEffect(() => {
-    animationHome(".boxHome");
-  }, []);
 
   useEffect(() => {
     window.addEventListener(
@@ -53,7 +34,7 @@ function Home() {
         />
         <header className="home-header z-10">
           <h1 className="welcome">Bienvenue sur mon Portfolio</h1>
-          <p className="boxHome">
+          <p>
             <span className="name">Kévin Marais</span>
             <br />
             Développeur Web full stack.

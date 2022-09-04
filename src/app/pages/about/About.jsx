@@ -1,7 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
-
-//Modules
-import { gsap } from "gsap";
+import React, { useState } from "react";
 
 // Components
 import SoftSkills from "../../components/about/SoftSkills";
@@ -19,94 +16,20 @@ import imgProfil from "../../../assets/img/imgAbout/Kevin.jpg";
 //Datas
 import dataSkills from "../../../datas/datasSkills";
 
-//Hooks
-import { useOnScreen } from "../../hooks/useOnScreen";
-
 function About() {
-  const [activedAnimation, setActivedAnimation] = useState(false);
   const [activeModal, setActiveModal] = useState(false);
-  const refAbout = useRef();
-
-  const onScreen = useOnScreen(refAbout);
 
   // OpenModal
   const openModal = () => {
     setActiveModal(!activeModal);
   };
 
-  // Animations
-  const animationTextDescription = useCallback(
-    (element) => {
-      setActivedAnimation(true);
-      gsap.fromTo(
-        element,
-        {
-          opacity: 0,
-          scale: 0.1,
-        },
-        {
-          duration: 1,
-          opacity: 1,
-          scale: 1,
-        }
-      );
-    },
-    [onScreen]
-  );
-
-  const animationImage = (element) => {
-    setActivedAnimation(true);
-    gsap.fromTo(
-      element,
-      {
-        opacity: 0,
-        scale: 0.1,
-      },
-      {
-        delay: 1,
-        duration: 2,
-        opacity: 1,
-        scale: 1,
-      }
-    );
-  };
-
-  const animationSoftSkills = (element) => {
-    setActivedAnimation(true);
-    gsap.fromTo(
-      element,
-      {
-        opacity: 0,
-        scale: 0.1,
-      },
-      {
-        delay: 2,
-        duration: 3,
-        opacity: 1,
-        scale: 1,
-      }
-    );
-  };
-  // End animations
-
-  useEffect(() => {
-    onScreen && !activedAnimation && animationTextDescription("#box1");
-  }, [onScreen]);
-
-  useEffect(() => {
-    onScreen && !activedAnimation && animationImage("#box2");
-  }, [onScreen]);
-
-  useEffect(() => {
-    onScreen && !activedAnimation && animationSoftSkills("#box3");
-  }, [onScreen]);
-
   return (
     <>
-      <section id="about" ref={refAbout} className="about-container">
+      <section id="about" className="about-container">
         <div className="card">
           <article className="description-part">
-            <aside className="text-part" id="box1">
+            <aside className="text-part">
               <h2 className="text-title">En quelques mots...</h2>
               <p className="text-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
@@ -120,7 +43,7 @@ function About() {
                 lacinia, in placerat elit mattis. Suspendisse et lacinia leo.
               </p>
             </aside>
-            <aside className="img-infos-part" id="box2">
+            <aside className="img-infos-part">
               <img className="profile-img" alt="Profil" src={imgProfil} />
 
               <ButtonCallToAction
@@ -132,7 +55,7 @@ function About() {
               </ButtonCallToAction>
             </aside>
           </article>
-          <article className="softSkills-part" id="box3">
+          <article className="softSkills-part">
             {dataSkills
               .filter((atout) => atout.catégorie === "Atout")
               .map((el) => (

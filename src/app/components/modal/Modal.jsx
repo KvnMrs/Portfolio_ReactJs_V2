@@ -1,7 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
-
-//Modules
-import { gsap } from "gsap";
+import React, { useState, useEffect } from "react";
 
 // Components
 import ModalTabButtons from "./ModalTabButtons";
@@ -27,34 +24,14 @@ function Modal({
     if (activeTab === 3) return setActiveContent(component3);
   };
 
-  // Animations
-  const animationModalOpening = useCallback((element) => {
-    gsap.fromTo(
-      element,
-      {
-        opacity: 0,
-        y: -1000,
-      },
-      {
-        duration: 1,
-        opacity: 1,
-        y: 0,
-      }
-    );
-  }, []);
-
   useEffect(() => {
     toggleContent(activeTab);
   }, [activeTab]);
 
-  useEffect(() => {
-    animationModalOpening("#boxModal");
-  }, []);
-
   return (
     <>
       <div className="modal-container">
-        <div className="modal-sub-container" id="boxModal">
+        <div className="modal-sub-container">
           <div className="content-tabs">
             <ModalTabButtons
               customClass={activeTab !== 1 ? "" : { activeClass }}
