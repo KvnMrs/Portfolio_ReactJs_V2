@@ -30,7 +30,7 @@ function About() {
         <div className="card">
           <article className="description-part">
             <aside className="text-part">
-              <h2 className="text-title">En quelques mots...</h2>
+              <h1 className="text-title">En quelques mots...</h1>
               <p className="text-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
                 auctor lacus nec sem volutpat tristique. Interdum et malesuada

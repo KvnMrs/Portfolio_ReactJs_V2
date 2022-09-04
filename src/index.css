@@ -187,7 +187,7 @@
 /* MD */ md:w-5/6 md:mx-auto md:flex-row md:items-center md:text-center
 }
 .text-part {
-  @apply w-4/6 mx-auto
+  @apply w-5/6 mx-auto
   /* MD */ md:w-1/2
 }
 .text-title {
@@ -199,11 +199,11 @@
 /* MD */ md:text-lg
 }
 .img-infos-part {
-  @apply w-full h-full mx-auto mt-8 flex items-center place-content-evenly
-/* MD */ md:w-2/6 md:h-auto md:flex-col md:mt-5 md:p-0
+  @apply w-full h-full mx-auto mt-5 flex items-center place-content-evenly
+/* MD */ md:w-2/6 md:h-auto md:flex-col md:p-0
 }
 .profile-img {
-  @apply w-32 h-32 object-cover rounded-full border border-white
+  @apply w-24 h-24 object-cover rounded-full border border-white
 /* MD */ md:w-56 md:h-56
 }
 
@@ -222,8 +222,8 @@
 /* MD */ md:text-lg md:mx-auto md:mt-5
 }
 .img-content {
-  @apply w-14 p-2 self-center border rounded-lg gradiant-light
-/* MD */ md:w-20 md:mx-auto md:mt-5
+  @apply w-12 p-2 self-center border rounded-lg gradiant-light
+/* MD */ md:w-16 md:mx-auto md:mt-5
 }
 .softSkill-img {
   @apply mx-auto rounded
@@ -336,7 +336,7 @@
 /*********************** Sub-Components ************************/
 
 .callToAction {
-  @apply w-auto h-10 py-2 px-4 flex items-center font-bold duration-500 ease-in-out bg-cyan-600 hover:bg-cyan-700 hover:scale-105 rounded-lg hover:ring-2
-/* MD */ md:mx-auto
+  @apply w-auto h-8 py-2 px-4 flex items-center font-bold duration-500 ease-in-out bg-cyan-600 hover:bg-cyan-700 hover:scale-105 rounded-lg hover:ring-2
+/* MD */ md:mx-auto md:h-10
 }
 
