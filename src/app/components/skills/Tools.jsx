@@ -4,7 +4,7 @@ import React from "react";
 import dataSkills from "../../../datas/datasSkills";
 
 //Sub-component
-import ButtonsSvg from "../../sub-components/buttons/ButtonsSvg";
+import ButtonCallToActionSvg from "../../sub-components/buttons/ButtonCallToActionSvg";
 import Tool from "../../sub-components/skills/Tool";
 
 // Assets
@@ -15,7 +15,7 @@ function Tools({ toggleSkills }) {
     <>
       <article className="hardSkills-container">
         <header className="hardSkills-header">
-          <ButtonsSvg
+          <ButtonCallToActionSvg
             svg={<LeftArrowSvg />}
             fct={() => toggleSkills()}
             customClass={"mr-5"}

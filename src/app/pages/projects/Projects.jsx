@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import ProjectCard from "../../components/projects/ProjectCard";
 
 // Sub-Component
-import ButtonsSvg from "../../sub-components/buttons/ButtonsSvg";
+import ButtonCallToActionSvg from "../../sub-components/buttons/ButtonCallToActionSvg";
 
 // Datas
 import DatasProjects from "../../../datas/datasProjects";
@@ -29,14 +29,14 @@ function Projects() {
       <section id="projects" className="Projects-container bg-section-card">
         <h2 className="title-section">Projets</h2>
         <div className="Projects-part">
-          <ButtonsSvg
+          <ButtonCallToActionSvg
             svg={<LeftArrowSvg />}
             fct={() => previousProject()}
             customClass={
               "absolute top-1/2 z-10 left-2 md:left-auto md:right-3/4 md:mr-5 "
             }
           />
-          <ButtonsSvg
+          <ButtonCallToActionSvg
             svg={<RightArrowSvg />}
             fct={() => nextProject()}
             customClass={"absolute top-1/2 z-10 right-2  md:left-3/4 md:ml-5 "}

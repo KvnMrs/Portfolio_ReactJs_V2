@@ -4,7 +4,7 @@ import React from "react";
 import dataSkills from "../../../datas/datasSkills";
 
 // Sub-components
-import ButtonsSvg from "../../sub-components/buttons/ButtonsSvg";
+import ButtonCallToActionSvg from "../../sub-components/buttons/ButtonCallToActionSvg";
 import HardSkill from "../../sub-components/skills/HardSkill";
 
 // Assets
@@ -15,8 +15,8 @@ const HardSkills = ({ toggleSkills }) => {
     <>
       <article className="hardSkills-container">
         <header className="hardSkills-header">
-          <h2 className="hardSkills-title ml-16">Compétences</h2>
-          <ButtonsSvg
+          <h2 className="hardSkills-title ml-10 md:ml-16">Compétences</h2>
+          <ButtonCallToActionSvg
             svg={<RightArrowSvg />}
             fct={() => toggleSkills()}
             customClass={"ml-5"}

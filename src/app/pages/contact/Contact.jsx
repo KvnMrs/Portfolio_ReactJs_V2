@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+// Sub-components
+import ButtonCallToActionText from "../../sub-components/buttons/ButtonCallToActionText";
+
 const Contact = () => {
   const [reason, setReason] = useState("Contact professionel");
   const [firstname, setFirstname] = useState("");
@@ -66,14 +69,17 @@ const Contact = () => {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />
-              <button type="submit">
+              <ButtonCallToActionText
+                type={"submit"}
+                customClass={"submit-button"}
+              >
                 <a
+                  className="w-full text-sm md:text-lg"
                   href={`mailto:kevin.mrs2020@gmail.com?subject=${reason}&body=${firstname} ${lastname.toUpperCase()}%0A${mail}%0A${phone}%0A%0A${message}`}
-                  className="text-center"
                 >
                   Envoyer
                 </a>
-              </button>
+              </ButtonCallToActionText>
             </div>
           </form>
         </section>
