@@ -6,7 +6,7 @@ const ButtonCallToAction = ({ text, fct, customClass }) => {
       <button
         type="button"
         onClick={fct}
-        className={"callToAction" + ` ${customClass}`}
+        className={"callToAction-text" + ` ${customClass}`}
       >
         {text}
       </button>

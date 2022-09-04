@@ -191,8 +191,8 @@
   /* MD */ md:w-1/2
 }
 .text-title {
-  @apply w-4/6 pb-2 mb-5 mx-auto border-b text-xl text-center
-/* MD */ md:w-80
+  @apply w-5/6 pb-2 mb-5 mx-auto border-b text-2xl text-center
+/* MD */ md:w-80 md:pb-3
 }
 .text-description {
   @apply w-full text-center
@@ -242,10 +242,12 @@
   @apply w-full text-center
 }
 .hardSkills-header {
-  @apply flex mx-auto mb-10 justify-center items-center
+  @apply flex mx-auto mb-5 justify-center items-center
+/* MD */ md:mb-10
 }
 .hardSkills-title {
-  @apply w-auto flex pb-5 place-content-center text-3xl border-b
+  @apply w-auto flex pb-2 place-content-center text-2xl border-b
+/* MD */ md:pb-3 md:text-3xl
 }
 .skill-container {
   @apply w-3/4 grid grid-cols-2 gap-4 mx-auto
@@ -255,11 +257,11 @@
   @apply grid-cols-1 mx-auto my-3
 }
 .skill-name {
-  @apply mx-auto mb-3 text-xl
+  @apply mx-auto mb-3 text-lg
 }
 .skill-img {
-  @apply w-20 h-14 mx-auto object-contain
-/* MD */ md:h-16
+  @apply w-10 h-10 mx-auto object-contain
+/* MD */ md:w-20 md:h-16
 }
 
 /*********************** Projects ************************/
@@ -335,8 +337,16 @@
 
 /*********************** Sub-Components ************************/
 
-.callToAction {
-  @apply w-auto h-8 py-2 px-4 flex items-center font-bold duration-500 ease-in-out bg-cyan-600 hover:bg-cyan-700 hover:scale-105 rounded-lg hover:ring-2
-/* MD */ md:mx-auto md:h-10
+.callToAction-text {
+  @apply w-auto h-8 py-2 px-4 flex items-center font-semibold duration-500 ease-in-out bg-cyan-600 hover:bg-cyan-700 hover:scale-105 rounded-lg hover:ring-2
+/* MD */ md:mx-auto md:h-10 md:font-bold
+}
+.callToAction-svg {
+  @apply w-8 h-8 ml-5 flex items-center animate-pulse duration-500 ease-in-out rounded-full bg-cyan-600
+/* MD */ md:w-10 md:h-10 md:p-3 md:hover:animate-none md:hover:ring-2 md:hover:bg-cyan-700
+}
+.callToAction-svg svg {
+  @apply w-4 mx-auto
+/* MD */ md:w-20
 }
 
