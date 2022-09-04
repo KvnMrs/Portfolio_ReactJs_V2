@@ -13,7 +13,7 @@ import LeftArrowSvg from "../../../assets/svg/global/LeftArrowSvg";
 function Tools({ toggleSkills }) {
   return (
     <>
-      <article className="hardSkills-container">
+      <article className="sections-sub-container">
         <header className="hardSkills-header">
           <ButtonCallToActionSvg
             svg={<LeftArrowSvg />}

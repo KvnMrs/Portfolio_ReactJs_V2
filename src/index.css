@@ -30,7 +30,9 @@
   @apply w-screen h-full flex flex-col mx-auto py-3 bg-slate-700 bg-opacity-50
 /* LG */ lg:w-10/12 lg:pb-8 lg:rounded-3xl
 }
-
+.sections-sub-container {
+  @apply w-full h-5/6 m-auto text-center
+}
 .bg-section-card {
  @apply bg-black bg-opacity-50 rounded-3xl h-full
 }
@@ -235,9 +237,6 @@
 
 /* HardSkills */
 
-.hardSkills-container {
-  @apply w-full h-5/6 m-auto text-center
-}
 .hardSkills-header {
   @apply flex mx-auto justify-center items-center pb-6
 /* MD */
@@ -264,10 +263,6 @@
 
 /*********************** Projects ************************/
 
-.Projects-container {
-  @apply h-screen my-10 mx-auto py-10 flex flex-col justify-center snap-center
-/* MD */ md:w-5/6
-}
 .title-section {
   @apply w-24 mx-auto pb-2 mb-5 border-b place-content-center text-center text-2xl
 /* MD */ md:pb-3 md:text-3xl
