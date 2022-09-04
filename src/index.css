@@ -27,8 +27,8 @@
 /* LG */ lg:py-5
 }
 .sections-surface {
-  @apply w-screen h-full mx-auto py-3 bg-slate-700 bg-opacity-50
-/* LG */ lg:w-10/12 lg:pb-10 lg:rounded-3xl
+  @apply w-screen h-full flex flex-col mx-auto py-3 bg-slate-700 bg-opacity-50
+/* LG */ lg:w-10/12 lg:pb-8 lg:rounded-3xl
 }
 
 .bg-section-card {
@@ -233,27 +233,22 @@
 
 /*********************** Skills ************************/
 
-.skills-container {
-  @apply w-full h-screen mx-auto my-10 flex place-content-center items-center snap-center
-/* MD */ md:w-5/6 md:pt-8
-}
-
 /* HardSkills */
 
 .hardSkills-container {
-  @apply w-full text-center
+  @apply w-full h-5/6 m-auto text-center
 }
 .hardSkills-header {
-  @apply flex mx-auto mb-5 justify-center items-center
-/* MD */ md:mb-10
+  @apply flex mx-auto justify-center items-center pb-6
+/* MD */
 }
 .hardSkills-title {
   @apply w-auto flex pb-2 place-content-center text-2xl border-b
 /* MD */ md:pb-3 md:text-3xl
 }
-.skill-container {
+.skills-list {
   @apply w-3/4 grid grid-cols-2 gap-4 mx-auto
-/* MD */ md:grid-cols-3 md:w-2/4
+/* MD */ md:grid-cols-3 md:gap-2
 }
 .skill {
   @apply w-max grid-cols-1 mx-auto my-1

@@ -23,7 +23,7 @@ function Tools({ toggleSkills }) {
           <h2 className="hardSkills-title mr-8 md:mr-16">Outils</h2>
         </header>
 
-        <aside className="skill-container">
+        <aside className="skills-list">
           {dataSkills
             .filter((category) => category.catégorie === "Outil")
             .map((tool) => (

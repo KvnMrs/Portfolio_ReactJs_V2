@@ -13,12 +13,14 @@ function Skills() {
 
   return (
     <>
-      <section id="skills" className="skills-container bg-section-card">
-        {showOthersSkills ? (
-          <Tools toggleSkills={toggleSkills} />
-        ) : (
-          <HardSkills toggleSkills={toggleSkills} />
-        )}
+      <section id="skills" className="sections-container">
+        <div className="sections-surface">
+          {showOthersSkills ? (
+            <Tools toggleSkills={toggleSkills} />
+          ) : (
+            <HardSkills toggleSkills={toggleSkills} />
+          )}
+        </div>
       </section>
     </>
   );
