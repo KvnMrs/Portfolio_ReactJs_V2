@@ -3,17 +3,17 @@ import React from "react";
 const ProjectCard = ({ img, title, category, description, link }) => {
   return (
     <>
-      <article className="Project">
+      <article className="project">
         <img alt={title} src={img} />
         <aside className="project-content">
-          <h3 className="Project-title">{title}</h3>
-          <h4 className="Project-techno">{category}</h4>
-          <p className="Project-description">{description}</p>
+          <h3 className="project-title">{title}</h3>
+          <h4 className="project-techno">{category}</h4>
+          <p className="project-description">{description}</p>
 
-          <a className="Project-link" href={link} blank="">
+          <a className="project-link" href={link} blank="">
             Visiter
             <svg
-              className="Projects-svg"
+              className="projects-svg"
               aria-hidden="true"
               fill="currentColor"
               viewBox="0 0 20 20"

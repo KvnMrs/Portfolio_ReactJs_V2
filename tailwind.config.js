@@ -9,6 +9,8 @@ module.exports = {
         wild_red: "#F76C6C",
       },
       screens: {
+        sm: "400px",
+        // => @media (min-width: 400px) { ... }
         md: "650px",
         // => @media (min-width: 650px) { ... }
         lg: "950px",

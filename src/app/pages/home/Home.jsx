@@ -40,7 +40,7 @@ function Home() {
             Développeur Web full stack.
           </p>
         </header>
-        <div
+        {/* <div
           className={
             activeScroll
               ? "social-medias-onscroll transition-opacity duration-2000 opacity-100"
@@ -57,7 +57,7 @@ function Home() {
             img={Github}
             alt={"Lien vers Github"}
           />
-        </div>
+        </div> */}
       </div>
     </>
   );
