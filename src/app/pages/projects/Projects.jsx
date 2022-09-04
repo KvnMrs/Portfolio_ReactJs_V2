@@ -26,35 +26,43 @@ function Projects() {
   };
   return (
     <>
-      <section id="projects" className="Projects-container bg-section-card">
-        <h2 className="title-section">Projets</h2>
-        <div className="Projects-part">
-          <ButtonCallToActionSvg
-            svg={<LeftArrowSvg />}
-            fct={() => previousProject()}
-            customClass={
-              "absolute top-1/2 z-10 left-2 md:left-auto md:right-3/4 md:mr-5 "
-            }
-          />
-          <ButtonCallToActionSvg
-            svg={<RightArrowSvg />}
-            fct={() => nextProject()}
-            customClass={"absolute top-1/2 z-10 right-2  md:left-3/4 md:ml-5 "}
-          />
-          {DatasProjects.map((el, index) => (
-            <>
-              {currentProject === index ? (
-                <ProjectCard
-                  key={el.title}
-                  img={el.img}
-                  title={el.title}
-                  category={el.category}
-                  description={el.description}
-                  link={el.link}
-                />
-              ) : null}
-            </>
-          ))}
+      <section id="projects" className="section-container">
+        <div className="section-surface">
+          <article className="section-sub-container">
+            <header className="section-header">
+              <h2 className="section-title">Projets</h2>
+            </header>
+            <div className="projects-carrousel">
+              <ButtonCallToActionSvg
+                svg={<LeftArrowSvg />}
+                fct={() => previousProject()}
+                customClass={
+                  "absolute top-1/2 z-10 left-2 md:left-auto md:right-3/4 md:mr-5 "
+                }
+              />
+              <ButtonCallToActionSvg
+                svg={<RightArrowSvg />}
+                fct={() => nextProject()}
+                customClass={
+                  "absolute top-1/2 z-10 right-2  md:left-3/4 md:ml-5 "
+                }
+              />
+              {DatasProjects.map((el, index) => (
+                <>
+                  {currentProject === index ? (
+                    <ProjectCard
+                      key={el.title}
+                      img={el.img}
+                      title={el.title}
+                      category={el.category}
+                      description={el.description}
+                      link={el.link}
+                    />
+                  ) : null}
+                </>
+              ))}
+            </div>
+          </article>
         </div>
       </section>
     </>

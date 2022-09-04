@@ -5,9 +5,9 @@ const SoftSkills = ({ softSkill, categorie, img }) => {
     <>
       <>
         <aside className="softSkill">
-          <h4 className="title-softSkill">{softSkill}</h4>
-          <div className="img-content">
-            <img className="softSkill-img" alt={categorie} src={img} />
+          <h4 className="softSkill-title">{softSkill}</h4>
+          <div className="softSkill-img">
+            <img alt={categorie} src={img} />
           </div>
         </aside>
       </>

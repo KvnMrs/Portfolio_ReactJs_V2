@@ -26,12 +26,12 @@ function About() {
 
   return (
     <>
-      <section id="about" className="about-container">
-        <div className="card">
+      <section id="about" className="section-container">
+        <div className="section-surface">
           <article className="description-part">
-            <aside className="text-part">
-              <h1 className="text-title">En quelques mots...</h1>
-              <p className="text-description">
+            <aside className="description-text">
+              <h1 className="description-title">En quelques mots...</h1>
+              <p className="text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
                 auctor lacus nec sem volutpat tristique. Interdum et malesuada
                 fames ac nte ipsum primis in faucibus. Aenean rutrum eros vitae
@@ -43,16 +43,17 @@ function About() {
                 lacinia, in placerat elit mattis. Suspendisse et lacinia leo.
               </p>
             </aside>
-            <aside className="img-infos-part">
+            <aside className="img-button-part">
               <img className="profile-img" alt="Profil" src={imgProfil} />
 
               <ButtonCallToActionText
                 text={"En savoir plus"}
-                customClass="md:mt-16"
+                customClass="m-auto"
                 fct={openModal}
               ></ButtonCallToActionText>
             </aside>
           </article>
+
           <article className="softSkills-part">
             {dataSkills
               .filter((atout) => atout.catégorie === "Atout")

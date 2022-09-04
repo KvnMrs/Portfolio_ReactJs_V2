@@ -13,9 +13,9 @@ import RightArrowSvg from "../../../assets/svg/global/RightArrowSvg";
 const HardSkills = ({ toggleSkills }) => {
   return (
     <>
-      <article className="hardSkills-container">
-        <header className="hardSkills-header">
-          <h2 className="hardSkills-title ml-10 md:ml-16">Compétences</h2>
+      <article className="section-sub-container">
+        <header className="section-header">
+          <h2 className="section-title ml-8 md:ml-16">Compétences</h2>
           <ButtonCallToActionSvg
             svg={<RightArrowSvg />}
             fct={() => toggleSkills()}
@@ -23,7 +23,7 @@ const HardSkills = ({ toggleSkills }) => {
           />
         </header>
 
-        <aside className="skill-container">
+        <aside className="skills-list">
           {dataSkills
             .filter((category) => category.catégorie === "Compétence")
             .map((hardSkill) => (
