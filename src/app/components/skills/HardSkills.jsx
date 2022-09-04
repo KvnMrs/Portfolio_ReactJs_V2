@@ -1,7 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
-
-//Modules
-import { gsap } from "gsap";
+import React from "react";
 
 // Datas
 import dataSkills from "../../../datas/datasSkills";
@@ -13,44 +10,10 @@ import HardSkill from "../../sub-components/skills/HardSkill";
 // Assets
 import RightArrowSvg from "../../../assets/svg/global/RightArrowSvg";
 
-//Hooks
-import { useOnScreen } from "../../hooks/useOnScreen";
-
 const HardSkills = ({ toggleSkills }) => {
-  const [activedAnimation, setActivedAnimation] = useState(false);
-  const refHardSkill = useRef();
-
-  const refChildren = gsap.utils.selector(refHardSkill);
-
-  const onScreen = useOnScreen(refHardSkill);
-
-  // Animations
-  const animationHardSkills = useCallback(
-    (element) => {
-      setActivedAnimation(true);
-      gsap.fromTo(
-        refChildren(element),
-        {
-          opacity: 0,
-          scale: 0.1,
-        },
-        {
-          duration: 1,
-          opacity: 1,
-          scale: 1,
-        }
-      );
-    },
-    [onScreen]
-  );
-
-  useEffect(() => {
-    onScreen && !activedAnimation && animationHardSkills(".boxSkill");
-  }, [onScreen]);
-
   return (
     <>
-      <article className="hardSkills-container" ref={refHardSkill}>
+      <article className="hardSkills-container">
         <header className="hardSkills-header">
           <h2 className="hardSkills-title ml-16">Compétences</h2>
           <ButtonsSvg
