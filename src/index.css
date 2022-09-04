@@ -27,12 +27,12 @@
 /* LG */ lg:py-5
 }
 .section-surface {
-  @apply w-screen h-full flex flex-col mx-auto py-3 bg-slate-700 bg-opacity-50
+  @apply w-screen h-full flex flex-col mx-auto py-3 justify-center bg-slate-700 bg-opacity-50
 /* MD */ md:py-0
 /* LG */ lg:w-10/12 lg:rounded-3xl
 }
 .section-sub-container {
-  @apply w-full m-auto text-center
+  @apply w-full h-3/4 m-auto text-center
 /* MD */ md:h-5/6
 }
 .section-header {
@@ -158,7 +158,7 @@
   @apply bg-gradient-to-r from-slate-700 to-slate-800 rounded-lg shadow-xl
 }
 .experience {
-  @apply w-full h-full  mt-1 m-auto text-center py-8 
+  @apply w-full h-full  mt-1 m-auto text-center py-8
 /* MD */ md:w-3/4 md:px-20
 }
 
@@ -196,7 +196,7 @@
 
 .description-part {
   @apply w-11/12 h-5/6 py-2 flex flex-col mx-auto
-  /* MD */ md:flex-row
+  /* MD */ sm:h-3/4 md:flex-row
 }
 .description-text {
   @apply w-5/6 flex flex-col justify-center mx-auto
@@ -214,8 +214,7 @@
 }
 .img-button-part {
   @apply w-4/5 m-auto flex items-center
-/* MD */ md:w-2/6 md:h-5/6 md:py-5 md:self-center md:flex-col
-/* XL */ xl:h-4/6
+/* MD */ md:w-2/6 md:h-4/6 md:py-5 md:self-center md:flex-col
 }
 .profile-img {
   @apply w-24 h-24 object-cover rounded-full border border-white
@@ -257,7 +256,7 @@
   @apply mx-auto mb-3 text-lg
 }
 .skill-img {
-  @apply w-10 h-10 mx-auto object-contain
+  @apply w-14 h-14 mx-auto object-contain
 /* MD */ md:w-20 md:h-16
 }
 
