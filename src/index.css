@@ -23,7 +23,8 @@
   @apply bg-black
 }
 .section-container {
-  @apply w-full h-screen flex flex-col snap-center
+  @apply w-full h-screen flex flex-col
+/* LG */ sm:snap-center
 /* LG */ lg:py-5
 }
 .section-surface {
@@ -45,6 +46,17 @@
 }
 .bg-section-card {
  @apply bg-black bg-opacity-50 rounded-3xl h-full
+}
+
+/********************** App ***********************/
+
+.scroll-control {
+  @apply h-screen w-screen overflow-auto scroll-smooth global-bg
+/* SM */ sm:snap-y sm:snap-mandatory
+}
+.main-container {
+  @apply w-screen bg-[url('./assets/img/imgBackground/main-bg.jpg')] bg-cover bg-fixed bg-no-repeat
+/* MD */ md:w-full md:py-10
 }
 
 /********************** SideBar ***********************/
@@ -161,16 +173,6 @@
 .experience {
   @apply w-full h-full  mt-1 m-auto text-center py-8
 /* MD */ md:w-3/4 md:px-20
-}
-
-/********************** App ***********************/
-
-.scroll-control {
-  @apply h-screen w-screen snap-y snap-mandatory overflow-auto scroll-smooth global-bg
-}
-.main-container {
-  @apply w-screen bg-[url('./assets/img/imgBackground/main-bg.jpg')] bg-cover bg-fixed bg-no-repeat
-/* MD */ md:w-full md:py-10
 }
 
 /********************** Home ***********************/
