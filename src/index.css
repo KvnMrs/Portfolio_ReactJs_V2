@@ -23,7 +23,8 @@
   @apply bg-black
 }
 .section-container {
-  @apply w-full h-screen flex flex-col snap-center
+  @apply w-full h-screen flex flex-col
+/* LG */ sm:snap-center
 /* LG */ lg:py-5
 }
 .section-surface {
@@ -33,8 +34,7 @@
 }
 .section-sub-container {
   @apply w-full text-center
-/* SM */ sm:h-3/4 sm:m-auto
-/* MD */ md:h-5/6
+/* MD */ md:h-5/6 md:m-auto
 }
 .section-header {
   @apply flex mx-auto justify-center items-center pb-6
@@ -45,6 +45,17 @@
 }
 .bg-section-card {
  @apply bg-black bg-opacity-50 rounded-3xl h-full
+}
+
+/********************** App ***********************/
+
+.scroll-control {
+  @apply h-screen w-screen overflow-auto scroll-smooth global-bg
+/* SM */ sm:snap-y sm:snap-mandatory
+}
+.main-container {
+  @apply w-screen bg-[url('./assets/img/imgBackground/main-bg.jpg')] bg-cover bg-fixed bg-no-repeat
+/* MD */ md:w-full md:py-10
 }
 
 /********************** SideBar ***********************/
@@ -163,16 +174,6 @@
 /* MD */ md:w-3/4 md:px-20
 }
 
-/********************** App ***********************/
-
-.scroll-control {
-  @apply h-screen w-screen snap-y snap-mandatory overflow-auto scroll-smooth global-bg
-}
-.main-container {
-  @apply w-screen bg-[url('./assets/img/imgBackground/main-bg.jpg')] bg-cover bg-fixed bg-no-repeat
-/* MD */ md:w-full md:py-10
-}
-
 /********************** Home ***********************/
 
 .home-container {
@@ -196,13 +197,15 @@
 /* Description part */
 
 .description-part {
-  @apply w-11/12 h-5/6 py-2 flex flex-col mx-auto
-  /* MD */ sm:h-3/4 md:flex-row
+  @apply w-11/12 py-2 flex flex-col mx-auto
+/* sm */ sm:h-3/4
+/* MD */ md:flex-row
 }
 .description-text {
   @apply flex flex-col justify-center mx-auto
 /* SM */ sm:w-5/6
-/* MD */ md:w-4/6 md:h-auto
+/* MD */ md:w-4/6
+/* LG */ lg:w-1/2
 }
 .description-title {
   @apply pb-1 mb-5 mx-auto border-b text-xl text-center
@@ -214,8 +217,8 @@
 /* MD */ md:text-lg
 }
 .img-button-part {
-  @apply w-4/5 m-auto flex items-center
-/* MD */ md:w-2/6 md:h-4/6 md:py-5 md:self-center md:flex-col
+  @apply w-4/5 my-6 mx-auto flex items-center
+/* MD */ md:w-2/6  md:self-center md:flex-col
 }
 .profile-img {
   @apply w-24 h-24 object-cover rounded-full border border-white
