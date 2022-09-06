@@ -1,8 +1,16 @@
 const dataCv = [
+  {
+    date: "Mars - Juillet 2022",
+    entreprise: "Cascade8",
+    lieu: "Auvergne-Rhône-Alpes | Lyon",
+    statut: "Stagiaire Developpeur Front-End",
+    mission: "blablabla blablabla blablabla blablabla",
+    categorie: "developpement web",
+  },
   /********** RESTAURATION ***************/
   {
     date: "Mai 2021",
-    entreprise: "Sca-Ouest ",
+    entreprise: "Sca-Ouest",
     lieu: "Saint-Etienne de Montluc",
     statut: "Préparateur de commande",
     mission: "Préparations des commandes en entrepôt.",
@@ -10,7 +18,7 @@ const dataCv = [
   },
   {
     date: "Avril 2019 à Février 2020",
-    entreprise: "L'Octopus ",
+    entreprise: "L'Octopus",
     lieu: "Nantes",
     statut: "Chef de rang ",
     mission:
@@ -19,7 +27,7 @@ const dataCv = [
   },
   {
     date: " Septembre 2018 à Mars 2019",
-    entreprise: "Le French Pub ",
+    entreprise: "Le French Pub",
     lieu: "Saint-Sébastien",
     statut: "Serveur",
     mission:
@@ -28,7 +36,7 @@ const dataCv = [
   },
   {
     date: "Juin 2018 à Septembe 2018",
-    entreprise: "L'Opium ",
+    entreprise: "L'Opium",
     lieu: "Nantes",
     statut: "Serveur / Barman",
     mission:
@@ -39,7 +47,7 @@ const dataCv = [
 
   {
     date: "Septembre 2017 à Juin 2018",
-    entreprise: "La Coquille ",
+    entreprise: "La Coquille",
     lieu: "Nantes",
     statut: "Buraliste",
     mission: "Vente des produits présents, gestion des conflits",
@@ -47,7 +55,7 @@ const dataCv = [
   },
   {
     date: "Juin 2017 à Septembe 2017",
-    entreprise: "Tipiak ",
+    entreprise: "Tipiak",
     lieu: "Saint-Herblain",
     statut: "Agent de production",
     mission:
@@ -58,7 +66,7 @@ const dataCv = [
 
   {
     date: "Février 2017 à Juin 2018",
-    entreprise: "Sam's Barber ",
+    entreprise: "Sam's Barber",
     lieu: "Dublin",
     statut: "Barbier",
     mission: "Stage en immersion dans le but d'apprendre l'Anglais",

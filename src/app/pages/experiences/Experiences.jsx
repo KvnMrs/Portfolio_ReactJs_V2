@@ -1,39 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Datas
 import datasExperiences from "../../../datas/datasExperiences";
 import dataTraining from "../../../datas/datasTraining";
 
 // Sub-Component
-import OtherExperiences from "../../sub-components/modal/OtherExperiences";
-import OtherTraining from "../../sub-components/modal/OtherTraining";
-import WebDevelopmentExperiences from "../../sub-components/modal/WebDevelopmentExperiences";
+import ExperiencesList from "../../components/experiences/ExperiencesList";
+import TrainingsList from "../../components/experiences/TrainingsList";
 
 function Experiences() {
+  const [showTraings, setShowTrainings] = useState(false);
+
   return (
     <>
-      <section id="experiences" className="section-container">
-        <div className="section-surface">
-          <article className="section-sub-container">
-            <header className="section-header">
-              <h1 className="section-title">Expreiences & Formations</h1>
+      <section id="experiences" className="sections-containers">
+        <div className="sections-surfaces">
+          <article className="sections-sub-containers">
+            <header className="sections-headers">
+              <h1 className="sections-titles">Experiences & Formations</h1>
             </header>
-            <div className="flex w-full h-5/6 bg-red-400">
-              <aside className="experiences-list">
+            <div className="lists-container">
+              <aside className="lists-experience-training">
                 {datasExperiences.map((experience) => (
-                  <div className="experiences-training-list">
-                    <OtherExperiences datas={experience} />
+                  <div className="experiences-trainings-lists">
+                    <ExperiencesList datas={experience} />
                   </div>
                 ))}
               </aside>
-              {/* 
-              <aside className="experiences-list">
+              <aside className="lists-experience-training">
                 {dataTraining.map((training) => (
-                  <div className="experiences-training-list">
-                    <OtherTraining datas={training} />
+                  <div className="experiences-trainings-lists">
+                    <TrainingsList datas={training} />
                   </div>
                 ))}
-              </aside> */}
+              </aside>
             </div>
           </article>
         </div>
