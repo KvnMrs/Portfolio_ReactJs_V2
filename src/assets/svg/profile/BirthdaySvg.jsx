@@ -13,7 +13,6 @@ function BirthdaySvg() {
         style={{ enableBackground: "new 0 0 110.08 122.88" }}
         fillRule="evenodd"
         clipRule="evenodd"
-        width={30}
       >
         <g>
           <path

@@ -12,7 +12,6 @@ function PhoneSvg() {
         fillRule="evenodd"
         clipRule="evenodd"
         viewBox="0 0 508 512.06"
-        width={30}
       >
         <g id="Layer_x0020_1">
           <metadata id="CorelCorpID_0Corel-Layer" />
