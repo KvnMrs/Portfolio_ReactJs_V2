@@ -16,7 +16,7 @@ function Modal({
   const [activeTab, setActiveTab] = useState(1);
   const [activeContent, setActiveContent] = useState(component1);
 
-  const activeClass = "h-10 bg-cyan-800 border-b border-white ring-2";
+  const activeClass = "bg-cyan-800 border-b border-white ring-2";
 
   const toggleContent = (activeTab) => {
     if (activeTab === 1) return setActiveContent(component1);
