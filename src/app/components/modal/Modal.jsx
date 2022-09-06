@@ -38,16 +38,20 @@ function Modal({
               tab={tab}
               fct={() => setActiveTab(1)}
             />
-            <ModalTabButtons
-              customClass={activeTab !== 2 ? "" : { activeClass }}
-              tab={tab2}
-              fct={() => setActiveTab(2)}
-            />
-            <ModalTabButtons
-              customClass={activeTab !== 3 ? "" : { activeClass }}
-              tab={tab3}
-              fct={() => setActiveTab(3)}
-            />
+            {tab2 && (
+              <ModalTabButtons
+                customClass={activeTab !== 2 ? "" : { activeClass }}
+                tab={tab2}
+                fct={() => setActiveTab(2)}
+              />
+            )}
+            {tab3 && (
+              <ModalTabButtons
+                customClass={activeTab !== 3 ? "" : { activeClass }}
+                tab={tab3}
+                fct={() => setActiveTab(3)}
+              />
+            )}
             <button onClick={showModal} className="button-close">
               x
             </button>

@@ -48,13 +48,9 @@ function About() {
                 </p>
               </aside>
               <aside className="img-button-part">
-                <img className="profile-img" alt="Profil" src={imgProfil} />
-
-                <ButtonCallToActionText
-                  text={"En savoir plus"}
-                  customClass="m-auto"
-                  fct={openModal}
-                ></ButtonCallToActionText>
+                <button type="button" onClick={openModal}>
+                  <img className="profile-img" alt="Profil" src={imgProfil} />
+                </button>
               </aside>
             </div>
 
@@ -76,11 +72,7 @@ function About() {
           <Modal
             showModal={openModal}
             component1={<Profile />}
-            component2={<Experiences />}
-            component3={<Training />}
             tab={"Profil"}
-            tab2={"Expériences"}
-            tab3={"Formations"}
           />
         ) : null}
       </section>
