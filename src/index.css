@@ -249,7 +249,7 @@
   @apply flex w-full h-5/6
 }
 .lists-experience-training {
-  @apply w-1/2 mx-2 overflow-scroll scrollbar-hide rounded-lg border-b border-white
+  @apply w-1/2 mx-2 overflow-scroll rounded-lg border-b border-white
 }
 .experiences-trainings-lists {
   @apply bg-gradient-to-r from-slate-700 to-slate-800 rounded-lg shadow-xl
