@@ -19,10 +19,10 @@ function Profile() {
     <>
       {/* <div className=""></div> */}
 
-      <div className="content-profile">
-        <div className="profile-infos-contact">
-          <div className="infos-contact-cards">
-            <h1 className="profile-card-titles">Infos</h1>
+      <div className="modal-profile">
+        <div className="profile-infos-contact-part">
+          <div className="profile-infos-contact-surface">
+            <h2 className="profile-titles">Infos</h2>
             <ProfileInformation svg={<ProfileSvg />} text={"Kévin Marais"} />
             <ProfileInformation
               svg={<CitySvg />}
@@ -37,8 +37,8 @@ function Profile() {
               text={"Français (Maternelle) | Anglais (Intermédiaire)"}
             />
           </div>
-          <div className="infos-contact-cards">
-            <h1 className="profile-card-titles">Contact</h1>
+          <div className="profile-infos-contact-surface">
+            <h2 className="profile-titles">Contact</h2>
             <ProfileInformation
               svg={<EmailAdressSvg />}
               text={"kevin.mrs2020@gmail.com"}
@@ -54,10 +54,9 @@ function Profile() {
             />
           </div>
         </div>
-        <div className="profile-hobbies">
-          <h1 className="profile-card-titles">Centres d'intêret</h1>
+        <div className="profile-hobbies-part">
+          <h2 className="profile-titles">Centres d'intêret</h2>
           <ProfileInformation
-            svg={<HobbiesSvg />}
             text={`Passionné par les technologies et le code, qui parfois nous font beaucoup réfléchir,
               Je libère mon esprit par quelques séances de fitness.Passionné par les technologies et le code, qui parfois nous font beaucoup réfléchir,
               Je libère mon esprit par quelques séances de fitness.

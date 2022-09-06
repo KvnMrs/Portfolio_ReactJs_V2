@@ -13,14 +13,14 @@ import LeftArrowSvg from "../../../assets/svg/global/LeftArrowSvg";
 function Tools({ toggleSkills }) {
   return (
     <>
-      <article className="section-sub-container">
-        <header className="section-header">
+      <article className="sections-sub-containers">
+        <header className="sections-headers">
           <ButtonCallToActionSvg
             svg={<LeftArrowSvg />}
             fct={() => toggleSkills()}
             customClass={"mr-5"}
           />
-          <h2 className="section-title mr-8 md:mr-16">Outils</h2>
+          <h2 className="sections-titles mr-8 md:mr-16">Outils</h2>
         </header>
 
         <aside className="skills-list">

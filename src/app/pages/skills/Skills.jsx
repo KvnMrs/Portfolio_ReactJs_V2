@@ -13,8 +13,8 @@ function Skills() {
 
   return (
     <>
-      <section id="skills" className="section-container">
-        <div className="section-surface">
+      <section id="skills" className="sections-containers">
+        <div className="sections-surfaces">
           {showOthersSkills ? (
             <Tools toggleSkills={toggleSkills} />
           ) : (

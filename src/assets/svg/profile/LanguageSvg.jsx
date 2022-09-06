@@ -9,7 +9,6 @@ const LanguageSvg = () => {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 116.45 122.88"
         fillRule="evenodd"
-        width={30}
       >
         <path
           className="cls-1"
