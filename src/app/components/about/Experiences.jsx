@@ -28,7 +28,7 @@ function Experiences() {
           </button>
         </div>
       </div>
-      <div className="experiences-training-container-list">
+      <div className="experiences-list">
         {showExperienceDev === 1 ? (
           <div className="experiences-training-list min-h-screen">
             <WebDevelopmentExperiences datas={datasExperiences[0]} />
