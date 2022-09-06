@@ -22,24 +22,24 @@
 .global-bg {
   @apply bg-black
 }
-.section-container {
+.sections-containers {
   @apply w-full h-screen flex flex-col
 /* LG */ sm:snap-center
 /* LG */ lg:py-5
 }
-.section-surface {
+.sections-surfaces {
   @apply w-screen h-full flex flex-col mx-auto py-3 justify-center bg-slate-700 bg-opacity-50
 /* MD */ md:py-0
 /* LG */ lg:w-10/12 lg:rounded-3xl
 }
-.section-sub-container {
+.sections-sub-containers {
   @apply w-full text-center
 /* MD */ md:h-5/6 md:m-auto
 }
-.section-header {
+.sections-headers {
   @apply flex mx-auto justify-center items-center pb-6
 }
-.section-title {
+.sections-titles {
   @apply w-auto flex pb-2 place-content-center text-2xl border-b
 /* MD */ md:pb-3 md:text-3xl
 }
@@ -135,23 +135,23 @@
 
 /* Profile-Modal */
 
-.content-profile {
+.modal-profile {
   @apply w-screen h-full flex flex-col mx-auto justify-center items-center  rounded-lg
 }
-.profile-infos-contact {
+.profile-infos-contact-part {
   @apply w-full
 /* MD */ md:flex
 /* LG */ lg:h-4/5
 }
-.infos-contact-cards {
+.profile-infos-contact-surface {
   @apply m-2 flex flex-col items-center bg-gradient-to-r from-cyan-900 to-slate-600 rounded-lg shadow-xl border-b border-white
 /* LG */ lg:w-1/2 lg:h-auto lg:justify-center
 }
-.profile-hobbies {
+.profile-hobbies-part {
   @apply h-2/5 flex flex-col mx-2 items-center justify-center bg-gradient-to-r from-cyan-900 to-slate-600 rounded-lg shadow-xl border-b border-white
 /* LG */ lg:px-4 lg:m-2
 }
-.profile-card-titles {
+.profile-titles {
   @apply mt-1 border-b-2 border-white
 /* SM */ sm:text-lg
 /* MD */ md:text-xl
@@ -222,8 +222,8 @@
   @apply text-center
 /* MD */ md:text-lg
 }
-.img-button-part {
-  @apply w-4/5 my-6 mx-auto flex items-center
+.img-part {
+  @apply w-4/5 my-6 mx-auto flex justify-center
 /* MD */ md:w-2/6  md:self-center md:flex-col
 }
 .profile-img {

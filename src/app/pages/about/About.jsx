@@ -26,11 +26,11 @@ function About() {
 
   return (
     <>
-      <section id="about" className="section-container">
-        <div className="section-surface">
-          <article className="section-sub-container">
-            <header className="section-header">
-              <h1 className="section-title">En quelques mots...</h1>
+      <section id="about" className="sections-containers">
+        <div className="sections-surfaces">
+          <article className="sections-sub-containers">
+            <header className="sections-headers">
+              <h1 className="sections-titles">En quelques mots...</h1>
             </header>
             <div className="description-part">
               <aside className="description-text">
@@ -47,7 +47,7 @@ function About() {
                   lacinia leo.
                 </p>
               </aside>
-              <aside className="img-button-part">
+              <aside className="img-part">
                 <button type="button" onClick={openModal}>
                   <img className="profile-img" alt="Profil" src={imgProfil} />
                 </button>
