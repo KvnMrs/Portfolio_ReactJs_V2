@@ -4,6 +4,9 @@ import React, { useState } from "react";
 import datasExperiences from "../../../datas/datasExperiences";
 import dataTraining from "../../../datas/datasTraining";
 
+// Components
+import ExperiencesLegend from "../../components/experiences/ExperiencesLegend";
+
 // Sub-Component
 import ExperiencesList from "../../components/experiences/ExperiencesList";
 import TrainingsList from "../../components/experiences/TrainingsList";
@@ -25,48 +28,39 @@ function Experiences() {
         <div className="sections-surfaces">
           <article className="sections-sub-containers">
             <header className="sections-headers">
-              {!showExperiences ? (
-                <ButtonCallToActionSvg
-                  svg={<LeftArrowSvg />}
-                  fct={() => toggleList()}
-                  customClass={"mr-5"}
-                />
-              ) : null}
-              <h1 className="sections-titles">
-                {showExperiences ? "Experiences" : "Formations"}
-              </h1>
+              {/* Experience or Trainings */}
               {showExperiences ? (
-                <ButtonCallToActionSvg
-                  svg={<RightArrowSvg />}
-                  fct={() => toggleList()}
-                  customClass={"ml-5"}
-                />
-              ) : null}
+                <>
+                  <h1 className="sections-titles ml-6">Experiences</h1>
+                  <ButtonCallToActionSvg
+                    svg={<RightArrowSvg />}
+                    fct={() => toggleList()}
+                    customClass={"ml-5"}
+                  />
+                </>
+              ) : (
+                <>
+                  <ButtonCallToActionSvg
+                    svg={<LeftArrowSvg />}
+                    fct={() => toggleList()}
+                    customClass={"mr-5"}
+                  />
+
+                  <h1 className="sections-titles mr-6">Formations</h1>
+                </>
+              )}
             </header>
-            <div className="lists-container">
-              <div className="test my-auto w-3/12 h-5/6 flex flex-col">
-                <div className="w-5/6  m-auto">
-                  <p className="my-5">Types expériences</p>
-                  <ul className="w-full h-full flex flex-col">
-                    <li className="w-5/6 self-center h-10 flex  items-center my-1">
-                      <div className="w-5 h-5 rounded bg-red-400"></div>
-                      <p className="ml-2">developement web</p>
-                    </li>
-                    <li className="w-5/6 self-center h-10 flex items-center my-1">
-                      <div className="w-5 h-5 rounded bg-green-400"></div>
-                      <p className="ml-2">restauration</p>
-                    </li>
-                    <li className="w-5/6 self-center h-10 flex  items-center my-1">
-                      <div className="w-5 h-5 rounded bg-blue-400"></div>
-                      <p className="ml-2">Coiffure</p>
-                    </li>
-                    <li className="w-5/6 self-center h-10 flex  items-center my-1">
-                      <div className="w-5 h-5 rounded bg-yellow-400"></div>
-                      <p className="ml-2">autres</p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+
+            {/* Center list for Trainning */}
+            <div
+              className={
+                showExperiences
+                  ? "lists-container"
+                  : "lists-container place-content-center"
+              }
+            >
+              {/* Show Legend for Experience */}
+              {showExperiences ? <ExperiencesLegend /> : null}
 
               <aside className="lists-experience-training">
                 {showExperiences
