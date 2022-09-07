@@ -252,7 +252,7 @@
   @apply w-1/2 mx-2 overflow-scroll scrollbar-hide rounded-lg border-b border-white
 }
 .lists-elements-containers {
-  @apply bg-gradient-to-r from-slate-700 to-slate-800 rounded-lg shadow-xl
+  @apply  rounded-lg shadow-xl
 }
 .lists-elements {
   @apply w-full mt-1 m-auto text-center py-8
@@ -260,17 +260,23 @@
 }
 /* legend experience */
 
-.legend-experience-container {
+.legend-container {
   @apply w-3/12 h-5/6 my-auto flex flex-col
 }
-.legend-experience-sub-container {
+.legend-sub-container {
   @apply w-5/6 m-auto
 }
-.legend-experience-list {
+.legend-checkbox-container {
+  @apply w-5/6 mb-5 flex place-content-center items-center
+}
+.legend-checkbox {
+  @apply w-5 h-5 mx-2 cursor-pointer
+}
+.legend-list {
   @apply w-full h-full flex flex-col
 }
-.legend-experience-list-elements {
-  @apply w-5/6 h-10 my-1 flex self-center items-center
+.legend-list-elements {
+  @apply w-10/12 h-10 my-1 flex self-center items-center
 }
 .legend-elements-circles {
   @apply w-5 h-5 rounded-full
