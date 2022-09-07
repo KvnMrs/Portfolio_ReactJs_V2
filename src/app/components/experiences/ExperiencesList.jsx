@@ -3,7 +3,7 @@ import React from "react";
 function ExperiencesList({ datas }) {
   return (
     <>
-      <div className="experience-training">
+      <div className="lists-elements">
         <h1 className="text-2xl md:text-3xl text-white">{datas.entreprise}</h1>
         <h2 className="text-xl text-gray-400">{datas.lieu}</h2>
         <h2 className="text-xl text-gray-400">{datas.date}</h2>

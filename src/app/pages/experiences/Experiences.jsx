@@ -66,13 +66,13 @@ function Experiences() {
                 {showExperiences
                   ? // Show experiences
                     datasExperiences.map((experience) => (
-                      <div className="experiences-trainings-lists">
+                      <div className="lists-elements-containers">
                         <ExperiencesList datas={experience} />
                       </div>
                     ))
                   : // Show trainings
                     dataTraining.map((training) => (
-                      <div className="experiences-trainings-lists">
+                      <div className="lists-elements-containers">
                         <TrainingsList datas={training} />
                       </div>
                     ))}

@@ -2,7 +2,7 @@ import React from "react";
 
 function TrainingsList({ datas }) {
   return (
-    <div className="experience-training">
+    <div className="lists-elements">
       <img
         alt={datas.centre}
         src={datas.image}
