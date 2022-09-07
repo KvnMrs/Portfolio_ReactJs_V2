@@ -3,9 +3,7 @@ import React, { useState } from "react";
 // Components
 import SoftSkills from "../../components/about/SoftSkills";
 import Modal from "../../components/modal/Modal";
-import Experiences from "../../components/about/Experiences";
 import Profile from "../../components/about/Profile";
-import Training from "../../components/about/Training";
 
 //Sub-components
 import ButtonCallToActionText from "../../sub-components/buttons/ButtonCallToActionText";

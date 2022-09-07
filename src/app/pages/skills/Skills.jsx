@@ -15,11 +15,13 @@ function Skills() {
     <>
       <section id="skills" className="sections-containers">
         <div className="sections-surfaces">
-          {showOthersSkills ? (
-            <Tools toggleSkills={toggleSkills} />
-          ) : (
-            <HardSkills toggleSkills={toggleSkills} />
-          )}
+          <article className="sections-sub-containers">
+            {showOthersSkills ? (
+              <Tools toggleSkills={toggleSkills} />
+            ) : (
+              <HardSkills toggleSkills={toggleSkills} />
+            )}
+          </article>
         </div>
       </section>
     </>
