@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // Datas
 import datasExperiences from "../../../datas/datasExperiences";
@@ -18,6 +18,11 @@ import LeftArrowSvg from "../../../assets/svg/global/LeftArrowSvg";
 
 function Experiences() {
   const [showExperiences, setShowExperiences] = useState(true);
+  const [legend, setLegend] = useState(false);
+
+  const activeLegend = () => {
+    setLegend(!legend);
+  };
 
   const toggleList = () => {
     return setShowExperiences(!showExperiences);
@@ -46,7 +51,7 @@ function Experiences() {
                     customClass={"mr-5"}
                   />
 
-                  <h1 className="sections-titles mr-6">Formations</h1>
+                  <h1 className="sections-titles mr-20">Formations</h1>
                 </>
               )}
             </header>
@@ -60,19 +65,27 @@ function Experiences() {
               }
             >
               {/* Show Legend for Experience */}
-              {showExperiences ? <ExperiencesLegend /> : null}
+              {showExperiences ? (
+                <ExperiencesLegend legend={legend} showLegend={activeLegend} />
+              ) : null}
 
               <aside className="lists-experience-training">
                 {showExperiences
                   ? // Show experiences
                     datasExperiences.map((experience) => (
-                      <div className="lists-elements-containers">
+                      <div
+                        className={
+                          legend
+                            ? `lists-elements-containers ${experience.bgColor}`
+                            : "lists-elements-containers bg-gradient-to-r from-slate-500 to-slate-700"
+                        }
+                      >
                         <ExperiencesList datas={experience} />
                       </div>
                     ))
                   : // Show trainings
                     dataTraining.map((training) => (
-                      <div className="lists-elements-containers">
+                      <div className="lists-elements-containers bg-gradient-to-r from-slate-500 to-slate-700">
                         <TrainingsList datas={training} />
                       </div>
                     ))}
