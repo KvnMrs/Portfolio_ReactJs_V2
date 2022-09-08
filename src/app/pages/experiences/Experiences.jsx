@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 // Datas
 import datasExperiences from "../../../datas/datasExperiences";
@@ -32,11 +32,11 @@ function Experiences() {
       <section id="experiences" className="sections-containers">
         <div className="sections-surfaces">
           <article className="sections-sub-containers">
-            <header className="sections-headers">
+            <header className="sections-headers pb-0">
               {/* Experience or Trainings */}
               {showExperiences ? (
                 <>
-                  <h1 className="sections-titles ml-6">Experiences</h1>
+                  <h1 className="sections-titles ">Experiences</h1>
                   <ButtonCallToActionSvg
                     svg={<RightArrowSvg />}
                     fct={() => toggleList()}
@@ -51,7 +51,7 @@ function Experiences() {
                     customClass={"mr-5"}
                   />
 
-                  <h1 className="sections-titles mr-20">Formations</h1>
+                  <h1 className="sections-titles ">Formations</h1>
                 </>
               )}
             </header>
@@ -60,7 +60,7 @@ function Experiences() {
             <div
               className={
                 showExperiences
-                  ? "lists-container"
+                  ? "lists-container sm:items-center lg:justify-start"
                   : "lists-container place-content-center"
               }
             >
@@ -69,7 +69,7 @@ function Experiences() {
                 <ExperiencesLegend legend={legend} showLegend={activeLegend} />
               ) : null}
 
-              <aside className="lists-experience-training">
+              <aside className="lists-experience-training h-5/6">
                 {showExperiences
                   ? // Show experiences
                     datasExperiences.map((experience) => (
