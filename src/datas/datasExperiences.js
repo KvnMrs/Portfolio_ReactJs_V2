@@ -6,7 +6,7 @@ const dataCv = [
     statut: "Stagiaire Developpeur Front-End",
     mission: "blablabla blablabla blablabla blablabla",
     categorie: "developpement web",
-    bgColor: "bg-opacity-40 bg-purple-500",
+    bgColor: "borber-b border-white bg-purple-500",
   },
   /********** RESTAURATION ***************/
   {
@@ -16,7 +16,7 @@ const dataCv = [
     statut: "Préparateur de commande",
     mission: "Préparations des commandes en entrepôt.",
     categorie: "autre",
-    bgColor: "bg-opacity-40 bg-blue-600",
+    bgColor: "borber-b border-white bg-blue-600",
   },
   {
     date: "Avril 2019 à Février 2020",
@@ -26,7 +26,7 @@ const dataCv = [
     mission:
       "Préparation du service, accueil, prise de commande, encaissement, gestion d'un rang.",
     categorie: "restauration",
-    bgColor: "bg-opacity-40 bg-green-500",
+    bgColor: "borber-b border-white bg-green-500",
   },
   {
     date: " Septembre 2018 à Mars 2019",
@@ -36,7 +36,7 @@ const dataCv = [
     mission:
       "Préparation de la salle et du service, envoi des commandes, nettoyage de la salle",
     categorie: "restauration",
-    bgColor: "bg-opacity-40 bg-green-500",
+    bgColor: "borber-b-2 border-white bg-green-500",
   },
   {
     date: "Juin 2018 à Septembe 2018",
@@ -46,7 +46,7 @@ const dataCv = [
     mission:
       "Service et conception des boissons au bar, services des plats en salle",
     categorie: "restauration",
-    bgColor: "bg-opacity-40 bg-green-500",
+    bgColor: "borber-b border-white bg-green-500",
   },
   /********** AUTRE ***************/
 
@@ -57,7 +57,7 @@ const dataCv = [
     statut: "Buraliste",
     mission: "Vente des produits présents, gestion des conflits",
     categorie: "autre",
-    bgColor: "bg-opacity-40 bg-blue-600",
+    bgColor: "borber-b border-white bg-blue-600",
   },
   {
     date: "Juin 2017 à Septembe 2017",
@@ -67,7 +67,7 @@ const dataCv = [
     mission:
       "Réalisation des commandes quotidiennes, respect des protocoles d'hygienne et de sécurité",
     categorie: "autre",
-    bgColor: "bg-opacity-40 bg-blue-600",
+    bgColor: "borber-b border-white bg-blue-600",
   },
   /********** COIFFURE ***************/
 
@@ -78,7 +78,7 @@ const dataCv = [
     statut: "Barbier",
     mission: "Stage en immersion dans le but d'apprendre l'Anglais",
     categorie: "coiffure",
-    bgColor: "bg-opacity-40 bg-amber-500",
+    bgColor: "borber-b border-white bg-amber-500",
   },
   {
     date: "Novembre 2016 à Février 2017",
@@ -88,7 +88,7 @@ const dataCv = [
     mission:
       "Recherche des besoins client, conseil, realisation des coupes et diférrentes techniques de coloration   ",
     categorie: "coiffure",
-    bgColor: "bg-opacity-40 bg-amber-500",
+    bgColor: "borber-b border-white bg-amber-500",
   },
   {
     date: "Septembre 2014 à Juin 2016",
@@ -97,7 +97,7 @@ const dataCv = [
     statut: "Apprenti - BP",
     mission: "Apprentissage des différentes techniques de coupe et coloration",
     categorie: "coiffure",
-    bgColor: "bg-opacity-40 bg-amber-500",
+    bgColor: "borber-b border-white bg-amber-500",
   },
   {
     date: "Septembre 2012 à Juin 2014",
@@ -106,7 +106,7 @@ const dataCv = [
     statut: "Apprenti - CAP",
     mission: "Apprentissage des différentes technique de coupe et coloration",
     categorie: "coiffure",
-    bgColor: "bg-opacity-40 bg-amber-500",
+    bgColor: "borber-b border-white bg-amber-500",
   },
   {
     date: "Septembre 2010 à Juin 2012",
@@ -115,7 +115,7 @@ const dataCv = [
     statut: "Apprenti - CAP",
     mission: "Apprentissage des différentes techniques de coupe et coloration",
     categorie: "coiffure",
-    bgColor: "bg-opacity-40 bg-amber-500",
+    bgColor: "borber-b border-white bg-amber-500",
   },
 ];
 
