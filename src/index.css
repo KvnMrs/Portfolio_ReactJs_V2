@@ -249,7 +249,7 @@
   @apply flex w-full h-5/6
 }
 .lists-experience-training {
-  @apply w-1/2 mx-2 overflow-scroll scrollbar-hide rounded-lg border-b border-white
+  @apply w-1/2 overflow-scroll scrollbar-hide rounded-lg border-b border-white
 }
 .lists-elements-containers {
   @apply  rounded-lg shadow-xl
@@ -258,28 +258,39 @@
   @apply w-full mt-1 m-auto text-center py-8
 /* MD */ md:w-3/4
 }
+
 /* legend experience */
 
 .legend-container {
-  @apply w-3/12 h-5/6 my-auto flex flex-col
+  @apply w-full flex px-2
+/* LG */ lg:w-3/12 lg:h-5/6 lg:my-auto lg:px-0 lg:flex-col
 }
 .legend-sub-container {
-  @apply w-5/6 m-auto
+  @apply w-full m-auto
+/* LG */ lg:w-5/6
 }
 .legend-checkbox-container {
   @apply w-5/6 mb-5 flex place-content-center items-center
+/* LG */
 }
 .legend-checkbox {
-  @apply w-5 h-5 mx-2 cursor-pointer
+  @apply w-3 h-3 mx-2 cursor-pointer
+/* LG */ lg:w-5 lg:h-3
 }
 .legend-list {
-  @apply w-full h-full flex flex-col
+  @apply w-full flex overflow-x-auto
+/* LG */ lg:h-full lg:flex-col
 }
 .legend-list-elements {
-  @apply w-10/12 h-10 my-1 flex self-center items-center
+  @apply my-1 mr-3 flex self-center items-center
+/* LG */ lg:w-10/12 lg:h-10 lg:mr-0
 }
-.legend-elements-circles {
+.legend-elements-circle {
   @apply w-5 h-5 rounded-full
+}
+.legend-elements-text {
+  @apply w-max ml-2 text-sm
+/* LG */ lg:text-base
 }
 
 /*********************** Skills ************************/
