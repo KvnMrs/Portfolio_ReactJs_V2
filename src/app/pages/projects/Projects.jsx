@@ -26,11 +26,11 @@ function Projects() {
   };
   return (
     <>
-      <section id="projects" className="section-container">
-        <div className="section-surface">
-          <article className="section-sub-container">
-            <header className="section-header">
-              <h2 className="section-title">Projets</h2>
+      <section id="projects" className="sections-containers">
+        <div className="sections-surfaces">
+          <article className="sections-sub-containers">
+            <header className="sections-headers">
+              <h2 className="sections-titles">Projets</h2>
             </header>
             <div className="projects-carrousel">
               <ButtonCallToActionSvg

@@ -3,9 +3,7 @@ import React, { useState } from "react";
 // Components
 import SoftSkills from "../../components/about/SoftSkills";
 import Modal from "../../components/modal/Modal";
-import Experiences from "../../components/about/Experiences";
 import Profile from "../../components/about/Profile";
-import Training from "../../components/about/Training";
 
 //Sub-components
 import ButtonCallToActionText from "../../sub-components/buttons/ButtonCallToActionText";
@@ -26,11 +24,11 @@ function About() {
 
   return (
     <>
-      <section id="about" className="section-container">
-        <div className="section-surface">
-          <article className="section-sub-container">
-            <header className="section-header">
-              <h1 className="section-title">En quelques mots...</h1>
+      <section id="about" className="sections-containers">
+        <div className="sections-surfaces">
+          <article className="sections-sub-containers">
+            <header className="sections-headers">
+              <h1 className="sections-titles">En quelques mots...</h1>
             </header>
             <div className="description-part">
               <aside className="description-text">
@@ -47,14 +45,10 @@ function About() {
                   lacinia leo.
                 </p>
               </aside>
-              <aside className="img-button-part">
-                <img className="profile-img" alt="Profil" src={imgProfil} />
-
-                <ButtonCallToActionText
-                  text={"En savoir plus"}
-                  customClass="m-auto"
-                  fct={openModal}
-                ></ButtonCallToActionText>
+              <aside className="img-part">
+                <button type="button" onClick={openModal}>
+                  <img className="profile-img" alt="Profil" src={imgProfil} />
+                </button>
               </aside>
             </div>
 
@@ -76,11 +70,7 @@ function About() {
           <Modal
             showModal={openModal}
             component1={<Profile />}
-            component2={<Experiences />}
-            component3={<Training />}
             tab={"Profil"}
-            tab2={"Expériences"}
-            tab3={"Formations"}
           />
         ) : null}
       </section>

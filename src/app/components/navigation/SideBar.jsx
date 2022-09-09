@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 // Assets
 import SvgHome from "../../../assets/svg/sidebar/links-section/SvgHome";
@@ -26,11 +27,11 @@ function BarNav() {
         {/* Links Section */}
         <nav className={openSidebar ? "nav" : "hidden"}>
           <ol className="links-container">
-            <li>
-              <a className="links" href="#home">
+            <Link to="/">
+              <li className="links">
                 <SvgHome />
-              </a>
-            </li>
+              </li>
+            </Link>
             <li>
               <a className="links" href="#about">
                 <SvgProfile />

@@ -9,7 +9,7 @@ module.exports = {
         wild_red: "#F76C6C",
       },
       screens: {
-        sm: "400px",
+        sm: "450px",
         // => @media (min-width: 400px) { ... }
         md: "650px",
         // => @media (min-width: 650px) { ... }

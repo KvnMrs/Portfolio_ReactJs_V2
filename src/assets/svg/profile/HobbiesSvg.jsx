@@ -9,7 +9,6 @@ const Hobbies = () => {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 122.88 108.44"
         fillRule="evenodd"
-        width={30}
       >
         <path
           className="cls-1"
