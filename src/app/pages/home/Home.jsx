@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 // Assets
 import Github from "../../../assets/img/imgSocialMedias/Github.png";
 import Linkedin from "../../../assets/img/imgSocialMedias/Linkedin.png";
-import videoBg from "../../../assets/video/video-bg.webm";
 import ButtonCallToActionText from "../../sub-components/buttons/ButtonCallToActionText";
 
 //Sub-component
@@ -26,14 +25,6 @@ function Home() {
   return (
     <>
       <div id="home" className="home-container h-screen relative">
-        <video
-          src={videoBg}
-          type="video/mp4"
-          autoPlay
-          muted
-          loop
-          className="absolute w-full h-full object-cover"
-        />
         <header className="home-header z-10">
           <h1 className="welcome">Bienvenue sur mon Portfolio</h1>
           <p>
@@ -41,10 +32,10 @@ function Home() {
             <br />
             Développeur Web full stack.
           </p>
-          <Link to="/portofolio">
-            <ButtonCallToActionText text={"Continuer"} customClass={"z-50"} />
-          </Link>
         </header>
+        <Link to="/portofolio">
+          <ButtonCallToActionText text={"Visiter"} customClass={"z-50 mt-20"} />
+        </Link>
 
         {/* <div
           className={
