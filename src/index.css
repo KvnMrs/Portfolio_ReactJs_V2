@@ -218,9 +218,9 @@
 /* MD */ md:w-2/6  md:self-center md:flex-col
 }
 .profile-img {
-  @apply w-24 h-24 object-cover rounded-full border border-white
+  @apply w-24 h-24 m-auto object-cover rounded-full border border-white
 /* SM */ sm:w-32 sm:h-32
-/* MD */ md:w-52 md:h-52 md:my-8
+/* MD */ md:w-52 md:h-52
 }
 
 /* SoftSkills part */
@@ -377,7 +377,7 @@
 /*********************** Sub-Components ************************/
 
 .callToAction-text {
-  @apply w-fit h-8 py-2 px-4 flex justify-center self-center items-center font-semibold duration-500 ease-in-out bg-cyan-600 hover:bg-cyan-700 hover:scale-105 rounded-lg hover:ring-2
+  @apply w-28 h-8 py-2 px-4 flex justify-center self-center items-center font-semibold duration-500 ease-in-out bg-cyan-600 hover:bg-cyan-700 hover:scale-105 rounded-lg hover:ring-2
 /* MD */ md:mx-auto md:h-10 md:font-bold
 }
 

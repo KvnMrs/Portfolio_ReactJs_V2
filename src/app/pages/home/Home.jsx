@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 // Assets
 import Github from "../../../assets/img/imgSocialMedias/Github.png";
 import Linkedin from "../../../assets/img/imgSocialMedias/Linkedin.png";
-import videoBg from "../../../assets/video/video-bg.webm";
-
+import ButtonCallToActionText from "../../sub-components/buttons/ButtonCallToActionText";
+import videoBg from "../../../assets/video/videoBg.mp4";
 //Sub-component
 import SocialMediasLinks from "../../sub-components/Links/SocialMediasLinks";
 
@@ -39,7 +40,14 @@ function Home() {
             <br />
             Développeur Web full stack.
           </p>
+          <Link to="/portofolio">
+            <ButtonCallToActionText
+              text={"Visiter"}
+              customClass={"z-50 mt-20"}
+            />
+          </Link>
         </header>
+
         {/* <div
           className={
             activeScroll
