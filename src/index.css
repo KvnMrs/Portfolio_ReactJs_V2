@@ -218,9 +218,9 @@
 /* MD */ md:w-2/6  md:self-center md:flex-col
 }
 .profile-img {
-  @apply w-24 h-24 object-cover rounded-full border border-white
+  @apply w-24 h-24 m-auto object-cover rounded-full border border-white
 /* SM */ sm:w-32 sm:h-32
-/* MD */ md:w-52 md:h-52 md:my-8
+/* MD */ md:w-52 md:h-52
 }
 
 /* SoftSkills part */
