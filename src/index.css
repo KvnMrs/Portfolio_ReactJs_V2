@@ -184,7 +184,7 @@
   @apply mb-5 text-2xl
 /* MD */ md:text-3xl
 }
-.social-medias-onscroll {
+.links-social-medias {
   @apply mt-5 top-2 right-4 flex justify-center
 /* MD */ md:fixed md:flex-col md:mt-0
 }

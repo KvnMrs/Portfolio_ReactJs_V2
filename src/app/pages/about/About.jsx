@@ -76,7 +76,7 @@ function About() {
           />
         ) : null}
       </section>
-      <div className="social-medias-onscroll transition-opacity duration-2000 opacity-100">
+      <div className="links-social-medias">
         <SocialMediasLinks
           link={"https://www.linkedin.com/in/k%C3%A9vin-marais-861314216/"}
           img={Linkedin}
