@@ -1,5 +1,8 @@
 import React from "react";
 
+// Package
+import { motion } from "framer-motion";
+
 // Pages
 import SideBar from "./components/navigation/SideBar";
 import About from "./pages/about/About";
@@ -12,13 +15,18 @@ const MyApp = () => {
   return (
     <>
       <SideBar />
-      <div className="main-container">
+      <motion.div
+        className="main-container"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <About />
         <Experiences />
         <Skills />
         <Projects />
         <Contact />
-      </div>
+      </motion.div>
     </>
   );
 };
