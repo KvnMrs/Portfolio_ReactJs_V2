@@ -1,30 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 // Packages
 import { Link } from "react-router-dom";
 
 // Assets
-import Github from "../../../assets/img/imgSocialMedias/Github.png";
-import Linkedin from "../../../assets/img/imgSocialMedias/Linkedin.png";
 import videoBg from "../../../assets/video/video-bg.webm";
 
 //Sub-component
-import SocialMediasLinks from "../../sub-components/Links/SocialMediasLinks";
 import ButtonCallToActionText from "../../sub-components/buttons/ButtonCallToActionText";
 
 function Home() {
-  const [activeScroll, setActiveScroll] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener(
-      "scroll",
-      function (event) {
-        setActiveScroll(event.isTrusted);
-      },
-      true
-    );
-  }, []);
-
   return (
     <>
       <div id="home" className="home-container h-screen relative">
@@ -44,30 +29,9 @@ function Home() {
             Développeur Web full stack.
           </p>
           <Link to="/portofolio">
-            <ButtonCallToActionText
-              text={"Continuer"}
-              // customClass="m-auto"
-            ></ButtonCallToActionText>
+            <ButtonCallToActionText text={"Continuer"}></ButtonCallToActionText>
           </Link>
         </header>
-        {/* <div
-          className={
-            activeScroll
-              ? "social-medias-onscroll transition-opacity duration-2000 opacity-100"
-              : "social-medias-onscroll opacity-0"
-          }
-        >
-          <SocialMediasLinks
-            link={"https://www.linkedin.com/in/k%C3%A9vin-marais-861314216/"}
-            img={Linkedin}
-            alt={"Lien vers Linkedin"}
-          />
-          <SocialMediasLinks
-            link={"https://github.com/KvnMrs"}
-            img={Github}
-            alt={"Lien vers Github"}
-          />
-        </div> */}
       </div>
     </>
   );

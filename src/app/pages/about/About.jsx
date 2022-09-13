@@ -6,10 +6,12 @@ import Modal from "../../components/modal/Modal";
 import Profile from "../../components/about/Profile";
 
 //Sub-components
-import ButtonCallToActionText from "../../sub-components/buttons/ButtonCallToActionText";
+import SocialMediasLinks from "../../sub-components/Links/SocialMediasLinks";
 
 //Assets
 import imgProfil from "../../../assets/img/imgAbout/Kevin.jpg";
+import Github from "../../../assets/img/imgSocialMedias/Github.png";
+import Linkedin from "../../../assets/img/imgSocialMedias/Linkedin.png";
 
 //Datas
 import dataSkills from "../../../datas/datasSkills";
@@ -74,6 +76,18 @@ function About() {
           />
         ) : null}
       </section>
+      <div className="social-medias-onscroll transition-opacity duration-2000 opacity-100">
+        <SocialMediasLinks
+          link={"https://www.linkedin.com/in/k%C3%A9vin-marais-861314216/"}
+          img={Linkedin}
+          alt={"Lien vers Linkedin"}
+        />
+        <SocialMediasLinks
+          link={"https://github.com/KvnMrs"}
+          img={Github}
+          alt={"Lien vers Github"}
+        />
+      </div>
     </>
   );
 }
