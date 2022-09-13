@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+// Package
+import { motion } from "framer-motion";
+
 // Components
 import SoftSkills from "../../components/about/SoftSkills";
 import Modal from "../../components/modal/Modal";
@@ -33,7 +36,12 @@ function About() {
               <h1 className="sections-titles">En quelques mots...</h1>
             </header>
             <div className="description-part">
-              <aside className="description-text">
+              <motion.aside
+                className="description-text"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+              >
                 <p className="text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
                   auctor lacus nec sem volutpat tristique. Interdum et malesuada
@@ -46,12 +54,17 @@ function About() {
                   in lacus lacinia, in placerat elit mattis. Suspendisse et
                   lacinia leo.
                 </p>
-              </aside>
-              <aside className="img-part">
+              </motion.aside>
+              <motion.aside
+                className="img-part"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 1 }}
+              >
                 <button type="button" onClick={openModal}>
                   <img className="profile-img" alt="Profil" src={imgProfil} />
                 </button>
-              </aside>
+              </motion.aside>
             </div>
 
             <aside className="softSkills-part">
