@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 
+// Packages
+import { Link } from "react-router-dom";
+
 // Assets
 import Github from "../../../assets/img/imgSocialMedias/Github.png";
 import Linkedin from "../../../assets/img/imgSocialMedias/Linkedin.png";
@@ -7,6 +10,7 @@ import videoBg from "../../../assets/video/video-bg.webm";
 
 //Sub-component
 import SocialMediasLinks from "../../sub-components/Links/SocialMediasLinks";
+import ButtonCallToActionText from "../../sub-components/buttons/ButtonCallToActionText";
 
 function Home() {
   const [activeScroll, setActiveScroll] = useState(false);
@@ -39,6 +43,12 @@ function Home() {
             <br />
             Développeur Web full stack.
           </p>
+          <Link to="/portofolio">
+            <ButtonCallToActionText
+              text={"Continuer"}
+              // customClass="m-auto"
+            ></ButtonCallToActionText>
+          </Link>
         </header>
         {/* <div
           className={
