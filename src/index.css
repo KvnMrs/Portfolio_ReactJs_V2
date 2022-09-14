@@ -184,7 +184,7 @@
   @apply mb-5 text-2xl
 /* MD */ md:text-3xl
 }
-.social-medias-onscroll {
+.links-social-medias {
   @apply mt-5 top-2 right-4 flex justify-center
 /* MD */ md:fixed md:flex-col md:mt-0
 }
@@ -214,11 +214,11 @@
 /* MD */ md:text-lg
 }
 .img-part {
-  @apply w-4/5 my-6 mx-auto flex justify-center
+  @apply w-4/5 my-6 mx-auto flex justify-center items-center
 /* MD */ md:w-2/6  md:self-center md:flex-col
 }
 .profile-img {
-  @apply w-24 h-24 object-cover rounded-full border border-white
+  @apply w-24 h-24 mx-auto object-cover rounded-full border border-white
 /* SM */ sm:w-32 sm:h-32
 /* MD */ md:w-52 md:h-52 md:my-8
 }

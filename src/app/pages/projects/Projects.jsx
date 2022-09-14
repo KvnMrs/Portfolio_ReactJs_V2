@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+// Package
+import { motion, AnimatePresence } from "framer-motion";
+
 // Components
 import ProjectCard from "../../components/projects/ProjectCard";
 
@@ -32,7 +35,13 @@ function Projects() {
             <header className="sections-headers">
               <h2 className="sections-titles">Projets</h2>
             </header>
-            <div className="projects-carrousel">
+            <motion.div
+              className="projects-carrousel"
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+            >
               <ButtonCallToActionSvg
                 svg={<LeftArrowSvg />}
                 fct={() => previousProject()}
@@ -49,7 +58,7 @@ function Projects() {
               />
               {DatasProjects.map((el, index) => (
                 <>
-                  {currentProject === index ? (
+                  {currentProject === index && (
                     <ProjectCard
                       key={el.title}
                       img={el.img}
@@ -58,10 +67,10 @@ function Projects() {
                       description={el.description}
                       link={el.link}
                     />
-                  ) : null}
+                  )}
                 </>
               ))}
-            </div>
+            </motion.div>
           </article>
         </div>
       </section>

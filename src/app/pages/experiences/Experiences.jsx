@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+// Package
+import { motion } from "framer-motion";
+
 // Datas
 import datasExperiences from "../../../datas/datasExperiences";
 import dataTraining from "../../../datas/datasTraining";
@@ -65,31 +68,48 @@ function Experiences() {
               }
             >
               {/* Show Legend for Experience */}
-              {showExperiences ? (
+              {showExperiences && (
                 <ExperiencesLegend legend={legend} showLegend={activeLegend} />
-              ) : null}
+              )}
 
-              <aside className="lists-experience-training h-5/6">
-                {showExperiences
-                  ? // Show experiences
-                    datasExperiences.map((experience) => (
-                      <div
-                        className={
-                          legend
-                            ? `lists-elements-containers ${experience.bgColor}`
-                            : "lists-elements-containers bg-gradient-to-r from-slate-500 to-slate-700"
-                        }
-                      >
-                        <ExperiencesList datas={experience} />
-                      </div>
-                    ))
-                  : // Show trainings
-                    dataTraining.map((training) => (
-                      <div className="lists-elements-containers bg-gradient-to-r from-slate-500 to-slate-700">
-                        <TrainingsList datas={training} />
-                      </div>
-                    ))}
-              </aside>
+              <motion.aside
+                className="lists-experience-training h-5/6"
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+              >
+                {/* Show experiences */}
+                {showExperiences &&
+                  datasExperiences.map((experience) => (
+                    <motion.div
+                      className={
+                        legend
+                          ? `lists-elements-containers ${experience.bgColor}`
+                          : "lists-elements-containers bg-gradient-to-r from-slate-500 to-slate-700"
+                      }
+                      initial={{ opacity: 0, scale: 0.5 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1 }}
+                    >
+                      <ExperiencesList datas={experience} />
+                    </motion.div>
+                  ))}
+                {/* Show trainings */}
+                {!showExperiences &&
+                  dataTraining.map((training) => (
+                    <motion.div
+                      className="lists-elements-containers bg-gradient-to-r from-slate-500 to-slate-700"
+                      initial={{ opacity: 0, scale: 0.5 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1 }}
+                    >
+                      <TrainingsList datas={training} />
+                    </motion.div>
+                  ))}
+              </motion.aside>
             </div>
           </article>
         </div>

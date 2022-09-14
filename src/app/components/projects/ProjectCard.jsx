@@ -1,9 +1,18 @@
 import React from "react";
 
+// Package
+import { motion } from "framer-motion";
+
 const ProjectCard = ({ img, title, category, description, link }) => {
   return (
     <>
-      <article className="project">
+      <motion.article
+        className="project"
+        initial={{ x: -200, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
         <img alt={title} src={img} />
         <aside className="project-content">
           <h3 className="project-title">{title}</h3>
@@ -27,7 +36,7 @@ const ProjectCard = ({ img, title, category, description, link }) => {
             </svg>
           </a>
         </aside>
-      </article>
+      </motion.article>
     </>
   );
 };

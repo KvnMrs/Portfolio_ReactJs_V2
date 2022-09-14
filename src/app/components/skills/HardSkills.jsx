@@ -1,5 +1,8 @@
 import React from "react";
 
+// Package
+import { motion } from "framer-motion";
+
 // Datas
 import dataSkills from "../../../datas/datasSkills";
 
@@ -23,7 +26,13 @@ const HardSkills = ({ toggleSkills }) => {
           />
         </header>
 
-        <aside className="skills-list">
+        <motion.aside
+          className="skills-list"
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+        >
           {dataSkills
             .filter((category) => category.catégorie === "Compétence")
             .map((hardSkill) => (
@@ -34,7 +43,7 @@ const HardSkills = ({ toggleSkills }) => {
                 img={hardSkill.image}
               />
             ))}
-        </aside>
+        </motion.aside>
       </article>
     </>
   );
