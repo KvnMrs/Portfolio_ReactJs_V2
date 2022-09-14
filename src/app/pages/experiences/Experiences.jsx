@@ -77,7 +77,7 @@ function Experiences() {
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: 1, duration: 1 }}
+                transition={{ duration: 1 }}
               >
                 {/* Show experiences */}
                 {showExperiences &&

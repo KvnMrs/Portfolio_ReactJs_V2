@@ -11,7 +11,7 @@ const ExperiencesLegend = ({ legend, showLegend }) => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 2 }}
+        transition={{ delay: 1, duration: 2 }}
       >
         <div className="legend-sub-container">
           <div className="legend-checkbox-container">
