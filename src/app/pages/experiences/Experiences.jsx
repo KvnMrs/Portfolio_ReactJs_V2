@@ -72,7 +72,7 @@ function Experiences() {
                 <ExperiencesLegend legend={legend} showLegend={activeLegend} />
               )}
 
-              <motion.aside className="lists-experience-training h-5/6">
+              <aside className="lists-experience-training h-5/6">
                 {/* Show experiences */}
                 {showExperiences &&
                   datasExperiences.map((experience) => (
@@ -103,7 +103,7 @@ function Experiences() {
                       <TrainingsList datas={training} />
                     </motion.div>
                   ))}
-              </motion.aside>
+              </aside>
             </div>
           </article>
         </div>

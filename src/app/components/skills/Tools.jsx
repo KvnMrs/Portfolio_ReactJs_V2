@@ -1,5 +1,8 @@
 import React from "react";
 
+// Package
+import { motion } from "framer-motion";
+
 //Datas
 import dataSkills from "../../../datas/datasSkills";
 
@@ -22,7 +25,13 @@ function Tools({ toggleSkills }) {
         <h2 className="sections-titles mr-8 md:mr-16">Outils</h2>
       </header>
 
-      <aside className="skills-list">
+      <motion.aside
+        className="skills-list"
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
         {dataSkills
           .filter((category) => category.catégorie === "Outil")
           .map((tool) => (
@@ -33,7 +42,7 @@ function Tools({ toggleSkills }) {
               img={tool.image}
             />
           ))}
-      </aside>
+      </motion.aside>
     </>
   );
 }
