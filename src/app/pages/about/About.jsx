@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // Package
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 // Components
 import SoftSkills from "../../components/about/SoftSkills";
@@ -81,13 +81,15 @@ function About() {
             </aside>
           </article>
         </div>
-        {activeModal ? (
-          <Modal
-            showModal={openModal}
-            component1={<Profile />}
-            tab={"Profil"}
-          />
-        ) : null}
+        <AnimatePresence>
+          {activeModal && (
+            <Modal
+              showModal={openModal}
+              component1={<Profile />}
+              tab={"Profil"}
+            />
+          )}
+        </AnimatePresence>
       </section>
       <div className="links-social-medias">
         <SocialMediasLinks

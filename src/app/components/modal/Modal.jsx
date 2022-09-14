@@ -38,6 +38,7 @@ function Modal({
         className="modal-container"
         initial={{ y: -1000 }}
         animate={{ y: 0 }}
+        exit={{ y: -1000 }}
         transition={{ ease: "easeOut", duration: 1 }}
       >
         <div className="modal-sub-container">
