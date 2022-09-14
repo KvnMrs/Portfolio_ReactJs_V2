@@ -214,7 +214,7 @@
 /* MD */ md:text-lg
 }
 .img-part {
-  @apply w-4/5 my-6 mx-auto flex justify-center
+  @apply w-4/5 my-6 mx-auto flex justify-center items-center
 /* MD */ md:w-2/6  md:self-center md:flex-col
 }
 .profile-img {

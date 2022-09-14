@@ -62,7 +62,17 @@ function About() {
                 transition={{ duration: 1, delay: 1 }}
               >
                 <button type="button" onClick={openModal}>
-                  <img className="profile-img" alt="Profil" src={imgProfil} />
+                  <motion.img
+                    className="profile-img"
+                    alt="Profil"
+                    src={imgProfil}
+                    whileHover={{
+                      borderBlockColor: "cyan",
+                      rotateY: 360,
+                      scale: 1.2,
+                    }}
+                    transition={{ duration: 1 }}
+                  />
                 </button>
               </motion.aside>
             </div>
