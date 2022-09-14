@@ -1,9 +1,18 @@
 import React from "react";
 
+// Package
+import { motion } from "framer-motion";
+
 const ExperiencesLegend = ({ legend, showLegend }) => {
   return (
     <>
-      <div className="legend-container">
+      <motion.div
+        className="legend-container"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 1, duration: 1 }}
+      >
         <div className="legend-sub-container">
           <div className="legend-checkbox-container">
             <input
@@ -37,7 +46,7 @@ const ExperiencesLegend = ({ legend, showLegend }) => {
             </li>
           </ul>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
