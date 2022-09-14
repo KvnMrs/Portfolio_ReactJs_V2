@@ -72,7 +72,13 @@ function Experiences() {
                 <ExperiencesLegend legend={legend} showLegend={activeLegend} />
               )}
 
-              <aside className="lists-experience-training h-5/6">
+              <motion.aside
+                className="lists-experience-training h-5/6"
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 1, duration: 1 }}
+              >
                 {/* Show experiences */}
                 {showExperiences &&
                   datasExperiences.map((experience) => (
@@ -103,7 +109,7 @@ function Experiences() {
                       <TrainingsList datas={training} />
                     </motion.div>
                   ))}
-              </aside>
+              </motion.aside>
             </div>
           </article>
         </div>
