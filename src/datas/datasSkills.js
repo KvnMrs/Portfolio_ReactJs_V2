@@ -35,35 +35,35 @@ const dataSkills = [
     catégorie: "Atout",
     element: "Esprit d'équipe",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, a nostrum. Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates,Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, a nostrum. Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates",
   },
   {
     image: img_autonome,
     catégorie: "Atout",
     element: "Autonome",
     description:
-      "Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates,Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates,Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates",
+      "Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates",
   },
   {
     image: img_ecoute,
     catégorie: "Atout",
     element: "Sens de l'écoute",
     description:
-      "Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates,Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates,Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates",
+      "Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates",
   },
   {
     image: img_logique,
     catégorie: "Atout",
     element: "Logique",
     description:
-      "Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates,Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates,Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates",
+      "Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates",
   },
   {
     image: img_curieux,
     catégorie: "Atout",
     element: "Curieux",
     description:
-      "delectus doloremque, explicabo tempore dicta adipisci fugit amet dignissimos? Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates,Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates",
+      "delectus doloremque, explicabo tempore dicta adipisci fugit amet dignissimos? Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates",
   },
 
   /********** HARDS SKILLS ***************/

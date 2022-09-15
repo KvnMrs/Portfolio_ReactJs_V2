@@ -1,8 +1,16 @@
 import React from "react";
 
+import { motion } from "framer-motion";
+
 function TrainingsList({ datas }) {
   return (
-    <div className="lists-elements">
+    <motion.div
+      className="lists-elements"
+      initial={{ opacity: 0, scale: 0.5 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.7 }}
+    >
       <img
         alt={datas.centre}
         src={datas.image}
@@ -13,7 +21,7 @@ function TrainingsList({ datas }) {
       <h2 className="text-lg text-gray-400">{datas.lieu}</h2>
       <h2 className="text-lg text-gray-400">{datas.date}</h2>
       <h3 className="">{datas.statut}</h3>
-    </div>
+    </motion.div>
   );
 }
 

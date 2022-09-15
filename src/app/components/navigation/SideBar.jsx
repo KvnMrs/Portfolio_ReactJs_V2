@@ -8,6 +8,7 @@ import SvgSkills from "../../../assets/svg/sidebar/links-section/SvgSkills";
 import SvgProject from "../../../assets/svg/sidebar/links-section/SvgProject";
 import SvgContact from "../../../assets/svg/sidebar/links-section/SvgContact";
 import SvgBurger from "../../../assets/svg/sidebar/SvgBurger";
+import { Link } from "react-router-dom";
 
 function BarNav() {
   const [openSidebar, setOpenSideBar] = useState(false);
@@ -27,11 +28,11 @@ function BarNav() {
         {/* Links Section */}
         <nav className={openSidebar ? "nav" : "hidden"}>
           <ol className="links-container">
-            <Link to="/">
-              <li className="links">
+            <li>
+              <Link className="links" to="/">
                 <SvgHome />
-              </li>
-            </Link>
+              </Link>
+            </li>
             <li>
               <a className="links" href="#about">
                 <SvgProfile />

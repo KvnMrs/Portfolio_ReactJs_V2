@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+// Package
+import { motion } from "framer-motion";
+
 // Sub-components
 import ButtonCallToActionText from "../../sub-components/buttons/ButtonCallToActionText";
 
@@ -22,7 +25,13 @@ const Contact = () => {
                 contactez-moi 📝
               </p>
             </header>
-            <form className="form">
+            <motion.form
+              className="form"
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+            >
               <div>
                 <label htmlFor="reason">Motif :</label>
                 <select id="reason" onChange={(e) => setReason(e.target.value)}>
@@ -76,15 +85,23 @@ const Contact = () => {
                   type={"submit"}
                   customClass={"submit-button"}
                 >
-                  <a
+                  <motion.a
                     className="w-full text-sm md:text-lg"
                     href={`mailto:kevin.mrs2020@gmail.com?subject=${reason}&body=${firstname} ${lastname.toUpperCase()}%0A${mail}%0A${phone}%0A%0A${message}`}
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    whileInView={{
+                      opacity: 1,
+                      scale: 1,
+                      rotateY: 360,
+                    }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.7, duration: 0.7 }}
                   >
                     Envoyer
-                  </a>
+                  </motion.a>
                 </ButtonCallToActionText>
               </div>
-            </form>
+            </motion.form>
           </article>
         </div>
       </section>

@@ -12,13 +12,10 @@ import LinkedinSvg from "../../../assets/svg/profile/LinkedinSvg";
 import GithubSvg from "../../../assets/svg/profile/GithubSvg";
 import PhoneSvg from "../../../assets/svg/profile/PhoneSvg";
 import LanguageSvg from "../../../assets/svg/profile/LanguageSvg";
-import HobbiesSvg from "../../../assets/svg/profile/HobbiesSvg";
 
 function Profile() {
   return (
     <>
-      {/* <div className=""></div> */}
-
       <div className="modal-profile">
         <div className="profile-infos-contact-part">
           <div className="profile-infos-contact-surface">

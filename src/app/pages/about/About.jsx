@@ -1,15 +1,21 @@
 import React, { useState } from "react";
 
+// Package
+import { AnimatePresence, motion } from "framer-motion";
+
 // Components
 import SoftSkills from "../../components/about/SoftSkills";
 import Modal from "../../components/modal/Modal";
-import Profile from "../../components/about/Profile";
+import ProfileModal from "../../components/about/ProfileModal";
+import SoftSkillsModal from "../../components/about/SoftSkillsModal";
 
 //Sub-components
-import ButtonCallToActionText from "../../sub-components/buttons/ButtonCallToActionText";
+import SocialMediasLinks from "../../sub-components/Links/SocialMediasLinks";
 
 //Assets
 import imgProfil from "../../../assets/img/imgAbout/Kevin.jpg";
+import Github from "../../../assets/img/imgSocialMedias/Github.png";
+import Linkedin from "../../../assets/img/imgSocialMedias/Linkedin.png";
 
 //Datas
 import dataSkills from "../../../datas/datasSkills";
@@ -31,7 +37,12 @@ function About() {
               <h1 className="sections-titles">En quelques mots...</h1>
             </header>
             <div className="description-part">
-              <aside className="description-text">
+              <motion.aside
+                className="description-text"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7 }}
+              >
                 <p className="text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
                   auctor lacus nec sem volutpat tristique. Interdum et malesuada
@@ -44,12 +55,27 @@ function About() {
                   in lacus lacinia, in placerat elit mattis. Suspendisse et
                   lacinia leo.
                 </p>
-              </aside>
-              <aside className="img-part">
+              </motion.aside>
+              <motion.aside
+                className="img-part"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7, delay: 0.7 }}
+              >
                 <button type="button" onClick={openModal}>
-                  <img className="profile-img" alt="Profil" src={imgProfil} />
+                  <motion.img
+                    className="profile-img"
+                    alt="Profil"
+                    src={imgProfil}
+                    whileHover={{
+                      borderBlockColor: "cyan",
+                      rotateY: 360,
+                      scale: 1.2,
+                    }}
+                    transition={{ duration: 0.7 }}
+                  />
                 </button>
-              </aside>
+              </motion.aside>
             </div>
 
             <aside className="softSkills-part">
@@ -61,19 +87,36 @@ function About() {
                     softSkill={el.element}
                     categorie={el.catégorie}
                     img={el.image}
+                    openModal={openModal}
                   />
                 ))}
             </aside>
           </article>
         </div>
-        {activeModal ? (
-          <Modal
-            showModal={openModal}
-            component1={<Profile />}
-            tab={"Profil"}
-          />
-        ) : null}
+        <AnimatePresence>
+          {activeModal && (
+            <Modal
+              showModal={openModal}
+              component1={<ProfileModal />}
+              component2={<SoftSkillsModal />}
+              tab={"Profil"}
+              tab2={"Savoir-être"}
+            />
+          )}
+        </AnimatePresence>
       </section>
+      {/* <div className="links-social-medias">
+        <SocialMediasLinks
+          link={"https://www.linkedin.com/in/k%C3%A9vin-marais-861314216/"}
+          img={Linkedin}
+          alt={"Lien vers Linkedin"}
+        />
+        <SocialMediasLinks
+          link={"https://github.com/KvnMrs"}
+          img={Github}
+          alt={"Lien vers Github"}
+        />
+      </div> */}
     </>
   );
 }
