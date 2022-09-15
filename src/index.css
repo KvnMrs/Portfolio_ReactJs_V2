@@ -129,7 +129,7 @@
   @apply ml-auto text-3xl text-white font-semibold font-sans transition-all hover:scale-125 hover:font-light
 }
 .content-modal {
-  @apply w-screen h-5/6 flex flex-col items-center m-auto
+  @apply w-screen h-full flex flex-col items-center m-auto
 /* MD */ md:flex-row
 /* LG */ lg:w-11/12
 }
@@ -137,7 +137,7 @@
 /* Profile-Modal */
 
 .modal-profile {
-  @apply w-screen h-full flex flex-col mx-auto justify-center items-center  rounded-lg
+  @apply w-screen h-full flex flex-col mx-auto justify-center items-center rounded-lg
 }
 .profile-infos-contact-part {
   @apply w-full
@@ -195,7 +195,7 @@
 
 .description-part {
   @apply w-11/12 py-2 flex flex-col mx-auto
-/* sm */ sm:h-4/6
+/* sm */ md:h-4/6
 /* MD */ md:flex-row
 }
 .description-text {
