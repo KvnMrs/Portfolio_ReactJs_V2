@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // Package
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 // Components
 import ProjectCard from "../../components/projects/ProjectCard";
