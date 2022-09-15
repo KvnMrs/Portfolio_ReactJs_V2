@@ -6,7 +6,8 @@ import { AnimatePresence, motion } from "framer-motion";
 // Components
 import SoftSkills from "../../components/about/SoftSkills";
 import Modal from "../../components/modal/Modal";
-import Profile from "../../components/about/Profile";
+import ProfileModal from "../../components/about/ProfileModal";
+import SoftSkillsModal from "../../components/about/SoftSkillsModal";
 
 //Sub-components
 import SocialMediasLinks from "../../sub-components/Links/SocialMediasLinks";
@@ -86,6 +87,7 @@ function About() {
                     softSkill={el.element}
                     categorie={el.catégorie}
                     img={el.image}
+                    openModal={openModal}
                   />
                 ))}
             </aside>
@@ -95,8 +97,10 @@ function About() {
           {activeModal && (
             <Modal
               showModal={openModal}
-              component1={<Profile />}
+              component1={<ProfileModal />}
+              component2={<SoftSkillsModal />}
               tab={"Profil"}
+              tab2={"Savoir-être"}
             />
           )}
         </AnimatePresence>

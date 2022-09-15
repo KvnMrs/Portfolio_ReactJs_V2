@@ -195,7 +195,7 @@
 
 .description-part {
   @apply w-11/12 py-2 flex flex-col mx-auto
-/* sm */ sm:h-3/4
+/* sm */ sm:h-4/6
 /* MD */ md:flex-row
 }
 .description-text {
@@ -226,11 +226,11 @@
 /* SoftSkills part */
 
 .softSkills-part {
-  @apply w-5/6 pt-2 flex mx-auto self-center items-center overflow-x-auto
+  @apply w-5/6 h-1/6 pt-2 flex mx-auto self-center items-center overflow-x-auto
 /* SM */ sm:pt-0
 }
 .softSkill {
-  @apply mx-3 pb-3 flex flex-col text-center
+  @apply h-full mx-3 pb-3 flex flex-col text-center
 /* MD */ md:mx-auto md:pb-0
 }
 .softSkill-title {
@@ -238,8 +238,8 @@
 /* MD */ md:text-lg md:mx-auto
 }
 .softSkill-img {
-  @apply w-12 p-2 self-center border rounded-lg gradiant-light
-/* MD */ md:w-16 md:mx-auto
+  @apply w-12 p-2 mx-auto self-center border rounded-lg gradiant-light
+/* MD */ md:w-16 
 }
 
 /*************************** Experiences ****************************/
