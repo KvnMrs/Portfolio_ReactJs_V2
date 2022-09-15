@@ -105,7 +105,7 @@ function About() {
           )}
         </AnimatePresence>
       </section>
-      <div className="links-social-medias">
+      {/* <div className="links-social-medias">
         <SocialMediasLinks
           link={"https://www.linkedin.com/in/k%C3%A9vin-marais-861314216/"}
           img={Linkedin}
@@ -116,7 +116,7 @@ function About() {
           img={Github}
           alt={"Lien vers Github"}
         />
-      </div>
+      </div> */}
     </>
   );
 }
