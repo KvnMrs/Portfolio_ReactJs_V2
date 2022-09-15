@@ -39,7 +39,7 @@ function Modal({
         initial={{ y: -1000 }}
         animate={{ y: 0 }}
         exit={{ y: -1000 }}
-        transition={{ ease: "easeOut", duration: 1 }}
+        transition={{ ease: "easeOut", duration: 0.7 }}
       >
         <div className="modal-sub-container">
           <div className="content-tabs">

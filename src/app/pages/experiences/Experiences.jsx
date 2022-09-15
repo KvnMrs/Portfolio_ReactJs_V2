@@ -77,7 +77,7 @@ function Experiences() {
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 0.7 }}
               >
                 {/* Show experiences */}
                 {showExperiences &&
@@ -91,7 +91,7 @@ function Experiences() {
                       initial={{ opacity: 0, scale: 0.5 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
-                      transition={{ duration: 1 }}
+                      transition={{ duration: 0.7 }}
                     >
                       <ExperiencesList datas={experience} />
                     </motion.div>
@@ -104,7 +104,7 @@ function Experiences() {
                       initial={{ opacity: 0, scale: 0.5 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
-                      transition={{ duration: 1 }}
+                      transition={{ duration: 0.7 }}
                     >
                       <TrainingsList datas={training} />
                     </motion.div>

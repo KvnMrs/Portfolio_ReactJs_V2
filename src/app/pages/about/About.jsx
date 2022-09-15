@@ -40,7 +40,7 @@ function About() {
                 className="description-text"
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 0.7 }}
               >
                 <p className="text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
@@ -59,7 +59,7 @@ function About() {
                 className="img-part"
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 1 }}
+                transition={{ duration: 0.7, delay: 0.7 }}
               >
                 <button type="button" onClick={openModal}>
                   <motion.img
@@ -71,7 +71,7 @@ function About() {
                       rotateY: 360,
                       scale: 1.2,
                     }}
-                    transition={{ duration: 1 }}
+                    transition={{ duration: 0.7 }}
                   />
                 </button>
               </motion.aside>

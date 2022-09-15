@@ -11,7 +11,7 @@ const SoftSkills = ({ softSkill, categorie, img }) => {
           className="softSkill"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 2 }}
+          transition={{ duration: 0.7, delay: 1.4 }}
         >
           <h4 className="softSkill-title">{softSkill}</h4>
           <div className="softSkill-img">

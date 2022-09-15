@@ -11,7 +11,7 @@ function ExperiencesList({ datas }) {
         initial={{ opacity: 0, scale: 0.5 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.7 }}
       >
         <h1 className="text-2xl md:text-3xl text-white">{datas.entreprise}</h1>
         <h2 className="text-xl text-slate-200">{datas.lieu}</h2>

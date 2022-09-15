@@ -11,7 +11,7 @@ const ProjectCard = ({ img, title, category, description, link }) => {
         initial={{ x: -200, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.7 }}
       >
         <img alt={title} src={img} />
         <aside className="project-content">

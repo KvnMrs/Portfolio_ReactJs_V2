@@ -19,7 +19,7 @@ const MyApp = () => {
         className="main-container"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.7 }}
       >
         <About />
         <Experiences />
