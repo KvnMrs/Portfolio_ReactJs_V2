@@ -13,7 +13,7 @@ const SoftSkillsModal = () => {
             <>
               <div className="modal-softSkill">
                 <div className="modal-softSkill-img-part">
-                  <img className=".modal-softSkill-img " src={skill.image} />
+                  <img className="modal-softSkill-img " src={skill.image} />
                 </div>
 
                 <div className="modal-softSkill-description-part">
