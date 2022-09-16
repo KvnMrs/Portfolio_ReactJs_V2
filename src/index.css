@@ -239,7 +239,7 @@
 /* SoftSkills part */
 
 .softSkills-part {
-  @apply w-5/6 h-1/6 pt-2 flex mx-auto self-center items-center overflow-x-auto
+  @apply w-5/6 h-1/6 py-2 flex mx-auto self-center items-center overflow-y-auto scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500
 /* SM */ sm:pt-0
 }
 .softSkill {
@@ -252,7 +252,7 @@
 }
 .softSkill-img {
   @apply w-12 p-2 mx-auto self-center border rounded-lg gradiant-light
-/* MD */ md:w-16 
+/* MD */ md:w-16
 }
 
 /*************************** Experiences ****************************/
@@ -262,7 +262,7 @@
 /* LG */ lg:flex-row
 }
 .lists-experience-training {
-  @apply w-5/6 items-center overflow-scroll scrollbar-hide rounded-lg border-b border-white
+  @apply w-5/6 items-center overflow-scroll scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500 rounded-lg border-b border-white
 /* LG */ lg:w-1/2
 }
 .lists-elements-containers {
