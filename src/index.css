@@ -20,7 +20,7 @@
   @apply text-white
 }
 .global-bg {
-  @apply bg-black
+  @apply gradiant-dark
 }
 .sections-containers {
   @apply w-full h-screen flex flex-col
@@ -72,11 +72,11 @@
   }
 }
 .sideBar-closed {
-  @apply w-auto h-14 p-3 fixed flex z-30 shadow-cyan-300/50 rounded-sm
+  @apply w-auto h-14 p-3 fixed flex z-30 shadow-cyan-500/50 rounded-sm
 /* MD */ md:duration-1000 md:top-4 md:h-auto md:left-4 md:flex-col md:content-center md:rounded-full
 }
 .sideBar-container {
-  @apply w-full h-14 fixed flex z-30 ease-in-out duration-1000 bg-black shadow-lg shadow-cyan-300/50 rounded-sm
+  @apply w-full h-14 fixed flex z-30 ease-in-out duration-1000 bg-gradient-to-r from-dark_blue to-light_blue shadow-lg shadow-cyan-500/50 rounded-sm
 /* MD */ md:w-16 md:h-4/6 md:left-4 sidebar-center md:flex-col duration-2000 md:content-center md:rounded-full
 }
 .burger-button-container {
@@ -110,7 +110,7 @@
  @apply w-screen absolute inset-0 z-50 bg-opacity-60 bg-black
 }
 .modal-sub-container {
-  @apply w-screen min-h-screen flex flex-col absolute z-50 mx-auto bg-gradient-to-r from-slate-800 to-dark_blue
+  @apply w-screen min-h-screen flex flex-col absolute z-50 mx-auto bg-light_blue
 /* MD */ md:h-full
 /* LG */ lg:w-10/12 lg:inset-x-10 lg:rounded-2xl
 }
@@ -118,7 +118,7 @@
 /* Tabs-Modal */
 
 .content-tabs {
-  @apply flex px-5 py-1 items-center bg-gradient-to-tr from-dark_blue to-slate-700 bg-opacity-70
+  @apply flex px-5 py-1 items-center gradiant-dark
 /* LG */ lg:py-3
 }
 .tab-buttons {
@@ -145,11 +145,11 @@
 /* LG */ lg:h-4/5
 }
 .profile-infos-contact-surface {
-  @apply m-2 flex flex-col items-center bg-gradient-to-r from-cyan-900 to-slate-600 rounded-lg shadow-xl border-b border-white
+  @apply m-2 flex flex-col items-center gradiant-dark rounded-lg shadow-xl border-b border-white
 /* LG */ lg:w-1/2 lg:h-auto lg:justify-center
 }
 .profile-hobbies-part {
-  @apply h-2/5 flex flex-col mx-2 items-center justify-center bg-gradient-to-r from-cyan-900 to-slate-600 rounded-lg shadow-xl border-b border-white
+  @apply h-2/5 flex flex-col mx-2 items-center justify-center gradiant-dark rounded-lg shadow-xl border-b border-white
 /* LG */ lg:px-4 lg:m-2
 }
 .profile-titles {
@@ -160,10 +160,10 @@
 
 /* SoftSkills-Modal */
 .modal-SoftSkills {
-  @apply flex flex-col
+  @apply flex flex-col mx-2
 }
 .modal-softSkill {
-  @apply w-full flex p-2 m-auto
+  @apply w-full flex p-2 my-3 mx-auto gradiant-dark border-b border-white rounded-md
 /* SM */ sm:p-5
 
 }
@@ -262,14 +262,11 @@
 /* LG */ lg:flex-row
 }
 .lists-experience-training {
-  @apply w-5/6 items-center overflow-scroll scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500 rounded-lg border-b border-white
+  @apply w-5/6 items-center overflow-scroll scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500 rounded-lg border-b border-cyan-500
 /* LG */ lg:w-1/2
 }
-.lists-elements-containers {
-  @apply  rounded-lg shadow-xl
-}
 .lists-elements {
-  @apply w-full mt-1 m-auto text-center py-8
+  @apply w-full border-b border-white m-auto text-center py-8
 /* MD */ md:w-3/4
 }
 
@@ -331,7 +328,7 @@
   @apply mx-auto relative flex flex-wrap justify-center
 }
 .project {
-  @apply rounded-lg shadow-md bg-gray-800
+  @apply rounded-lg shadow-md gradiant-dark
 /* MD */ md:w-1/2
 }
 .project-content {

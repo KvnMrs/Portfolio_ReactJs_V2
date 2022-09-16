@@ -84,9 +84,7 @@ function Experiences() {
                   datasExperiences.map((experience) => (
                     <motion.div
                       className={
-                        legend
-                          ? `lists-elements-containers ${experience.bgColor}`
-                          : "lists-elements-containers bg-gradient-to-r from-slate-500 to-slate-700"
+                        legend ? `${experience.bgColor}` : "gradiant-dark"
                       }
                       initial={{ opacity: 0, scale: 0.5 }}
                       whileInView={{ opacity: 1, scale: 1 }}
@@ -100,7 +98,7 @@ function Experiences() {
                 {!showExperiences &&
                   dataTraining.map((training) => (
                     <motion.div
-                      className="lists-elements-containers bg-gradient-to-r from-slate-500 to-slate-700"
+                      className="gradiant-dark"
                       initial={{ opacity: 0, scale: 0.5 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
