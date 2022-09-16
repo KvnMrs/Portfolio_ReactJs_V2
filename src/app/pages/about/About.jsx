@@ -68,8 +68,7 @@ function About() {
                     alt="Profil"
                     src={imgProfil}
                     whileHover={{
-                      borderBlockColor: "cyan",
-                      rotateY: 360,
+                      borderColor: "cyan",
                       scale: 1.2,
                     }}
                     transition={{ duration: 0.7 }}
