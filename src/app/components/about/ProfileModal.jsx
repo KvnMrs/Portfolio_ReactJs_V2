@@ -1,5 +1,8 @@
 import React from "react";
 
+// Package
+import { motion } from "framer-motion";
+
 // Sub-Components
 import ProfileInformation from "../../sub-components/modal/ProfileInformation";
 
@@ -18,7 +21,13 @@ function Profile() {
     <>
       <div className="modal-profile">
         <div className="profile-infos-contact-part">
-          <div className="profile-infos-contact-surface">
+          <motion.div
+            className="profile-infos-contact-surface"
+            initial={{ opacity: 0, x: -150 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
             <h2 className="profile-titles">Infos</h2>
             <ProfileInformation svg={<ProfileSvg />} text={"Kévin Marais"} />
             <ProfileInformation
@@ -33,8 +42,14 @@ function Profile() {
               svg={<LanguageSvg />}
               text={"Français (Maternelle) | Anglais (Intermédiaire)"}
             />
-          </div>
-          <div className="profile-infos-contact-surface">
+          </motion.div>
+          <motion.div
+            className="profile-infos-contact-surface"
+            initial={{ opacity: 0, x: 150 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
             <h2 className="profile-titles">Contact</h2>
             <ProfileInformation
               svg={<EmailAdressSvg />}
@@ -49,9 +64,15 @@ function Profile() {
               svg={<GithubSvg />}
               text={"https://github.com/KvnMrs"}
             />
-          </div>
+          </motion.div>
         </div>
-        <div className="profile-hobbies-part">
+        <motion.div
+          className="profile-hobbies-part"
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
           <h2 className="profile-titles">Centres d'intêret</h2>
           <ProfileInformation
             text={`Passionné par les technologies et le code, qui parfois nous font beaucoup réfléchir,
@@ -59,7 +80,7 @@ function Profile() {
               Je libère mon esprit par quelques séances de fitness.
               `}
           />
-        </div>
+        </motion.div>
       </div>
     </>
   );
