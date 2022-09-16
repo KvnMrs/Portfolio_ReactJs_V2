@@ -37,7 +37,7 @@
 /* MD */ md:h-5/6 md:m-auto md:block
 }
 .sections-headers {
-  @apply flex mx-auto justify-center items-center pb-2
+  @apply flex mx-auto mb-5 justify-center items-center pb-2
 /* MD */ md:pb-5
 }
 .sections-titles {
