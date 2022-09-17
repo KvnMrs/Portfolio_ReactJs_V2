@@ -16,6 +16,13 @@ import GithubSvg from "../../../assets/svg/profile/GithubSvg";
 import PhoneSvg from "../../../assets/svg/profile/PhoneSvg";
 import LanguageSvg from "../../../assets/svg/profile/LanguageSvg";
 
+// Animations
+import {
+  modalProfileInfosAnim,
+  modalProfileContactAnim,
+  modalProfileHobbiesAnim,
+} from "../../animations/aboutAnimation";
+
 function Profile() {
   return (
     <>
@@ -23,10 +30,10 @@ function Profile() {
         <div className="profile-infos-contact-part">
           <motion.div
             className="profile-infos-contact-surface"
-            initial={{ opacity: 0, x: -150 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            variants={modalProfileInfosAnim}
+            initial="initial"
+            animate="animate"
+            viewport="viewport"
           >
             <h2 className="profile-titles">Infos</h2>
             <ProfileInformation svg={<ProfileSvg />} text={"Kévin Marais"} />
@@ -45,10 +52,10 @@ function Profile() {
           </motion.div>
           <motion.div
             className="profile-infos-contact-surface"
-            initial={{ opacity: 0, x: 150 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            variants={modalProfileContactAnim}
+            initial="initial"
+            animate="animate"
+            viewport="viewport"
           >
             <h2 className="profile-titles">Contact</h2>
             <ProfileInformation
@@ -68,10 +75,10 @@ function Profile() {
         </div>
         <motion.div
           className="profile-hobbies-part"
-          initial={{ opacity: 0, scale: 0.5 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          variants={modalProfileHobbiesAnim}
+          initial="initial"
+          animate="animate"
+          viewport="viewport"
         >
           <h2 className="profile-titles">Centres d'intêret</h2>
           <ProfileInformation
