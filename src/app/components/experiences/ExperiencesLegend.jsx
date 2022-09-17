@@ -3,15 +3,18 @@ import React from "react";
 // Package
 import { motion } from "framer-motion";
 
+// Animations
+import { legendAnim } from "../../animations/experiencesAnimation";
+
 const ExperiencesLegend = ({ legend, showLegend }) => {
   return (
     <>
       <motion.div
         className="legend-container"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        variants={legendAnim}
+        initial="initial"
+        whileInView="whileInView"
         viewport={{ once: true }}
-        transition={{ delay: 0.7, duration: 1 }}
       >
         <div className="legend-sub-container">
           <div className="legend-checkbox-container">

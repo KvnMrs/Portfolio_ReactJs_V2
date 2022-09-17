@@ -325,7 +325,7 @@
   @apply mx-auto relative flex flex-wrap justify-center
 }
 .project {
-  @apply rounded-lg shadow-md gradiant-dark
+  @apply m-auto rounded-lg shadow-md gradiant-dark
 /* MD */ md:w-1/2
 }
 .project-content {
