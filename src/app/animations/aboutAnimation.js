@@ -58,3 +58,23 @@ export const modalProfileHobbiesAnim = {
   animate: { opacity: 1, scale: 1, transition: { duration: 0.7 } },
   viewport: { once: true },
 };
+
+// Modal SoftSkills part
+export const modalSoftSkillsAnim = {
+  initial: { opacity: 0 },
+  animate: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+export const modalSoftSkillAnim = {
+  initial: { x: -20, opacity: 0 },
+  animate: {
+    x: 0,
+    opacity: 1,
+  },
+};
