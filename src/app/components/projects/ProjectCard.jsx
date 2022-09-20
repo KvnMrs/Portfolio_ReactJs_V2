@@ -3,15 +3,19 @@ import React from "react";
 // Package
 import { motion } from "framer-motion";
 
+// Animations
+import { projecItemAnim } from "../../animations/projectsAnimation";
+
 const ProjectCard = ({ img, title, category, description, link }) => {
   return (
     <>
       <motion.article
         className="project"
-        initial={{ x: -200, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
+        variants={projecItemAnim}
+        initial="initial"
+        animate="animate"
+        exit="exit"
         viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
       >
         <img alt={title} src={img} />
         <aside className="project-content">

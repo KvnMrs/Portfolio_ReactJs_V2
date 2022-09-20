@@ -7,6 +7,9 @@ import { motion } from "framer-motion";
 import ModalTabButtons from "./ModalTabButtons";
 import ModalContent from "./ModalContent";
 
+// Animations
+import { modalAnim } from "../../animations/aboutAnimation";
+
 function Modal({
   showModal,
   component1,
@@ -15,7 +18,6 @@ function Modal({
   tab,
   tab2,
   tab3,
-  y,
 }) {
   const [activeTab, setActiveTab] = useState(1);
   const [activeContent, setActiveContent] = useState(component1);
@@ -36,10 +38,10 @@ function Modal({
     <>
       <motion.div
         className="modal-container"
-        initial={{ y: -1000 }}
-        animate={{ y: 0 }}
-        exit={{ y: -1000 }}
-        transition={{ ease: "easeOut", duration: 0.7 }}
+        variants={modalAnim}
+        initial="initial"
+        animate="animate"
+        exit="exit"
       >
         <div className="modal-sub-container">
           <div className="content-tabs">
