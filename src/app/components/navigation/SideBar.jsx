@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 // Assets
 import SvgHome from "../../../assets/svg/sidebar/links-section/SvgHome";
@@ -7,7 +8,6 @@ import SvgSkills from "../../../assets/svg/sidebar/links-section/SvgSkills";
 import SvgProject from "../../../assets/svg/sidebar/links-section/SvgProject";
 import SvgContact from "../../../assets/svg/sidebar/links-section/SvgContact";
 import SvgBurger from "../../../assets/svg/sidebar/SvgBurger";
-import { Link } from "react-router-dom";
 
 function BarNav() {
   const [openSidebar, setOpenSideBar] = useState(false);
