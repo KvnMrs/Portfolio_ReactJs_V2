@@ -13,7 +13,7 @@ const ProjectCard = ({ img, title, category, description, link }) => {
         className="project"
         variants={projecItemAnim}
         initial="initial"
-        whileInView="whileInView"
+        animate="animate"
         exit="exit"
         viewport={{ once: true }}
       >
