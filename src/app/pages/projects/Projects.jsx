@@ -17,7 +17,7 @@ import RightArrowSvg from "../../../assets/svg/global/RightArrowSvg";
 import LeftArrowSvg from "../../../assets/svg/global/LeftArrowSvg";
 
 // Animations
-import { projectsAnim } from "../../animations/projectsAnimation";
+import { projectsContainer } from "../../animations/projectsAnimation";
 
 function Projects() {
   const [currentProject, SetCurrentProject] = useState(0);
@@ -40,7 +40,7 @@ function Projects() {
             </header>
             <motion.div
               className="projects-carrousel"
-              variants={projectsAnim}
+              variants={projectsContainer}
               initial="initial"
               whileInView="whileInView"
               viewport={{ once: true }}
@@ -64,7 +64,7 @@ function Projects() {
                   <>
                     {currentProject === index && (
                       <ProjectCard
-                        key={el.title}
+                        key={index}
                         img={el.img}
                         title={el.title}
                         category={el.category}

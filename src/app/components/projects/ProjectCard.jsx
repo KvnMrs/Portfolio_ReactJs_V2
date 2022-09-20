@@ -4,14 +4,14 @@ import React from "react";
 import { motion } from "framer-motion";
 
 // Animations
-import { projectAnim } from "../../animations/projectsAnimation";
+import { projecItemAnim } from "../../animations/projectsAnimation";
 
 const ProjectCard = ({ img, title, category, description, link }) => {
   return (
     <>
       <motion.article
         className="project"
-        variants={projectAnim}
+        variants={projecItemAnim}
         initial="initial"
         whileInView="whileInView"
         exit="exit"

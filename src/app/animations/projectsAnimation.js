@@ -1,23 +1,24 @@
-export const projectsAnim = {
+export const projectsContainer = {
   initial: { opacity: 0, scale: 0.5 },
   whileInView: {
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 0.7,
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
     },
   },
 };
 
-export const projectAnim = {
-  initial: { x: -200, opacity: 0 },
+export const projecItemAnim = {
+  initial: { x: -100, opacity: 0 },
   whileInView: {
     x: 0,
     opacity: 1,
-    transition: { durantion: 0.5 },
+    transition: { duration: 0.5 },
   },
   exit: {
-    x: 200,
+    x: 100,
     opacity: 0,
   },
 };
