@@ -19,6 +19,12 @@ import ButtonCallToActionSvg from "../../sub-components/buttons/ButtonCallToActi
 import RightArrowSvg from "../../../assets/svg/global/RightArrowSvg";
 import LeftArrowSvg from "../../../assets/svg/global/LeftArrowSvg";
 
+// Animations
+import {
+  listsContainerAnim,
+  listsItemsAnim,
+} from "../../animations/experiencesAnimation";
+
 function Experiences() {
   const [showExperiences, setShowExperiences] = useState(true);
   const [legend, setLegend] = useState(false);
@@ -74,24 +80,22 @@ function Experiences() {
 
               <motion.aside
                 className="lists-experience-training h-5/6"
-                initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                variants={listsContainerAnim}
+                initial="initial"
+                whileInView="whileInView"
                 viewport={{ once: true }}
-                transition={{ duration: 0.7 }}
               >
                 {/* Show experiences */}
                 {showExperiences &&
                   datasExperiences.map((experience) => (
                     <motion.div
                       className={
-                        legend
-                          ? `lists-elements-containers ${experience.bgColor}`
-                          : "lists-elements-containers bg-gradient-to-r from-slate-500 to-slate-700"
+                        legend ? `${experience.bgColor}` : "gradiant-dark"
                       }
-                      initial={{ opacity: 0, scale: 0.5 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
+                      variants={listsItemsAnim}
+                      initial="initial"
+                      whileInView="whileInView"
                       viewport={{ once: true }}
-                      transition={{ duration: 0.7 }}
                     >
                       <ExperiencesList datas={experience} />
                     </motion.div>
@@ -100,11 +104,11 @@ function Experiences() {
                 {!showExperiences &&
                   dataTraining.map((training) => (
                     <motion.div
-                      className="lists-elements-containers bg-gradient-to-r from-slate-500 to-slate-700"
-                      initial={{ opacity: 0, scale: 0.5 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
+                      className="gradiant-dark"
+                      variants={listsItemsAnim}
+                      initial="initial"
+                      whileInView="whileInView"
                       viewport={{ once: true }}
-                      transition={{ duration: 0.7 }}
                     >
                       <TrainingsList datas={training} />
                     </motion.div>

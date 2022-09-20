@@ -16,6 +16,9 @@ import DatasProjects from "../../../datas/datasProjects";
 import RightArrowSvg from "../../../assets/svg/global/RightArrowSvg";
 import LeftArrowSvg from "../../../assets/svg/global/LeftArrowSvg";
 
+// Animations
+import { projectsContainer } from "../../animations/projectsAnimation";
+
 function Projects() {
   const [currentProject, SetCurrentProject] = useState(0);
   const length = DatasProjects.length;
@@ -37,10 +40,10 @@ function Projects() {
             </header>
             <motion.div
               className="projects-carrousel"
-              initial={{ opacity: 0, scale: 0.5 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              variants={projectsContainer}
+              initial="initial"
+              whileInView="whileInView"
               viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
             >
               <ButtonCallToActionSvg
                 svg={<LeftArrowSvg />}
@@ -53,23 +56,25 @@ function Projects() {
                 svg={<RightArrowSvg />}
                 fct={() => nextProject()}
                 customClass={
-                  "absolute top-1/2 z-10 right-2  md:left-3/4 md:ml-5 "
+                  "absolute top-1/2 z-10 right-2 md:left-3/4 md:ml-5 "
                 }
               />
-              {DatasProjects.map((el, index) => (
-                <>
-                  {currentProject === index && (
-                    <ProjectCard
-                      key={el.title}
-                      img={el.img}
-                      title={el.title}
-                      category={el.category}
-                      description={el.description}
-                      link={el.link}
-                    />
-                  )}
-                </>
-              ))}
+              <AnimatePresence>
+                {DatasProjects.map((el, index) => (
+                  <>
+                    {currentProject === index && (
+                      <ProjectCard
+                        key={index}
+                        img={el.img}
+                        title={el.title}
+                        category={el.category}
+                        description={el.description}
+                        link={el.link}
+                      />
+                    )}
+                  </>
+                ))}
+              </AnimatePresence>
             </motion.div>
           </article>
         </div>

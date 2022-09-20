@@ -1,5 +1,8 @@
 import React from "react";
 
+// Package
+import { motion } from "framer-motion";
+
 // Sub-Components
 import ProfileInformation from "../../sub-components/modal/ProfileInformation";
 
@@ -13,12 +16,25 @@ import GithubSvg from "../../../assets/svg/profile/GithubSvg";
 import PhoneSvg from "../../../assets/svg/profile/PhoneSvg";
 import LanguageSvg from "../../../assets/svg/profile/LanguageSvg";
 
+// Animations
+import {
+  modalProfileInfosAnim,
+  modalProfileContactAnim,
+  modalProfileHobbiesAnim,
+} from "../../animations/aboutAnimation";
+
 function Profile() {
   return (
     <>
       <div className="modal-profile">
         <div className="profile-infos-contact-part">
-          <div className="profile-infos-contact-surface">
+          <motion.div
+            className="profile-infos-contact-surface"
+            variants={modalProfileInfosAnim}
+            initial="initial"
+            animate="animate"
+            viewport="viewport"
+          >
             <h2 className="profile-titles">Infos</h2>
             <ProfileInformation svg={<ProfileSvg />} text={"Kévin Marais"} />
             <ProfileInformation
@@ -33,8 +49,14 @@ function Profile() {
               svg={<LanguageSvg />}
               text={"Français (Maternelle) | Anglais (Intermédiaire)"}
             />
-          </div>
-          <div className="profile-infos-contact-surface">
+          </motion.div>
+          <motion.div
+            className="profile-infos-contact-surface"
+            variants={modalProfileContactAnim}
+            initial="initial"
+            animate="animate"
+            viewport="viewport"
+          >
             <h2 className="profile-titles">Contact</h2>
             <ProfileInformation
               svg={<EmailAdressSvg />}
@@ -49,9 +71,15 @@ function Profile() {
               svg={<GithubSvg />}
               text={"https://github.com/KvnMrs"}
             />
-          </div>
+          </motion.div>
         </div>
-        <div className="profile-hobbies-part">
+        <motion.div
+          className="profile-hobbies-part"
+          variants={modalProfileHobbiesAnim}
+          initial="initial"
+          animate="animate"
+          viewport="viewport"
+        >
           <h2 className="profile-titles">Centres d'intêret</h2>
           <ProfileInformation
             text={`Passionné par les technologies et le code, qui parfois nous font beaucoup réfléchir,
@@ -59,7 +87,7 @@ function Profile() {
               Je libère mon esprit par quelques séances de fitness.
               `}
           />
-        </div>
+        </motion.div>
       </div>
     </>
   );

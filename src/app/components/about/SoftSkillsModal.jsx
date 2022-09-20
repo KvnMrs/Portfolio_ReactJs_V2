@@ -1,17 +1,35 @@
 import React from "react";
 
+// Package
+import { motion } from "framer-motion";
+
 //Datas
 import dataSkills from "../../../datas/datasSkills";
+
+// Animations
+import {
+  modalSoftSkillsAnim,
+  modalSoftSkillAnim,
+} from "../../animations/aboutAnimation";
 
 const SoftSkillsModal = () => {
   return (
     <>
-      <div className="modal-SoftSkills">
+      <motion.div
+        className="modal-SoftSkills"
+        variants={modalSoftSkillsAnim}
+        initial="initial"
+        animate="animate"
+      >
         {dataSkills
           .filter((atout) => atout.catégorie === "Atout")
-          .map((skill) => (
+          .map((skill, index) => (
             <>
-              <div className="modal-softSkill">
+              <motion.div
+                key={index}
+                className="modal-softSkill"
+                variants={modalSoftSkillAnim}
+              >
                 <div className="modal-softSkill-img-part">
                   <img className="modal-softSkill-img " src={skill.image} />
                 </div>
@@ -22,10 +40,10 @@ const SoftSkillsModal = () => {
                     {skill.description}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </>
           ))}
-      </div>
+      </motion.div>
     </>
   );
 };

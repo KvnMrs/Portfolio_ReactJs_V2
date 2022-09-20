@@ -20,6 +20,14 @@ import Linkedin from "../../../assets/img/imgSocialMedias/Linkedin.png";
 //Datas
 import dataSkills from "../../../datas/datasSkills";
 
+// Animations
+import {
+  descriptionAnim,
+  imageAnim,
+  softSkillsAnim,
+  imageHoverAnim,
+} from "../../animations/aboutAnimation";
+
 function About() {
   const [activeModal, setActiveModal] = useState(false);
 
@@ -39,9 +47,9 @@ function About() {
             <div className="description-part">
               <motion.aside
                 className="description-text"
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.7 }}
+                variants={descriptionAnim}
+                initial="initial"
+                animate="animate"
               >
                 <p className="text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
@@ -58,27 +66,29 @@ function About() {
               </motion.aside>
               <motion.aside
                 className="img-part"
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.7, delay: 0.7 }}
+                variants={imageAnim}
+                initial="initial"
+                animate="animate"
               >
                 <button type="button" onClick={openModal}>
                   <motion.img
                     className="profile-img"
                     alt="Profil"
                     src={imgProfil}
-                    whileHover={{
-                      borderBlockColor: "cyan",
-                      rotateY: 360,
-                      scale: 1.2,
-                    }}
-                    transition={{ duration: 0.7 }}
+                    variants={imageHoverAnim}
+                    whileHover="whileHover"
+                    transition="transition"
                   />
                 </button>
               </motion.aside>
             </div>
 
-            <aside className="softSkills-part">
+            <motion.aside
+              className="softSkills-part"
+              variants={softSkillsAnim}
+              initial="initial"
+              animate="animate"
+            >
               {dataSkills
                 .filter((atout) => atout.catégorie === "Atout")
                 .map((el) => (
@@ -90,7 +100,7 @@ function About() {
                     openModal={openModal}
                   />
                 ))}
-            </aside>
+            </motion.aside>
           </article>
         </div>
         <AnimatePresence>

@@ -6,6 +6,13 @@ import { motion } from "framer-motion";
 // Sub-components
 import ButtonCallToActionText from "../../sub-components/buttons/ButtonCallToActionText";
 
+// Animations
+import {
+  inputsAnim,
+  texteAreaAnim,
+  submitAnim,
+} from "../../animations/contactAnimation";
+
 const Contact = () => {
   const [reason, setReason] = useState("Contact professionel");
   const [firstname, setFirstname] = useState("");
@@ -25,14 +32,13 @@ const Contact = () => {
                 contactez-moi 📝
               </p>
             </header>
-            <motion.form
-              className="form"
-              initial={{ opacity: 0, scale: 0.5 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-            >
-              <div>
+            <form className="form">
+              <motion.div
+                variants={inputsAnim}
+                initial="initial"
+                whileInView="whileInView"
+                viewport={{ once: true }}
+              >
                 <label htmlFor="reason">Motif :</label>
                 <select id="reason" onChange={(e) => setReason(e.target.value)}>
                   <option>Contact professionel</option>
@@ -72,8 +78,13 @@ const Contact = () => {
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                 />
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+                variants={texteAreaAnim}
+                initial="initial"
+                whileInView="whileInView"
+                viewport={{ once: true }}
+              >
                 <label htmlFor="message">Votre message :</label>
                 <textarea
                   id="message"
@@ -88,20 +99,16 @@ const Contact = () => {
                   <motion.a
                     className="w-full text-sm md:text-lg"
                     href={`mailto:kevin.mrs2020@gmail.com?subject=${reason}&body=${firstname} ${lastname.toUpperCase()}%0A${mail}%0A${phone}%0A%0A${message}`}
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    whileInView={{
-                      opacity: 1,
-                      scale: 1,
-                      rotateY: 360,
-                    }}
+                    variants={submitAnim}
+                    initial="initial"
+                    whileInView="whileInView"
                     viewport={{ once: true }}
-                    transition={{ delay: 0.7, duration: 0.7 }}
                   >
                     Envoyer
                   </motion.a>
                 </ButtonCallToActionText>
-              </div>
-            </motion.form>
+              </motion.div>
+            </form>
           </article>
         </div>
       </section>
