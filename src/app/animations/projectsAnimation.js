@@ -4,6 +4,7 @@ export const projectsContainer = {
     opacity: 1,
     scale: 1,
     transition: {
+      duration: 0.7,
       delayChildren: 0.3,
       staggerChildren: 0.2,
     },
