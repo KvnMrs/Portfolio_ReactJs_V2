@@ -37,6 +37,7 @@ const Contact = () => {
                 variants={inputsAnim}
                 initial="initial"
                 whileInView="whileInView"
+                viewport={{ once: true }}
               >
                 <label htmlFor="reason">Motif :</label>
                 <select id="reason" onChange={(e) => setReason(e.target.value)}>
@@ -82,6 +83,7 @@ const Contact = () => {
                 variants={texteAreaAnim}
                 initial="initial"
                 whileInView="whileInView"
+                viewport={{ once: true }}
               >
                 <label htmlFor="message">Votre message :</label>
                 <textarea
@@ -101,7 +103,6 @@ const Contact = () => {
                     initial="initial"
                     whileInView="whileInView"
                     viewport={{ once: true }}
-                    transition={{ delay: 0.7, duration: 0.7 }}
                   >
                     Envoyer
                   </motion.a>
