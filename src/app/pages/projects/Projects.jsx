@@ -59,22 +59,20 @@ function Projects() {
                   "absolute top-1/2 z-10 right-2 md:left-3/4 md:ml-5 "
                 }
               />
-              <AnimatePresence>
-                {DatasProjects.map((el, index) => (
-                  <>
-                    {currentProject === index && (
-                      <ProjectCard
-                        key={index}
-                        img={el.img}
-                        title={el.title}
-                        category={el.category}
-                        description={el.description}
-                        link={el.link}
-                      />
-                    )}
-                  </>
-                ))}
-              </AnimatePresence>
+              {DatasProjects.map((el, index) => (
+                <>
+                  {currentProject === index && (
+                    <ProjectCard
+                      key={index}
+                      img={el.img}
+                      title={el.title}
+                      category={el.category}
+                      description={el.description}
+                      link={el.link}
+                    />
+                  )}
+                </>
+              ))}
             </motion.div>
           </article>
         </div>
