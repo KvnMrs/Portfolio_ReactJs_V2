@@ -34,7 +34,7 @@
 }
 .sections-sub-containers {
   @apply w-full h-full max-h-screen p-3 flex flex-col place-content-center text-center bg-dark_blue bg-opacity-50
-/* MD */ md:m-auto md:p-0 md:py-3 md:block
+/* MD */ md:m-auto md:p-0 md:pt-10 md:block
 }
 .sections-headers {
   @apply flex mx-auto mb-5 justify-center items-center pb-2
@@ -215,8 +215,8 @@
 
 .description-part {
   @apply w-11/12 py-2 flex flex-col mx-auto
-/* sm */ md:h-4/6
-/* MD */ md:flex-row
+/* MD */ md:h-3/6 md:flex-row md:mt-10
+/* LG */ lg:mt-5
 }
 .description-text {
   @apply flex flex-col justify-center mx-auto
@@ -248,9 +248,10 @@
 .softSkills-part {
   @apply w-5/6 h-1/6 py-2 flex mx-auto self-center items-center overflow-auto scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500
 /* SM */ sm:pt-0
+/* MD */ md:h-1/4
 }
 .softSkill {
-  @apply h-full mx-3 pb-3 flex flex-col text-center
+  @apply h-full mx-3 pb-3 flex flex-col text-center justify-center
 /* MD */ md:mx-auto md:pb-0
 }
 .softSkill-title {
