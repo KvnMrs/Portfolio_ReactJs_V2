@@ -42,7 +42,9 @@ function About() {
         <div className="sections-surfaces">
           <article className="sections-sub-containers">
             <header className="sections-headers">
-              <h1 className="sections-titles">En quelques mots...</h1>
+              <h1 className="sections-titles">
+                Mon parcours dans le Développement Web
+              </h1>
             </header>
             <div className="description-part">
               <motion.aside
@@ -51,18 +53,32 @@ function About() {
                 initial="initial"
                 animate="animate"
               >
-                <p className="text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                  auctor lacus nec sem volutpat tristique. Interdum et malesuada
-                  fames ac nte ipsum primis in faucibus. Aenean rutrum eros
-                  vitae metus mollis bibendum. Aenean ultricies euismod turpis,
-                  et maximsex. Mauris blandit, est accumsan molestie rutrum,
-                  nisl urnamaximus ligula, nec condimentum lectus mauris eu leo.
-                  Morbi euismod, magna id auctor volutpat, sem tellus pulvinar
-                  eros, vel accumsan arcu felis et nibh. Nulla convallis massa
-                  in lacus lacinia, in placerat elit mattis. Suspendisse et
-                  lacinia leo.
-                </p>
+                <div className="text">
+                  <p className="description-paragraph">
+                    C'est à la suite de l'idée d'un site qui me tenais beaucoup
+                    à coeur et en cherchant comment le concrétisé que j'ai
+                    <span className="font-bold"> découvert</span> le
+                    développement web. Après quelques mois à me
+                    <span className="font-bold"> former</span> en autodidacte
+                    sur différents suports, j'ai décidé de passer à la vitesse
+                    supérieur, notament en autofinancant une{" "}
+                    <span className="font-bold">formation</span> au près de la{" "}
+                    <span className="text-wild_red font-bold">
+                      Wild Code School
+                    </span>
+                    . Une formation qui c'est concrétisé par un{" "}
+                    <span className="font-bold">stage</span>, tous deux très
+                    enrichissants.
+                  </p>
+
+                  <p className="description-paragraph">
+                    J'aimerais à <span className="font-bold">présent</span>{" "}
+                    intégré un poste en tant que{" "}
+                    <span className="font-bold">Développeur Web Front-end</span>{" "}
+                    et metre mon <span className="font-bold">experience</span>{" "}
+                    aquise au service d'une nouvelle équipe.
+                  </p>
+                </div>
               </motion.aside>
               <motion.aside
                 className="img-part"

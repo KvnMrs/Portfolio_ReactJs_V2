@@ -214,28 +214,22 @@
 /* Description part */
 
 .description-part {
-  @apply w-11/12 py-2 flex flex-col mx-auto
-/* MD */ md:h-3/6 md:flex-row md:mt-10
-/* LG */ lg:mt-5
+  @apply w-11/12 flex flex-col mx-auto
+/* MD */ md:h-4/6 md:flex-row
 }
 .description-text {
-  @apply flex flex-col justify-center mx-auto
-/* SM */ sm:w-5/6
+  @apply flex flex-col justify-center m-auto
+/* SM  */sm:w-5/6
 /* MD */ md:w-4/6
-/* LG */ lg:w-1/2
+/* LG */ lg:w-3/6
 }
-.description-title {
-  @apply pb-1 mb-5 mx-auto border-b text-xl text-center
-/* MD */ md:text-2xl
-/* LG */ md:pb-2
-}
-.text {
-  @apply text-center
+.description-paragraph {
+  @apply mb-3
 /* MD */ md:text-lg
 }
 .img-part {
   @apply w-4/5 my-6 mx-auto flex justify-center items-center
-/* MD */ md:w-2/6  md:self-center md:flex-col
+/* MD */ md:w-2/6 md:self-center md:flex-col
 }
 .profile-img {
   @apply w-24 h-24 mx-auto object-cover rounded-full border border-white
@@ -248,7 +242,7 @@
 .softSkills-part {
   @apply w-5/6 h-1/6 py-2 flex mx-auto self-center items-center overflow-auto scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500
 /* SM */ sm:pt-0
-/* MD */ md:h-1/4
+/* MD md:h-1/4 */
 }
 .softSkill {
   @apply h-full mx-3 pb-3 flex flex-col text-center justify-center
