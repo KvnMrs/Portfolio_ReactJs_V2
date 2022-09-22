@@ -134,26 +134,26 @@
 /* Profile-Modal */
 
 .modal-profile {
-  @apply w-screen h-full flex flex-col mx-auto justify-center items-center rounded-lg
+  @apply w-screen h-full flex flex-col mx-auto p-2 justify-center items-center rounded-lg
 }
 .profile-infos-contact-part {
   @apply w-full
-/* MD */ md:flex
+/* MD */ md:h-3/5 md:flex
 /* LG */ lg:h-4/5
 }
 .profile-infos-contact-surface {
-  @apply m-2 flex flex-col items-center gradiant-dark rounded-lg shadow-xl border-b border-white
-/* MD */ md:w-1/2 md:h-auto md:justify-center
+  @apply my-2 flex flex-col items-center gradiant-dark rounded-lg shadow-xl border-b border-white
+/* MD */ md:w-1/2 md:h-auto md:my-0 md:mx-1 md:justify-center
 }
 .profile-hobbies-part {
-  @apply h-2/5 flex flex-col mx-2 px-2 items-center justify-center gradiant-dark rounded-lg shadow-xl border-b border-white
-/* MD */ md:px-20
-/* LG */ lg:px-40 lg:m-2
+  @apply w-full h-2/5 flex flex-col px-2 items-center justify-center gradiant-dark rounded-lg shadow-xl border-b border-white
+/* MD */ md:w-auto md:px-20 md:my-2
+/* LG */ lg:h-3/5 lg:px-40 lg:m-2
 }
 .profile-titles {
   @apply my-2 border-b-2 border-white
 /* SM */ sm:text-lg
-/* MD */ md:text-xl
+/* MD */ md:text-2xl
 }
 
 /* SoftSkills-Modal */
