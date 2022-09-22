@@ -81,12 +81,16 @@ function Profile() {
           viewport="viewport"
         >
           <h2 className="profile-titles">Centres d'intêret</h2>
-          <ProfileInformation
-            text={`Passionné par les technologies et le code, qui parfois nous font beaucoup réfléchir,
-              Je libère mon esprit par quelques séances de fitness.Passionné par les technologies et le code, qui parfois nous font beaucoup réfléchir,
-              Je libère mon esprit par quelques séances de fitness.
-              `}
-          />
+          <ProfileInformation>
+            <div className="flex flex-col">
+              <p className="my-2">
+                💻 - Technologies: code, algorithmie, veille technologique
+              </p>
+              <p className="my-2">✈ - Voyages: Europe, Magreb, Asie.</p>
+              <p className="my-2">🎮 - Jeux vidéos</p>
+              <p className="my-2">💪 - Sport: fitness, jogging</p>
+            </div>
+          </ProfileInformation>
         </motion.div>
       </div>
     </>

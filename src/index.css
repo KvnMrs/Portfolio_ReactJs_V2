@@ -143,14 +143,15 @@
 }
 .profile-infos-contact-surface {
   @apply m-2 flex flex-col items-center gradiant-dark rounded-lg shadow-xl border-b border-white
-/* LG */ lg:w-1/2 lg:h-auto lg:justify-center
+/* MD */ md:w-1/2 md:h-auto md:justify-center
 }
 .profile-hobbies-part {
-  @apply h-2/5 flex flex-col mx-2 items-center justify-center gradiant-dark rounded-lg shadow-xl border-b border-white
-/* LG */ lg:px-4 lg:m-2
+  @apply h-2/5 flex flex-col mx-2 px-2 items-center justify-center gradiant-dark rounded-lg shadow-xl border-b border-white
+/* MD */ md:px-20
+/* LG */ lg:px-40 lg:m-2
 }
 .profile-titles {
-  @apply mt-1 border-b-2 border-white
+  @apply my-2 border-b-2 border-white
 /* SM */ sm:text-lg
 /* MD */ md:text-xl
 }

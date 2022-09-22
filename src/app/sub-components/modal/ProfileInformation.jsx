@@ -1,6 +1,6 @@
 import React from "react";
 
-function ProfileInformation({ svg, text }) {
+function ProfileInformation({ svg, text, children }) {
   return (
     <>
       <div className="w-full flex my-2 md:my-3">
@@ -9,7 +9,11 @@ function ProfileInformation({ svg, text }) {
             {svg}
           </span>
         )}
-        <p className="self-center text-sm sm:text-base">{text}</p>
+        {text ? (
+          <p className="self-center text-sm sm:text-base">{text}</p>
+        ) : (
+          children
+        )}
       </div>
     </>
   );
