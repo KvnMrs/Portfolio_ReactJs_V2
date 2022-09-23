@@ -3,7 +3,7 @@ import React from "react";
 // Package
 import { motion } from "framer-motion";
 
-function ExperiencesList({ datas }) {
+function ExperiencesList({ datas, legend }) {
   return (
     <>
       <motion.div
@@ -13,7 +13,14 @@ function ExperiencesList({ datas }) {
         viewport={{ once: true }}
         transition={{ duration: 0.7 }}
       >
-        <h1 className="mb-2 text-2xl md:text-3xl text-white">
+        <h1
+          className={
+            legend
+              ? "mb-2 text-2xl md:text-3xl transition-all duration-700 " +
+                `${datas.legendColor}`
+              : "mb-2 text-2xl md:text-3xl transition-all duration-700 text-white"
+          }
+        >
           {datas.entreprise}
         </h1>
         <h2 className="mb-1 md:text-xl text-slate-200">{datas.lieu}</h2>

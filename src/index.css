@@ -265,11 +265,11 @@
 /* LG */ lg:flex-row
 }
 .lists-experience-training {
-  @apply mt-5 items-center overflow-scroll scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500 rounded-lg
+  @apply mt-5 items-center overflow-scroll scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500 rounded-lg gradiant-dark
 /* LG */ lg:w-1/2
 }
 .lists-elements {
-  @apply w-full px-2 py-8 border-b border-white m-auto text-center 
+  @apply w-full px-2 py-8 border-b border-white m-auto text-center
 /* MD */ md:w-3/4 md:px-0
 }
 
