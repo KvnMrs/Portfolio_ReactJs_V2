@@ -35,14 +35,14 @@ const dataSkills = [
     catégorie: "Atout",
     element: "Esprit d'équipe",
     description:
-      "Une qualité mise en avant durant mes expériences professionnelles en restauration. La communication, l'entraide et la disponibilité me paraissent être les clefs d'une bonne cohésion d'équipe.",
+      "Un atout mise en avant durant mes expériences professionnelles en restauration. La communication, l'entraide et la disponibilité me paraissent être les clefs d'une bonne cohésion d'équipe.",
   },
   {
     image: img_autonome,
     catégorie: "Atout",
     element: "Autonome",
     description:
-      "D'un naturel autonome, j'ai pu développer cette qualité tout au long de mon parcours professionnel. Il me semble important de pouvoir accomplir un maximum par soi même.",
+      "D'un naturel autonome, j'ai pu développer cet atout tout au long de mon parcours professionnel. Il me paraît essentiel de pouvoir accomplir un maximum par soi-même.",
   },
   {
     image: img_ecoute,
@@ -63,7 +63,7 @@ const dataSkills = [
     catégorie: "Atout",
     element: "Curieux",
     description:
-      "Curieux de nature, j'aime beaucoup voyager dans le but de découvrir d'autres cultures. La curiosité mène vers la découverte et l'enrichissement aussi bien professionel que personnel.",
+      "Curieux de nature, j'aime beaucoup voyager dans le but de découvrir d'autres cultures. La curiosité mène vers la découverte et l'enrichissement aussi bien professionnel que personnel.",
   },
 
   /********** HARDS SKILLS ***************/
