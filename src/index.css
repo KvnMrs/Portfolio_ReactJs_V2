@@ -126,7 +126,7 @@
   @apply ml-auto text-3xl text-white font-semibold font-sans transition-all hover:scale-125 hover:font-light
 }
 .content-modal {
-  @apply w-screen h-full flex flex-col items-center m-auto
+  @apply w-screen h-full flex flex-col my-2 mx-auto overflow-y-auto scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500
 /* MD */ md:flex-row
 /* LG */ lg:w-11/12
 }
@@ -142,13 +142,13 @@
 /* LG */ lg:h-4/5
 }
 .profile-infos-contact-surface {
-  @apply my-2 flex flex-col items-center gradiant-dark rounded-lg shadow-xl border-b border-white
-/* MD */ md:w-1/2 md:h-auto md:my-0 md:mx-1 md:justify-center
+  @apply flex flex-col mb-2 mx-1 items-center gradiant-dark rounded-lg shadow-xl border-b border-white
+/* MD */ md:w-1/2 md:h-auto md:justify-center
 }
 .profile-hobbies-part {
   @apply w-full h-2/5 flex flex-col px-2 items-center justify-center gradiant-dark rounded-lg shadow-xl border-b border-white
-/* MD */ md:w-auto md:px-20 md:my-2
-/* LG */ lg:h-3/5 lg:px-40 lg:m-2
+/* MD */ md:w-auto md:px-20
+/* LG */ lg:h-3/5 lg:px-40
 }
 .profile-titles {
   @apply my-2 border-b-2 border-white
