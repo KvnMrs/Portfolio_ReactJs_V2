@@ -43,7 +43,7 @@ const Contact = () => {
                 <select id="reason" onChange={(e) => setReason(e.target.value)}>
                   <option>Contact professionel</option>
                   <option>Question(s)</option>
-                  <option>feedback</option>
+                  <option>Feedback</option>
                 </select>
 
                 <label htmlFor="nom">Prénom :</label>
