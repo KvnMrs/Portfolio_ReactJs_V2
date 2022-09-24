@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 // Animations
 import { projecItemAnim } from "../../animations/projectsAnimation";
 
-const ProjectCard = ({ img, title, category, description, link }) => {
+const ProjectCard = ({ img, title, technologies, description, link, note }) => {
   return (
     <>
       <motion.article
@@ -20,9 +20,10 @@ const ProjectCard = ({ img, title, category, description, link }) => {
         <img alt={title} src={img} />
         <aside className="project-content">
           <h3 className="project-title">{title}</h3>
-          <h4 className="project-techno">{category}</h4>
           <p className="project-description">{description}</p>
-
+          <p className="">{note}</p>
+        </aside>
+        <aside className="flex px-5 py-3">
           <a className="project-link" href={link} blank="">
             Visiter
             <svg
@@ -39,6 +40,13 @@ const ProjectCard = ({ img, title, category, description, link }) => {
               ></path>
             </svg>
           </a>
+          <ul className="w-full flex justify-end">
+            {technologies.map((techno) => (
+              <li>
+                <img className="w-10 h-10 mx-1 object-cover" src={techno} />
+              </li>
+            ))}
+          </ul>
         </aside>
       </motion.article>
     </>

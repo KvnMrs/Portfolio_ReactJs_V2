@@ -35,35 +35,35 @@ const dataSkills = [
     catégorie: "Atout",
     element: "Esprit d'équipe",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, a nostrum. Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates",
+      "Un atout mise en avant durant mes expériences professionnelles en restauration. La communication, l'entraide et la disponibilité me paraissent être les clefs d'une bonne cohésion d'équipe.",
   },
   {
     image: img_autonome,
     catégorie: "Atout",
     element: "Autonome",
     description:
-      "Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates",
+      "D'un naturel autonome, j'ai pu développer cet atout tout au long de mon parcours professionnel. Il me paraît essentiel de pouvoir accomplir un maximum par soi-même.",
   },
   {
     image: img_ecoute,
     catégorie: "Atout",
     element: "Sens de l'écoute",
     description:
-      "Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates",
+      "Très important de manière générale et d'autant plus lors d'un contact client. Il permet la bonne compréhension des besoins, menant à la satisfaction de ce dernier.",
   },
   {
     image: img_logique,
     catégorie: "Atout",
-    element: "Logique",
+    element: "Adaptabilité",
     description:
-      "Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates",
+      "Au cours de mes expériences professionnelles passées, il était important de m'adapter de manière rapide et efficace aux différents clients. Cette qualité se confirme aujourd'hui par ma reconversion professionnelle actuelle dans un domaine quelque peu différent des précédents.",
   },
   {
     image: img_curieux,
     catégorie: "Atout",
     element: "Curieux",
     description:
-      "delectus doloremque, explicabo tempore dicta adipisci fugit amet dignissimos? Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates",
+      "Curieux de nature, j'aime beaucoup voyager dans le but de découvrir d'autres cultures. La curiosité mène vers la découverte et l'enrichissement aussi bien professionnel que personnel.",
   },
 
   /********** HARDS SKILLS ***************/
