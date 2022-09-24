@@ -66,9 +66,10 @@ function Projects() {
                       key={index}
                       img={el.img}
                       title={el.title}
-                      category={el.category}
+                      technologies={el.technologies}
                       description={el.description}
                       link={el.link}
+                      note={el.note}
                     />
                   )}
                 </>
