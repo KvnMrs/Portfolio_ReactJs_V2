@@ -269,7 +269,8 @@
 /* LG */ lg:flex-row
 }
 .lists-experience-training {
-  @apply max-w-max mt-5 items-center overflow-scroll scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500 rounded-lg gradiant-dark
+  @apply w-full mt-5 items-center overflow-scroll scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500 rounded-lg gradiant-dark
+/* LG */ sm:w-11/12
   /* MD */ md:mt-0
 /* LG */ lg:w-1/2
 }
