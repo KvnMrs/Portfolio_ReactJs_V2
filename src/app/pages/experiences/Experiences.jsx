@@ -79,7 +79,7 @@ function Experiences() {
               )}
 
               <motion.aside
-                className="lists-experience-training h-5/6"
+                className="lists-experience-training h-90"
                 variants={listsContainerAnim}
                 initial="initial"
                 whileInView="whileInView"
@@ -89,15 +89,12 @@ function Experiences() {
                 {showExperiences &&
                   datasExperiences.map((experience) => (
                     <motion.div
-                      className={
-                        legend ? `${experience.bgColor}` : "gradiant-dark"
-                      }
                       variants={listsItemsAnim}
                       initial="initial"
                       whileInView="whileInView"
                       viewport={{ once: true }}
                     >
-                      <ExperiencesList datas={experience} />
+                      <ExperiencesList datas={experience} legend={legend} />
                     </motion.div>
                   ))}
                 {/* Show trainings */}

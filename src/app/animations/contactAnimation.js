@@ -1,5 +1,5 @@
 export const inputsAnim = {
-  initial: { opacity: 0, x: -100 },
+  initial: { opacity: 0, x: -80 },
   whileInView: {
     opacity: 1,
     x: 0,
@@ -10,7 +10,7 @@ export const inputsAnim = {
 };
 
 export const texteAreaAnim = {
-  initial: { opacity: 0, x: 100 },
+  initial: { opacity: 0, x: 80 },
   whileInView: {
     opacity: 1,
     x: 0,
