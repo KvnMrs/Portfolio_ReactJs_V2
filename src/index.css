@@ -38,7 +38,7 @@
 }
 .sections-sub-containers {
   @apply w-full h-full max-h-screen p-3 flex flex-col place-content-center text-center bg-dark_blue bg-opacity-50
-/* MD */ md:m-auto md:p-0 md:pt-7 md:block
+/* MD */ md:m-auto md:p-0 md:py-7 md:block
 }
 .sections-headers {
   @apply flex mx-auto justify-center items-center pb-2
@@ -77,7 +77,7 @@
 /* MD */ md:duration-1000 md:top-4 md:h-auto md:left-4 md:flex-col md:content-center md:rounded-full
 }
 .sideBar-container {
-  @apply w-full h-14 fixed flex z-30 ease-in-out duration-1000 bg-black lg:bg-dark_blue shadow-lg shadow-cyan-500/50 rounded-sm
+  @apply w-full h-14 fixed flex z-30 ease-in-out duration-1000 bg-black shadow-lg shadow-cyan-300 rounded-sm
 /* MD */ md:w-16 md:h-4/6 md:left-4 sidebar-center md:flex-col duration-2000 md:content-center md:rounded-full
 }
 .burger-button-container {
@@ -265,11 +265,12 @@
 /*************************** Experiences ****************************/
 
 .lists-container {
-  @apply w-full h-5/6 flex flex-col items-center justify-around
+  @apply w-full h-90 flex flex-col items-center justify-around
 /* LG */ lg:flex-row
 }
 .lists-experience-training {
   @apply mt-5 items-center overflow-scroll scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500 rounded-lg gradiant-dark
+/* MD */ md:mt-0
 /* LG */ lg:w-1/2
 }
 .lists-elements {
@@ -314,7 +315,7 @@
 
 /* HardSkills */
 .skills-list {
-  @apply w-3/4 grid grid-cols-2 gap-4 mx-auto
+  @apply w-3/4 h-90 grid grid-cols-2 gap-4 mx-auto items-center
 /* MD */ md:grid-cols-3 md:gap-2
 }
 .skill {
@@ -337,9 +338,9 @@
 /* LG*/
 }
 .project {
-  @apply h-90 w-full flex flex-col snap-center shrink-0 rounded-lg shadow-md gradiant-dark
+  @apply h-full w-full flex flex-col snap-center shrink-0 rounded-lg shadow-md gradiant-dark
 }
-.project-img{
+.project-img {
   @apply mx-auto my-3
 /* MD */ md:w-11/12 md:px-5 md:pt-3
 /* LG */ lg:w-11/12 lg:px-10 lg:pt-6
@@ -389,11 +390,11 @@
 /* MD */ md:text-base
 }
 .form input, select, option {
-  @apply px-2 mb-2 rounded-lg text-black
+  @apply px-2 mb-2 rounded-lg text-black cursor-pointer transition duration-500 focus:scale-x-105 hover:scale-x-105
 /* MD */ md:mb-5
 }
 .form textarea {
-  @apply h-28 rounded-lg text-black
+  @apply h-28 rounded-lg text-black cursor-pointer transition duration-500 focus:scale-x-105 hover:scale-x-105 focus:shadow-lg
 /* MD */ md:h-64
 }
 .submit-button {
