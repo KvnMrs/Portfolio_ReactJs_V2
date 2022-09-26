@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 // Package
 import { motion } from "framer-motion";
@@ -22,6 +22,7 @@ import { projectsContainer } from "../../animations/projectsAnimation";
 function Projects() {
   const [currentProject, SetCurrentProject] = useState(0);
   const length = DatasProjects.length;
+  const itemsRef = useRef([]);
 
   const nextProject = () => {
     SetCurrentProject(currentProject === length - 1 ? 0 : currentProject + 1);
@@ -30,11 +31,16 @@ function Projects() {
   const previousProject = () => {
     SetCurrentProject(currentProject === 0 ? length - 1 : currentProject - 1);
   };
+  useEffect(() => {
+    itemsRef.current[currentProject].scrollIntoView({
+      behavior: "smooth",
+    });
+  }, [currentProject]);
   return (
     <>
       <section id="projects" className="sections-containers">
         <div className="sections-surfaces">
-          <article className="sections-sub-containers">
+          <article className="sections-sub-containers relative">
             <header className="sections-headers">
               <h2 className="sections-titles">Projets</h2>
             </header>
@@ -45,33 +51,36 @@ function Projects() {
               whileInView="whileInView"
               viewport={{ once: true }}
             >
-              <ButtonCallToActionSvg
-                svg={<LeftArrowSvg />}
-                fct={() => previousProject()}
-                customClass={
-                  "absolute top-1/2 z-10 left-2 md:left-auto md:right-3/4 md:mr-5 "
-                }
-              />
-              <ButtonCallToActionSvg
-                svg={<RightArrowSvg />}
-                fct={() => nextProject()}
-                customClass={
-                  "absolute top-1/2 z-10 right-2 md:left-3/4 md:ml-5 "
-                }
-              />
-              {DatasProjects.map((el, index) => (
+              {currentProject > 0 && (
+                <ButtonCallToActionSvg
+                  svg={<LeftArrowSvg />}
+                  fct={() => previousProject()}
+                  customClass={"absolute top-1/2 z-10 -left-3 md:left-20 "}
+                />
+              )}
+              {currentProject < length - 1 && (
+                <ButtonCallToActionSvg
+                  svg={<RightArrowSvg />}
+                  fct={() => nextProject()}
+                  customClass={
+                    "absolute top-1/2 z-10 -right-3 md:right-20 md:mr-5 "
+                  }
+                />
+              )}
+              {DatasProjects.map((el) => (
                 <>
-                  {currentProject === index && (
+                  {
                     <ProjectCard
-                      key={index}
+                      key={el.id}
                       img={el.img}
                       title={el.title}
                       technologies={el.technologies}
                       description={el.description}
                       link={el.link}
                       note={el.note}
+                      projectRefprop={itemsRef}
                     />
-                  )}
+                  }
                 </>
               ))}
             </motion.div>
