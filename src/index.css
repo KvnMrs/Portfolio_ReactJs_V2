@@ -14,6 +14,10 @@
   background: radial-gradient(#141e30, #243b55);
 }
 
+.h-90 {
+  height: 90%
+}
+
 /********************** Global ***********************/
 
 * {
@@ -34,7 +38,7 @@
 }
 .sections-sub-containers {
   @apply w-full h-full max-h-screen p-3 flex flex-col place-content-center text-center bg-dark_blue bg-opacity-50
-/* MD */ md:m-auto md:p-0 md:pt-10 md:block
+/* MD */ md:m-auto md:p-0 md:pt-7 md:block
 }
 .sections-headers {
   @apply flex mx-auto justify-center items-center pb-2
@@ -328,29 +332,41 @@
 /*********************** Projects ************************/
 
 .projects-carrousel {
-  @apply mx-auto relative flex flex-wrap justify-center
+  @apply w-full h-90 mx-auto items-center snap-mandatory flex gap-6 snap-x overflow-x-hidden
+/* MD*/ md:w-1/2
+/* LG*/
 }
 .project {
-  @apply m-auto rounded-lg shadow-md gradiant-dark
-/* MD */ md:w-1/2
+  @apply h-90 w-full flex flex-col snap-center shrink-0 rounded-lg shadow-md gradiant-dark
+}
+.project-img{
+  @apply mx-auto my-3
+/* MD */ md:w-11/12 md:px-5 md:pt-3
+/* LG */ lg:w-11/12 lg:px-10 lg:pt-6
 }
 .project-content {
-  @apply px-5 py-3 text-start
+  @apply flex h-90 flex-col px-5 pb-2 overflow-y-auto text-start scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500
+}
+.project-infos {
+  @apply flex mt-auto py-3 items-center
 }
 .project-title {
-  @apply my-1 text-center text-xl font-bold tracking-tight
+  @apply text-center text-xl font-bold
 /* MD */ md:text-2xl
 }
-.project-techno {
-  @apply text-lg text-center
-/* MD */ md:text-xl
+.project-technos {
+  @apply w-full flex justify-end
+}
+.project-techno-icon {
+  @apply w-8 h-8 mx-1 object-cover
+/* SM */ sm:w-10 sm:h-10
 }
 .project-description {
-  @apply my-6 px-5 text-justify text-gray-400
+  @apply my-2 px-2 text-justify
 /* MD */ md:px-2
 }
 .project-link {
-  @apply my-1 py-2 px-3 inline-flex items-center text-sm font-medium rounded-lg hover:ring-2 duration-500 ease-in-out dark:bg-cyan-600 dark:hover:bg-cyan-700
+  @apply h-fit ml-5 py-2 px-3 m-auto inline-flex items-center text-sm font-medium rounded-lg hover:ring-2 duration-500 ease-in-out dark:bg-cyan-600 dark:hover:bg-cyan-700
 }
 .projects-svg {
   @apply w-4 h-4 ml-2 mr-1
@@ -395,7 +411,7 @@
 
 .callToAction-svg {
   @apply w-8 h-8 flex items-center animate-pulse duration-500 ease-in-out rounded-full bg-cyan-600
-/* MD */ md:w-10 md:h-10 md:ml-5 md:p-3 md:hover:animate-none md:hover:ring-2 md:hover:bg-cyan-700
+/* MD */ md:w-10 md:h-10 md:p-3 md:hover:animate-none md:hover:ring-2 md:hover:bg-cyan-700
 }
 .callToAction-svg svg {
   @apply w-4 mx-auto

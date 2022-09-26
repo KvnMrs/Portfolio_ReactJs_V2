@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
 // Package
 import { motion } from "framer-motion";
@@ -6,10 +6,27 @@ import { motion } from "framer-motion";
 // Animations
 import { projecItemAnim } from "../../animations/projectsAnimation";
 
-const ProjectCard = ({ img, title, technologies, description, link, note }) => {
+const ProjectCard = ({
+  id,
+  img,
+  title,
+  technologies,
+  description,
+  link,
+  note,
+  projectRefprop,
+}) => {
+  const projectRef = useRef();
+
+  useEffect(() => {
+    projectRefprop.current.push(projectRef.current);
+  }, []);
+
   return (
     <>
       <motion.article
+        id={id}
+        ref={projectRef}
         className="project"
         variants={projecItemAnim}
         initial="initial"
@@ -17,13 +34,13 @@ const ProjectCard = ({ img, title, technologies, description, link, note }) => {
         exit="exit"
         viewport={{ once: true }}
       >
-        <img alt={title} src={img} />
+        <img className="project-img" alt={title} src={img} />
         <aside className="project-content">
           <h3 className="project-title">{title}</h3>
           <p className="project-description">{description}</p>
-          <p className="">{note}</p>
+          <p className="project-description">{note}</p>
         </aside>
-        <aside className="flex px-5 py-3">
+        <aside className="project-infos">
           <a className="project-link" href={link} blank="">
             Visiter
             <svg
@@ -40,10 +57,10 @@ const ProjectCard = ({ img, title, technologies, description, link, note }) => {
               ></path>
             </svg>
           </a>
-          <ul className="w-full flex justify-end">
+          <ul className="project-technos">
             {technologies.map((techno) => (
               <li>
-                <img className="w-10 h-10 mx-1 object-cover" src={techno} />
+                <img className="project-techno-icon" src={techno} />
               </li>
             ))}
           </ul>

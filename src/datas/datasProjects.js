@@ -13,23 +13,35 @@ import img_GitHub from "../assets/img/imgTools/GitHub.png";
 
 const dataProjects = [
   {
+    id: 0,
     img: img_Project2,
     link: "https://wcs-weather.netlify.app/",
     title: "WCS-Weather",
     technologies: [img_ReactJs, img_tailwindcss, img_Git, img_GitHub],
     description:
       "Projet réalisé au cours de ma formation à la Wild Code School, en équipe de 4. Notre but était de développer un site web qui répertorie les indices de pollution et la météo sur une période de plusieurs mois, dans les villes où sont présents les campus de la Wild Code School ainsi que toutes les capitales européennes. ",
-    note: "Le compte Supabase, utilisé pour l'authentification, n'étant plus actif vous aurez accès qu'aux pages Home et LogIn/SignUp donnant un aperçu du site.",
+    note: "- Le compte Supabase, utilisé pour l'authentification, n'étant plus actif vous aurez accès qu'aux pages Home et LogIn/SignUp donnant un aperçu du site.",
   },
 
   {
+    id: 1,
     img: img_Project1,
     link: "https://kvnmrs.github.io/WCS_Projet_1/",
     title: "NantesAutrement",
     technologies: [img_HTML, img_CSS, img_Git, img_GitHub],
     description:
-      "Projet réalisé au cours de ma formation à la Wild Code School, en équipe de 4. Un site vitrine, dont le but était de répertorier les endroits sympathiques de Nantes.",
-    note: "non fonctionnel",
+      "Projet réalisé en entrée en formation, en équipe de 4. Un site vitrine, dont le but était de répertorier les endroits sympathiques et insolites de Nantes.",
+    note: "- Non fonctionnel",
+  },
+  {
+    id: 2,
+    img: img_Project1,
+    link: "https://kvnmrs.github.io/WCS_Projet_1/",
+    title: "NantesAutrement",
+    technologies: [img_HTML, img_CSS, img_Git, img_GitHub],
+    description:
+      "Projet réalisé en entrée en formation, en équipe de 4. Un site vitrine, dont le but était de répertorier les endroits sympathiques et insolites de Nantes.",
+    note: "- Non fonctionnel",
   },
 ];
 
