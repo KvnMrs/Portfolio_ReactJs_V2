@@ -42,9 +42,7 @@ function About() {
         <div className="sections-surfaces">
           <article className="sections-sub-containers">
             <header className="sections-headers">
-              <h1 className="sections-titles">
-                Mon parcours dans le Développement Web
-              </h1>
+              <h1 className="sections-titles">Qui suis-je ?</h1>
             </header>
             <div className="description-part">
               <motion.aside
@@ -55,20 +53,12 @@ function About() {
               >
                 <div className="text">
                   <p className="description-paragraph">
-                    C'est à la suite de l'idée d'un site qui me tenais beaucoup
-                    à coeur et en cherchant comment le concrétisé que j'ai
-                    <span className="font-bold"> découvert</span> le
-                    développement web. Après quelques mois à me
-                    <span className="font-bold"> former</span> en autodidacte
-                    sur différents suports, j'ai décidé de passer à la vitesse
-                    supérieur, notament en autofinancant une{" "}
-                    <span className="font-bold">formation</span> au près de la{" "}
-                    <span className="text-wild_red font-bold">
-                      Wild Code School
-                    </span>
-                    . Une formation qui c'est concrétisé par un{" "}
-                    <span className="font-bold">stage</span>, tous deux très
-                    enrichissants.
+                    À la suite de 10 années passées dans le domaine du commerce,
+                    (coiffure et restauration) j'ai décidé de suivre une
+                    reconversion professionnelle dans le but de devenir
+                    Développeur Web. Depuis mes débuts en autodidacte, j'ai
+                    suivi une formation auprès de la wild Code School ainsi
+                    qu'un stage au sein de l'entreprise Cascade8.
                   </p>
 
                   <p className="description-paragraph">
