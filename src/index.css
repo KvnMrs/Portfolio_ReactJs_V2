@@ -378,7 +378,7 @@
 /* MD */ md:mb-5 md:text-xl
 }
 .form {
-  @apply w-5/6 p-5 flex flex-col mx-auto gradiant-light rounded-2xl
+  @apply w-5/6 p-5 flex flex-col mx-auto gradiant-light rounded-2xl overflow-hidden
 /* MD */ md:w-10/12 md:mt-8 md:flex-row
 }
 .form div {
