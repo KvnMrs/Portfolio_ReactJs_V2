@@ -51,24 +51,22 @@ function About() {
                 initial="initial"
                 animate="animate"
               >
-                <div className="text">
-                  <p className="description-paragraph">
-                    À la suite de 10 années passées dans le domaine du commerce,
-                    (coiffure et restauration) j'ai décidé de suivre une
-                    reconversion professionnelle dans le but de devenir
-                    Développeur Web. Depuis mes débuts en autodidacte, j'ai
-                    suivi une formation auprès de la wild Code School ainsi
-                    qu'un stage au sein de l'entreprise Cascade8.
-                  </p>
+                <p className="description-paragraph">
+                  À la suite de 10 années passées dans le domaine du commerce,
+                  (coiffure et restauration) j'ai décidé de suivre une
+                  reconversion professionnelle dans le but de devenir
+                  Développeur Web. Depuis mes débuts en autodidacte, j'ai suivi
+                  une formation auprès de la wild Code School ainsi qu'un stage
+                  au sein de l'entreprise Cascade8.
+                </p>
 
-                  <p className="description-paragraph">
-                    J'aimerais à <span className="font-bold">présent</span>{" "}
-                    intégré un poste en tant que{" "}
-                    <span className="font-bold">Développeur Web Front-end</span>{" "}
-                    et metre mon <span className="font-bold">experience</span>{" "}
-                    aquise au service d'une nouvelle équipe.
-                  </p>
-                </div>
+                <p className="description-paragraph">
+                  J'aimerais à <span className="font-bold">présent</span>{" "}
+                  intégré un poste en tant que{" "}
+                  <span className="font-bold">Développeur Web Front-end</span>{" "}
+                  et metre mon <span className="font-bold">experience</span>{" "}
+                  aquise au service d'une nouvelle équipe.
+                </p>
               </motion.aside>
               <motion.aside
                 className="img-part"
