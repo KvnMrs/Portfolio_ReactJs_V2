@@ -55,7 +55,7 @@ function Projects() {
                 <ButtonCallToActionSvg
                   svg={<LeftArrowSvg />}
                   fct={() => previousProject()}
-                  customClass={"absolute top-1/2 z-10 -left-3 md:left-20 "}
+                  customClass={"absolute top-1/2 z-10 -left-2 md:left-20"}
                 />
               )}
               {currentProject < length - 1 && (
@@ -63,7 +63,7 @@ function Projects() {
                   svg={<RightArrowSvg />}
                   fct={() => nextProject()}
                   customClass={
-                    "absolute top-1/2 z-10 -right-3 md:right-20 md:mr-5 "
+                    "absolute top-1/2 z-10 -right-2 md:right-20 md:mr-5"
                   }
                 />
               )}
