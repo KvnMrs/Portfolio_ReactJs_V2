@@ -130,7 +130,7 @@
   @apply ml-auto text-3xl text-white font-semibold font-sans transition-all hover:scale-125 hover:font-light
 }
 .content-modal {
-  @apply w-screen h-full flex flex-col my-2 mx-auto overflow-y-auto scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500
+  @apply w-screen h-full flex flex-col my-2 mx-auto overflow-y-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-cyan-500
 /* MD */ md:flex-row
 /* LG */ lg:w-11/12
 }
@@ -246,7 +246,7 @@
 /* SoftSkills part */
 
 .softSkills-part {
-  @apply w-5/6 h-1/6 pb-2 flex mx-auto self-center items-center overflow-auto scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500
+  @apply w-5/6 h-1/6 pb-2 flex mx-auto self-center items-center overflow-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-cyan-500
 }
 .softSkill {
   @apply h-full mx-3 pb-3 flex flex-col text-center justify-center
@@ -268,7 +268,7 @@
 /* LG */ lg:flex-row
 }
 .lists-experience-training {
-  @apply w-11/12 mt-5 items-center overflow-scroll scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500 rounded-lg gradiant-dark
+  @apply w-11/12 mt-5 items-center overflow-scroll scrollbar-thin scrollbar-track-transparent scrollbar-thumb-cyan-500 rounded-lg gradiant-dark
 /* MD */ md:mt-0
 /* LG */ lg:w-1/2
 }
@@ -294,7 +294,7 @@
   @apply w-5 h-5 mx-2 cursor-pointer
 }
 .legend-list {
-  @apply w-full pb-2 flex overflow-auto scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500
+  @apply w-full pb-2 flex overflow-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-cyan-500
 /* SM */ sm:justify-center
 /* LG */ lg:h-full lg:flex-col
 }
@@ -345,7 +345,7 @@
 /* LG */ lg:w-11/12 lg:px-10 lg:pt-6
 }
 .project-content {
-  @apply flex h-90 flex-col px-5 pb-2 overflow-y-auto text-start scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500
+  @apply flex h-90 flex-col px-5 pb-2 overflow-y-auto text-start scrollbar-thin scrollbar-track-transparent scrollbar-thumb-cyan-500
 }
 .project-infos {
   @apply flex mt-auto py-3 items-center
