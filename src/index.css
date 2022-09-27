@@ -32,8 +32,8 @@
 /* LG */ lg:py-5
 }
 .sections-surfaces {
-  @apply w-screen h-full p-5 flex flex-col mx-auto justify-center bg-slate-700 bg-opacity-50
-/* MD */ md:rounded-md
+  @apply w-screen h-full p-2 mx-auto justify-center bg-slate-700 bg-opacity-50
+/* MD */ md:rounded-md md:p-5
 /* LG */ lg:w-10/12 lg:rounded-3xl
 }
 .sections-sub-containers {
@@ -219,8 +219,8 @@
 /* Description part */
 
 .description-part {
-  @apply w-11/12 flex flex-col mx-auto
-/* MD */ md:h-4/6 md:flex-row
+  @apply flex flex-col mt-3 mx-auto
+/* MD */ md:w-11/12 md:h-4/6 md:flex-row
 }
 .description-text {
   @apply flex flex-col justify-center m-auto
@@ -229,12 +229,13 @@
 /* LG */ lg:w-3/6
 }
 .description-paragraph {
-  @apply mb-3
-/* MD */ md:text-lg
+  @apply
+/* MD */ md:text-lg md:mb-3
+/* LG */ lg:text-xl
 }
 .img-part {
-  @apply w-4/5 my-6 mx-auto flex justify-center items-center
-/* MD */ md:w-2/6 md:self-center md:flex-col
+  @apply w-4/5 my-3 mx-auto flex justify-center items-center
+/* MD */ md:w-2/6 md:mt-0 md:self-center md:flex-col
 }
 .profile-img {
   @apply w-24 h-24 mx-auto object-cover rounded-full border border-white
@@ -245,9 +246,7 @@
 /* SoftSkills part */
 
 .softSkills-part {
-  @apply w-5/6 h-1/6 py-2 flex mx-auto self-center items-center overflow-auto scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500
-/* SM */ sm:pt-0
-/* MD md:h-1/4 */
+  @apply w-5/6 h-1/6 pb-2 flex mx-auto self-center items-center overflow-auto scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500
 }
 .softSkill {
   @apply h-full mx-3 pb-3 flex flex-col text-center justify-center

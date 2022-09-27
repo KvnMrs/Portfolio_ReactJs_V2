@@ -53,14 +53,21 @@ function About() {
               >
                 <p className="description-paragraph">
                   À la suite de 10 années passées dans le domaine du commerce,
-                  (coiffure et restauration) j'ai décidé de suivre une
-                  reconversion professionnelle dans le but de devenir
-                  Développeur Web. Depuis mes débuts en autodidacte, j'ai suivi
-                  une formation auprès de la wild Code School ainsi qu'un stage
-                  au sein de l'entreprise Cascade8.
+                  (coiffure et restauration) j'ai décidé de suivre une{" "}
+                  <span className="font-bold">
+                    reconversion professionnelle
+                  </span>{" "}
+                  dans le but de devenir Développeur Web. Depuis mes débuts en
+                  <span className="font-bold"> autodidacte</span>, j'ai suivi
+                  une <span className="font-bold"> formation</span> auprès de la{" "}
+                  <span className="text-wild_red font-bold">
+                    Wild Code School
+                  </span>{" "}
+                  ainsi qu'un <span className="font-bold"> stage</span> au sein
+                  de l'entreprise <span className="font-bold">Cascade8</span>.
                 </p>
 
-                <p className="description-paragraph">
+                <p className="description-paragraph mt-2 md:mt-0">
                   J'aimerais à <span className="font-bold">présent</span>{" "}
                   intégré un poste en tant que{" "}
                   <span className="font-bold">Développeur Web Front-end</span>{" "}
