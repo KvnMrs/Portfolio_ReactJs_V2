@@ -280,7 +280,7 @@
 /* legend experience */
 
 .legend-container {
-  @apply w-full flex px-2 mb-5
+  @apply w-full flex px-2 my-4
 /* LG */ lg:w-3/12 lg:h-5/6 lg:my-auto lg:px-0 lg:flex-col
 }
 .legend-sub-container {
@@ -288,7 +288,7 @@
 /* XL */ xl:w-5/6
 }
 .legend-checkbox-container {
-  @apply w-5/6 mb-5 mx-auto flex place-content-center items-center
+  @apply w-5/6 mb-2 mx-auto flex place-content-center items-center
 }
 .legend-checkbox {
   @apply w-5 h-5 mx-2 cursor-pointer
