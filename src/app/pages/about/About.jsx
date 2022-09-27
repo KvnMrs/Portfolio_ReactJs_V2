@@ -42,9 +42,7 @@ function About() {
         <div className="sections-surfaces">
           <article className="sections-sub-containers">
             <header className="sections-headers">
-              <h1 className="sections-titles">
-                Mon parcours dans le Développement Web
-              </h1>
+              <h1 className="sections-titles">Qui suis-je ?</h1>
             </header>
             <div className="description-part">
               <motion.aside
@@ -53,32 +51,29 @@ function About() {
                 initial="initial"
                 animate="animate"
               >
-                <div className="text">
-                  <p className="description-paragraph">
-                    C'est à la suite de l'idée d'un site qui me tenais beaucoup
-                    à coeur et en cherchant comment le concrétisé que j'ai
-                    <span className="font-bold"> découvert</span> le
-                    développement web. Après quelques mois à me
-                    <span className="font-bold"> former</span> en autodidacte
-                    sur différents suports, j'ai décidé de passer à la vitesse
-                    supérieur, notament en autofinancant une{" "}
-                    <span className="font-bold">formation</span> au près de la{" "}
-                    <span className="text-wild_red font-bold">
-                      Wild Code School
-                    </span>
-                    . Une formation qui c'est concrétisé par un{" "}
-                    <span className="font-bold">stage</span>, tous deux très
-                    enrichissants.
-                  </p>
+                <p className="description-paragraph">
+                  À la suite de 10 années passées dans le domaine du commerce,
+                  (coiffure et restauration) j'ai décidé de suivre une{" "}
+                  <span className="font-bold">
+                    reconversion professionnelle
+                  </span>{" "}
+                  dans le but de devenir Développeur Web. Depuis mes débuts en
+                  <span className="font-bold"> autodidacte</span>, j'ai suivi
+                  une <span className="font-bold"> formation</span> auprès de la{" "}
+                  <span className="text-wild_red font-bold">
+                    Wild Code School
+                  </span>{" "}
+                  ainsi qu'un <span className="font-bold"> stage</span> au sein
+                  de l'entreprise <span className="font-bold">Cascade8</span>.
+                </p>
 
-                  <p className="description-paragraph">
-                    J'aimerais à <span className="font-bold">présent</span>{" "}
-                    intégré un poste en tant que{" "}
-                    <span className="font-bold">Développeur Web Front-end</span>{" "}
-                    et metre mon <span className="font-bold">experience</span>{" "}
-                    aquise au service d'une nouvelle équipe.
-                  </p>
-                </div>
+                <p className="description-paragraph mt-2 md:mt-0">
+                  J'aimerais à <span className="font-bold">présent</span>{" "}
+                  intégré un poste en tant que{" "}
+                  <span className="font-bold">Développeur Web Front-end</span>{" "}
+                  et metre mon <span className="font-bold">experience</span>{" "}
+                  aquise au service d'une nouvelle équipe.
+                </p>
               </motion.aside>
               <motion.aside
                 className="img-part"
