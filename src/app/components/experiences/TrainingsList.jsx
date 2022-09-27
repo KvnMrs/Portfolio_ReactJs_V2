@@ -17,8 +17,8 @@ function TrainingsList({ datas }) {
         className="w-20 md:w-28 mx-auto mb-6"
       />
 
-      <h1 className="text-xl text-white min-w-max">{datas.centre}</h1>
-      <h2 className="text-lg text-gray-400">{datas.lieu}</h2>
+      <h1 className="text-xl text-white mb-1">{datas.centre}</h1>
+      <h2 className="text-lg text-gray-400 mb-1">{datas.lieu}</h2>
       <h2 className="text-lg text-gray-400">{datas.date}</h2>
       <h3 className="">{datas.statut}</h3>
     </motion.div>
