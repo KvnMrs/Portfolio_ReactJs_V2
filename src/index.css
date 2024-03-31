@@ -24,7 +24,7 @@
 /* LG */ lg:py-5
 }
 .sections-surfaces {
-  @apply w-screen h-full p-5 flex flex-col mx-auto justify-center
+  @apply w-screen h-full flex mx-auto
 /* MD */ md:rounded-md
 /* LG */ lg:w-10/12 lg:rounded-3xl
 }
@@ -197,61 +197,27 @@
 /* LG */ lg:text-3xl
 }
 .name {
-  @apply text-xl
+  @apply text-xl p-2
   /* MD */ md:text-2xl
   /* LG */ lg:text-4xl
 }
 .links-social-medias {
-  @apply mt-5 top-2 right-4 flex justify-center
-/* MD */ md:fixed md:flex-col md:mt-0
+  @apply flex flex-col gap-2
 }
 
 /*************************** About ****************************/
 
 /* Description part */
-
-.description-part {
-  @apply w-11/12 flex flex-col mx-auto
-/* MD */ md:h-4/6 md:flex-row
+.presentation {
+  @apply p-0 flex flex-col gap-4 text-start
 }
-.description-text {
-  @apply flex flex-col justify-center m-auto
-/* SM  */sm:w-5/6
-/* MD */ md:w-4/6
-/* LG */ lg:w-3/6
-}
-.description-paragraph {
-  @apply mb-3
-/* MD */ md:text-lg
-}
-.img-part {
-  @apply w-4/5 my-6 mx-auto flex justify-center items-center
-/* MD */ md:w-2/6 md:self-center md:flex-col
+.picture-scoial-medias {
+  @apply flex place-content-between
 }
 .profile-img {
-  @apply w-24 h-24 mx-auto object-cover rounded-full border border-white
+  @apply w-44 h-44 object-cover border rounded-lg border-white
 /* SM */ sm:w-32 sm:h-32
 /* MD */ md:w-52 md:h-52
-}
-
-/* SoftSkills part */
-
-.softSkills-part {
-  @apply w-5/6 h-1/6 py-2 flex mx-auto self-center items-center overflow-auto scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500
-/* SM */ sm:pt-0
-/* MD md:h-1/4 */
-}
-.softSkill {
-  @apply h-full mx-3 pb-3 flex flex-col text-center justify-center
-/* MD */ md:mx-auto md:pb-0
-}
-.softSkill-title {
-  @apply min-w-max mb-1 font-semibold
-/* MD */ md:text-lg md:mx-auto
-}
-.softSkill-img {
-  @apply w-12 p-2 mx-auto self-center border rounded-lg
-/* MD */ md:w-16
 }
 
 /*************************** Experiences ****************************/
