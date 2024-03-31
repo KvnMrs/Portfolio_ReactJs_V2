@@ -101,7 +101,7 @@ function Experiences() {
                 {!showExperiences &&
                   dataTraining.map((training) => (
                     <motion.div
-                      className="gradiant-dark"
+                      className="bg-black"
                       variants={listsItemsAnim}
                       initial="initial"
                       whileInView="whileInView"
