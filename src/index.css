@@ -29,7 +29,7 @@
 /* LG */ lg:w-10/12 lg:rounded-3xl
 }
 .sections-sub-containers {
-  @apply w-full h-full max-h-screen p-3 flex flex-col place-content-center text-center bg-opacity-50
+  @apply w-full h-full max-h-screen pt-14 p-2 flex flex-col gap-8
 /* MD */ md:m-auto md:p-0 md:py-7 md:block
 }
 .sections-headers {
@@ -180,36 +180,11 @@
 }
 /********************** Home ***********************/
 
-.home-container {
-  @apply w-full h-screen max-h-screen flex flex-col justify-center text-center items-center snap-center
-}
-.home-header{
-  @apply mb-16
-}
-.welcome {
-  @apply mb-5 text-2xl
-/* MD */ md:text-3xl
-/* LG */ lg:text-4xl
-}
-.home-paragraph {
-  @apply mb-5 text-xl
-/* MD */ md:text-2xl
-/* LG */ lg:text-3xl
-}
-.name {
-  @apply text-xl p-2
-  /* MD */ md:text-2xl
-  /* LG */ lg:text-4xl
+.presentation {
+  @apply p-0 flex flex-col gap-4 text-start
 }
 .links-social-medias {
   @apply flex flex-col gap-2
-}
-
-/*************************** About ****************************/
-
-/* Description part */
-.presentation {
-  @apply p-0 flex flex-col gap-4 text-start
 }
 .picture-scoial-medias {
   @apply flex place-content-between
@@ -220,6 +195,9 @@
 /* MD */ md:w-52 md:h-52
 }
 
+/*************************** About ****************************/
+
+/* Description part */
 /*************************** Experiences ****************************/
 
 .lists-container {
@@ -364,8 +342,8 @@
 /*********************** Sub-Components ************************/
 
 .callToAction-text {
-  @apply max-w-min h-8 py-2 px-4 flex justify-center self-center items-center font-semibold duration-500 ease-in-out bg-cyan-600 hover:bg-cyan-700 hover:scale-105 rounded-lg hover:ring-2
-/* MD */ md:mx-auto md:h-10 md:font-bold
+  @apply absolute right-7 bottom-7 py-1 px-2 flex border rounded-3xl
+    /* MD */
 }
 
 .callToAction-svg {
