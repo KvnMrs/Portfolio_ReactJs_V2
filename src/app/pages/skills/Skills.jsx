@@ -15,7 +15,7 @@ function Skills() {
     <>
       <section id="skills" className="sections-containers">
         <div className="sections-surfaces">
-          <article className="sections-sub-containers">
+          <article className="article-containers">
             {showOthersSkills && <Tools toggleSkills={toggleSkills} />}
             {!showOthersSkills && <HardSkills toggleSkills={toggleSkills} />}
           </article>

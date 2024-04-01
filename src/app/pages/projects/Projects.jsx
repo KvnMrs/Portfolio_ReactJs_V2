@@ -40,7 +40,7 @@ function Projects() {
     <>
       <section id="projects" className="sections-containers">
         <div className="sections-surfaces">
-          <article className="sections-sub-containers relative">
+          <article className="article-containers relative">
             <header className="sections-headers">
               <h2 className="sections-titles">Projets</h2>
             </header>

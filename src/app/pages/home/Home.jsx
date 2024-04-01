@@ -31,7 +31,7 @@ function About() {
   return (
     <>
       <section id="about" className="w-full h-screen">
-        <article className="sections-sub-containers">
+        <article className="article-containers">
           <div className="presentation">
             <motion.aside
               className=""

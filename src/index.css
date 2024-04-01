@@ -28,7 +28,7 @@
 /* MD */ md:rounded-md
 /* LG */ lg:w-10/12 lg:rounded-3xl
 }
-.sections-sub-containers {
+.article-containers {
   @apply w-full h-full max-h-screen pt-14 p-2 flex flex-col gap-8
 /* MD */ md:m-auto md:p-0 md:py-7 md:block
 }
@@ -196,8 +196,9 @@
 }
 
 /*************************** About ****************************/
-
-/* Description part */
+.aside-container {
+  @apply grid grid-cols-1 grid-rows-3 gap-4
+}
 /*************************** Experiences ****************************/
 
 .lists-container {
