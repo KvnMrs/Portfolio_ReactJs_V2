@@ -40,7 +40,7 @@ function Experiences() {
     <>
       <section id="experiences" className="sections-containers">
         <div className="sections-surfaces">
-          <article className="article-containers">
+          <article className="articles-containers">
             <header className="sections-headers pb-0">
               {/* Experience or Trainings */}
               {showExperiences ? (

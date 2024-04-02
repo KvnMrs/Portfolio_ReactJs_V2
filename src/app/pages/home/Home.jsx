@@ -30,8 +30,8 @@ function About() {
 
   return (
     <>
-      <section id="about" className="w-full h-screen">
-        <article className="article-containers">
+      <section id="home" className="sections-containers">
+        <article className="articles-containers">
           <div className="presentation">
             <motion.aside
               className=""
@@ -74,12 +74,12 @@ function About() {
               </div>
             </motion.aside>
           </div>
-          <Link to="/portofolio" >
-            <ButtonCallToActionText
-              text={"Qui suis-je ?"}
-            ></ButtonCallToActionText>
-          </Link>
         </article>
+        <Link to="/portofolio" >
+          <ButtonCallToActionText
+            text={"Qui suis-je ?"}
+          ></ButtonCallToActionText>
+        </Link>
       </section>
       <AnimatePresence>
         {activeModal && (

@@ -25,7 +25,7 @@ const Contact = () => {
     <>
       <section id="contact" className="sections-containers">
         <div className="sections-surfaces">
-          <article className="article-containers">
+          <article className="articles-containers">
             <header className="sections-headers">
               <p className="contact-text">
                 Un contact professionel, une question, un feedback <br />
