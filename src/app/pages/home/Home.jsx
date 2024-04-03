@@ -13,10 +13,10 @@ import ButtonCallToActionText from "../../sub-components/buttons/ButtonCallToAct
 import imgProfil from "../../../assets/img/imgAbout/Kevin.png";
 import Github from "../../../assets/img/imgSocialMedias/Github.png";
 import Linkedin from "../../../assets/img/imgSocialMedias/Linkedin.png";
+import CV from "../../../assets/document/Kévin_MARAIS_CV_FR.pdf";
 // Animations
 import {
   descriptionAnim,
-  imageAnim,
   imageHoverAnim,
 } from "../../animations/aboutAnimation";
 
@@ -53,7 +53,12 @@ function About() {
               transition="transition"
             />
           </aside>
-          <div className="links-social-medias">
+          <div className="links-social-medias items-center">
+            <a href={CV} download>
+              <button className="mr-4 px-4 py-2 outline outline-1 rounded-md">
+                Télécharger CV
+              </button>
+            </a>
                 <SocialMediasLinks
                   link={"https://www.linkedin.com/in/k%C3%A9vin-marais-861314216/"}
                   img={Linkedin}

@@ -187,7 +187,7 @@
   @apply flex gap-2
 }
 .profile-img {
-  @apply w-48 h-48 absolute -top-36 right-4 object-cover rounded-bl-[75%]
+  @apply w-48 h-48 absolute -top-36 right-2 object-cover rounded-bl-[75%]
 /* SM */ sm:w-32 sm:h-32
 /* MD */ md:w-52 md:h-52
 }
