@@ -32,7 +32,7 @@ function About() {
     <>
       <section id="home" className="section-containers">
         <article className="article-containers">
-          <div className="presentation">
+          <aside className="presentation relative">
             <motion.aside
               className=""
               variants={descriptionAnim}
@@ -44,21 +44,16 @@ function About() {
               <p className="text-3xl">Recherche Alternance</p>
               <p className="text-xl">Développeur Web Full-Stack</p>
             </motion.aside>
-            <motion.aside
-              className="picture-scoial-medias"
-              variants={imageAnim}
-              initial="initial"
-              animate="animate"
-            >
-                <motion.img
-                  className="profile-img"
-                  alt="Profil"
-                  src={imgProfil}
-                  variants={imageHoverAnim}
-                  whileHover="whileHover"
-                  transition="transition"
-              />
-              <div className="links-social-medias">
+            <motion.img
+              className="profile-img"
+              alt="Profil"
+              src={imgProfil}
+              variants={imageHoverAnim}
+              whileHover="whileHover"
+              transition="transition"
+            />
+          </aside>
+          <div className="links-social-medias">
                 <SocialMediasLinks
                   link={"https://www.linkedin.com/in/k%C3%A9vin-marais-861314216/"}
                   img={Linkedin}
@@ -68,9 +63,7 @@ function About() {
                   link={"https://github.com/KvnMrs"}
                   img={Github}
                   alt={"Lien vers Github"}
-                />
-              </div>
-            </motion.aside>
+            />
           </div>
         </article>
         <Link className="flex justify-end" to="/portofolio" >

@@ -181,16 +181,13 @@
 /********************** Home ***********************/
 
 .presentation {
-  @apply p-0 flex flex-col gap-4 text-start
+  @apply p-0 flex gap-4 text-start
 }
 .links-social-medias {
-  @apply flex flex-col gap-2
-}
-.picture-scoial-medias {
-  @apply flex place-content-between
+  @apply flex gap-2
 }
 .profile-img {
-  @apply w-44 h-44 object-cover
+  @apply w-48 h-48 absolute -top-36 right-4 object-cover rounded-bl-[75%]
 /* SM */ sm:w-32 sm:h-32
 /* MD */ md:w-52 md:h-52
 }
