@@ -10,7 +10,7 @@ import SoftSkillsModal from "../../components/about/SoftSkillsModal";
 import SocialMediasLinks from "../../sub-components/Links/SocialMediasLinks";
 import ButtonCallToActionText from "../../sub-components/buttons/ButtonCallToActionText";
 //Assets
-import imgProfil from "../../../assets/img/imgAbout/Kevin.jpg";
+import imgProfil from "../../../assets/img/imgAbout/Kevin.png";
 import Github from "../../../assets/img/imgSocialMedias/Github.png";
 import Linkedin from "../../../assets/img/imgSocialMedias/Linkedin.png";
 // Animations
@@ -50,7 +50,6 @@ function About() {
               initial="initial"
               animate="animate"
             >
-              <button type="button" onClick={openModal}>
                 <motion.img
                   className="profile-img"
                   alt="Profil"
@@ -58,8 +57,7 @@ function About() {
                   variants={imageHoverAnim}
                   whileHover="whileHover"
                   transition="transition"
-                />
-              </button>
+              />
               <div className="links-social-medias">
                 <SocialMediasLinks
                   link={"https://www.linkedin.com/in/k%C3%A9vin-marais-861314216/"}
@@ -75,7 +73,7 @@ function About() {
             </motion.aside>
           </div>
         </article>
-        <Link to="/portofolio" >
+        <Link className="flex justify-end" to="/portofolio" >
           <ButtonCallToActionText
             text={"Qui suis-je ?"}
           ></ButtonCallToActionText>
