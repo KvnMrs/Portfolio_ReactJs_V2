@@ -19,7 +19,7 @@ function BarNav() {
     <>
       <div className={openSidebar ? "sideBar-container " : "sideBar-closed "}>
         <div className="burger-button-container">
-          <button type="button" onClick={toggleSidebar}>
+          <button className="absolute h-auto left-4 top-4" type="button" onClick={toggleSidebar}>
             <SvgBurger />
           </button>
         </div>
@@ -30,27 +30,26 @@ function BarNav() {
             <li>
               <Link className="links" to="/">
                 <SvgHome />
+                <p className="text-xl">Accueil</p>
               </Link>
             </li>
             <li>
-              <a className="links" href="#about">
+              <Link className="links" to="#about">
                 <SvgProfile />
-              </a>
+                <p className="text-xl">A propos</p>
+              </Link>
             </li>
             <li>
-              <a className="links" href="#skills">
-                <SvgSkills />
-              </a>
-            </li>
-            <li>
-              <a className="links" href="#projects">
+              <Link className="links" to="#projects">
                 <SvgProject />
-              </a>
+                <p className="text-xl">Projets</p>
+              </Link>
             </li>
             <li>
-              <a className="links" href="#contact">
+              <Link className="links" to="#contact">
                 <SvgContact />
-              </a>
+                <p className="text-xl">Contact</p>
+              </Link>
             </li>
           </ol>
         </nav>
