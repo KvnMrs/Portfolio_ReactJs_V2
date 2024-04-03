@@ -18,25 +18,25 @@
 .global-bg {
   @apply bg-black
 }
-.sections-containers {
+.section-containers {
   @apply w-full min-h-screen flex flex-col
 /* LG */ sm:snap-center
 /* LG */ lg:py-5
 }
-.sections-surfaces {
+.section-surfaces {
   @apply w-screen flex mx-auto
 /* MD */ md:rounded-md
 /* LG */ lg:w-10/12 lg:rounded-3xl
 }
-.articles-containers {
-  @apply w-full h-screen p-4 flex flex-col
+.article-containers {
+  @apply w-full min-h-screen p-4 flex flex-col
 /* MD */ md:m-auto md:p-0 md:py-7 md:block
 }
-.sections-headers {
+.section-headers {
   @apply flex mx-auto justify-center items-center pb-2
 /* MD */ md:pb-5
 }
-.sections-titles {
+.section-titles {
   @apply w-auto flex pb-2 place-content-center text-2xl border-b
 /* MD */ md:pb-3 md:text-3xl
 }
@@ -197,16 +197,16 @@
 
 /*************************** About ****************************/
 .about-aside-containers {
-@apply pt-4 flex flex-col gap-8
+@apply pt-4 flex flex-col
 }
-.about-img-container {
-  @apply w-3/4 h-20 flex self-end justify-center rotate-12
+.about-img-containers {
+  @apply w-3/4 h-20 flex justify-center
 }
 .about-img {
   @apply w-3/4 h-full rounded-full bg-gray-700
 }
 .about-description-container {
-  @apply flex flex-col gap-2
+  @apply mb-8 flex flex-col gap-2
 }
 /*************************** Experiences ****************************/
 
@@ -352,7 +352,7 @@
 /*********************** Sub-Components ************************/
 
 .callToAction-text {
-  @apply ml-auto mr-4 mb-4 px-2 border rounded-3xl
+  @apply mt-8 mr-4 mb-4 ml-auto px-2 self-end border rounded-3xl
     /* MD */
 }
 
