@@ -18,25 +18,25 @@
 .global-bg {
   @apply bg-black
 }
-.sections-containers {
-  @apply w-full h-screen flex flex-col
+.section-containers {
+  @apply w-full min-h-screen flex flex-col
 /* LG */ sm:snap-center
 /* LG */ lg:py-5
 }
-.sections-surfaces {
-  @apply w-screen h-full flex mx-auto
+.section-surfaces {
+  @apply w-screen flex mx-auto
 /* MD */ md:rounded-md
 /* LG */ lg:w-10/12 lg:rounded-3xl
 }
-.sections-sub-containers {
-  @apply w-full h-full max-h-screen p-3 flex flex-col place-content-center text-center bg-opacity-50
+.article-containers {
+  @apply w-full min-h-screen p-4 flex flex-col gap-8 place-content-center
 /* MD */ md:m-auto md:p-0 md:py-7 md:block
 }
-.sections-headers {
+.section-headers {
   @apply flex mx-auto justify-center items-center pb-2
 /* MD */ md:pb-5
 }
-.sections-titles {
+.section-titles {
   @apply w-auto flex pb-2 place-content-center text-2xl border-b
 /* MD */ md:pb-3 md:text-3xl
 }
@@ -44,7 +44,7 @@
 /********************** App ***********************/
 
 .scroll-control {
-  @apply h-screen w-screen overflow-auto scroll-smooth global-bg
+  @apply min-h-screen w-screen overflow-auto scroll-smooth global-bg
 /* SM */ sm:snap-y sm:snap-mandatory
 }
 .main-container {
@@ -180,46 +180,31 @@
 }
 /********************** Home ***********************/
 
-.home-container {
-  @apply w-full h-screen max-h-screen flex flex-col justify-center text-center items-center snap-center
-}
-.home-header{
-  @apply mb-16
-}
-.welcome {
-  @apply mb-5 text-2xl
-/* MD */ md:text-3xl
-/* LG */ lg:text-4xl
-}
-.home-paragraph {
-  @apply mb-5 text-xl
-/* MD */ md:text-2xl
-/* LG */ lg:text-3xl
-}
-.name {
-  @apply text-xl p-2
-  /* MD */ md:text-2xl
-  /* LG */ lg:text-4xl
+.presentation {
+  @apply p-0 flex gap-4 text-start
 }
 .links-social-medias {
-  @apply flex flex-col gap-2
-}
-
-/*************************** About ****************************/
-
-/* Description part */
-.presentation {
-  @apply p-0 flex flex-col gap-4 text-start
-}
-.picture-scoial-medias {
-  @apply flex place-content-between
+  @apply flex gap-2
 }
 .profile-img {
-  @apply w-44 h-44 object-cover border rounded-lg border-white
+  @apply w-48 h-48 absolute -top-36 right-2 object-cover rounded-bl-[75%]
 /* SM */ sm:w-32 sm:h-32
 /* MD */ md:w-52 md:h-52
 }
 
+/*************************** About ****************************/
+.about-aside-containers {
+@apply pt-4 flex flex-col
+}
+.about-img-containers {
+  @apply w-3/4 h-20 flex justify-center
+}
+.about-img {
+  @apply w-3/4 h-full rounded-full bg-gray-700
+}
+.about-description-container {
+  @apply mb-8 flex flex-col gap-2
+}
 /*************************** Experiences ****************************/
 
 .lists-container {
@@ -364,8 +349,8 @@
 /*********************** Sub-Components ************************/
 
 .callToAction-text {
-  @apply max-w-min h-8 py-2 px-4 flex justify-center self-center items-center font-semibold duration-500 ease-in-out bg-cyan-600 hover:bg-cyan-700 hover:scale-105 rounded-lg hover:ring-2
-/* MD */ md:mx-auto md:h-10 md:font-bold
+  @apply mt-8 mr-4 mb-4 ml-auto px-2 self-end border rounded-3xl
+    /* MD */
 }
 
 .callToAction-svg {

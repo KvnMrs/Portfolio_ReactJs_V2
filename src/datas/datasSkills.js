@@ -47,7 +47,7 @@ const dataSkills = [
   {
     image: img_ecoute,
     catégorie: "Atout",
-    element: "Sens de l'écoute",
+    element: "Ecoute active",
     description:
       "Très important de manière générale et d'autant plus lors d'un contact client. Il permet la bonne compréhension des besoins, menant à la satisfaction de ce dernier.",
   },
