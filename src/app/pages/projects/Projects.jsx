@@ -38,11 +38,11 @@ function Projects() {
   }, [currentProject]);
   return (
     <>
-      <section id="projects" className="sections-containers">
-        <div className="sections-surfaces">
-          <article className="articles-containers relative">
-            <header className="sections-headers">
-              <h2 className="sections-titles">Projets</h2>
+      <section id="projects" className="section-containers">
+        <div className="section-surfaces">
+          <article className="article-containers relative">
+            <header className="section-headers">
+              <h2 className="section-titles">Projets</h2>
             </header>
             <motion.div
               className="projects-carrousel"

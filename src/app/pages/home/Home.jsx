@@ -30,8 +30,8 @@ function About() {
 
   return (
     <>
-      <section id="home" className="sections-containers">
-        <article className="articles-containers">
+      <section id="home" className="section-containers">
+        <article className="article-containers">
           <div className="presentation">
             <motion.aside
               className=""

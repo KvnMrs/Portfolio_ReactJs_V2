@@ -23,10 +23,10 @@ const Contact = () => {
 
   return (
     <>
-      <section id="contact" className="sections-containers">
-        <div className="sections-surfaces">
-          <article className="articles-containers">
-            <header className="sections-headers">
+      <section id="contact" className="section-containers">
+        <div className="section-surfaces">
+          <article className="article-containers">
+            <header className="section-headers">
               <p className="contact-text">
                 Un contact professionel, une question, un feedback <br />
                 contactez-moi 📝
