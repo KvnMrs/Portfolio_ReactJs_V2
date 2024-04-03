@@ -5,13 +5,13 @@ const SoftSkills = ({ softSkill, categorie, img, openModal }) => {
     <>
       <button
         type="button"
-        className="w-10 h-10 items-center flex flex-col"
+        className="m-2 flex flex-col gap-2 items-center"
         onClick={openModal}
       >
         <div>
-          <img alt={categorie} src={img} />
+          <img className="w-10 h-10" alt={categorie} src={img} />
         </div>
-        <h4 className="softSkill-title">{softSkill}</h4>
+        <h4>{softSkill}</h4>
       </button>
     </>
   );

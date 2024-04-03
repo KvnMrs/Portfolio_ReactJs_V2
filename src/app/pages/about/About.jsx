@@ -17,11 +17,11 @@ function About() {
       <section id="about" className="sections-containers">
         <article className="articles-containers">
           <aside className="about-aside-containers">
-            <div className="w-full row-span-1 content-end">
-              <div className="h-3/5 w-3/4 mt-auto ml-auto rotate-6 rounded-3xl bg-white"></div>
+            <div className="about-img-container">
+              <div className="about-img"></div>
             </div>
             <motion.div
-              className="row-span-2"
+              className="about-description-container"
               variants={descriptionAnim}
               initial="initial"
               animate="animate"
@@ -32,7 +32,7 @@ function About() {
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </motion.div>
             <motion.div
-              className="w-full flex flex-wrap self-center justify-between"
+              className="flex gap-4 flex-wrap justify-around"
               variants={softSkillsAnim}
               initial="initial"
               animate="animate"
