@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { descriptionAnim, softSkillsAnim } from "../../animations/aboutAnimation";
 // Components
 import SoftSkills from "../../components/about/SoftSkills";
+//Assets
+import imgProfil from "../../../assets/img/imgAbout/Kevin.png";
 // Sub-components
 import ButtonCallToActionText from "../../sub-components/buttons/ButtonCallToActionText";
 // Datas
@@ -16,6 +18,26 @@ function About() {
     <>
       <section id="about" className="section-containers">
         <article className="article-containers">
+          <aside className="about-aside-containers p-2 text-center gap-4">
+            <motion.img
+              className="w-40 h-40 object-cover self-center"
+              alt="Profil"
+              src={imgProfil}
+            />
+            <div className="flex justify-around">
+              <p>Kévin Marais</p>
+              <p>30 ans</p>
+              <p>Nantes</p>
+            </div>
+            <div className="">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </aside>
+
+          <div className="w-4/5 mx-auto my-8 border border-t-0"> </div>
+
           <aside className="about-aside-containers">
             <div className="about-img-containers self-end rotate-12">
               <div className="about-img"></div>
@@ -50,7 +72,7 @@ function About() {
             </motion.div>
           </aside>
 
-          <div className="w-4/5 mx-auto my-10 border border-t-0"> </div>
+          <div className="w-4/5 mx-auto my-8 border border-t-0"> </div>
 
           <aside className="about-aside-containers">
             <div className="about-img-containers self-start rotate-[168deg]">
