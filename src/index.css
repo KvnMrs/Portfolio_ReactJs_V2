@@ -64,37 +64,23 @@
     margin-block: auto;
   }
 }
-.sideBar-closed {
-  @apply w-auto p-3 fixed flex z-30
-/* MD */ md:duration-1000 md:top-4 md:h-auto md:left-4 md:flex-col md:content-center md:rounded-full
-}
 .sideBar-container {
-  @apply w-full h-5/6 fixed flex flex-col z-30 ease-in-out duration-700 bg-black shadow-lg shadow-cyan-300 rounded-sm
-/* MD */ md:w-16 md:h-4/6 md:left-4 sidebar-center md:flex-col duration-2000 md:content-center md:rounded-full
+  @apply w-full h-5/6 fixed flex flex-col z-30 bg-black shadow-md shadow-cyan-300 rounded-sm
 }
 .burger-button-container {
   @apply flex self-center mx-auto
-/* MD */ md:h-1/6 md:mx-0
 }
 .burger-button-container svg {
   @apply w-5
-/* MD */ md:w-7
-}
-.nav {
-  @apply h-full duration-1000 
-/* MD */ md:h-2/4 margin-block
 }
 .links-container {
   @apply h-auto absolute top-20 left-10 flex flex-col gap-6 justify-start
-/* MD */ md:h-auto md:flex-col md:mx-auto
 }
 .links {
   @apply flex gap-4
-/* MD */ md:mx-auto md:my-5 md:justify-center
 }
 .sidebar-svg {
   @apply w-5 h-auto
-/* MD */ md:w-7 md:duration-500 md:ease-in-out md:hover:scale-125 md:hover:fill-cyan-300 md:hover:shadow-lg md:hover:shadow-cyan-300/50
 }
 
 /******* Modal *******/

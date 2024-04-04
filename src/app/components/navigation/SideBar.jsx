@@ -4,10 +4,13 @@ import { Link } from "react-router-dom";
 // Assets
 import SvgHome from "../../../assets/svg/sidebar/links-section/SvgHome";
 import SvgProfile from "../../../assets/svg/sidebar/links-section/SvgProfile";
-import SvgSkills from "../../../assets/svg/sidebar/links-section/SvgSkills";
 import SvgProject from "../../../assets/svg/sidebar/links-section/SvgProject";
 import SvgContact from "../../../assets/svg/sidebar/links-section/SvgContact";
 import SvgBurger from "../../../assets/svg/sidebar/SvgBurger";
+// Package
+import { motion } from "framer-motion";
+// Animations
+import { modalAnim } from "../../animations/aboutAnimation";
 
 function BarNav() {
   const [openSidebar, setOpenSideBar] = useState(false);
@@ -17,15 +20,18 @@ function BarNav() {
   };
   return (
     <>
-      <div className={openSidebar ? "sideBar-container " : "sideBar-closed "}>
-        <div className="burger-button-container">
-          <button className="absolute h-auto left-4 top-4" type="button" onClick={toggleSidebar}>
-            <SvgBurger />
-          </button>
-        </div>
-
+      <div className="burger-button-container">
+        <button className="fixed z-50 h-auto left-4 top-4" type="button" onClick={toggleSidebar}>
+          <SvgBurger />
+        </button>
+      </div>
+      {openSidebar && <motion.div className="sideBar-container"
+        variants={modalAnim}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+      >
         {/* Links Section */}
-        <nav className={openSidebar ? "nav" : "hidden"}>
           <ol className="links-container">
             <li>
               <Link className="links" to="/">
@@ -52,8 +58,8 @@ function BarNav() {
               </Link>
             </li>
           </ol>
-        </nav>
-      </div>
+      </motion.div >}
+
     </>
   );
 }
