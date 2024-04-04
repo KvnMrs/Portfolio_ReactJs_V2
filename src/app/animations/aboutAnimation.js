@@ -36,8 +36,8 @@ export const softSkillHoverAnim = {
 // Modal
 export const modalAnim = {
   initial: { y: -1000 },
-  animate: { y: 0, transition: { ease: "easeOut", duration: 0.7 } },
-  exit: { y: -1000, transition: { ease: "easeOut", duration: 0.4 } },
+  animate: { y: 0, transition: { ease: "easeOut", duration: 0.5 } },
+  exit: { y: -1000, transition: { ease: "easeOut", duration: 0.5 } },
 };
 
 // Modal Profile part
