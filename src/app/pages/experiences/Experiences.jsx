@@ -39,7 +39,6 @@ function Experiences() {
   return (
     <>
       <section id="experiences" className="section-containers">
-        <div className="section-surfaces">
           <article className="article-containers">
             <header className="section-headers pb-0">
               {/* Experience or Trainings */}
@@ -112,8 +111,7 @@ function Experiences() {
                   ))}
               </motion.aside>
             </div>
-          </article>
-        </div>
+        </article>
       </section>
     </>
   );
