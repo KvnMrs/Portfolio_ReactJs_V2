@@ -1,42 +1,11 @@
-import React, { useState, useRef, useEffect } from "react";
-
-// Package
-import { motion } from "framer-motion";
-
+import React, { useRef } from "react";
 // Components
 import ProjectCard from "../../components/projects/ProjectCard";
-
-// Sub-Component
-import ButtonCallToActionSvg from "../../sub-components/buttons/ButtonCallToActionSvg";
-
 // Datas
 import DatasProjects from "../../../datas/datasProjects";
 
-// Assets
-import RightArrowSvg from "../../../assets/svg/global/RightArrowSvg";
-import LeftArrowSvg from "../../../assets/svg/global/LeftArrowSvg";
-
-// Animations
-import { projectsContainer } from "../../animations/projectsAnimation";
-
 function Projects() {
-  const [currentProject, SetCurrentProject] = useState(0);
-  const length = DatasProjects.length;
   const itemsRef = useRef([]);
-
-  const nextProject = () => {
-    SetCurrentProject(currentProject === length - 1 ? 0 : currentProject + 1);
-  };
-
-  const previousProject = () => {
-    SetCurrentProject(currentProject === 0 ? length - 1 : currentProject - 1);
-  };
-
-  useEffect(() => {
-    itemsRef.current[currentProject].scrollIntoView({
-      behavior: "smooth",
-    });
-  }, [currentProject]);
 
   return (
     <>
@@ -45,29 +14,7 @@ function Projects() {
             <header className="section-headers">
               <h2 className="section-titles">Projets</h2>
             </header>
-            <motion.div
-              className="projects-carrousel"
-              variants={projectsContainer}
-              initial="initial"
-              whileInView="whileInView"
-              viewport={{ once: true }}
-            >
-              {currentProject > 0 && (
-                <ButtonCallToActionSvg
-                  svg={<LeftArrowSvg />}
-                  fct={() => previousProject()}
-                  customClass={"absolute top-1/2 z-10 -left-3 md:left-20 "}
-                />
-              )}
-              {currentProject < length - 1 && (
-                <ButtonCallToActionSvg
-                  svg={<RightArrowSvg />}
-                  fct={() => nextProject()}
-                  customClass={
-                    "absolute top-1/2 z-10 -right-3 md:right-20 md:mr-5 "
-                  }
-                />
-              )}
+          <div className="project-containers">
               {DatasProjects.map((el) => (
                 <>
                   {
@@ -84,7 +31,7 @@ function Projects() {
                   }
                 </>
               ))}
-            </motion.div>
+          </div>
         </article>
       </section>
     </>
