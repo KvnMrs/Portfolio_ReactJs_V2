@@ -316,10 +316,8 @@
 /*********************** Sub-Components ************************/
 
 .callToAction-text {
-  @apply mt-8 mr-4 mb-4 ml-auto px-2 self-end border rounded-3xl
-    /* MD */
+  @apply mr-4 mb-4 ml-auto px-2 self-end border rounded-md
 }
-
 .callToAction-svg {
   @apply w-8 h-8 flex items-center animate-pulse duration-500 ease-in-out rounded-full bg-cyan-600
 /* MD */ md:w-10 md:h-10 md:p-3 md:hover:animate-none md:hover:ring-2 md:hover:bg-cyan-700

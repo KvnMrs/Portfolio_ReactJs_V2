@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 
-// Package
-import { motion } from "framer-motion";
-
 // Sub-components
 import ButtonCallToActionText from "../../sub-components/buttons/ButtonCallToActionText";
-
 // Animations
 import {
   inputsAnim,
@@ -32,7 +28,7 @@ const Contact = () => {
               </p>
             </header>
             <form className="form">
-              <motion.div
+            <div
                 variants={inputsAnim}
                 initial="initial"
                 whileInView="whileInView"
@@ -77,8 +73,8 @@ const Contact = () => {
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                 />
-              </motion.div>
-              <motion.div
+            </div>
+            <div
                 variants={texteAreaAnim}
                 initial="initial"
                 whileInView="whileInView"
@@ -95,7 +91,7 @@ const Contact = () => {
                   type={"submit"}
                   customClass={"submit-button"}
                 >
-                  <motion.a
+                <a
                     className="w-full text-sm md:text-lg"
                     href={`mailto:kevin.mrs2020@gmail.com?subject=${reason}&body=${firstname} ${lastname.toUpperCase()}%0A${mail}%0A${phone}%0A%0A${message}`}
                     variants={submitAnim}
@@ -104,9 +100,9 @@ const Contact = () => {
                     viewport={{ once: true }}
                   >
                     Envoyer
-                  </motion.a>
+                </a>
                 </ButtonCallToActionText>
-              </motion.div>
+            </div>
             </form>
         </article>
       </section>
