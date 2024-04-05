@@ -31,15 +31,16 @@ function Projects() {
   const previousProject = () => {
     SetCurrentProject(currentProject === 0 ? length - 1 : currentProject - 1);
   };
+
   useEffect(() => {
     itemsRef.current[currentProject].scrollIntoView({
       behavior: "smooth",
     });
   }, [currentProject]);
+
   return (
     <>
       <section id="projects" className="section-containers">
-        <div className="section-surfaces">
           <article className="article-containers relative">
             <header className="section-headers">
               <h2 className="section-titles">Projets</h2>
@@ -84,8 +85,7 @@ function Projects() {
                 </>
               ))}
             </motion.div>
-          </article>
-        </div>
+        </article>
       </section>
     </>
   );

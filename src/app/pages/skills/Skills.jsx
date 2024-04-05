@@ -14,12 +14,10 @@ function Skills() {
   return (
     <>
       <section id="skills" className="section-containers">
-        <div className="section-surfaces">
           <article className="article-containers">
             {showOthersSkills && <Tools toggleSkills={toggleSkills} />}
             {!showOthersSkills && <HardSkills toggleSkills={toggleSkills} />}
-          </article>
-        </div>
+        </article>
       </section>
     </>
   );

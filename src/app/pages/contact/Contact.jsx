@@ -24,7 +24,6 @@ const Contact = () => {
   return (
     <>
       <section id="contact" className="section-containers">
-        <div className="section-surfaces">
           <article className="article-containers">
             <header className="section-headers">
               <p className="contact-text">
@@ -109,8 +108,7 @@ const Contact = () => {
                 </ButtonCallToActionText>
               </motion.div>
             </form>
-          </article>
-        </div>
+        </article>
       </section>
     </>
   );
