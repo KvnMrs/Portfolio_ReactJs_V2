@@ -2,11 +2,9 @@ import "./App.css";
 
 // Package
 import { Routes, Route } from "react-router-dom";
-import { motion } from "framer-motion";
 
 // Pages
 import Home from "./app/pages/home/Home";
-import MyApp from "./app/MyApp";
 import SideBar from "./app/components/navigation/SideBar";
 import About from "./app/pages/about/About";
 import Contact from "./app/pages/contact/Contact";
