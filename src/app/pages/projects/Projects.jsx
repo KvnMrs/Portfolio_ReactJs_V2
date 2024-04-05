@@ -1,6 +1,9 @@
 import React, { useRef } from "react";
+import { Link } from "react-router-dom";
 // Components
 import ProjectCard from "../../components/projects/ProjectCard";
+// Sub-components
+import ButtonCallToActionText from "../../sub-components/buttons/ButtonCallToActionText";
 // Datas
 import DatasProjects from "../../../datas/datasProjects";
 
@@ -33,6 +36,11 @@ function Projects() {
               ))}
           </div>
         </article>
+        <Link className="flex justify-end" to="/projects" >
+          <ButtonCallToActionText
+            text={"Me contacter"}
+          ></ButtonCallToActionText>
+        </Link>
       </section>
     </>
   );
