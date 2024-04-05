@@ -7,20 +7,29 @@ import { motion } from "framer-motion";
 // Pages
 import Home from "./app/pages/home/Home";
 import MyApp from "./app/MyApp";
+import SideBar from "./app/components/navigation/SideBar";
+import About from "./app/pages/about/About";
+import Contact from "./app/pages/contact/Contact";
+import Projects from "./app/pages/projects/Projects";
 
 function App() {
   return (
     <>
-      <motion.div
+      <div
         className="scroll-control"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
       >
+        <SideBar />
+        <div className="main-container"
+        >
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/portofolio" element={<MyApp />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
         </Routes>
-      </motion.div>
+        </div>
+      </div >
+
     </>
   );
 }

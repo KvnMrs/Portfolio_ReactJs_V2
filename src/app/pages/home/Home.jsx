@@ -71,7 +71,7 @@ function About() {
             />
           </div>
         </article>
-        <Link className="flex justify-end" to="/portofolio" >
+        <Link className="flex justify-end" to="/about" >
           <ButtonCallToActionText
             text={"Qui suis-je ?"}
           ></ButtonCallToActionText>

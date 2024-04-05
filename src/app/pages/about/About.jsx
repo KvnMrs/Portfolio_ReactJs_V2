@@ -108,7 +108,7 @@ function About() {
             </motion.div>
           </aside>
         </article>
-        <Link className="flex justify-end" to="/portofolio" >
+        <Link className="flex justify-end" to="/projects" >
           <ButtonCallToActionText
             text={"Mes projets ?"}
           ></ButtonCallToActionText>
