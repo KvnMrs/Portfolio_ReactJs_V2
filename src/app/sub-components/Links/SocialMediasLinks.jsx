@@ -4,11 +4,11 @@ function SocialMediasLinks({ link, img, alt }) {
   return (
     <>
       <a
-        className="w-fit bg-white rounded-2xl duration-700 m-3 hover:scale-125"
+        className="h-fit bg-white rounded-2xl "
         href={link}
         target="blank"
       >
-        <img className="w-12 m-1" src={img} alt={alt} />
+        <img className="w-8" src={img} alt={alt} />
       </a>
     </>
   );

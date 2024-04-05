@@ -22,10 +22,10 @@ const MyApp = () => {
         transition={{ duration: 0.7 }}
       >
         <About />
-        <Experiences />
+        {/* <Experiences />
         <Skills />
         <Projects />
-        <Contact />
+        <Contact /> */}
       </motion.div>
     </>
   );

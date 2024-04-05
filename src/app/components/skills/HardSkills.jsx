@@ -16,8 +16,8 @@ import RightArrowSvg from "../../../assets/svg/global/RightArrowSvg";
 const HardSkills = ({ toggleSkills }) => {
   return (
     <>
-      <header className="sections-headers">
-        <h2 className="sections-titles ml-8 md:ml-16">Compétences</h2>
+      <header className="section-headers">
+        <h2 className="section-titles ml-8 md:ml-16">Compétences</h2>
         <ButtonCallToActionSvg
           svg={<RightArrowSvg />}
           fct={() => toggleSkills()}
