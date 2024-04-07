@@ -77,17 +77,6 @@ function About() {
           ></ButtonCallToActionText>
         </Link>
       </section>
-      <AnimatePresence>
-        {activeModal && (
-          <Modal
-            showModal={openModal}
-            component1={<ProfileModal />}
-            component2={<SoftSkillsModal />}
-            tab={"Profil"}
-            tab2={"Savoir-être"}
-          />
-        )}
-      </AnimatePresence>
     </>
   );
 }
