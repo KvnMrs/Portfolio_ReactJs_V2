@@ -32,9 +32,9 @@ function About() {
     <>
       <section id="home" className="section-containers">
         <article className="article-containers">
-          <aside className="presentation relative">
-            <motion.aside
-              className=""
+          <aside className="presentation ">
+            <motion.div
+              className="w-fit relative"
               variants={descriptionAnim}
               initial="initial"
               animate="animate"
@@ -43,39 +43,41 @@ function About() {
               <p className="text-6xl">MARAIS</p>
               <p className="text-3xl">Recherche Alternance</p>
               <p className="text-xl">Développeur Web Full-Stack</p>
-            </motion.aside>
-            <motion.img
-              className="profile-img"
-              alt="Profil"
-              src={imgProfil}
-              variants={imageHoverAnim}
-              whileHover="whileHover"
-              transition="transition"
-            />
+              <motion.img
+                className="profile-img"
+                alt="Profil"
+                src={imgProfil}
+                variants={imageHoverAnim}
+                whileHover="whileHover"
+                transition="transition"
+              />
+            </motion.div>
+            <div className="links-social-medias items-center">
+              <a href={CV} download>
+                <button className="mr-4 px-4 py-2 outline outline-1 rounded-md">
+                  Télécharger CV
+                </button>
+              </a>
+              <SocialMediasLinks
+                link={
+                  "https://www.linkedin.com/in/k%C3%A9vin-marais-861314216/"
+                }
+                img={Linkedin}
+                alt={"Lien vers Linkedin"}
+              />
+              <SocialMediasLinks
+                link={"https://github.com/KvnMrs"}
+                img={Github}
+                alt={"Lien vers Github"}
+              />
+            </div>
           </aside>
-          <div className="links-social-medias items-center">
-            <a href={CV} download>
-              <button className="mr-4 px-4 py-2 outline outline-1 rounded-md">
-                Télécharger CV
-              </button>
-            </a>
-                <SocialMediasLinks
-                  link={"https://www.linkedin.com/in/k%C3%A9vin-marais-861314216/"}
-                  img={Linkedin}
-                  alt={"Lien vers Linkedin"}
-                />
-                <SocialMediasLinks
-                  link={"https://github.com/KvnMrs"}
-                  img={Github}
-                  alt={"Lien vers Github"}
-            />
-          </div>
         </article>
-        <Link className="flex justify-end" to="/about" >
+        {/* <Link className="flex justify-end" to="/about">
           <ButtonCallToActionText
             text={"Qui suis-je ?"}
           ></ButtonCallToActionText>
-        </Link>
+        </Link> */}
       </section>
     </>
   );
