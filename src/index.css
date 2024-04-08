@@ -152,14 +152,13 @@
 }
 /********************** Home ***********************/
 
-.presentation {
-  @apply p-0 flex flex-col gap-4 text-start
-}
-.links-social-medias {
-  @apply flex gap-2
+.presentation-container {
+  @apply w-fit relative self-center flex flex-col gap-12
+/* MD */ md:self-center md:gap-8
 }
 .profile-img {
   @apply w-48 h-48 absolute -top-36 -right-10 object-cover rounded-bl-[75%]
+/* MD */ md:w-60 md:h-60 md:static
 }
 
 /*************************** About ****************************/
@@ -314,7 +313,7 @@
 /*********************** Sub-Components ************************/
 
 .callToAction-text {
-  @apply mr-4 mb-4 ml-auto px-2 self-end border rounded-md
+  @apply px-4 py-2 outline outline-1 rounded-md
 }
 .callToAction-svg {
   @apply w-8 h-8 flex items-center animate-pulse duration-500 ease-in-out rounded-full bg-cyan-600
