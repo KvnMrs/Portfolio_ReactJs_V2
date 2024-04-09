@@ -1,11 +1,5 @@
 import React, { useRef, useEffect } from "react";
 
-// Package
-import { motion } from "framer-motion";
-
-// Animations
-import { projecItemAnim } from "../../animations/projectsAnimation";
-
 const ProjectCard = ({
   id,
   img,
@@ -24,16 +18,7 @@ const ProjectCard = ({
 
   return (
     <>
-      <motion.article
-        id={id}
-        ref={projectRef}
-        className="project"
-        variants={projecItemAnim}
-        initial="initial"
-        animate="animate"
-        exit="exit"
-        viewport={{ once: true }}
-      >
+      <article id={id} ref={projectRef} className="project">
         <img className="project-img" alt={title} src={img} />
         <aside className="project-content">
           <h3 className="project-title">{title}</h3>
@@ -65,7 +50,7 @@ const ProjectCard = ({
             ))}
           </ul>
         </aside>
-      </motion.article>
+      </article>
     </>
   );
 };

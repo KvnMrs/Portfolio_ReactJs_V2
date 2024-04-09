@@ -2,25 +2,28 @@ import "./App.css";
 
 // Package
 import { Routes, Route } from "react-router-dom";
-import { motion } from "framer-motion";
 
 // Pages
 import Home from "./app/pages/home/Home";
-import MyApp from "./app/MyApp";
+import SideBar from "./app/components/navigation/SideBar";
+import About from "./app/pages/about/About";
+import Contact from "./app/pages/contact/Contact";
+import Projects from "./app/pages/projects/Projects";
 
 function App() {
   return (
     <>
-      <motion.div
-        className="scroll-control"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-      >
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/portofolio" element={<MyApp />} />
-        </Routes>
-      </motion.div>
+      <div className="scroll-control">
+        <SideBar />
+        <div className="main-container">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+      </div>
     </>
   );
 }

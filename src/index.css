@@ -20,25 +20,16 @@
 }
 .section-containers {
   @apply w-full min-h-screen flex flex-col
-/* LG */ sm:snap-center
-/* LG */ lg:py-5
-}
-.section-surfaces {
-  @apply w-screen flex mx-auto
-/* MD */ md:rounded-md
-/* LG */ lg:w-10/12 lg:rounded-3xl
 }
 .article-containers {
-  @apply w-full min-h-screen p-4 flex flex-col gap-8 place-content-center
-/* MD */ md:m-auto md:p-0 md:py-7 md:block
+  @apply w-full min-h-screen p-8 flex flex-col gap-8 place-content-center
+/* MD */ md:w-11/12 md:px-0 md:self-center md:gap-12 md:items-center
 }
 .section-headers {
-  @apply flex mx-auto justify-center items-center pb-2
-/* MD */ md:pb-5
+  @apply flex mt-10
 }
 .section-titles {
-  @apply w-auto flex pb-2 place-content-center text-2xl border-b
-/* MD */ md:pb-3 md:text-3xl
+  @apply w-auto text-2xl border-b
 }
 
 /********************** App ***********************/
@@ -104,7 +95,7 @@
   @apply ml-auto text-3xl text-white font-semibold font-sans transition-all hover:scale-125 hover:font-light
 }
 .content-modal {
-  @apply w-screen h-full flex flex-col my-2 mx-auto overflow-y-auto scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500
+  @apply w-screen h-full flex flex-col my-2 mx-auto overflow-y-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-cyan-500
 /* MD */ md:flex-row
 /* LG */ lg:w-11/12
 }
@@ -162,30 +153,30 @@
 }
 /********************** Home ***********************/
 
-.presentation {
-  @apply p-0 flex gap-4 text-start
-}
-.links-social-medias {
-  @apply flex gap-2
+.presentation-container {
+  @apply w-fit relative self-center flex flex-col gap-12
+/* MD */ md:self-center md:gap-8
 }
 .profile-img {
-  @apply w-48 h-48 absolute -top-36 right-2 object-cover rounded-bl-[75%]
-/* SM */ sm:w-32 sm:h-32
-/* MD */ md:w-52 md:h-52
+  @apply w-48 h-48 absolute -top-36 -right-10 object-cover rounded-bl-[75%]
+/* MD */ md:w-60 md:h-60 md:static
 }
 
 /*************************** About ****************************/
 .about-aside-containers {
-@apply pt-4 flex flex-col
+@apply md:h-96 pt-4 flex gap-8 justify-around
+/* MD */ md:w-11/12 md:pt-0 md:gap-12
 }
 .about-img-containers {
   @apply w-3/4 h-20 flex justify-center
 }
 .about-img {
   @apply w-3/4 h-full rounded-full bg-gray-700
+/* MD */ md:w-1/2
 }
 .about-description-container {
-  @apply mb-8 flex flex-col gap-2
+  @apply mb-8 flex flex-col gap-2 self-center
+/* MD */ md:w-1/2
 }
 /*************************** Experiences ****************************/
 
@@ -206,7 +197,7 @@
 /* legend experience */
 
 .legend-container {
-  @apply w-full flex px-2 mb-5
+  @apply w-full flex px-2 my-4
 /* LG */ lg:w-3/12 lg:h-5/6 lg:my-auto lg:px-0 lg:flex-col
 }
 .legend-sub-container {
@@ -214,13 +205,13 @@
 /* XL */ xl:w-5/6
 }
 .legend-checkbox-container {
-  @apply w-5/6 mb-5 mx-auto flex place-content-center items-center
+  @apply w-5/6 mb-2 mx-auto flex place-content-center items-center
 }
 .legend-checkbox {
   @apply w-5 h-5 mx-2 cursor-pointer
 }
 .legend-list {
-  @apply w-full pb-2 flex overflow-auto scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500
+  @apply w-full pb-2 flex overflow-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-cyan-500
 /* SM */ sm:justify-center
 /* LG */ lg:h-full lg:flex-col
 }
@@ -257,28 +248,25 @@
 
 /*********************** Projects ************************/
 
-.projects-carrousel {
-  @apply w-full h-90 mx-auto items-center snap-mandatory flex gap-6 snap-x overflow-x-hidden
-/* MD*/ md:w-1/2
-/* LG*/
+.project-containers {
+  @apply w-full flex flex-col gap-4 justify-center
+/* MD */ md:flex-row md:flex-wrap md:gap-8
 }
 .project {
-  @apply h-full w-full flex flex-col snap-center shrink-0 rounded-lg shadow-md
+  @apply flex flex-col gap-4 rounded-lg border 
+/* MD */ md:w-96
 }
 .project-img {
-  @apply mx-auto my-3
-/* MD */ md:w-11/12 md:px-5 md:pt-3
-/* LG */ lg:w-11/12 lg:px-10 lg:pt-6
+  @apply mx-auto rounded-lg
 }
 .project-content {
-  @apply flex h-90 flex-col px-5 pb-2 overflow-y-auto text-start scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500
+  @apply flex h-90 flex-col px-4 overflow-y-auto text-start scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500
 }
 .project-infos {
   @apply flex mt-auto py-3 items-center
 }
 .project-title {
   @apply text-center text-xl font-bold
-/* MD */ md:text-2xl
 }
 .project-technos {
   @apply w-full flex justify-end
@@ -292,7 +280,7 @@
 /* MD */ md:px-2
 }
 .project-link {
-  @apply h-fit ml-5 py-2 px-3 m-auto inline-flex items-center text-sm font-medium rounded-lg hover:ring-2 duration-500 ease-in-out dark:bg-cyan-600 dark:hover:bg-cyan-700
+  @apply h-fit ml-5 m-auto inline-flex items-center text-sm font-medium rounded-lg underline underline-offset-1
 }
 .projects-svg {
   @apply w-4 h-4 ml-2 mr-1
@@ -308,7 +296,9 @@
 /* MD */ md:w-10/12 md:mt-8 md:flex-row
 }
 .form div {
-  @apply w-full self-center px-8 flex flex-col
+  @apply w-full self-center flex flex-col
+/* SM */ sm:px-2
+/* MD */ md:px-4
 }
 .form label {
   @apply w-fit mb-1 text-sm
@@ -331,10 +321,8 @@
 /*********************** Sub-Components ************************/
 
 .callToAction-text {
-  @apply mt-8 mr-4 mb-4 ml-auto px-2 self-end border rounded-3xl
-    /* MD */
+  @apply px-4 py-2 outline outline-1 rounded-md
 }
-
 .callToAction-svg {
   @apply w-8 h-8 flex items-center animate-pulse duration-500 ease-in-out rounded-full bg-cyan-600
 /* MD */ md:w-10 md:h-10 md:p-3 md:hover:animate-none md:hover:ring-2 md:hover:bg-cyan-700
