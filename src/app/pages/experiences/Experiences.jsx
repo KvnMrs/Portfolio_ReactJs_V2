@@ -38,14 +38,13 @@ function Experiences() {
   };
   return (
     <>
-      <section id="experiences" className="sections-containers">
-        <div className="sections-surfaces">
-          <article className="sections-sub-containers">
-            <header className="sections-headers pb-0">
+      <section id="experiences" className="section-containers">
+          <article className="article-containers">
+            <header className="section-headers pb-0">
               {/* Experience or Trainings */}
               {showExperiences ? (
                 <>
-                  <h1 className="sections-titles ">Experiences</h1>
+                  <h1 className="section-titles ">Experiences</h1>
                   <ButtonCallToActionSvg
                     svg={<RightArrowSvg />}
                     fct={() => toggleList()}
@@ -60,7 +59,7 @@ function Experiences() {
                     customClass={"mr-5"}
                   />
 
-                  <h1 className="sections-titles ">Formations</h1>
+                    <h1 className="section-titles ">Formations</h1>
                 </>
               )}
             </header>
@@ -101,7 +100,7 @@ function Experiences() {
                 {!showExperiences &&
                   dataTraining.map((training) => (
                     <motion.div
-                      className="gradiant-dark"
+                      className="bg-black"
                       variants={listsItemsAnim}
                       initial="initial"
                       whileInView="whileInView"
@@ -112,8 +111,7 @@ function Experiences() {
                   ))}
               </motion.aside>
             </div>
-          </article>
-        </div>
+        </article>
       </section>
     </>
   );

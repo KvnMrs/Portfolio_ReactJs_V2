@@ -1,201 +1,72 @@
-import React from "react";
-
-// Packages
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
-
-//Sub-component
+//Sub-components
+import SocialMediasLinks from "../../sub-components/Links/SocialMediasLinks";
 import ButtonCallToActionText from "../../sub-components/buttons/ButtonCallToActionText";
-
+//Assets
+import imgProfil from "../../../assets/img/imgAbout/Kevin.png";
+import Github from "../../../assets/img/imgSocialMedias/Github.png";
+import Linkedin from "../../../assets/img/imgSocialMedias/Linkedin.png";
+import CV from "../../../assets/document/Kévin_MARAIS_CV_FR.pdf";
 // Animations
 import {
-  div1,
-  div2,
-  div3,
-  div4,
-  welcomeAnim,
-  nameAnim,
-  jobAnim,
-  buttonAnim,
-} from "../../animations/homeAnimations";
+  descriptionAnim,
+  imageHoverAnim,
+} from "../../animations/aboutAnimation";
 
-function Home() {
+function About() {
+  const [activeModal, setActiveModal] = useState(false);
+
+  // OpenModal
+  const openModal = () => {
+    setActiveModal(!activeModal);
+  };
+
   return (
     <>
-      <div id="home" className="home-container relative">
-        <div className="px-2 lg:border lg:p-20">
-          <header className="home-header">
-            <motion.h1
-              className="welcome"
-              variants={welcomeAnim}
-              initial="initial"
-              animate="animate"
-            >
-              Bienvenue sur mon Portfolio
-            </motion.h1>
-            <motion.p
-              className="home-paragraph"
-              variants={nameAnim}
-              initial="initial"
-              animate="animate"
-            >
-              je m'appelle <span className="name">Kévin MARAIS</span>
-            </motion.p>
-            <motion.p
-              className="home-paragraph"
-              variants={jobAnim}
-              initial="initial"
-              animate="animate"
-            >
-              je suis Développeur Web Front-End Junior
-            </motion.p>
-          </header>
-          <motion.div
-            className="w-fit mx-auto"
-            variants={buttonAnim}
-            initial="initial"
-            animate="animate"
-          >
-            <Link to="/portofolio">
-              <ButtonCallToActionText
-                text={"Continuer"}
-              ></ButtonCallToActionText>
-            </Link>
-          </motion.div>
-        </div>
-        {/* left side */}
-        <motion.div
-          className="left-8 bottom-48 w-1 blur-lg absolute bg-white rounded-lg"
-          variants={div1}
-          initial="initial"
-          animate="animate"
-        ></motion.div>
-        <motion.div
-          className="left-16 bottom-24 w-1 blur-xl absolute bg-white rounded-lg"
-          variants={div3}
-          initial="initial"
-          animate="animate"
-        ></motion.div>
-        <motion.div
-          className="left-28 bottom-2 w-1 blur-xl absolute bg-white rounded-lg"
-          variants={div4}
-          initial="initial"
-          animate="animate"
-        ></motion.div>
-        <motion.div
-          className="left-2/4 bottom-24 w-1 blur-xl absolute bg-white rounded-lg"
-          variants={div3}
-          initial="initial"
-          animate="animate"
-        ></motion.div>
-        <motion.div
-          className="left-32 bottom-12 w-1 blur-md absolute bg-white rounded-lg"
-          variants={div2}
-          initial="initial"
-          animate="animate"
-        ></motion.div>
-        <motion.div
-          className="left-44 bottom-12 w-1 blur-md absolute bg-white rounded-lg"
-          variants={div4}
-          initial="initial"
-          animate="animate"
-        ></motion.div>
-        <motion.div
-          className="left-56 bottom-20 w-1 blur-md absolute bg-white rounded-lg"
-          variants={div3}
-          initial="initial"
-          animate="animate"
-        ></motion.div>
-        <motion.div
-          className="left-80 bottom-36 w-1 blur-lg absolute bg-white rounded-lg"
-          variants={div2}
-          initial="initial"
-          animate="animate"
-        ></motion.div>
-        <motion.div
-          className="left-80 bottom-36 w-1 blur-xl absolute bg-white rounded-lg"
-          variants={div3}
-          initial="initial"
-          animate="animate"
-        ></motion.div>
-        <motion.div
-          className="right-2/3 bottom-20 w-1 blur-xl absolute bg-white rounded-lg"
-          variants={div1}
-          initial="initial"
-          animate="animate"
-        ></motion.div>
-        <motion.div
-          className="right-3/4 bottom-8 w-1 blur-xl absolute bg-white rounded-lg"
-          variants={div3}
-          initial="initial"
-          animate="animate"
-        ></motion.div>
+      <section id="home" className="section-containers">
+        <article className="article-containers">
+          <aside className="presentation-container">
+            <div className="md:flex">
+              <div className="flex flex-col gap-2 justify-center  md:gap-4">
+                <span>
+                  <p className="text-5xl">Kévin</p>
+                  <p className="text-6xl">MARAIS</p>
+                </span>
+                <span>
+                  <p className="text-3xl">Recherche Alternance</p>
+                  <p className="text-xl">Développeur Web Full-Stack</p>
+                </span>
+              </div>
+              <img className="profile-img" alt="Profil" src={imgProfil} />
+            </div>
 
-        <motion.div
-          className="left-auto bottom-28 w-1 blur-2xl absolute bg-white rounded-lg"
-          variants={div2}
-          initial="initial"
-          animate="animate"
-        ></motion.div>
-        <motion.div
-          className="left-auto bottom-28 w-1 blur-md absolute bg-white rounded-lg"
-          variants={div4}
-          initial="initial"
-          animate="animate"
-        ></motion.div>
-
-        {/* right side */}
-        <motion.div
-          className="right-16 bottom-20 w-1 blur-lg absolute bg-white rounded-lg"
-          variants={div1}
-          initial="initial"
-          animate="animate"
-        ></motion.div>
-        <motion.div
-          className="right-32 bottom-20 w-1 blur-xl absolute bg-white rounded-lg"
-          variants={div3}
-          initial="initial"
-          animate="animate"
-        ></motion.div>
-        <motion.div
-          className="right-48 bottom-4 w-1 blur-lg absolute bg-white rounded-lg"
-          variants={div2}
-          initial="initial"
-          animate="animate"
-        ></motion.div>
-        <motion.div
-          className="right-72 bottom-4 w-1 blur-lg absolute bg-white rounded-lg"
-          variants={div3}
-          initial="initial"
-          animate="animate"
-        ></motion.div>
-        <motion.div
-          className="hidden lg:visible left-2/3 bottom-24 w-2 blur-xl absolute bg-white rounded-lg"
-          variants={div2}
-          initial="initial"
-          animate="animate"
-        ></motion.div>
-        <motion.div
-          className="right-96 bottom-72 w-1 blur-lg absolute bg-white rounded-lg"
-          variants={div1}
-          initial="initial"
-          animate="animate"
-        ></motion.div>
-        <motion.div
-          className="right-1/4 bottom-8 w-1 blur-xl absolute bg-white rounded-lg"
-          variants={div3}
-          initial="initial"
-          animate="animate"
-        ></motion.div>
-        <motion.div
-          className="right-3/4 bottom-8 w-1 blur-2xl absolute bg-white rounded-lg"
-          variants={div3}
-          initial="initial"
-          animate="animate"
-        ></motion.div>
-      </div>
+            <div className="flex gap-8 items-center">
+              <a href={CV} download>
+                <ButtonCallToActionText
+                  text={"Télécharger CV"}
+                ></ButtonCallToActionText>
+              </a>
+              <div className="flex gap-2">
+                <SocialMediasLinks
+                  link={
+                    "https://www.linkedin.com/in/k%C3%A9vin-marais-861314216/"
+                  }
+                  img={Linkedin}
+                  alt={"Lien vers Linkedin"}
+                />
+                <SocialMediasLinks
+                  link={"https://github.com/KvnMrs"}
+                  img={Github}
+                  alt={"Lien vers Github"}
+                />
+              </div>
+            </div>
+          </aside>
+        </article>
+      </section>
     </>
   );
 }
 
-export default Home;
+export default About;

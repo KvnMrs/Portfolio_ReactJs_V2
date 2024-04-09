@@ -1,43 +1,18 @@
-import React, { useState } from "react";
-
-// Package
-import { motion } from "framer-motion";
-
-// Animations
-import { softSkillHoverAnim } from "../../animations/aboutAnimation";
+import React from "react";
 
 const SoftSkills = ({ softSkill, categorie, img, openModal }) => {
-  const [activeHover, setActiveHover] = useState(false);
   return (
     <>
-      <>
-        <motion.aside
-          className="softSkill"
-          onHoverStart={() => {
-            setActiveHover(true);
-          }}
-          onHoverEnd={() => {
-            setActiveHover(false);
-          }}
-        >
-          <motion.button
-            type="button"
-            onClick={openModal}
-            variants={softSkillHoverAnim}
-            whileHover="whileHover"
-          >
-            <h4 className="softSkill-title">{softSkill}</h4>
-
-            <div
-              className={
-                activeHover ? "softSkill-img border-cyan-500" : "softSkill-img"
-              }
-            >
-              <img alt={categorie} src={img} />
-            </div>
-          </motion.button>
-        </motion.aside>
-      </>
+      <button
+        type="button"
+        className="flex flex-col gap-2 items-center justify-center"
+        onClick={openModal}
+      >
+        {/* <div> */}
+        <img className="w-10 h-10 md:w-14 md:h-14" alt={categorie} src={img} />
+        {/* </div> */}
+        <h4>{softSkill}</h4>
+      </button>
     </>
   );
 };

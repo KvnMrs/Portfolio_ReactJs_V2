@@ -1,105 +1,58 @@
-import React, { useState } from "react";
-
-// Package
-import { AnimatePresence, motion } from "framer-motion";
-
-// Components
-import SoftSkills from "../../components/about/SoftSkills";
-import Modal from "../../components/modal/Modal";
-import ProfileModal from "../../components/about/ProfileModal";
-import SoftSkillsModal from "../../components/about/SoftSkillsModal";
-
-//Sub-components
-import SocialMediasLinks from "../../sub-components/Links/SocialMediasLinks";
-
-//Assets
-import imgProfil from "../../../assets/img/imgAbout/Kevin.jpg";
-import Github from "../../../assets/img/imgSocialMedias/Github.png";
-import Linkedin from "../../../assets/img/imgSocialMedias/Linkedin.png";
-
-//Datas
-import dataSkills from "../../../datas/datasSkills";
-
-// Animations
+import React from "react";
+import { Link } from "react-router-dom";
 import {
   descriptionAnim,
-  imageAnim,
   softSkillsAnim,
-  imageHoverAnim,
 } from "../../animations/aboutAnimation";
+// Components
+import SoftSkills from "../../components/about/SoftSkills";
+//Assets
+import imgProfil from "../../../assets/img/imgAbout/Kevin.png";
+// Sub-components
+import ButtonCallToActionText from "../../sub-components/buttons/ButtonCallToActionText";
+// Datas
+import dataSkills from "../../../datas/datasSkills";
 
 function About() {
-  const [activeModal, setActiveModal] = useState(false);
-
-  // OpenModal
-  const openModal = () => {
-    setActiveModal(!activeModal);
-  };
-
   return (
     <>
-      <section id="about" className="sections-containers">
-        <div className="sections-surfaces">
-          <article className="sections-sub-containers">
-            <header className="sections-headers">
-              <h1 className="sections-titles">Qui suis-je ?</h1>
-            </header>
-            <div className="description-part">
-              <motion.aside
-                className="description-text"
-                variants={descriptionAnim}
-                initial="initial"
-                animate="animate"
-              >
-                <p className="description-paragraph">
-                  À la suite de 10 années passées dans le domaine du commerce,
-                  (coiffure et restauration) j'ai décidé de suivre une{" "}
-                  <span className="font-bold">
-                    reconversion professionnelle
-                  </span>{" "}
-                  dans le but de devenir Développeur Web. Depuis mes débuts en
-                  <span className="font-bold"> autodidacte</span>, j'ai suivi
-                  une <span className="font-bold"> formation</span> auprès de la{" "}
-                  <span className="text-wild_red font-bold">
-                    Wild Code School
-                  </span>{" "}
-                  ainsi qu'un <span className="font-bold"> stage</span> au sein
-                  de l'entreprise <span className="font-bold">Cascade8</span>.
-                </p>
-
-                <p className="description-paragraph mt-2 md:mt-0">
-                  J'aimerais à <span className="font-bold">présent</span>{" "}
-                  intégré un poste en tant que{" "}
-                  <span className="font-bold">Développeur Web Front-end</span>{" "}
-                  et metre mon <span className="font-bold">experience</span>{" "}
-                  aquise au service d'une nouvelle équipe.
-                </p>
-              </motion.aside>
-              <motion.aside
-                className="img-part"
-                variants={imageAnim}
-                initial="initial"
-                animate="animate"
-              >
-                <button type="button" onClick={openModal}>
-                  <motion.img
-                    className="profile-img"
-                    alt="Profil"
-                    src={imgProfil}
-                    variants={imageHoverAnim}
-                    whileHover="whileHover"
-                    transition="transition"
-                  />
-                </button>
-              </motion.aside>
+      <section id="about" className="section-containers">
+        <article className="article-containers">
+          <aside className="about-aside-containers flex-col p-2 text-center gap-4  md:w-1/2 md:self-center">
+            <img
+              className="w-40 h-40 object-cover self-center"
+              alt="Profil"
+              src={imgProfil}
+            />
+            <div className="flex justify-around">
+              <p>Kévin Marais</p>
+              <p>30 ans</p>
+              <p>Nantes</p>
             </div>
+            <div className="">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </aside>
 
-            <motion.aside
-              className="softSkills-part"
-              variants={softSkillsAnim}
-              initial="initial"
-              animate="animate"
-            >
+          <div className="w-4/5 mx-auto my-8 border border-t-0"> </div>
+
+          <aside className="about-aside-containers flex-col md:flex-row">
+            <div className="about-description-container">
+              <div className="about-img-containers rotate-[16deg] self-end">
+                <div className="about-img"></div>
+              </div>
+              <h2 className="text-3xl">Titre 1.</h2>
+              <p className="text-xl">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+            <div className="md:w-1/3 flex gap-4 md:gap-8 flex-wrap justify-around ">
               {dataSkills
                 .filter((atout) => atout.catégorie === "Atout")
                 .map((el) => (
@@ -108,36 +61,37 @@ function About() {
                     softSkill={el.element}
                     categorie={el.catégorie}
                     img={el.image}
-                    openModal={openModal}
                   />
                 ))}
-            </motion.aside>
-          </article>
-        </div>
-        <AnimatePresence>
-          {activeModal && (
-            <Modal
-              showModal={openModal}
-              component1={<ProfileModal />}
-              component2={<SoftSkillsModal />}
-              tab={"Profil"}
-              tab2={"Savoir-être"}
-            />
-          )}
-        </AnimatePresence>
+            </div>
+          </aside>
+          <div className="w-4/5 mx-auto my-8 border border-t-0"> </div>
+          <aside className="about-aside-containers flex-col-reverse md:flex-row ">
+            <div className="md:w-1/3 flex gap-4 md:gap-8 flex-wrap justify-around">
+              {dataSkills
+                .filter((atout) => atout.catégorie === "Compétence")
+                .map((el) => (
+                  <SoftSkills
+                    key={el.element}
+                    softSkill={el.element}
+                    categorie={el.catégorie}
+                    img={el.image}
+                  />
+                ))}
+            </div>
+            <div className="about-description-container text-end">
+              <div className="about-img-containers self-start rotate-[168deg]">
+                <div className="about-img"></div>
+              </div>
+              <h2 className="text-3xl">Titre 2.</h2>
+              <p className="text-xl">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </aside>
+        </article>
       </section>
-      {/* <div className="links-social-medias">
-        <SocialMediasLinks
-          link={"https://www.linkedin.com/in/k%C3%A9vin-marais-861314216/"}
-          img={Linkedin}
-          alt={"Lien vers Linkedin"}
-        />
-        <SocialMediasLinks
-          link={"https://github.com/KvnMrs"}
-          img={Github}
-          alt={"Lien vers Github"}
-        />
-      </div> */}
     </>
   );
 }
