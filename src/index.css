@@ -95,7 +95,7 @@
   @apply ml-auto text-3xl text-white font-semibold font-sans transition-all hover:scale-125 hover:font-light
 }
 .content-modal {
-  @apply w-screen h-full flex flex-col my-2 mx-auto overflow-y-auto scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500
+  @apply w-screen h-full flex flex-col my-2 mx-auto overflow-y-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-cyan-500
 /* MD */ md:flex-row
 /* LG */ lg:w-11/12
 }
@@ -197,7 +197,7 @@
 /* legend experience */
 
 .legend-container {
-  @apply w-full flex px-2 mb-5
+  @apply w-full flex px-2 my-4
 /* LG */ lg:w-3/12 lg:h-5/6 lg:my-auto lg:px-0 lg:flex-col
 }
 .legend-sub-container {
@@ -205,13 +205,13 @@
 /* XL */ xl:w-5/6
 }
 .legend-checkbox-container {
-  @apply w-5/6 mb-5 mx-auto flex place-content-center items-center
+  @apply w-5/6 mb-2 mx-auto flex place-content-center items-center
 }
 .legend-checkbox {
   @apply w-5 h-5 mx-2 cursor-pointer
 }
 .legend-list {
-  @apply w-full pb-2 flex overflow-auto scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500
+  @apply w-full pb-2 flex overflow-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-cyan-500
 /* SM */ sm:justify-center
 /* LG */ lg:h-full lg:flex-col
 }
@@ -296,7 +296,9 @@
 /* MD */ md:w-10/12 md:mt-8 md:flex-row
 }
 .form div {
-  @apply w-full self-center px-8 flex flex-col
+  @apply w-full self-center flex flex-col
+/* SM */ sm:px-2
+/* MD */ md:px-4
 }
 .form label {
   @apply w-fit mb-1 text-sm
