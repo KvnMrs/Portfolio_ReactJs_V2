@@ -18,11 +18,7 @@ const ProjectCard = ({
 
   return (
     <>
-      <article
-        id={id}
-        ref={projectRef}
-        className="project"
-      >
+      <article id={id} ref={projectRef} className="project">
         <img className="project-img" alt={title} src={img} />
         <aside className="project-content">
           <h3 className="project-title">{title}</h3>
