@@ -3,11 +3,15 @@ import { Link } from "react-router-dom";
 //Sub-components
 import SocialMediasLinks from "../../sub-components/Links/SocialMediasLinks";
 import ButtonCallToActionText from "../../sub-components/buttons/ButtonCallToActionText";
+import HomeNavButton from "../../components/navigation/HomeNavButton.jsx";
 //Assets
 import imgProfil from "../../../assets/img/imgAbout/Kevin.png";
 import Github from "../../../assets/img/imgSocialMedias/Github.png";
 import Linkedin from "../../../assets/img/imgSocialMedias/Linkedin.png";
 import CV from "../../../assets/document/Kévin_MARAIS_CV_FR.pdf";
+import SvgProfile from "../../../assets/svg/sidebar/links-section/SvgProfile";
+import SvgProject from "../../../assets/svg/sidebar/links-section/SvgProject";
+import SvgContact from "../../../assets/svg/sidebar/links-section/SvgContact";
 // Animations
 import {
   descriptionAnim,
@@ -16,6 +20,23 @@ import {
 
 function About() {
   const [activeModal, setActiveModal] = useState(false);
+  const navigation = [
+    {
+      linkName: "< A propos /> ",
+      link: "about",
+      svg: <SvgProfile className={"w-10 h-10 mb-3 md:w-20 md:h-20"} />,
+    },
+    {
+      linkName: "< Mes projets />",
+      link: "projects",
+      svg: <SvgProject className={"w-10 h-10 mb-3 md:w-20 md:h-20"} />,
+    },
+    {
+      linkName: "< Contact />",
+      link: "contact",
+      svg: <SvgContact className={"w-12 h-12 md:w-20 md:h-20 md:mb-1"} />,
+    },
+  ];
 
   // OpenModal
   const openModal = () => {
@@ -26,7 +47,7 @@ function About() {
     <>
       <section id="home" className="section-containers">
         <article className="article-containers">
-          <aside className="presentation-container">
+          <aside className="presentation-container md:mb-16">
             <div className="md:flex">
               <div className="flex flex-col gap-2 justify-center  md:gap-4">
                 <span>
@@ -64,6 +85,12 @@ function About() {
             </div>
           </aside>
         </article>
+        <div className="w-4/5 mx-auto mt-4 mb-8 border border-t-0 | md:mb-16"></div>
+        <div className="w-full flex justify-center gap-2 md:w-1/2 | md:self-center md:justify-between">
+          {navigation.map((el) => (
+            <HomeNavButton linkName={el.linkName} svg={el.svg} link={el.link} />
+          ))}
+        </div>
       </section>
     </>
   );

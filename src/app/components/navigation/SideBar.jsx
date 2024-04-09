@@ -20,46 +20,52 @@ function BarNav() {
   };
   return (
     <>
-      <div className="burger-button-container">
-        <button className="fixed z-50 h-auto left-4 top-4" type="button" onClick={toggleSidebar}>
+      <div className="burger-button-container md:hidden">
+        <button
+          className="fixed z-50 h-auto left-4 top-4"
+          type="button"
+          onClick={toggleSidebar}
+        >
           <SvgBurger />
         </button>
       </div>
-      {openSidebar && <motion.div className="sideBar-container"
-        variants={modalAnim}
-        initial="initial"
-        animate="animate"
-        exit="exit"
-      >
-        {/* Links Section */}
+      {openSidebar && (
+        <motion.div
+          className="sideBar-container"
+          variants={modalAnim}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+        >
+          {/* Links Section */}
           <ol className="links-container">
             <li>
               <Link className="links" to="/">
-                <SvgHome />
+                <SvgHome className={"sidebar-svg"} />
                 <p className="text-xl">Accueil</p>
               </Link>
             </li>
             <li>
-            <Link className="links" to="about">
-                <SvgProfile />
+              <Link className="links" to="about">
+                <SvgProfile className={"sidebar-svg"} />
                 <p className="text-xl">A propos</p>
               </Link>
             </li>
             <li>
-            <Link className="links" to="projects">
-                <SvgProject />
+              <Link className="links" to="projects">
+                <SvgProject className={"sidebar-svg"} />
                 <p className="text-xl">Projets</p>
               </Link>
             </li>
             <li>
-            <Link className="links" to="contact">
-                <SvgContact />
+              <Link className="links" to="contact">
+                <SvgContact className={"sidebar-svg"} />
                 <p className="text-xl">Contact</p>
               </Link>
             </li>
           </ol>
-      </motion.div >}
-
+        </motion.div>
+      )}
     </>
   );
 }
