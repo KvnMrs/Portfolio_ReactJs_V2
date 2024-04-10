@@ -1,6 +1,6 @@
 import React from "react";
 
-// Package
+// Packages
 import { motion } from "framer-motion";
 
 function ExperiencesList({ datas, legend }) {

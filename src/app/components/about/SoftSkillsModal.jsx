@@ -1,11 +1,8 @@
 import React from "react";
-
-// Package
+// Packages
 import { motion } from "framer-motion";
-
-//Datas
+//Data
 import dataSkills from "../../../datas/datasSkills";
-
 // Animations
 import {
   modalSoftSkillsAnim,

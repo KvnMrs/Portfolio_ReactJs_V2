@@ -1,15 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import {
-  descriptionAnim,
-  softSkillsAnim,
-} from "../../animations/aboutAnimation";
 // Components
 import SoftSkills from "../../components/about/SoftSkills";
-//Assets
+// Assets
 import imgProfil from "../../../assets/img/imgAbout/Kevin.png";
-// Sub-components
-import ButtonCallToActionText from "../../sub-components/buttons/ButtonCallToActionText";
 // Datas
 import dataSkills from "../../../datas/datasSkills";
 

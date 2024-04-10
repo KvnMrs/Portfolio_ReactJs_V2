@@ -1,4 +1,4 @@
-import { RefObject, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export const useOnScreen = (ref, observerOptions) => {
   const [isVisible, setVisibility] = useState(false);
