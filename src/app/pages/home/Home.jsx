@@ -87,7 +87,7 @@ function About() {
         </article>
       </section>
       <div className="w-4/5 mx-auto mt-4 mb-8 border border-t-0 | md:mb-16"></div>
-      <div className=" m-auto flex justify-around | md:w-10/12 md:self-center md:justify-between">
+      <div className=" m-auto flex justify-around | md:w-1/2 md:self-center md:justify-between">
         {navigation.map((el) => (
           <HomeNavButton linkName={el.linkName} svg={el.svg} link={el.link} />
         ))}
