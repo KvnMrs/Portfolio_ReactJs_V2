@@ -5,7 +5,7 @@ function HomeNavButton({ linkName, svg, link }) {
   return (
     <>
       <Link
-        className="w-28 h-28 flex flex-col place-content-center items-center rounded-md md:w-40 md:h-36"
+        className="flex flex-col place-content-center items-center rounded-md md:w-40 md:h-36"
         to={link}
       >
         {svg}

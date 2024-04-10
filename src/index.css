@@ -35,11 +35,11 @@
 /********************** App ***********************/
 
 .scroll-control {
-  @apply min-h-screen w-screen overflow-auto scroll-smooth global-bg
+  @apply min-h-screen overflow-auto scroll-smooth global-bg
 /* SM */ sm:snap-y sm:snap-mandatory
 }
 .main-container {
-  @apply w-screen min-h-screen place-content-end
+  @apply w-screen min-h-screen py-4 place-content-end
 /* MD */ md:w-full md:py-10
 }
 

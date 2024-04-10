@@ -34,7 +34,7 @@ function About() {
     {
       linkName: "< Contact />",
       link: "contact",
-      svg: <SvgContact className={"w-12 h-12 md:w-20 md:h-20 md:mb-1"} />,
+      svg: <SvgContact className={"w-12 h-12 md:w-20 md:h-20 md:mb-1.5"} />,
     },
   ];
 
@@ -85,13 +85,13 @@ function About() {
             </div>
           </aside>
         </article>
-        <div className="w-4/5 mx-auto mt-4 mb-8 border border-t-0 | md:mb-16"></div>
-        <div className="w-full flex justify-center gap-2 md:w-1/2 | md:self-center md:justify-between">
-          {navigation.map((el) => (
-            <HomeNavButton linkName={el.linkName} svg={el.svg} link={el.link} />
-          ))}
-        </div>
       </section>
+      <div className="w-4/5 mx-auto mt-4 mb-8 border border-t-0 | md:mb-16"></div>
+      <div className=" m-auto flex justify-around | md:w-10/12 md:self-center md:justify-between">
+        {navigation.map((el) => (
+          <HomeNavButton linkName={el.linkName} svg={el.svg} link={el.link} />
+        ))}
+      </div>
     </>
   );
 }
