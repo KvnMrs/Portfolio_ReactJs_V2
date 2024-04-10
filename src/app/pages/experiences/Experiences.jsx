@@ -1,24 +1,18 @@
 import React, { useState } from "react";
-
-// Package
+// Packages
 import { motion } from "framer-motion";
-
 // Datas
 import datasExperiences from "../../../datas/datasExperiences";
 import dataTraining from "../../../datas/datasTraining";
-
 // Components
 import ExperiencesLegend from "../../components/experiences/ExperiencesLegend";
-
-// Sub-Component
+// Sub-Components
 import ExperiencesList from "../../components/experiences/ExperiencesList";
 import TrainingsList from "../../components/experiences/TrainingsList";
 import ButtonCallToActionSvg from "../../sub-components/buttons/ButtonCallToActionSvg";
-
 // Assets
 import RightArrowSvg from "../../../assets/svg/global/RightArrowSvg";
 import LeftArrowSvg from "../../../assets/svg/global/LeftArrowSvg";
-
 // Animations
 import {
   listsContainerAnim,
