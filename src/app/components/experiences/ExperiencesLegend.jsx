@@ -1,8 +1,6 @@
 import React from "react";
-
-// Package
+// Packages
 import { motion } from "framer-motion";
-
 // Animations
 import { legendAnim } from "../../animations/experiencesAnimation";
 

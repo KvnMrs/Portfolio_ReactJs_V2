@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
 // Assets
 import SvgHome from "../../../assets/svg/sidebar/links-section/SvgHome";
 import SvgProfile from "../../../assets/svg/sidebar/links-section/SvgProfile";
 import SvgProject from "../../../assets/svg/sidebar/links-section/SvgProject";
 import SvgContact from "../../../assets/svg/sidebar/links-section/SvgContact";
 import SvgBurger from "../../../assets/svg/sidebar/SvgBurger";
-// Package
+// Packages
 import { motion } from "framer-motion";
 // Animations
 import { modalAnim } from "../../animations/aboutAnimation";

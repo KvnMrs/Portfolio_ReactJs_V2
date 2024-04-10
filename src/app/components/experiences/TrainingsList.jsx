@@ -1,5 +1,5 @@
 import React from "react";
-
+// Packages
 import { motion } from "framer-motion";
 
 function TrainingsList({ datas }) {

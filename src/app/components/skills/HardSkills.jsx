@@ -1,15 +1,11 @@
 import React from "react";
-
-// Package
+// Packages
 import { motion } from "framer-motion";
-
-// Datas
+// Data
 import dataSkills from "../../../datas/datasSkills";
-
 // Sub-components
 import ButtonCallToActionSvg from "../../sub-components/buttons/ButtonCallToActionSvg";
 import HardSkill from "../../sub-components/skills/HardSkill";
-
 // Assets
 import RightArrowSvg from "../../../assets/svg/global/RightArrowSvg";
 

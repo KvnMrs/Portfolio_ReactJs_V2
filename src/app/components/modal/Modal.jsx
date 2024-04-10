@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
-
-// Package
+// Packages
 import { motion } from "framer-motion";
-
 // Components
 import ModalTabButtons from "./ModalTabButtons";
 import ModalContent from "./ModalContent";
-
 // Animations
 import { modalAnim } from "../../animations/aboutAnimation";
 
