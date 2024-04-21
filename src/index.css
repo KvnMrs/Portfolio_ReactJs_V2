@@ -164,8 +164,8 @@
 
 /*************************** About ****************************/
 .about-aside-containers {
-@apply md:h-96 pt-4 flex gap-8 justify-around
-/* MD */ md:w-11/12 md:pt-0 md:gap-12
+@apply pt-4 flex gap-8 justify-around
+/* MD */ md:w-11/12 md:h-96 md:pt-0 md:gap-12
 }
 .about-img-containers {
   @apply w-3/4 h-20 flex justify-center

@@ -31,13 +31,15 @@ const dataSkills = [
   /********** SOFTS SKILLS ***************/
 
   {
-    image: img_esprit_equipe,
+    part: 1,
+    image: img_curieux,
     catégorie: "Atout",
-    element: "Esprit d'équipe",
+    element: "Curieux",
     description:
-      "Un atout mise en avant durant mes expériences professionnelles en restauration. La communication, l'entraide et la disponibilité me paraissent être les clefs d'une bonne cohésion d'équipe.",
+      "Curieux de nature, j'aime beaucoup voyager dans le but de découvrir d'autres cultures. La curiosité mène vers la découverte et l'enrichissement aussi bien professionnel que personnel.",
   },
   {
+    part: 1,
     image: img_autonome,
     catégorie: "Atout",
     element: "Autonome",
@@ -45,11 +47,27 @@ const dataSkills = [
       "D'un naturel autonome, j'ai pu développer cet atout tout au long de mon parcours professionnel. Il me paraît essentiel de pouvoir accomplir un maximum par soi-même.",
   },
   {
+    part: 1,
+    image: img_logique,
+    catégorie: "Atout",
+    element: "Adaptabilité",
+    description:
+      "Au cours de mes expériences professionnelles passées, il était important de m'adapter de manière rapide et efficace aux différents clients. Cette qualité se confirme aujourd'hui par ma reconversion professionnelle actuelle dans un domaine quelque peu différent des précédents.",
+  },
+  {
+    part: 1,
     image: img_ecoute,
     catégorie: "Atout",
     element: "Ecoute active",
     description:
       "Très important de manière générale et d'autant plus lors d'un contact client. Il permet la bonne compréhension des besoins, menant à la satisfaction de ce dernier.",
+  },
+  {
+    image: img_esprit_equipe,
+    catégorie: "Atout",
+    element: "Esprit d'équipe",
+    description:
+      "Un atout mise en avant durant mes expériences professionnelles en restauration. La communication, l'entraide et la disponibilité me paraissent être les clefs d'une bonne cohésion d'équipe.",
   },
   {
     image: img_logique,
@@ -58,13 +76,7 @@ const dataSkills = [
     description:
       "Au cours de mes expériences professionnelles passées, il était important de m'adapter de manière rapide et efficace aux différents clients. Cette qualité se confirme aujourd'hui par ma reconversion professionnelle actuelle dans un domaine quelque peu différent des précédents.",
   },
-  {
-    image: img_curieux,
-    catégorie: "Atout",
-    element: "Curieux",
-    description:
-      "Curieux de nature, j'aime beaucoup voyager dans le but de découvrir d'autres cultures. La curiosité mène vers la découverte et l'enrichissement aussi bien professionnel que personnel.",
-  },
+
 
   /********** HARDS SKILLS ***************/
 

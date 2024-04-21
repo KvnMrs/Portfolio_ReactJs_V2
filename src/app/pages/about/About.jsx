@@ -11,22 +11,46 @@ function About() {
     <>
       <section id="about" className="section-containers">
         <article className="article-containers">
-          <aside className="about-aside-containers flex-col p-2 text-center gap-4  md:w-1/2 md:self-center">
-            <img
-              className="w-40 h-40 object-cover self-center"
-              alt="Profil"
-              src={imgProfil}
-            />
-            <div className="flex justify-around">
-              <p>Kévin Marais</p>
-              <p>30 ans</p>
-              <p>Nantes</p>
-            </div>
-            <div className="">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
+          <aside className="about-aside-containers | md:self-center">
+            <div className="p-2 flex flex-col gap-8 items-center | md:gap-12 md:py-0">
+              <img
+                className="w-40 h-40 object-cover self-center | md:w-48 md:h-48"
+                alt="Profil"
+                src={imgProfil}
+              />
+              <div className="px-2 flex flex-col gap-3 | md:w-8/12 md:px-4">
+                <p>
+                  Je m'appelle Kévin, j'ai 30 ans et j'habite la ville
+                  culturelle et historique de Nantes. C'est peut être de la que
+                  vient mon intêret pour l'histoire et ces différentes époques,
+                  qui par moment nous amêne à l'interogation, parfois à la
+                  compréhention de certaines choses.
+                </p>
+                <p>
+                  De nature curieux j'aime aussi beaucoup voyager dans le but de
+                  découvrir et m'adapter à de nouveaux environnement. Il est
+                  possible aussi que ma variable 'lookingForChallenge' soit une
+                  constante initialiser à 'true'..
+                </p>
+                <p>
+                  Vous l'avez peut-être compris, cette même curiosité m'a amenée
+                  un jour à découvrir le domaine du développement web. C'est en
+                  autonomie et par le biais de différents support que j'ai
+                  commencé à m'initer à ces bases.
+                </p>
+              </div>
+              <div className="w-11/12 mt-2 flex gap-4 flex-wrap justify-around | | md:w-10/12 md:gap-8 ">
+                {dataSkills
+                  .filter((atout) => atout.part === 1)
+                  .map((el) => (
+                    <SoftSkills
+                      key={el.element}
+                      softSkill={el.element}
+                      categorie={el.catégorie}
+                      img={el.image}
+                    />
+                  ))}
+              </div>
             </div>
           </aside>
 
@@ -37,7 +61,9 @@ function About() {
               <div className="about-img-containers rotate-[16deg] self-end">
                 <div className="about-img"></div>
               </div>
-              <h2 className="text-3xl">Titre 1.</h2>
+              <h2 className="text-3xl">
+                {"<"}Une aventure professionnelle{"/>"}
+              </h2>
               <p className="text-xl">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
