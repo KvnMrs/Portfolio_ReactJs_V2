@@ -40,7 +40,7 @@
 }
 .main-container {
   @apply w-screen min-h-screen py-4 place-content-end
-/* MD */ md:w-full md:py-10
+/* MD */ md:w-full
 }
 
 /********************** SideBar ***********************/
@@ -165,7 +165,7 @@
 /*************************** About ****************************/
 .about-aside-containers {
 @apply pt-4 flex gap-8 justify-around
-/* MD */ md:w-11/12 md:h-96 md:pt-0 md:gap-12
+/* MD */ md:w-11/12  md:pt-0 md:gap-12
 }
 .about-img-containers {
   @apply w-3/4 h-20 flex justify-center
