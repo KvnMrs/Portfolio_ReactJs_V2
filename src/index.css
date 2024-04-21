@@ -164,19 +164,20 @@
 
 /*************************** About ****************************/
 .about-aside-containers {
-@apply pt-4 flex gap-8 justify-around
-/* MD */ md:w-11/12  md:pt-0 md:gap-12
+@apply  flex flex-col  gap-8 items-center justify-around
+/* MD */ md:w-11/12 md:py-0 md:gap-12 
 }
 .about-img-containers {
-  @apply w-3/4 h-20 flex justify-center
+  @apply hidden  
+/* MD */
+ /* md:flex md:w-3/4 md:h-20 md:justify-center */
 }
 .about-img {
   @apply w-3/4 h-full rounded-full bg-gray-700
 /* MD */ md:w-1/2
 }
 .about-description-container {
-  @apply mb-8 flex flex-col gap-2 self-center
-/* MD */ md:w-1/2
+  @apply mb-8 flex flex-col gap-4 self-center
 }
 /*************************** Experiences ****************************/
 

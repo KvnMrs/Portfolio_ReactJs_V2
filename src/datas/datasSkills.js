@@ -26,6 +26,8 @@ import img_curieux from "../assets/img/imgSoftSkills/curieux.png";
 import img_esprit_equipe from "../assets/img/imgSoftSkills/espritEquipe.png";
 import img_logique from "../assets/img/imgSoftSkills/logique.png";
 import img_ecoute from "../assets/img/imgSoftSkills/ecoute.png";
+import img_reactivite from "../assets/img/imgSoftSkills/reactivite.png";
+import img_timer from "../assets/img/imgSoftSkills/timer.png";
 
 const dataSkills = [
   /********** SOFTS SKILLS ***************/
@@ -47,6 +49,14 @@ const dataSkills = [
       "D'un naturel autonome, j'ai pu développer cet atout tout au long de mon parcours professionnel. Il me paraît essentiel de pouvoir accomplir un maximum par soi-même.",
   },
   {
+    part: 2,
+    image: img_ecoute,
+    catégorie: "Atout",
+    element: "Ecoute active",
+    description:
+      "Très important de manière générale et d'autant plus lors d'un contact client. Il permet la bonne compréhension des besoins, menant à la satisfaction de ce dernier.",
+  },
+  {
     part: 1,
     image: img_logique,
     catégorie: "Atout",
@@ -55,14 +65,8 @@ const dataSkills = [
       "Au cours de mes expériences professionnelles passées, il était important de m'adapter de manière rapide et efficace aux différents clients. Cette qualité se confirme aujourd'hui par ma reconversion professionnelle actuelle dans un domaine quelque peu différent des précédents.",
   },
   {
-    part: 1,
-    image: img_ecoute,
-    catégorie: "Atout",
-    element: "Ecoute active",
-    description:
-      "Très important de manière générale et d'autant plus lors d'un contact client. Il permet la bonne compréhension des besoins, menant à la satisfaction de ce dernier.",
-  },
-  {
+
+    part: 2,
     image: img_esprit_equipe,
     catégorie: "Atout",
     element: "Esprit d'équipe",
@@ -70,6 +74,25 @@ const dataSkills = [
       "Un atout mise en avant durant mes expériences professionnelles en restauration. La communication, l'entraide et la disponibilité me paraissent être les clefs d'une bonne cohésion d'équipe.",
   },
   {
+
+    part: 2,
+    image: img_timer,
+    catégorie: "Atout",
+    element: "Respect du temps",
+    description:
+      "Un atout mise en avant durant mes expériences professionnelles en restauration. La communication, l'entraide et la disponibilité me paraissent être les clefs d'une bonne cohésion d'équipe.",
+  },
+  {
+
+    part: 2,
+    image: img_reactivite,
+    catégorie: "Atout",
+    element: "Réactivité",
+    description:
+      "Un atout mise en avant durant mes expériences professionnelles en restauration. La communication, l'entraide et la disponibilité me paraissent être les clefs d'une bonne cohésion d'équipe.",
+  },
+  {
+    part: 3,
     image: img_logique,
     catégorie: "Atout",
     element: "Adaptabilité",
