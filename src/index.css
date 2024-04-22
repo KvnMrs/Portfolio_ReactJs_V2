@@ -164,7 +164,7 @@
 
 /*************************** About ****************************/
 .about-aside-containers {
-@apply  flex flex-col  gap-8 items-center justify-around
+@apply  flex flex-col gap-8 items-center justify-around
 /* MD */ md:w-11/12 md:py-0 md:gap-12 
 }
 .about-img-containers {
