@@ -13,7 +13,7 @@ const ButtonCallToActionText = ({ children, text, fct, customClass, type }) => {
         }
       >
         {children ? children : null}
-        <p className="text-base">{text}</p>
+        <p className="text-lg md:text-xl">{text}</p>
       </button>
     </>
   );
