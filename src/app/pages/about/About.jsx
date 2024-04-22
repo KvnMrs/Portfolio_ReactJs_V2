@@ -5,6 +5,9 @@ import SoftSkills from "../../components/about/SoftSkills";
 import imgProfil from "../../../assets/img/imgAbout/Kevin.png";
 // Datas
 import dataSkills from "../../../datas/datasSkills";
+import img_ReactJs from "../../../assets/img/imgHardSkills/ReactJs.png";
+import img_Angular from "../../../assets/img/imgHardSkills/Angular.png";
+import img_VueJs from "../../../assets/img/imgHardSkills/VueJs.png";
 
 function About() {
   return (
@@ -38,7 +41,7 @@ function About() {
                 commencé à m'initer à ces bases.
               </p>
             </div>
-            <div className="flex gap-4 md:gap-8 flex-wrap justify-center | md:w-2/3 ">
+            <div className="w-11/12 flex gap-4 md:gap-8 flex-wrap justify-between | md:w-2/3 ">
               {dataSkills
                 .filter((atout) => atout.part === 1)
                 .map((el) => (
@@ -90,7 +93,7 @@ function About() {
                 </div>
               </div>
             </div>
-            <div className="flex gap-4 md:gap-8 flex-wrap justify-around | md:w-1/2 ">
+            <div className="flex gap-4 md:gap-8 flex-wrap justify-between | md:w-2/3 ">
               {dataSkills
                 .filter((atout) => atout.part === 2)
                 .map((el) => (
@@ -105,28 +108,106 @@ function About() {
             </div>
           </aside>
           <div className="w-4/5 mx-auto my-8 border border-t-0"> </div>
-          <aside className="about-aside-containers flex-col-reverse | md:flex-row ">
-            <div className="flex gap-4 flex-wrap justify-around | md:w-1/3 md:gap-8">
-              {dataSkills
-                .filter((atout) => atout.catégorie === "Compétence")
-                .map((el) => (
-                  <SoftSkills
-                    key={el.element}
-                    softSkill={el.element}
-                    categorie={el.catégorie}
-                    img={el.image}
-                  />
-                ))}
-            </div>
-            <div className="about-description-container text-end">
+          <aside className="about-aside-containers md:gap-36">
+            <div className="about-description-container">
               <div className="about-img-containers self-start rotate-[168deg]">
                 <div className="about-img"></div>
               </div>
-              <h2 className="text-3xl">Titre 2.</h2>
-              <p className="text-xl">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
+              <div className="px-2 flex flex-col gap-4 |  md:px-0">
+                <h2 className="mb-4 text-3xl">
+                  {"<"} Le développement{" "}
+                  <span className="line-through">web</span> <br></br>des
+                  compétences
+                  {" />"}
+                </h2>
+                <div className="flex flex-col gap-16 | md:flex-row md:gap-6">
+                  <p className="text-xl md:w-1/3 relative">
+                    Tout comme le web, les compétences se développent avec le
+                    temps. Depuis mes débuts en autodiacte, j'ai auto-financé ma
+                    formation au sein de la Wild Code School. Une formation
+                    Full-Stack axée sur l'environnement JavaScript et MySQL,
+                    d'une durée de 5 mois.
+                    <img
+                      src={img_ReactJs}
+                      className="max-h-full md:-bottom-28 -bottom-14 inset-x-0 m-auto md:flex absolute bg-cover opacity-20"
+                    />
+                  </p>
+                  <p className="text-xl md:w-1/3 relative">
+                    A la suite de cette formation j'ai eu l'opportunité
+                    d'intégrer l'équipe de Cascade8 pour un stage d'une durée de
+                    5 mois également. Toujours dans un environnement JavaScript,
+                    c'est durant ce stage que j'ai eu le plaisir de découvrir le
+                    'NoSQL' avec Firebase.
+                    <img
+                      src={img_Angular}
+                      className="max-h-full md:-bottom-28 -bottom-14 inset-x-0 m-auto md:flex absolute bg-cover opacity-20"
+                    />
+                  </p>
+                  <p className="text-xl md:w-1/3 relative">
+                    J'ai également eu l'occasion d'accomplir un second stage au
+                    sein de XRATOR, d'une duré de 4 mois. Toujours dans un
+                    environnement Javascript, avec cette foic-ci Prisma pour la
+                    base de donnée.
+                    <img
+                      src={img_VueJs}
+                      className="max-h-full md:-bottom-28 -bottom-14 inset-x-0 m-auto md:flex absolute bg-cover opacity-20"
+                    />
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="w-11/12 flex flex-col gap-12 | md:gap-20">
+              <div className="flex flex-col gap-4 | md:gap-8">
+                <h2 className="text-2xl">Front-End:</h2>
+                <div className="flex flex-wrap gap-4 | md:gap-8 ">
+                  {dataSkills
+                    .filter(
+                      (atout) =>
+                        atout.stack === "front-end" || atout.stack === "full"
+                    )
+                    .map((el) => (
+                      <SoftSkills
+                        key={el.element}
+                        softSkill={el.element}
+                        categorie={el.catégorie}
+                        img={el.image}
+                      />
+                    ))}
+                </div>
+              </div>
+              <div className="flex flex-col gap-4 | md:gap-8">
+                <h2 className="text-2xl">Back-End:</h2>
+                <div className="flex flex-wrap gap-4 | md:gap-8 ">
+                  {dataSkills
+                    .filter(
+                      (atout) =>
+                        atout.stack === "back-end" || atout.stack === "full"
+                    )
+                    .map((el) => (
+                      <SoftSkills
+                        key={el.element}
+                        softSkill={el.element}
+                        categorie={el.catégorie}
+                        img={el.image}
+                      />
+                    ))}
+                </div>
+              </div>
+              <div className="w-11/12 flex flex-col gap-4 | md:gap-8">
+                <h2 className="text-2xl">Outils:</h2>
+                <div className="flex flex-wrap gap-8 | md:gap-8 ">
+                  {dataSkills
+                    .filter((atout) => atout.catégorie === "Outil")
+                    .map((el) => (
+                      <SoftSkills
+                        key={el.element}
+                        softSkill={el.element}
+                        categorie={el.catégorie}
+                        img={el.image}
+                      />
+                    ))}
+                </div>
+              </div>
             </div>
           </aside>
         </article>

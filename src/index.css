@@ -13,7 +13,7 @@
 /********************** Global ***********************/
 
 * {
-  @apply text-white
+  @apply text-white text-justify
 }
 .global-bg {
   @apply bg-black

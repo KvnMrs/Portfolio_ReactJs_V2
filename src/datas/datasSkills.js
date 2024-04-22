@@ -7,6 +7,7 @@ import img_MySQL from "../assets/img/imgHardSkills/MySQL.png";
 import img_NodeJs from "../assets/img/imgHardSkills/NodeJs.png";
 import img_ReactJs from "../assets/img/imgHardSkills/ReactJs.png";
 import img_Angular from "../assets/img/imgHardSkills/Angular.png";
+import img_VueJs from "../assets/img/imgHardSkills/VueJs.png";
 import img_TypeScript from "../assets/img/imgHardSkills/TypeScript.png";
 import img_Firebase from "../assets/img/imgHardSkills/Firebase.png";
 
@@ -17,6 +18,7 @@ import img_GitHub from "../assets/img/imgTools/GitHub.png";
 import img_VScode from "../assets/img/imgTools/VScode.png";
 import img_Figma from "../assets/img/imgTools/Figma.png";
 import img_Airtable from "../assets/img/imgTools/Airtable.png";
+import img_Jira from "../assets/img/imgTools/Jira.png";
 import img_Trello from "../assets/img/imgTools/Trello.png";
 import img_ZenHub from "../assets/img/imgTools/ZenHub.png";
 
@@ -105,51 +107,67 @@ const dataSkills = [
 
   {
     catégorie: "Compétence",
+    stack: 'front-end',
     element: "HTML5",
     image: img_HTML,
   },
   {
     catégorie: "Compétence",
+    stack: 'front-end',
     element: "CSS3",
     image: img_CSS,
   },
   {
     catégorie: "Compétence",
+    stack: 'full',
     element: "JavaScript",
     image: img_JS,
   },
   {
     catégorie: "Compétence",
+    stack: 'front-end',
     element: "ReactJs",
     image: img_ReactJs,
   },
   {
     catégorie: "Compétence",
+    stack: 'front-end',
     element: "Angular",
     image: img_Angular,
   },
   {
     catégorie: "Compétence",
+    stack: 'front-end',
+    element: "VueJs",
+    image: img_VueJs,
+  },
+  {
+    catégorie: "Compétence",
+    stack: 'front-end',
     element: "TypeScript",
     image: img_TypeScript,
   },
   {
     catégorie: "Compétence",
+    stack: 'back-end',
     element: "Firebase",
     image: img_Firebase,
   },
   {
     catégorie: "Compétence",
+    stack: 'back-end',
     element: "NodeJs",
     image: img_NodeJs,
   },
   {
     catégorie: "Compétence",
+    stack: 'front-end',
     element: "TailwindCSS",
     image: img_tailwindcss,
   },
   {
     catégorie: "Compétence",
+    stack: 'back-end',
     element: "Mysql",
     image: img_MySQL,
   },
@@ -173,7 +191,7 @@ const dataSkills = [
   },
   {
     catégorie: "Outil",
-    element: "Visual studio code",
+    element: "VScode",
     image: img_VScode,
   },
   {
@@ -185,6 +203,11 @@ const dataSkills = [
     catégorie: "Outil",
     element: "Trello",
     image: img_Trello,
+  },
+  {
+    catégorie: "Outil",
+    element: "Jira",
+    image: img_Jira,
   },
   {
     catégorie: "Outil",

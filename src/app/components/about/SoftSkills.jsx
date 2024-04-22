@@ -11,7 +11,7 @@ const SoftSkills = ({ softSkill, categorie, img, openModal, customClass }) => {
         onClick={openModal}
       >
         <img className="w-10 h-10 md:w-14 md:h-14" alt={categorie} src={img} />
-        <h4>{softSkill}</h4>
+        {softSkill ? <h4>{softSkill}</h4> : null}
       </button>
     </>
   );
