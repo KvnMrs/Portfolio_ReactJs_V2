@@ -126,32 +126,36 @@ function About() {
                     Tout comme le web, les compétences se développent avec le
                     temps. Depuis mes débuts en autodidacte, j'ai autofinancé ma
                     formation au sein de la Wild Code School. Une formation
-                    Full-Stack axée sur l'environnement JavaScript et MySQL,
-                    d'une durée de 5 mois.
+                    Full-Stack d'une durée de 5 mois, axée sur l'environnement
+                    JavaScript avec React, NodeJs et MySQL pour les bases de
+                    donées relationnel.
                     <img
                       src={img_ReactJs}
-                      className="max-h-full md:-bottom-28 -bottom-14 inset-x-0 m-auto md:flex absolute bg-cover opacity-20"
+                      className="max-h-full -bottom-14 inset-x-0 m-auto md:flex absolute bg-cover opacity-20 | md:-bottom-28"
                     />
                   </p>
-                  <p className="text-xl md:w-1/3 relative">
+                  <p className="relative text-xl | md:w-1/3">
                     À la suite de cette formation, j'ai eu l'opportunité
-                    d'intégrer l'équipe de Cascade8 pour un stage d'une durée de
-                    5 mois également. Toujours dans un environnement JavaScript,
-                    c'est durant ce stage que j'ai eu le plaisir de découvrir le
-                    'NoSQL' avec Firebase.
+                    d'intégrer l'équipe de Cascade8, une start-up travaillant
+                    dans le domaine du cinéma. Un stage d'une durée de 5 mois,
+                    dans un environnement JavaScript avec Angular. C'est
+                    également durant ce stage que j'ai eu le plaisir de
+                    découvrir le 'NoSQL' avec Firebase.
                     <img
                       src={img_Angular}
-                      className="max-h-full md:-bottom-28 -bottom-14 inset-x-0 m-auto md:flex absolute bg-cover opacity-20"
+                      className="max-h-full -bottom-14 inset-x-0 m-auto md:flex absolute bg-cover opacity-20 | md:-bottom-28"
                     />
                   </p>
-                  <p className="text-xl md:w-1/3 relative">
-                    J'ai également eu l'occasion d'accomplir un second stage au
-                    sein de XRATOR, d'une durée de 4 mois. Toujours dans un
-                    environnement JavaScript, avec cette fois-ci Prisma pour la
-                    base de données.
+                  <p className="relative text-xl | md:w-1/3">
+                    J'ai eu l'occasion d'accomplir un second stage en tant que
+                    développeur Front-End au sein de XRATOR, une start-up
+                    opérant dans le domaine de la cybersécurité. D'une durée de
+                    4 mois, ce stage m'a permis de me familiariser avec le
+                    dernier framework JavaScript : Vue.js, ainsi qu'avec Prisma
+                    pour les bases de données relationnelles.
                     <img
                       src={img_VueJs}
-                      className="max-h-full md:-bottom-28 -bottom-14 inset-x-0 m-auto md:flex absolute bg-cover opacity-20"
+                      className="max-h-full absolute -bottom-14 inset-x-0 m-auto bg-cover opacity-20 | md:flex md:-bottom-28 "
                     />
                   </p>
                 </div>
