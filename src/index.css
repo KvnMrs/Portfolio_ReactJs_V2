@@ -13,17 +13,17 @@
 /********************** Global ***********************/
 
 * {
-  @apply text-white
+  @apply text-white text-justify
 }
 .global-bg {
   @apply bg-black
 }
 .section-containers {
-  @apply w-full flex flex-col 
+  @apply w-full flex flex-col min-h-screen 
 }
 .article-containers {
-  @apply w-full py-8 px-4 flex flex-col gap-8 
-/* MD */ md:w-11/12 md:px-0 md:self-center md:gap-12 md:items-center
+  @apply w-full py-8 px-4 flex flex-col gap-12
+/* MD */ md:w-11/12 md:px-0 self-center md:gap-12 items-center
 }
 .section-headers {
   @apply flex mt-10
@@ -40,7 +40,7 @@
 }
 .main-container {
   @apply w-screen min-h-screen py-4 place-content-end
-/* MD */ md:w-full md:py-10
+/* MD */ md:w-full
 }
 
 /********************** SideBar ***********************/
@@ -158,25 +158,26 @@
 /* MD */ md:self-center md:gap-8
 }
 .profile-img {
-  @apply w-48 h-48 absolute -top-36 -right-10 object-cover rounded-bl-[75%]
-/* MD */ md:w-60 md:h-60 md:static
+  @apply w-48 h-48 absolute -top-32 -right-16 object-cover rounded-bl-[75%]
+/* MD */ md:w-72 md:h-72 md:-top-44 md:-right-44 
 }
 
 /*************************** About ****************************/
 .about-aside-containers {
-@apply md:h-96 pt-4 flex gap-8 justify-around
-/* MD */ md:w-11/12 md:pt-0 md:gap-12
+@apply  flex flex-col gap-8 items-center justify-around
+/* MD */ md:w-11/12 md:py-0 md:gap-12 
 }
 .about-img-containers {
-  @apply w-3/4 h-20 flex justify-center
+  @apply hidden  
+/* MD */
+ /* md:flex md:w-3/4 md:h-20 md:justify-center */
 }
 .about-img {
   @apply w-3/4 h-full rounded-full bg-gray-700
 /* MD */ md:w-1/2
 }
 .about-description-container {
-  @apply mb-8 flex flex-col gap-2 self-center
-/* MD */ md:w-1/2
+  @apply mb-8 flex flex-col gap-4 self-center
 }
 /*************************** Experiences ****************************/
 
@@ -322,6 +323,7 @@
 
 .callToAction-text {
   @apply px-4 py-2 outline outline-1 rounded-md
+/* MD */ md:px-6 md:py-4 
 }
 .callToAction-svg {
   @apply w-8 h-8 flex items-center animate-pulse duration-500 ease-in-out rounded-full bg-cyan-600
