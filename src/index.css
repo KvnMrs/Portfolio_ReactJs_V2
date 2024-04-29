@@ -15,8 +15,15 @@
 * {
   @apply text-white text-justify
 }
-.global-bg {
-  @apply bg-black
+.contrast-bg-0 {
+  @apply bg-slate-400 from-slate-100 to-slate-400  bg-opacity-20 backdrop-blur-md p-4 rounded-lg shadow-xl shadow-black text-green-500
+}
+.contrast-bg-1 {
+  @apply bg-green-500  bg-opacity-20 backdrop-blur-md p-4 rounded-lg shadow-xl shadow-black text-white;
+}
+
+.contrast-bg-2 {
+  @apply bg-black  bg-opacity-20 backdrop-blur-md p-4 rounded-lg shadow-xl shadow-black text-green-500;
 }
 .section-containers {
   @apply w-full flex flex-col min-h-screen 
@@ -35,11 +42,11 @@
 /********************** App ***********************/
 
 .scroll-control {
-  @apply min-h-screen overflow-auto scroll-smooth global-bg
+  @apply  scroll-smooth 
 /* SM */ sm:snap-y sm:snap-mandatory
 }
 .main-container {
-  @apply w-screen min-h-screen py-4 place-content-end
+  @apply  w-screen min-h-screen py-4 place-content-end 
 /* MD */ md:w-full
 }
 
@@ -250,15 +257,15 @@
 /*********************** Projects ************************/
 
 .project-containers {
-  @apply w-full flex flex-col gap-4 justify-center
+  @apply flex flex-col gap-4 justify-center
 /* MD */ md:flex-row md:flex-wrap md:gap-8
 }
 .project {
-  @apply flex flex-col gap-4 rounded-lg border 
-/* MD */ md:w-96
+  @apply flex flex-col gap-4 rounded-lg contrast-bg-2
+/* MD */ md:flex-row-reverse self-center
 }
 .project-img {
-  @apply mx-auto rounded-lg
+  @apply md:md:w-2/4 md:h-auto rounded-lg
 }
 .project-content {
   @apply flex h-90 flex-col px-4 overflow-y-auto text-start scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500

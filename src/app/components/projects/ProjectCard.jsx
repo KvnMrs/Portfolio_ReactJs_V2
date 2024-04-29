@@ -1,32 +1,25 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 
-const ProjectCard = ({
-  id,
-  img,
-  title,
-  technologies,
-  description,
-  link,
-  note,
-  projectRefprop,
-}) => {
-  const projectRef = useRef();
-
-  useEffect(() => {
-    projectRefprop.current.push(projectRef.current);
-  }, []);
-
+const ProjectCard = ({ projectData }) => {
+  if (!projectData) return null;
   return (
-    <>
-      <article id={id} ref={projectRef} className="project">
-        <img className="project-img" alt={title} src={img} />
+    <article
+      id={projectData.id}
+      className="project border-y-[0.05rem] border-y-white"
+    >
+      <img
+        className="project-img "
+        alt={projectData.title}
+        src={projectData.img}
+      />
+      {/* <div className="w-1/2 flex flex-col">
         <aside className="project-content">
-          <h3 className="project-title">{title}</h3>
-          <p className="project-description">{description}</p>
-          <p className="project-description">{note}</p>
+          <h3 className="project-title">{projectData.title}</h3>
+          <p className="project-description">{projectData.description}</p>
+          <p className="project-description">{projectData.note}</p>
         </aside>
         <aside className="project-infos">
-          <a className="project-link" href={link} blank="">
+          <a className="project-link" href={projectData.link} blank="">
             Visiter
             <svg
               className="projects-svg"
@@ -43,15 +36,15 @@ const ProjectCard = ({
             </svg>
           </a>
           <ul className="project-technos">
-            {technologies.map((techno) => (
+            {projectData.technologies.map((techno) => (
               <li>
                 <img className="project-techno-icon" src={techno} />
               </li>
             ))}
           </ul>
         </aside>
-      </article>
-    </>
+      </div> */}
+    </article>
   );
 };
 
