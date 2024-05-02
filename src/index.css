@@ -46,7 +46,7 @@
 /* SM */ sm:snap-y sm:snap-mandatory
 }
 .main-container {
-  @apply  w-screen min-h-screen py-4 place-content-end 
+  @apply w-screen min-h-screen py-4 place-content-center bg-black
 /* MD */ md:w-full
 }
 
@@ -256,28 +256,24 @@
 
 /*********************** Projects ************************/
 
-.project-containers {
-  @apply flex flex-col gap-4 justify-center
-/* MD */ md:flex-row md:flex-wrap md:gap-8
-}
 .project {
-  @apply flex flex-col gap-4 rounded-lg contrast-bg-2
-/* MD */ md:flex-row-reverse self-center
+  @apply  h-full flex flex-col gap-4 rounded-lg contrast-bg-2
+/* MD */  self-center
 }
 .project-img {
-  @apply md:md:w-2/4 md:h-auto rounded-lg
+  @apply w-5/6 object-cover rounded-lg
 }
 .project-content {
-  @apply flex h-90 flex-col px-4 overflow-y-auto text-start scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500
+  @apply w-10/12 flex max-h-48 flex-col px-4 overflow-y-auto text-start scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500 text-lg
 }
 .project-infos {
   @apply flex mt-auto py-3 items-center
 }
 .project-title {
-  @apply text-center text-xl font-bold
+  @apply text-2xl font-bold
 }
 .project-technos {
-  @apply w-full flex justify-end
+  @apply w-full flex 
 }
 .project-techno-icon {
   @apply w-8 h-8 mx-1 object-cover

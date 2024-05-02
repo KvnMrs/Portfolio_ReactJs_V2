@@ -13,8 +13,8 @@ import img_GitHub from "../assets/img/imgTools/GitHub.png";
 
 const dataProjects = [
   {
-    id: 0,
-    img: img_Project2,
+    id: 1,
+    img: img_Project1,
     link: "https://wcs-weather.netlify.app/",
     title: "WCS-Weather",
     technologies: [img_ReactJs, img_tailwindcss, img_Git],
@@ -24,7 +24,7 @@ const dataProjects = [
   },
 
   {
-    id: 1,
+    id: 2,
     img: img_Project1,
     link: "https://kvnmrs.github.io/WCS_Projet_1/",
     title: "NantesAutrement",
@@ -34,7 +34,7 @@ const dataProjects = [
     note: "- Non fonctionnel",
   },
   {
-    id: 2,
+    id: 3,
     img: img_Project1,
     link: "https://kvnmrs.github.io/WCS_Projet_1/",
     title: "NantesAutrement",
