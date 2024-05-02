@@ -5,7 +5,7 @@ const ProjectCard = ({ projectData }) => {
   return (
     <article
       id={projectData.id}
-      className="project pt-16 place-items-center items-center justify-center content-center"
+      className="project place-items-center items-center justify-center content-center | md:pt-16 "
     >
       <div className="flex flex-col gap-4">
         <h3 className="project-title">{projectData.title}</h3>

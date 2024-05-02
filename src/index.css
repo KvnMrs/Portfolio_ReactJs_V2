@@ -257,14 +257,16 @@
 /*********************** Projects ************************/
 
 .project {
-  @apply  h-full flex flex-col gap-4 rounded-lg contrast-bg-2
-/* MD */  self-center
+  @apply px-2 self-center flex flex-col gap-4 rounded-lg
+/* MD */ md:h-full 
 }
 .project-img {
-  @apply w-5/6 object-cover rounded-lg
+  @apply object-cover rounded-lg
+/* MD */ md:w-5/6
 }
 .project-content {
-  @apply w-10/12 flex max-h-48 flex-col px-4 overflow-y-auto text-start scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500 text-lg
+  @apply flex max-h-48 flex-col overflow-y-auto text-start scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500 text-lg
+/* MD */ md:w-10/12
 }
 .project-infos {
   @apply flex mt-auto py-3 items-center
