@@ -3,11 +3,16 @@ import React from "react";
 const ProjectCard = ({ projectData }) => {
   if (!projectData) return null;
   return (
-    <article id={projectData.id} className="project">
-      <div className="flex flex-col gap-4">
-        <div className="w-full flex justify-between">
+    <article
+      id={projectData.id}
+      className={
+        projectData.id % 2 === 0 ? "project md:flex-row-reverse" : "project"
+      }
+    >
+      <div className="flex flex-col gap-4 self-center | md:w-1/2 | lg:w-2/6">
+        <div className="w-full flex justify-between | md:hidden ">
           <h3 className="project-title">{projectData.title}</h3>
-          <span className="flex border w-8 h-8 items-end p-1 justify-center rounded-full text-xl">
+          <span className="flex border w-8 h-8 items-end p-1 justify-center rounded-full text-xl | md:hidden">
             {projectData.id}
           </span>
         </div>
@@ -18,7 +23,10 @@ const ProjectCard = ({ projectData }) => {
         />
       </div>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col | md:w-1/2 md:p-8 | lg:w-2/5 ">
+        <h3 className="hidden md:flex project-title mb-8 ">
+          {projectData.title}
+        </h3>
         <p className="project-description">{projectData.description}</p>
         <p className="project-description">{projectData.note}</p>
         <aside className="project-infos">

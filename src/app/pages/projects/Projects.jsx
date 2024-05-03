@@ -11,7 +11,7 @@ export default function App() {
         {dataProjects.map((el) => (
           <>
             <ProjectCard projectData={el} />
-            <div className="w-4/5 mx-auto my-8 border border-t-0"> </div>
+            <div className="w-4/5 mx-auto my-8 border border-t-0 | md:my-16 | lg:my-20"></div>
           </>
         ))}
       </AnimatePresence>
