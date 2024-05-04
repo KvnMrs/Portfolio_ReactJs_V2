@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // Sub-components
-import ButtonCallToActionText from "../../sub-components/buttons/ButtonCallToActionText";
+import ButtonCallToActionText from "../../components/common/button/ButtonCallToActionText";
 // Animations
 import {
   inputsAnim,

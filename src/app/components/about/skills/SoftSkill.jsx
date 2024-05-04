@@ -1,6 +1,6 @@
 import React from "react";
 
-const SoftSkills = ({ softSkill, categorie, img, openModal, customClass }) => {
+const SoftSkill = ({ softSkill, categorie, img, openModal, customClass }) => {
   return (
     <>
       <button
@@ -17,4 +17,4 @@ const SoftSkills = ({ softSkill, categorie, img, openModal, customClass }) => {
   );
 };
 
-export default SoftSkills;
+export default SoftSkill;

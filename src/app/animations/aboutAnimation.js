@@ -59,7 +59,7 @@ export const modalProfileHobbiesAnim = {
   viewport: { once: true },
 };
 
-// Modal SoftSkills part
+// Modal SoftSkill part
 export const modalSoftSkillsAnim = {
   initial: { opacity: 0 },
   animate: {

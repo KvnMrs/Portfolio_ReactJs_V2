@@ -1,6 +1,6 @@
 import React from "react";
 // Components
-import SoftSkills from "../../components/about/SoftSkills";
+import SoftSkill from "../../components/about/skills/SoftSkill";
 // Assets
 import imgProfil from "../../../assets/img/imgAbout/Kevin.png";
 // Datas
@@ -47,7 +47,7 @@ function About() {
               {dataSkills
                 .filter((atout) => atout.part === 1)
                 .map((el) => (
-                  <SoftSkills
+                  <SoftSkill
                     key={el.element}
                     softSkill={el.element}
                     categorie={el.catégorie}
@@ -98,7 +98,7 @@ function About() {
               {dataSkills
                 .filter((atout) => atout.part === 2)
                 .map((el) => (
-                  <SoftSkills
+                  <SoftSkill
                     key={el.element}
                     softSkill={el.element}
                     categorie={el.catégorie}
@@ -171,7 +171,7 @@ function About() {
                         atout.stack === "front-end" || atout.stack === "full"
                     )
                     .map((el) => (
-                      <SoftSkills
+                      <SoftSkill
                         key={el.element}
                         softSkill={el.element}
                         categorie={el.catégorie}
@@ -189,7 +189,7 @@ function About() {
                         atout.stack === "back-end" || atout.stack === "full"
                     )
                     .map((el) => (
-                      <SoftSkills
+                      <SoftSkill
                         key={el.element}
                         softSkill={el.element}
                         categorie={el.catégorie}
@@ -204,7 +204,7 @@ function About() {
                   {dataSkills
                     .filter((atout) => atout.catégorie === "Outil")
                     .map((el) => (
-                      <SoftSkills
+                      <SoftSkill
                         key={el.element}
                         softSkill={el.element}
                         categorie={el.catégorie}

@@ -16,14 +16,14 @@
   @apply text-white text-justify
 }
 .contrast-bg-0 {
-  @apply bg-slate-400 from-slate-100 to-slate-400  bg-opacity-20 backdrop-blur-md p-4 rounded-lg shadow-xl shadow-black text-green-500
+  @apply bg-slate-400 from-slate-100 to-slate-400  bg-opacity-20 backdrop-blur-md p-4 rounded-lg shadow-xl text-green-500
 }
 .contrast-bg-1 {
-  @apply bg-green-500  bg-opacity-20 backdrop-blur-md p-4 rounded-lg shadow-xl shadow-black text-white;
+  @apply bg-green-500  bg-opacity-20 backdrop-blur-md p-4 rounded-lg shadow-xl text-white;
 }
 
 .contrast-bg-2 {
-  @apply bg-black  bg-opacity-20 backdrop-blur-md p-4 rounded-lg shadow-xl shadow-black text-green-500;
+  @apply bg-black  bg-opacity-20 backdrop-blur-md p-4 rounded-lg shadow-xl text-green-500;
 }
 .section-containers {
   @apply w-full flex flex-col min-h-screen 
@@ -41,10 +41,6 @@
 
 /********************** App ***********************/
 
-.scroll-control {
-  @apply  scroll-smooth 
-/* SM */ sm:snap-y sm:snap-mandatory
-}
 .main-container {
   @apply w-screen min-h-screen py-4 place-content-center bg-[#050810]
 /* MD */ md:w-full
@@ -59,10 +55,12 @@
   }
 }
 .sideBar-container {
-  @apply w-full h-5/6 fixed flex flex-col z-30 bg-black shadow-md shadow-cyan-300 rounded-sm
+  @apply w-full h-5/6 fixed flex flex-col z-30 bg-[#050810] shadow-md shadow-cyan-300 rounded-sm
+/* MD */ md:hidden
 }
 .burger-button-container {
   @apply flex self-center mx-auto
+/* MD */ md:hidden
 }
 .burger-button-container svg {
   @apply w-5
@@ -77,87 +75,6 @@
   @apply w-5 h-auto
 }
 
-/******* Modal *******/
-
-.modal-container {
-@apply w-screen absolute inset-0 z-50 bg-black
-}
-.modal-sub-container {
-  @apply w-screen min-h-screen flex flex-col absolute z-50 mx-auto
-/* MD */ md:h-full
-/* LG */ lg:w-10/12 lg:inset-x-10 lg:rounded-2xl
-}
-
-/* Tabs-Modal */
-
-.content-tabs {
-  @apply flex px-5 py-1 items-center
-/* LG */ lg:py-3
-}
-.tab-buttons {
-  @apply w-24 border-b p-2 py-1 px-2 mx-1 my-2 transition text-center text-sm font-bold rounded-lg duration-500 ease-in-out
-/* MD */ md:hover:bg-cyan-700
-}
-.button-close {
-  @apply ml-auto text-3xl text-white font-semibold font-sans transition-all hover:scale-125 hover:font-light
-}
-.content-modal {
-  @apply w-screen h-full flex flex-col my-2 mx-auto overflow-y-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-cyan-500
-/* MD */ md:flex-row
-/* LG */ lg:w-11/12
-}
-
-/* Profile-Modal */
-
-.modal-profile {
-  @apply w-screen h-full flex flex-col mx-auto p-2 justify-center items-center rounded-lg
-}
-.profile-infos-contact-part {
-  @apply w-full
-/* MD */ md:h-3/5 md:flex
-/* LG */ lg:h-4/5
-}
-.profile-infos-contact-surface {
-  @apply flex flex-col mb-2 mx-1 items-center rounded-lg shadow-xl border-b border-white
-/* MD */ md:w-1/2 md:h-auto md:justify-center
-}
-.profile-hobbies-part {
-  @apply w-full h-2/5 flex flex-col px-2 items-center justify-center rounded-lg shadow-xl border-b border-white
-/* MD */ md:w-auto md:px-20
-/* LG */ lg:h-3/5 lg:px-40
-}
-.profile-titles {
-  @apply my-2 border-b-2 border-white
-/* SM */ sm:text-lg
-/* MD */ md:text-2xl
-}
-
-/* SoftSkills-Modal */
-.modal-SoftSkills {
-  @apply flex flex-col mx-2
-}
-.modal-softSkill {
-  @apply w-full flex p-2 my-3 mx-auto border-b border-white rounded-md
-/* SM */ sm:p-5
-
-}
-.modal-softSkill-img-part {
-  @apply w-1/6 self-center
-}
-.modal-softSkill-img {
-  @apply w-8 m-auto self-center
-/* SM */ sm:w-12
-}
-.modal-softSkill-description-part {
-  @apply w-5/6 m-auto flex flex-col
-/* SM */ sm:items-center
-}
-.modal-softSkill-title {
-  @apply mb-2 underline text-lg
-}
-.modal-softSkill-description {
-  @apply text-sm sm:text-base
-}
 /********************** Home ***********************/
 
 .presentation-container {
@@ -185,54 +102,6 @@
 }
 .about-description-container {
   @apply mb-8 flex flex-col gap-4 self-center
-}
-/*************************** Experiences ****************************/
-
-.lists-container {
-  @apply w-full h-90 flex flex-col items-center justify-around
-/* LG */ lg:flex-row
-}
-.lists-experience-training {
-  @apply w-11/12 mt-5 items-center overflow-scroll scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500 rounded-lg
-/* MD */ md:mt-0
-/* LG */ lg:w-1/2
-}
-.lists-elements {
-  @apply w-full px-2 py-8 border-b border-white m-auto text-center
-/* MD */ md:w-3/4 md:px-0
-}
-
-/* legend experience */
-
-.legend-container {
-  @apply w-full flex px-2 my-4
-/* LG */ lg:w-3/12 lg:h-5/6 lg:my-auto lg:px-0 lg:flex-col
-}
-.legend-sub-container {
-  @apply w-full m-auto
-/* XL */ xl:w-5/6
-}
-.legend-checkbox-container {
-  @apply w-5/6 mb-2 mx-auto flex place-content-center items-center
-}
-.legend-checkbox {
-  @apply w-5 h-5 mx-2 cursor-pointer
-}
-.legend-list {
-  @apply w-full pb-2 flex overflow-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-cyan-500
-/* SM */ sm:justify-center
-/* LG */ lg:h-full lg:flex-col
-}
-.legend-list-elements {
-  @apply my-1 mr-3 flex self-center items-center
-/* LG */ lg:w-10/12 lg:h-10 lg:mr-0
-}
-.legend-elements-circle {
-  @apply w-5 h-5 rounded-full
-}
-.legend-elements-text {
-  @apply w-max ml-2 text-sm
-/* LG */ lg:text-base
 }
 
 /*********************** Skills ************************/
