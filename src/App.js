@@ -13,7 +13,6 @@ import Projects from "./app/pages/projects/Projects";
 function App() {
   return (
     <>
-      <div className="scroll-control bg-black">
         <SideBar />
         <div className="main-container">
           <Routes>
@@ -22,7 +21,6 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-        </div>
       </div>
     </>
   );
