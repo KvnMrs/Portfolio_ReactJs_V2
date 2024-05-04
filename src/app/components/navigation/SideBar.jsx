@@ -68,13 +68,11 @@ function BarNav() {
       )}
       {/* DESKTOP */}
       <Link className="w-full" to="/">
-        <h1 className="absolute top-2 md:left-8 text-xl font-bold right-8">
-          KM
-        </h1>
+        <h1 className="fixed top-2 md:left-8 text-xl font-bold right-8">KM</h1>
       </Link>
 
       <div className="hidden md:fixed z-50 md:flex w-full px-8 pt-4 pr-8 ml-auto">
-        <ol className="w-1/2 flex gap-8 ml-auto place-content-end">
+        <ol className="flex gap-8 ml-auto place-content-end">
           <li>
             <Link to="/">
               <p className="text-xl">Accueil</p>
