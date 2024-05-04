@@ -8,8 +8,6 @@ import SvgContact from "../../../assets/svg/sidebar/links-section/SvgContact";
 import SvgBurger from "../../../assets/svg/sidebar/SvgBurger";
 // Packages
 import { motion } from "framer-motion";
-// Animations
-import { modalAnim } from "../../animations/aboutAnimation";
 
 function BarNav() {
   const [openSidebar, setOpenSideBar] = useState(false);
@@ -32,7 +30,6 @@ function BarNav() {
       {openSidebar && (
         <motion.div
           className="sideBar-container "
-          variants={modalAnim}
           initial="initial"
           animate="animate"
           exit="exit"

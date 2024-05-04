@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 //Sub-components
 import SocialMediasLinks from "../../components/common/Link/SocialMediasLinks.jsx";
 import ButtonCallToActionText from "../../components/common/button/ButtonCallToActionText.jsx";
@@ -12,14 +11,8 @@ import CV from "../../../assets/document/Kévin_MARAIS_CV_FR.pdf";
 import SvgProfile from "../../../assets/svg/sidebar/links-section/SvgProfile";
 import SvgProject from "../../../assets/svg/sidebar/links-section/SvgProject";
 import SvgContact from "../../../assets/svg/sidebar/links-section/SvgContact";
-// Animations
-import {
-  descriptionAnim,
-  imageHoverAnim,
-} from "../../animations/aboutAnimation";
 
 function About() {
-  const [activeModal, setActiveModal] = useState(false);
   const navigation = [
     {
       linkName: "< A propos /> ",
@@ -37,11 +30,6 @@ function About() {
       svg: <SvgContact className={"w-10 h-10"} />,
     },
   ];
-
-  // OpenModal
-  const openModal = () => {
-    setActiveModal(!activeModal);
-  };
 
   return (
     <>

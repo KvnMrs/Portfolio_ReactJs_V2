@@ -132,6 +132,7 @@ function About() {
                     <img
                       src={img_ReactJs}
                       className="max-h-full -bottom-14 inset-x-0 m-auto md:flex absolute bg-cover opacity-20 | md:-bottom-28"
+                      alt="ReactJs"
                     />
                   </p>
                   <p className="relative text-xl | md:w-1/3">
@@ -144,6 +145,7 @@ function About() {
                     <img
                       src={img_Angular}
                       className="max-h-full -bottom-14 inset-x-0 m-auto md:flex absolute bg-cover opacity-20 | md:-bottom-28"
+                      alt="Angular"
                     />
                   </p>
                   <p className="relative text-xl | md:w-1/3">
@@ -156,6 +158,7 @@ function About() {
                     <img
                       src={img_VueJs}
                       className="max-h-full absolute -bottom-14 inset-x-0 m-auto bg-cover opacity-20 | md:flex md:-bottom-28 "
+                      alt="VueJs"
                     />
                   </p>
                 </div>
