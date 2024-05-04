@@ -7,9 +7,7 @@ const ButtonCallToActionText = ({ children, text, fct, customClass, type }) => {
         type={type ? type : "button"}
         onClick={fct ? fct : null}
         className={
-          customClass
-            ? "callToAction-text" + ` ${customClass}`
-            : "callToAction-text"
+          customClass ? `callToAction-text ${customClass}` : "callToAction-text"
         }
       >
         {children ? children : null}
