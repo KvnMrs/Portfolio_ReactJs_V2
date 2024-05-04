@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 //Sub-components
-import SocialMediasLinks from "../../sub-components/Links/SocialMediasLinks";
-import ButtonCallToActionText from "../../sub-components/buttons/ButtonCallToActionText";
+import SocialMediasLinks from "../../components/common/Link/SocialMediasLinks.jsx";
+import ButtonCallToActionText from "../../components/common/button/ButtonCallToActionText.jsx";
 import HomeNavButton from "../../components/navigation/HomeNavButton.jsx";
 //Assets
 import imgProfil from "../../../assets/img/imgAbout/Kevin.png";

@@ -132,8 +132,8 @@
 /* MD */ md:text-2xl
 }
 
-/* SoftSkills-Modal */
-.modal-SoftSkills {
+/* SoftSkill-Modal */
+.modal-SoftSkill {
   @apply flex flex-col mx-2
 }
 .modal-softSkill {
