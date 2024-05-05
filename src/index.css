@@ -15,13 +15,15 @@
 * {
   @apply text-white text-justify
 }
+.blue-night-surface {
+  @apply bg-gradient-to-r from-transparent via-[#142144] to-transparent rounded-3xl
+}
 .contrast-bg-0 {
   @apply bg-slate-400 from-slate-100 to-slate-400  bg-opacity-20 backdrop-blur-md p-4 rounded-lg shadow-xl text-green-500
 }
 .contrast-bg-1 {
   @apply bg-green-500  bg-opacity-20 backdrop-blur-md p-4 rounded-lg shadow-xl text-white;
 }
-
 .contrast-bg-2 {
   @apply bg-black  bg-opacity-20 backdrop-blur-md p-4 rounded-lg shadow-xl text-green-500;
 }

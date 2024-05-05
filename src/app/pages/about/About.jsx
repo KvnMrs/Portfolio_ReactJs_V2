@@ -43,7 +43,7 @@ function About() {
                 </p>
               </div>
             </div>
-            <div className="w-11/12 flex gap-4 md:gap-8 flex-wrap justify-around | md:w-2/3 ">
+            <div className="blue-night-surface w-full py-4 flex gap-4 flex-wrap justify-evenly | md:w-2/3 md:gap-8 | lg:w-full ">
               {dataSkills
                 .filter((atout) => atout.part === 1)
                 .map((el) => (
@@ -94,7 +94,7 @@ function About() {
                 </div>
               </div>
             </div>
-            <div className="flex gap-4 flex-wrap justify-between | md:w-2/3 md:gap-8 ">
+            <div className="blue-night-surface w-full py-4 flex gap-4 flex-wrap justify-evenly | md:w-2/3 md:gap-8 | lg:w-full ">
               {dataSkills
                 .filter((atout) => atout.part === 2)
                 .map((el) => (
@@ -166,7 +166,9 @@ function About() {
             </div>
             <div className="w-11/12 flex flex-col gap-12 | md:gap-20">
               <div className="flex flex-col gap-4 | md:gap-8">
-                <h2 className="text-2xl">Front-End:</h2>
+                <h2 className="w-1/3 white-night-surface text-2xl">
+                  Front-End:
+                </h2>
                 <div className="flex flex-wrap gap-4 | md:gap-8 ">
                   {dataSkills
                     .filter(
@@ -184,7 +186,9 @@ function About() {
                 </div>
               </div>
               <div className="flex flex-col gap-4 | md:gap-8">
-                <h2 className="text-2xl">Back-End:</h2>
+                <h2 className="w-1/3 white-night-surface text-2xl">
+                  Back-End:
+                </h2>
                 <div className="flex flex-wrap gap-4 | md:gap-8 ">
                   {dataSkills
                     .filter(
@@ -202,8 +206,8 @@ function About() {
                 </div>
               </div>
               <div className="w-11/12 flex flex-col gap-4 | md:gap-8">
-                <h2 className="text-2xl">Outils:</h2>
-                <div className="flex flex-wrap gap-8 | md:gap-8 ">
+                <h2 className="w-1/3 white-night-surface text-2xl">Outils:</h2>
+                <div className="flex flex-wrap gap-4 | md:gap-8 ">
                   {dataSkills
                     .filter((atout) => atout.catégorie === "Outil")
                     .map((el) => (
