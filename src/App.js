@@ -13,16 +13,14 @@ import Projects from "./app/pages/projects/Projects";
 function App() {
   return (
     <>
-      <div className="scroll-control">
         <SideBar />
-        <div className="main-container">
+      <div className="main-container">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-        </div>
       </div>
     </>
   );

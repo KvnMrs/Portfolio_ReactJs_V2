@@ -8,8 +8,6 @@ import SvgContact from "../../../assets/svg/sidebar/links-section/SvgContact";
 import SvgBurger from "../../../assets/svg/sidebar/SvgBurger";
 // Packages
 import { motion } from "framer-motion";
-// Animations
-import { modalAnim } from "../../animations/aboutAnimation";
 
 function BarNav() {
   const [openSidebar, setOpenSideBar] = useState(false);
@@ -20,7 +18,7 @@ function BarNav() {
   return (
     <>
       {/* MOBILE */}
-      <div className="burger-button-container md:hidden">
+      <div className="burger-button-container">
         <button
           className="fixed z-50 h-auto left-4 top-4"
           type="button"
@@ -31,8 +29,7 @@ function BarNav() {
       </div>
       {openSidebar && (
         <motion.div
-          className="sideBar-container md:hidden"
-          variants={modalAnim}
+          className="sideBar-container "
           initial="initial"
           animate="animate"
           exit="exit"
@@ -67,33 +64,29 @@ function BarNav() {
         </motion.div>
       )}
       {/* DESKTOP */}
-      <Link className="" to="/">
-        <h1 className="absolute top-4 left-8 text-xl font-bold">KM</h1>
+      <Link className="w-full" to="/">
+        <h1 className="fixed top-2 md:left-8 text-xl font-bold right-8">KM</h1>
       </Link>
 
-      <div className="hidden md:flex w-10/12 px-8 pt-4 pr-8 ml-auto">
-        <ol className="w-1/2 flex gap-8 ml-auto place-content-end">
+      <div className="hidden md:fixed z-50 w-full px-8 pt-4 pr-8 ml-auto | md:flex ">
+        <ol className="flex gap-8 ml-auto place-content-end">
           <li>
             <Link to="/">
-              {/* <SvgHome className={"sidebar-svg"} /> */}
               <p className="text-xl">Accueil</p>
             </Link>
           </li>
           <li>
             <Link to="about">
-              {/* <SvgProfile className={"sidebar-svg"} /> */}
               <p className="text-xl">A propos</p>
             </Link>
           </li>
           <li>
             <Link to="projects">
-              {/* <SvgProject className={"sidebar-svg"} /> */}
               <p className="text-xl">Projets</p>
             </Link>
           </li>
           <li>
             <Link to="contact">
-              {/* <SvgContact className={"sidebar-svg"} /> */}
               <p className="text-xl">Contact</p>
             </Link>
           </li>

@@ -1,44 +1,22 @@
-import React, { useRef } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import { AnimatePresence } from "framer-motion";
 // Components
 import ProjectCard from "../../components/projects/ProjectCard";
-// Sub-components
-import ButtonCallToActionText from "../../sub-components/buttons/ButtonCallToActionText";
-// Datas
-import DatasProjects from "../../../datas/datasProjects";
+import dataProjects from "../../../datas/datasProjects";
 
-function Projects() {
-  const itemsRef = useRef([]);
-
+export default function App() {
   return (
-    <>
-      <section id="projects" className="section-containers">
-        <article className="article-containers relative">
-          <header className="section-headers">
-            <h2 className="section-titles">Projets</h2>
-          </header>
-          <div className="project-containers">
-            {DatasProjects.map((el) => (
-              <>
-                {
-                  <ProjectCard
-                    key={el.id}
-                    img={el.img}
-                    title={el.title}
-                    technologies={el.technologies}
-                    description={el.description}
-                    link={el.link}
-                    note={el.note}
-                    projectRefprop={itemsRef}
-                  />
-                }
-              </>
-            ))}
-          </div>
-        </article>
-      </section>
-    </>
+    <section className="section-containers">
+      <div className="flex flex-col items-center">
+        <AnimatePresence exitBeforeEnter>
+          {dataProjects.map((el) => (
+            <>
+              <ProjectCard projectData={el} />
+              <div className="w-4/5 mx-auto my-8 border border-t-0 | md:my-16 | lg:my-20"></div>
+            </>
+          ))}
+        </AnimatePresence>
+      </div>
+    </section>
   );
 }
-
-export default Projects;

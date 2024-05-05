@@ -13,17 +13,28 @@
 /********************** Global ***********************/
 
 * {
-  @apply text-white
+  @apply text-white text-justify
 }
-.global-bg {
-  @apply bg-black
+.blue-night-surface {
+  @apply bg-gradient-to-r from-transparent via-[#142144] to-transparent rounded-3xl
+}
+.contrast-bg-0 {
+  @apply bg-slate-400 from-slate-100 to-slate-400  bg-opacity-20 backdrop-blur-md p-4 rounded-lg shadow-xl text-green-500
+}
+.contrast-bg-1 {
+  @apply bg-gradient-to-r from-transparent via-[#142144]  bg-opacity-20 backdrop-blur-md p-4 rounded-lg shadow-xl text-white;
+}
+.contrast-bg-2 {
+  @apply bg-black bg-opacity-20 backdrop-blur-md p-4 rounded-lg shadow-xl text-green-500;
 }
 .section-containers {
-  @apply w-full flex flex-col 
+  @apply w-full min-h-screen py-8 px-4 flex flex-col gap-12 self-center items-center bg-[#050810]
+/* MD */ md:px-8 md:py-16
+
 }
 .article-containers {
-  @apply w-full py-8 px-4 flex flex-col gap-8 
-/* MD */ md:w-11/12 md:px-0 md:self-center md:gap-12 md:items-center
+  @apply w-full py-8 px-4 flex flex-col gap-12
+/* MD */ md:w-11/12  self-center md:gap-12 items-center
 }
 .section-headers {
   @apply flex mt-10
@@ -34,13 +45,9 @@
 
 /********************** App ***********************/
 
-.scroll-control {
-  @apply min-h-screen overflow-auto scroll-smooth global-bg
-/* SM */ sm:snap-y sm:snap-mandatory
-}
 .main-container {
-  @apply w-screen min-h-screen py-4 place-content-end
-/* MD */ md:w-full md:py-10
+  @apply w-screen min-h-screen place-content-center text-center
+/* MD */ md:w-full
 }
 
 /********************** SideBar ***********************/
@@ -52,10 +59,12 @@
   }
 }
 .sideBar-container {
-  @apply w-full h-5/6 fixed flex flex-col z-30 bg-black shadow-md shadow-cyan-300 rounded-sm
+  @apply w-full h-5/6 fixed flex flex-col z-30 bg-[#050810] shadow-md shadow-cyan-300 rounded-sm
+/* MD */ md:hidden
 }
 .burger-button-container {
   @apply flex self-center mx-auto
+/* MD */ md:hidden
 }
 .burger-button-container svg {
   @apply w-5
@@ -70,87 +79,6 @@
   @apply w-5 h-auto
 }
 
-/******* Modal *******/
-
-.modal-container {
-@apply w-screen absolute inset-0 z-50 bg-black
-}
-.modal-sub-container {
-  @apply w-screen min-h-screen flex flex-col absolute z-50 mx-auto
-/* MD */ md:h-full
-/* LG */ lg:w-10/12 lg:inset-x-10 lg:rounded-2xl
-}
-
-/* Tabs-Modal */
-
-.content-tabs {
-  @apply flex px-5 py-1 items-center
-/* LG */ lg:py-3
-}
-.tab-buttons {
-  @apply w-24 border-b p-2 py-1 px-2 mx-1 my-2 transition text-center text-sm font-bold rounded-lg duration-500 ease-in-out
-/* MD */ md:hover:bg-cyan-700
-}
-.button-close {
-  @apply ml-auto text-3xl text-white font-semibold font-sans transition-all hover:scale-125 hover:font-light
-}
-.content-modal {
-  @apply w-screen h-full flex flex-col my-2 mx-auto overflow-y-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-cyan-500
-/* MD */ md:flex-row
-/* LG */ lg:w-11/12
-}
-
-/* Profile-Modal */
-
-.modal-profile {
-  @apply w-screen h-full flex flex-col mx-auto p-2 justify-center items-center rounded-lg
-}
-.profile-infos-contact-part {
-  @apply w-full
-/* MD */ md:h-3/5 md:flex
-/* LG */ lg:h-4/5
-}
-.profile-infos-contact-surface {
-  @apply flex flex-col mb-2 mx-1 items-center rounded-lg shadow-xl border-b border-white
-/* MD */ md:w-1/2 md:h-auto md:justify-center
-}
-.profile-hobbies-part {
-  @apply w-full h-2/5 flex flex-col px-2 items-center justify-center rounded-lg shadow-xl border-b border-white
-/* MD */ md:w-auto md:px-20
-/* LG */ lg:h-3/5 lg:px-40
-}
-.profile-titles {
-  @apply my-2 border-b-2 border-white
-/* SM */ sm:text-lg
-/* MD */ md:text-2xl
-}
-
-/* SoftSkills-Modal */
-.modal-SoftSkills {
-  @apply flex flex-col mx-2
-}
-.modal-softSkill {
-  @apply w-full flex p-2 my-3 mx-auto border-b border-white rounded-md
-/* SM */ sm:p-5
-
-}
-.modal-softSkill-img-part {
-  @apply w-1/6 self-center
-}
-.modal-softSkill-img {
-  @apply w-8 m-auto self-center
-/* SM */ sm:w-12
-}
-.modal-softSkill-description-part {
-  @apply w-5/6 m-auto flex flex-col
-/* SM */ sm:items-center
-}
-.modal-softSkill-title {
-  @apply mb-2 underline text-lg
-}
-.modal-softSkill-description {
-  @apply text-sm sm:text-base
-}
 /********************** Home ***********************/
 
 .presentation-container {
@@ -158,73 +86,26 @@
 /* MD */ md:self-center md:gap-8
 }
 .profile-img {
-  @apply w-48 h-48 absolute -top-36 -right-10 object-cover rounded-bl-[75%]
-/* MD */ md:w-60 md:h-60 md:static
+  @apply w-48 h-48 absolute -top-32 -right-16 object-cover rounded-bl-[75%]
+/* MD */ md:w-72 md:h-72 md:-top-44 md:-right-44 
 }
 
 /*************************** About ****************************/
 .about-aside-containers {
-@apply md:h-96 pt-4 flex gap-8 justify-around
-/* MD */ md:w-11/12 md:pt-0 md:gap-12
+@apply  min-h-screen flex flex-col gap-8 items-center justify-around
+/* MD */ md:w-11/12 md:py-0 md:gap-12 
 }
 .about-img-containers {
-  @apply w-3/4 h-20 flex justify-center
+  @apply hidden  
+/* MD */
+ /* md:flex md:w-3/4 md:h-20 md:justify-center */
 }
 .about-img {
   @apply w-3/4 h-full rounded-full bg-gray-700
 /* MD */ md:w-1/2
 }
 .about-description-container {
-  @apply mb-8 flex flex-col gap-2 self-center
-/* MD */ md:w-1/2
-}
-/*************************** Experiences ****************************/
-
-.lists-container {
-  @apply w-full h-90 flex flex-col items-center justify-around
-/* LG */ lg:flex-row
-}
-.lists-experience-training {
-  @apply w-11/12 mt-5 items-center overflow-scroll scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500 rounded-lg
-/* MD */ md:mt-0
-/* LG */ lg:w-1/2
-}
-.lists-elements {
-  @apply w-full px-2 py-8 border-b border-white m-auto text-center
-/* MD */ md:w-3/4 md:px-0
-}
-
-/* legend experience */
-
-.legend-container {
-  @apply w-full flex px-2 my-4
-/* LG */ lg:w-3/12 lg:h-5/6 lg:my-auto lg:px-0 lg:flex-col
-}
-.legend-sub-container {
-  @apply w-full m-auto
-/* XL */ xl:w-5/6
-}
-.legend-checkbox-container {
-  @apply w-5/6 mb-2 mx-auto flex place-content-center items-center
-}
-.legend-checkbox {
-  @apply w-5 h-5 mx-2 cursor-pointer
-}
-.legend-list {
-  @apply w-full pb-2 flex overflow-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-cyan-500
-/* SM */ sm:justify-center
-/* LG */ lg:h-full lg:flex-col
-}
-.legend-list-elements {
-  @apply my-1 mr-3 flex self-center items-center
-/* LG */ lg:w-10/12 lg:h-10 lg:mr-0
-}
-.legend-elements-circle {
-  @apply w-5 h-5 rounded-full
-}
-.legend-elements-text {
-  @apply w-max ml-2 text-sm
-/* LG */ lg:text-base
+  @apply mb-8 flex flex-col gap-4 self-center
 }
 
 /*********************** Skills ************************/
@@ -248,25 +129,18 @@
 
 /*********************** Projects ************************/
 
-.project-containers {
-  @apply w-full flex flex-col gap-4 justify-center
-/* MD */ md:flex-row md:flex-wrap md:gap-8
-}
 .project {
-  @apply flex flex-col gap-4 rounded-lg border 
-/* MD */ md:w-96
+  @apply w-10/12 flex flex-col justify-between gap-4
+/* MD */ md:flex-row md:justify-around
 }
 .project-img {
-  @apply mx-auto rounded-lg
-}
-.project-content {
-  @apply flex h-90 flex-col px-4 overflow-y-auto text-start scrollbar-thin scrollbar-track-cyan-700 scrollbar-thumb-cyan-500
+  @apply object-cover rounded-lg
 }
 .project-infos {
-  @apply flex mt-auto py-3 items-center
+  @apply mt-4 flex justify-around
 }
 .project-title {
-  @apply text-center text-xl font-bold
+  @apply text-2xl font-bold
 }
 .project-technos {
   @apply w-full flex justify-end
@@ -276,11 +150,11 @@
 /* SM */ sm:w-10 sm:h-10
 }
 .project-description {
-  @apply my-2 px-2 text-justify
-/* MD */ md:px-2
+  @apply text-justify text-lg
+/* MD */ 
 }
 .project-link {
-  @apply h-fit ml-5 m-auto inline-flex items-center text-sm font-medium rounded-lg underline underline-offset-1
+  @apply h-fit ml-5 m-auto inline-flex items-center text-lg font-medium rounded-lg underline underline-offset-1
 }
 .projects-svg {
   @apply w-4 h-4 ml-2 mr-1
@@ -322,6 +196,7 @@
 
 .callToAction-text {
   @apply px-4 py-2 outline outline-1 rounded-md
+/* MD */ md:px-6 md:py-4 
 }
 .callToAction-svg {
   @apply w-8 h-8 flex items-center animate-pulse duration-500 ease-in-out rounded-full bg-cyan-600
