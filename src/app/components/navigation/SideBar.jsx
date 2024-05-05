@@ -68,7 +68,7 @@ function BarNav() {
         <h1 className="fixed top-2 md:left-8 text-xl font-bold right-8">KM</h1>
       </Link>
 
-      <div className="hidden md:fixed z-50 md:flex w-full px-8 pt-4 pr-8 ml-auto">
+      <div className="hidden md:fixed z-50 w-full px-8 pt-4 pr-8 ml-auto | md:flex ">
         <ol className="flex gap-8 ml-auto place-content-end">
           <li>
             <Link to="/">
