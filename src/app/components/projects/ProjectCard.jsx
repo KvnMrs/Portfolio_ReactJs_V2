@@ -9,7 +9,7 @@ const ProjectCard = ({ projectData }) => {
         projectData.id % 2 === 0 ? "project md:flex-row-reverse" : "project"
       }
     >
-      <div className="flex flex-col gap-4 self-center | md:w-1/2 | lg:w-2/6">
+      <div className="flex flex-col gap-4 self-center | md:w-1/2 | ">
         <div className="w-full flex justify-between | md:hidden ">
           <h3 className="project-title">{projectData.title}</h3>
           <span className="flex border w-8 h-8 items-end p-1 justify-center rounded-full text-xl | md:hidden">
@@ -17,13 +17,17 @@ const ProjectCard = ({ projectData }) => {
           </span>
         </div>
         <img
-          className="project-img "
+          className={
+            projectData.id % 2 === 0
+              ? "project-img lg:rotate-12 lg:-skew-x-8 lg:-skew-y-12 lg:hover:skew-x-0 lg:hover:skew-y-0 md:self-end"
+              : "project-img lg:-rotate-12 lg:skew-x-8 lg:skew-y-12 hover:skew-x-0 lg:hover:skew-y-0 md:self-start"
+          }
           alt={projectData.title}
           src={projectData.img}
         />
       </div>
 
-      <div className="flex flex-col | md:w-1/2 md:p-8 | lg:w-2/5 ">
+      <div className="flex flex-col self-center | md:w-1/2 md:p-8 | lg:w-2/5 ">
         <h3 className="hidden md:flex project-title mb-8 ">
           {projectData.title}
         </h3>
