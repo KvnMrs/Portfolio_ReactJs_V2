@@ -8,16 +8,12 @@ const ProjectCard = ({ projectData }) => {
     <article
       id={projectData.id}
       className={
-        projectData.id % 2 === 0 ? "project md:flex-row-reverse" : "project"
+        projectData.id % 2 === 0 ? "project lg:flex-row-reverse" : "project"
       }
     >
+      <h3 className="project-title md:hidden">{projectData.title}</h3>
+
       <div className="flex flex-col gap-4 self-center | md:w-1/2 | ">
-        <div className="w-full flex justify-between | md:hidden ">
-          <h3 className="project-title">{projectData.title}</h3>
-          <span className="flex border w-8 h-8 items-end p-1 justify-center rounded-full text-xl | md:hidden">
-            {projectData.id}
-          </span>
-        </div>
         <motion.img
           className={
             projectData.id % 2 === 0
@@ -29,7 +25,7 @@ const ProjectCard = ({ projectData }) => {
         />
       </div>
 
-      <div className="flex flex-col self-center | md:w-1/2 md:p-8 | lg:w-2/5 ">
+      <div className="flex flex-col self-center | md:w-1/2 md:p-8 | lg:w-2/5 lg:gap-8 ">
         <h3 className="hidden md:flex project-title mb-8 ">
           {projectData.title}
         </h3>

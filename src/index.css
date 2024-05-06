@@ -130,8 +130,8 @@
 /*********************** Projects ************************/
 
 .project {
-  @apply w-10/12 h-screen flex flex-col justify-evenly gap-4 
-/* MD */ md:w-11/12 md:flex-row 
+  @apply w-10/12 h-screen flex flex-col justify-evenly 
+/* MD */ md:w-11/12 lg:flex-row 
 }
 .project-img {
   @apply object-cover self-center rounded-lg shadow-white shadow-2xl duration-300 ease-in
@@ -142,6 +142,7 @@
 }
 .project-title {
   @apply text-2xl font-bold
+/* MD */ md:text-3xl
 }
 .project-technos {
   @apply w-full flex justify-end
@@ -152,7 +153,7 @@
 }
 .project-description {
   @apply text-justify text-lg
-/* MD */ 
+/* MD */md:text-xl
 }
 .project-link {
   @apply h-fit ml-5 m-auto inline-flex items-center text-lg font-medium rounded-lg underline underline-offset-1
