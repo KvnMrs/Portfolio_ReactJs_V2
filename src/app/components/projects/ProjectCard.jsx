@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import "./ProjectCard.css";
 
 const ProjectCard = ({ projectData }) => {
   if (!projectData) return null;
@@ -16,11 +18,11 @@ const ProjectCard = ({ projectData }) => {
             {projectData.id}
           </span>
         </div>
-        <img
+        <motion.img
           className={
             projectData.id % 2 === 0
-              ? "project-img lg:rotate-12 lg:-skew-x-8 lg:-skew-y-12 lg:hover:skew-x-0 lg:hover:skew-y-0 md:self-end"
-              : "project-img lg:-rotate-12 lg:skew-x-8 lg:skew-y-12 hover:skew-x-0 lg:hover:skew-y-0 md:self-start"
+              ? "project-img rotating-box-3d-right "
+              : "project-img rotating-box-3d-left"
           }
           alt={projectData.title}
           src={projectData.img}

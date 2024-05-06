@@ -59,7 +59,7 @@
   }
 }
 .sideBar-container {
-  @apply w-full h-5/6 fixed flex flex-col z-30 bg-[#050810] shadow-md shadow-cyan-300 rounded-sm
+  @apply w-full h-5/6 fixed flex flex-col z-30 bg-dark_blue shadow-md shadow-cyan-300 rounded-sm
 /* MD */ md:hidden
 }
 .burger-button-container {
@@ -134,7 +134,7 @@
 /* MD */ md:w-11/12 md:flex-row 
 }
 .project-img {
-  @apply object-cover rounded-lg shadow-white shadow-2xl hover:rotate-0 hover:scale-125 duration-300 ease-in
+  @apply object-cover self-center rounded-lg shadow-white shadow-2xl duration-300 ease-in
 /* MD */ md:w-9/12 
 }
 .project-infos {
