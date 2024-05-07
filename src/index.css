@@ -130,7 +130,7 @@
 /*********************** Projects ************************/
 
 .project {
-  @apply w-10/12 h-screen flex flex-col justify-evenly 
+  @apply w-10/12 h-screen80 flex flex-col justify-evenly 
 /* MD */ md:w-11/12 lg:flex-row 
 }
 .project-img {
@@ -141,8 +141,8 @@
   @apply mt-4 flex justify-around
 }
 .project-title {
-  @apply text-2xl font-bold
-/* MD */ md:text-3xl
+  @apply text-2xl font-bold justify-center 
+/* MD */ md:text-3xl md:font-extrabold
 }
 .project-technos {
   @apply w-full flex justify-end
