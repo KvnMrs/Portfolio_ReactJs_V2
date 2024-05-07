@@ -3,8 +3,14 @@ module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
     extend: {
+      width: {
+        'full10': '110%',
+      },
+      height: {
+        'screen80': '80vh',
+      },
       colors: {
-        dark_blue: "#141E30",
+        dark_blue: "#050810",
         light_blue: "#243B55",
         wild_red: "#F76C6C",
       },
