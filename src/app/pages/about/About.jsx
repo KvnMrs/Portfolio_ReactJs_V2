@@ -10,9 +10,12 @@ import img_ReactJs from "../../../assets/img/imgHardSkills/ReactJs.png";
 import img_Angular from "../../../assets/img/imgHardSkills/Angular.png";
 import img_VueJs from "../../../assets/img/imgHardSkills/VueJs.png";
 
+import SideBar from "../../../app/components/common/navigation/SideBar";
+
 function About() {
   return (
     <>
+      <SideBar />
       <section id="about" className="section-containers">
         <aside className="about-aside-containers | md:self-center lg:gap-16">
           <div className="flex flex-col gap-4 items-center justify-center | md:gap-8 | lg:flex-row-reverse ">
