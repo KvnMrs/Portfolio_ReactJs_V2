@@ -5,7 +5,6 @@ import { Routes, Route } from "react-router-dom";
 
 // Pages
 import Home from "./app/pages/home/Home";
-import SideBar from "./app/components/navigation/SideBar";
 import About from "./app/pages/about/About";
 import Contact from "./app/pages/contact/Contact";
 import Projects from "./app/pages/projects/Projects";
@@ -13,7 +12,6 @@ import Projects from "./app/pages/projects/Projects";
 function App() {
   return (
     <>
-        <SideBar />
       <div className="main-container">
           <Routes>
             <Route path="/" element={<Home />} />

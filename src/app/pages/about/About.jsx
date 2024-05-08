@@ -10,9 +10,12 @@ import img_ReactJs from "../../../assets/img/imgHardSkills/ReactJs.png";
 import img_Angular from "../../../assets/img/imgHardSkills/Angular.png";
 import img_VueJs from "../../../assets/img/imgHardSkills/VueJs.png";
 
+import SideBar from "../../../app/components/common/navigation/SideBar";
+
 function About() {
   return (
     <>
+      <SideBar />
       <section id="about" className="section-containers">
         <aside className="about-aside-containers | md:self-center lg:gap-16">
           <div className="flex flex-col gap-4 items-center justify-center | md:gap-8 | lg:flex-row-reverse ">
@@ -43,7 +46,7 @@ function About() {
               </p>
             </div>
           </div>
-          <div className="blue-night-surface w-full py-4 flex gap-4 flex-wrap justify-evenly | md:w-2/3 md:gap-8 | lg:w-full ">
+          <div className="blue-night-surface w-full10 py-4 flex gap-4 flex-wrap justify-evenly | md:gap-8 ">
             {dataSkills
               .filter((atout) => atout.part === 1)
               .map((el) => (
@@ -92,7 +95,7 @@ function About() {
               </div>
             </div>
           </div>
-          <div className="blue-night-surface w-full py-4 flex gap-4 flex-wrap justify-evenly | md:w-2/3 md:gap-8 | lg:w-full ">
+          <div className="blue-night-surface w-full10 py-4 flex gap-4 flex-wrap justify-evenly | md:gap-8 ">
             {dataSkills
               .filter((atout) => atout.part === 2)
               .map((el) => (

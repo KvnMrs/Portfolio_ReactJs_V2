@@ -8,6 +8,8 @@ import {
   submitAnim,
 } from "../../animations/contactAnimation";
 
+import SideBar from "../../../app/components/common/navigation/SideBar";
+
 const Contact = () => {
   const [reason, setReason] = useState("Contact professionel");
   const [firstname, setFirstname] = useState("");
@@ -18,6 +20,7 @@ const Contact = () => {
 
   return (
     <>
+      <SideBar />
       <section id="contact" className="section-containers">
         <article className="article-containers">
           <header className="section-headers">
