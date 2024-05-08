@@ -22,3 +22,4 @@
     filter: blur(2);
 }
   
+.move-shadow:hover { box-shadow: 0 60px 130px -15px hsla(225, 2%, 62%, .42), 0 35px 75px -35px hsla(225, 2%, 62%, .08);}
