@@ -2,7 +2,7 @@ import React from "react";
 //Sub-components
 import SocialMediasLinks from "../../components/common/Link/SocialMediasLinks.jsx";
 import ButtonCallToActionText from "../../components/common/button/ButtonCallToActionText.jsx";
-import HomeNavButton from "../../components/navigation/HomeNavButton.jsx";
+import HomeNavButton from "../../components/common/navigation/HomeNavButton.jsx";
 import MatrixBackground from "../../components/home/BgHome.jsx";
 //Assets
 import imgProfil from "../../../assets/img/imgAbout/Kevin.png";
