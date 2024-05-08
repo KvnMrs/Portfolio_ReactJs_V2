@@ -7,7 +7,7 @@ module.exports = {
         'full10': '110%',
       },
       height: {
-        'screen80': '80vh',
+        'screen90': '90vh',
       },
       colors: {
         dark_blue: "#050810",
