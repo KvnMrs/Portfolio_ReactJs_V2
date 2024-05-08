@@ -10,7 +10,7 @@ import img_ReactJs from "../../../assets/img/imgHardSkills/ReactJs.png";
 import img_Angular from "../../../assets/img/imgHardSkills/Angular.png";
 import img_VueJs from "../../../assets/img/imgHardSkills/VueJs.png";
 
-import SideBar from "../../../app/components/navigation/SideBar";
+import SideBar from "../../../app/components/common/navigation/SideBar";
 
 function About() {
   return (

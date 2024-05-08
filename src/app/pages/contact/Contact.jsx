@@ -8,7 +8,7 @@ import {
   submitAnim,
 } from "../../animations/contactAnimation";
 
-import SideBar from "../../../app/components/navigation/SideBar";
+import SideBar from "../../../app/components/common/navigation/SideBar";
 
 const Contact = () => {
   const [reason, setReason] = useState("Contact professionel");

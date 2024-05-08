@@ -64,33 +64,34 @@ function BarNav() {
         </motion.div>
       )}
       {/* DESKTOP */}
-      <Link className="w-full" to="/">
-        <h1 className="fixed top-2 md:left-8 text-xl font-bold right-8">KM</h1>
-      </Link>
-
-      <div className="hidden md:fixed z-50 w-full px-8 pt-4 pr-8 ml-auto | md:flex ">
-        <ol className="flex gap-8 ml-auto place-content-end">
-          <li>
-            <Link to="/">
-              <p className="text-xl">Accueil</p>
-            </Link>
-          </li>
-          <li>
-            <Link to="/about">
-              <p className="text-xl">A propos</p>
-            </Link>
-          </li>
-          <li>
-            <Link to="/projects">
-              <p className="text-xl">Projets</p>
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact">
-              <p className="text-xl">Contact</p>
-            </Link>
-          </li>
-        </ol>
+      <div className="hidden bg-gradient-to-l from-black z-40 w-full px-8 py-4 pr-8  | md:flex md:fixed md:justify-center">
+        <div className="flex | md:w-10/12 | lg:w-1/2">
+          <Link to="/">
+            <h1 className="text-xl font-bold z-50">KM</h1>
+          </Link>
+          <ol className="flex gap-8 ml-auto place-content-end">
+            <li>
+              <Link to="/">
+                <p className="text-xl">Accueil</p>
+              </Link>
+            </li>
+            <li>
+              <Link to="/about">
+                <p className="text-xl">A propos</p>
+              </Link>
+            </li>
+            <li>
+              <Link to="/projects">
+                <p className="text-xl">Projets</p>
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact">
+                <p className="text-xl">Contact</p>
+              </Link>
+            </li>
+          </ol>
+        </div>
       </div>
     </>
   );

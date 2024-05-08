@@ -4,7 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import ProjectCard from "../../components/projects/ProjectCard";
 import dataProjects from "../../../datas/datasProjects";
 
-import SideBar from "../../../app/components/navigation/SideBar";
+import SideBar from "../../../app/components/common/navigation/SideBar";
 
 export default function App() {
   return (
