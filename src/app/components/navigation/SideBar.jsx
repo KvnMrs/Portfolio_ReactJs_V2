@@ -43,19 +43,19 @@ function BarNav() {
               </Link>
             </li>
             <li>
-              <Link className="links" to="about">
+              <Link className="links" to="/about">
                 <SvgProfile className={"sidebar-svg"} />
                 <p className="text-xl">A propos</p>
               </Link>
             </li>
             <li>
-              <Link className="links" to="projects">
+              <Link className="links" to="/projects">
                 <SvgProject className={"sidebar-svg"} />
                 <p className="text-xl">Projets</p>
               </Link>
             </li>
             <li>
-              <Link className="links" to="contact">
+              <Link className="links" to="/contact">
                 <SvgContact className={"sidebar-svg"} />
                 <p className="text-xl">Contact</p>
               </Link>
@@ -76,17 +76,17 @@ function BarNav() {
             </Link>
           </li>
           <li>
-            <Link to="about">
+            <Link to="/about">
               <p className="text-xl">A propos</p>
             </Link>
           </li>
           <li>
-            <Link to="projects">
+            <Link to="/projects">
               <p className="text-xl">Projets</p>
             </Link>
           </li>
           <li>
-            <Link to="contact">
+            <Link to="/contact">
               <p className="text-xl">Contact</p>
             </Link>
           </li>

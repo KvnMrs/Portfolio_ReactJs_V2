@@ -13,7 +13,6 @@ import Projects from "./app/pages/projects/Projects";
 function App() {
   return (
     <>
-        <SideBar />
       <div className="main-container">
           <Routes>
             <Route path="/" element={<Home />} />
