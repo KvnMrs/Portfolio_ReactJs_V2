@@ -1,108 +1,66 @@
-import React, { useState } from "react";
-// Sub-components
-import ButtonCallToActionText from "../../components/common/button/ButtonCallToActionText";
+import React, { useState, useRef } from "react";
 // Animations
 import {
   inputsAnim,
   texteAreaAnim,
   submitAnim,
 } from "../../animations/contactAnimation";
-
+// COomponents
+import ButtonCallToActionText from "../../components/common/button/ButtonCallToActionText";
 import SideBar from "../../../app/components/common/navigation/SideBar";
+// Libraries
+import emailjs from "emailjs-com";
 
 const Contact = () => {
-  const [reason, setReason] = useState("Contact professionel");
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [mail, setMail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
+  const formRef = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_an3elxs",
+        "template_od75s98",
+        formRef.current,
+        "6mH0PNM35bHQtU6lg"
+      )
+      .then((result) => {
+        console.log("E-mail sent successfully!", result.text);
+      })
+      .catch((error) => {
+        console.error("Error sending e-mail:", error);
+      });
+  };
 
   return (
     <>
       <SideBar />
       <section id="contact" className="section-containers">
-        <article className="article-containers">
-          <header className="section-headers">
-            <p className="contact-text">
-              Un contact professionel, une question, un feedback <br />
-              contactez-moi 📝
-            </p>
-          </header>
-          <form className="form">
-            <div
-              variants={inputsAnim}
-              initial="initial"
-              whileInView="whileInView"
-              viewport={{ once: true }}
-            >
+        <article className="article-containers mt-8">
+          <form className="form " ref={formRef} onSubmit={sendEmail}>
+            <header className=" mx-auto z-30 flex justify-center "></header>
+            <div className="md:px-8 md:py-8">
               <label htmlFor="reason">Motif :</label>
-              <select id="reason" onChange={(e) => setReason(e.target.value)}>
+              <select id="reason" name="reason">
                 <option>Contact professionel</option>
                 <option>Question(s)</option>
                 <option>Feedback</option>
               </select>
 
-              <label htmlFor="nom">Prénom :</label>
-              <input
-                id="nom"
-                type="nom"
-                name="nom"
-                value={firstname}
-                onChange={(e) => setFirstname(e.target.value)}
-              />
-              <label htmlFor="prenom">Nom :</label>
-              <input
-                id="prenom"
-                type="prenom"
-                name="prenom"
-                value={lastname}
-                onChange={(e) => setLastname(e.target.value)}
-              />
+              <label htmlFor="firstname">Prénom :</label>
+              <input id="firstname" type="firstname" name="firstname" />
+              <label htmlFor="lastname">Nom :</label>
+              <input id="lastname" type="lastname" name="lastname" />
               <label htmlFor="email">Adresse Mail :</label>
-              <input
-                id="email"
-                type="email"
-                name="email"
-                value={mail}
-                onChange={(e) => setMail(e.target.value)}
-              />
-              <label htmlFor="phone">Téléphone :</label>
-              <input
-                id="phone"
-                type="phone"
-                name="phone"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-              />
+              <input id="email" type="email" name="email" />
             </div>
-            <div
-              variants={texteAreaAnim}
-              initial="initial"
-              whileInView="whileInView"
-              viewport={{ once: true }}
-            >
+            <div variants={texteAreaAnim} initial="initial">
               <label htmlFor="message">Votre message :</label>
-              <textarea
-                id="message"
-                name="message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-              />
+              <textarea id="message" type="text" name="message" />
               <ButtonCallToActionText
                 type={"submit"}
                 customClass={"submit-button"}
               >
-                <a
-                  className="w-full text-sm md:text-lg"
-                  href={`mailto:kevin.mrs2020@gmail.com?subject=${reason}&body=${firstname} ${lastname.toUpperCase()}%0A${mail}%0A${phone}%0A%0A${message}`}
-                  variants={submitAnim}
-                  initial="initial"
-                  whileInView="whileInView"
-                  viewport={{ once: true }}
-                >
-                  Envoyer
-                </a>
+                Envoyer
               </ButtonCallToActionText>
             </div>
           </form>
