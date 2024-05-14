@@ -3,9 +3,7 @@ import React from "react";
 import SocialMediasLinks from "../../components/common/Link/SocialMediasLinks.jsx";
 import ButtonCallToActionText from "../../components/common/button/ButtonCallToActionText.jsx";
 import HomeNavButton from "../../components/common/navigation/HomeNavButton.jsx";
-import MatrixBackground from "../../components/home/BgHome.jsx";
 //Assets
-import imgProfil from "../../../assets/img/imgAbout/Kevin.png";
 import Github from "../../../assets/img/imgSocialMedias/Github.png";
 import Linkedin from "../../../assets/img/imgSocialMedias/Linkedin.png";
 import CV from "../../../assets/document/Kévin_MARAIS_CV_FR.pdf";
@@ -34,11 +32,7 @@ function About() {
 
   return (
     <>
-      <section
-        id="home"
-        className=" w-full min-h-screen py-8 px-4 flex flex-col gap-12 self-center items-center justify-center md:justify-end lg:justify-center relative "
-      >
-        <MatrixBackground />
+      <section id="home" className=" section-containers">
         <article className="article-containers contrast-bg-1 gap-16 justify-between |  md:px-8 lg:gap-0 lg:flex-row-reverse lg:self-start">
           <aside className="presentation-container">
             <div className="md:flex">
@@ -54,7 +48,6 @@ function About() {
                   </p>
                 </span>
               </div>
-              {/* <img className="profile-img" alt="Profil" src={imgProfil} /> */}
             </div>
 
             <div className="flex gap-8 items-center">
