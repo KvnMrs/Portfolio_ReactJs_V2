@@ -12,9 +12,11 @@ function H2({ children }) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        {"< "}
-        {children}
-        {" />"}
+        <code>
+          {"<"}
+          {children}
+          {"/>"}
+        </code>
       </motion.h2>
     </AnimatePresence>
   );
