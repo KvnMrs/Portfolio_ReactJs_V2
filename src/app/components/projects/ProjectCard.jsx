@@ -32,9 +32,9 @@ const ProjectCard = ({ projectData }) => {
         <p className="project-description">{projectData.description}</p>
         <p className="project-description">{projectData.note}</p>
         <aside className="project-infos ">
-          <motion.button className="py-2 px-8 text-xl font-bold rounded-lg transition-all bg-white shadow-md shadow-white text-dark_blue | hover:scale-110 button-ping move-shadow">
+          <button className="py-2 px-8 text-xl font-bold rounded-lg transition-all bg-white shadow-md shadow-white text-dark_blue | hover:scale-110 button-ping move-shadow">
             Visiter
-          </motion.button>
+          </button>
         </aside>
       </div>
     </article>
