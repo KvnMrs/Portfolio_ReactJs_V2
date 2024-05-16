@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const colors = ["white", "cyan"];
@@ -12,9 +12,11 @@ function H2({ children }) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        {"< "}
-        {children}
-        {" />"}
+        <code>
+          {"<"}
+          {children}
+          {"/>"}
+        </code>
       </motion.h2>
     </AnimatePresence>
   );

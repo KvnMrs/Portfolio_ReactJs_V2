@@ -1,6 +1,7 @@
 import React from "react";
 // Components
 import SoftSkill from "../../components/about/skills/SoftSkill";
+import HardSkill from "../../components/about/skills/HardSkill";
 import H2 from "../../components/about/H2";
 // Assets
 import imgProfil from "../../../assets/img/imgAbout/Kevin.png";
@@ -24,7 +25,7 @@ function About() {
               alt="Profil"
               src={imgProfil}
             />
-            <div className="px-4 flex flex-col gap-3 | lg:w-1/2 lg:px-8">
+            <div className="px-4 flex flex-col gap-3 | lg:w-1/2 lg:px-8 italic">
               <p className="text-xl">
                 Je m'appelle Kévin, j'ai 30 ans et j'habite la ville culturelle
                 et historique de Nantes. C'est peut être de la que vient mon
@@ -46,7 +47,7 @@ function About() {
               </p>
             </div>
           </div>
-          <div className="blue-night-surface w-full10 py-4 flex gap-4 flex-wrap justify-evenly | md:gap-8 ">
+          <div className="w-full10 py-4 flex gap-4 flex-wrap justify-evenly | md:gap-8 ">
             {dataSkills
               .filter((atout) => atout.part === 1)
               .map((el) => (
@@ -61,7 +62,7 @@ function About() {
           <div className="w-4/5 mx-auto my-8 border border-t-0"> </div>
         </aside>
         <aside className="about-aside-containers flex-col |">
-          <div className="about-description-container">
+          <div className="contrast-bg-0 about-description-container">
             <div className="about-img-containers rotate-[16deg] self-end">
               <div className="about-img"></div>
             </div>
@@ -95,7 +96,7 @@ function About() {
               </div>
             </div>
           </div>
-          <div className="blue-night-surface w-full10 py-4 flex gap-4 flex-wrap justify-evenly | md:gap-8 ">
+          <div className="w-full py-4 flex gap-4 flex-wrap justify-evenly | md:gap-8 ">
             {dataSkills
               .filter((atout) => atout.part === 2)
               .map((el) => (
@@ -104,18 +105,17 @@ function About() {
                   softSkill={el.element}
                   categorie={el.catégorie}
                   img={el.image}
-                  customClass={"min-w-[8rem]"}
                 />
               ))}
           </div>
           <div className="w-4/5 mx-auto my-8 border border-t-0"> </div>
         </aside>
         <aside className="about-aside-containers md:gap-36">
-          <div className="about-description-container">
+          <div className="contrast-bg-0  about-description-container">
             <div className="about-img-containers self-start rotate-[168deg]">
               <div className="about-img"></div>
             </div>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 ">
               <H2>
                 Le développement <span className="line-through">web</span>{" "}
                 <br></br>des compétences
@@ -130,7 +130,7 @@ function About() {
                   donées relationnel.
                   <img
                     src={img_ReactJs}
-                    className="max-h-full -bottom-14 inset-x-0 m-auto md:flex absolute bg-cover opacity-20 | md:-bottom-28"
+                    className="max-h-full -bottom-14 inset-x-0 m-auto md:flex absolute bg-cover opacity-20 | md:-bottom-32"
                     alt="ReactJs"
                   />
                 </p>
@@ -143,7 +143,7 @@ function About() {
                   Firebase.
                   <img
                     src={img_Angular}
-                    className="max-h-full -bottom-14 inset-x-0 m-auto md:flex absolute bg-cover opacity-20 | md:-bottom-28"
+                    className="max-h-full -bottom-14 inset-x-0 m-auto md:flex absolute bg-cover opacity-20 | md:-bottom-32"
                     alt="Angular"
                   />
                 </p>
@@ -156,7 +156,7 @@ function About() {
                   données relationnelles.
                   <img
                     src={img_VueJs}
-                    className="max-h-full absolute -bottom-14 inset-x-0 m-auto bg-cover opacity-20 | md:flex md:-bottom-28 "
+                    className="max-h-full absolute -bottom-14 inset-x-0 m-auto bg-cover opacity-20 | md:flex md:-bottom-32 "
                     alt="VueJs"
                   />
                 </p>
@@ -166,16 +166,16 @@ function About() {
           <div className="w-11/12 flex flex-col gap-12 | md:gap-20">
             <div className="flex flex-col gap-4 | md:gap-8">
               <H2>Front-End</H2>
-              <div className="flex flex-wrap gap-4 | md:gap-8 ">
+              <div className=" flex flex-wrap gap-8 | md:gap-8 ">
                 {dataSkills
                   .filter(
                     (atout) =>
                       atout.stack === "front-end" || atout.stack === "full"
                   )
                   .map((el) => (
-                    <SoftSkill
+                    <HardSkill
                       key={el.element}
-                      softSkill={el.element}
+                      hardSkill={el.element}
                       categorie={el.catégorie}
                       img={el.image}
                     />
@@ -184,16 +184,16 @@ function About() {
             </div>
             <div className="flex flex-col gap-4 | md:gap-8">
               <H2 className="w-1/3 white-night-surface text-2xl">Back-End</H2>
-              <div className="flex flex-wrap gap-4 | md:gap-8 ">
+              <div className="flex flex-wrap gap-8 | md:gap-8 ">
                 {dataSkills
                   .filter(
                     (atout) =>
                       atout.stack === "back-end" || atout.stack === "full"
                   )
                   .map((el) => (
-                    <SoftSkill
+                    <HardSkill
                       key={el.element}
-                      softSkill={el.element}
+                      hardSkill={el.element}
                       categorie={el.catégorie}
                       img={el.image}
                     />
@@ -202,13 +202,13 @@ function About() {
             </div>
             <div className="w-11/12 flex flex-col gap-4 | md:gap-8">
               <H2 className="w-1/3 white-night-surface text-2xl">Outils</H2>
-              <div className="flex flex-wrap gap-4 | md:gap-8 ">
+              <div className="flex flex-wrap gap-8 | md:gap-8 ">
                 {dataSkills
                   .filter((atout) => atout.catégorie === "Outil")
                   .map((el) => (
-                    <SoftSkill
+                    <HardSkill
                       key={el.element}
-                      softSkill={el.element}
+                      hardSkill={el.element}
                       categorie={el.catégorie}
                       img={el.image}
                     />
