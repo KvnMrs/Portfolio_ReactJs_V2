@@ -7,11 +7,13 @@ const ButtonCallToActionText = ({ children, text, fct, customClass, type }) => {
         type={type ? type : "button"}
         onClick={fct ? fct : null}
         className={
-          customClass ? `callToAction-text ${customClass}` : "callToAction-text"
+          customClass
+            ? `callToAction-text ${customClass}`
+            : "callToAction-text shadow-xl text-lg md:text-xl hover:border-sky-500 hover:bg-opacity-40 hover:shadow-lg hover:bg-slate-700 hover:shadow-sky-900 duration-300 ease-in"
         }
       >
         {children ? children : null}
-        <p className="text-lg md:text-xl">{text}</p>
+        {text}
       </button>
     </>
   );
