@@ -19,13 +19,10 @@
   @apply bg-gradient-to-r from-transparent via-[#142144] to-transparent rounded-3xl
 }
 .contrast-bg-0 {
-  @apply bg-slate-400 from-slate-100 to-slate-400  bg-opacity-20 backdrop-blur-md p-8 rounded-xl shadow-2xl text-green-500
+  @apply bg-slate-400 from-slate-100 to-slate-400  bg-opacity-20 backdrop-blur-md p-8 rounded-xl shadow-2xl 
 }
 .contrast-bg-1 {
-  @apply bg-gradient-to-r from-transparent via-[#142144]  bg-opacity-20 backdrop-blur-md p-4 rounded-lg shadow-xl text-white;
-}
-.contrast-bg-2 {
-  @apply bg-black bg-opacity-20 backdrop-blur-md p-4 rounded-lg shadow-xl text-green-500;
+  @apply bg-slate-400 from-slate-100 to-slate-400  bg-opacity-30 backdrop-blur-md p-4 rounded-xl shadow-2xl 
 }
 .section-containers {
   @apply w-full min-h-screen py-8 px-4 flex flex-col gap-12 place-content-center self-center items-center bg-[#0b1121]
@@ -33,7 +30,7 @@
 
 }
 .article-containers {
-  @apply w-full py-8 px-4 flex flex-col gap-12 self-center  items-center 
+  @apply w-full py-8 px-4 flex flex-col gap-12 self-center items-center 
 /* MD */ md:w-11/12 md:py-20
 }
 .section-titles {
@@ -80,7 +77,7 @@
 
 .presentation-container {
   @apply w-fit relative self-center flex flex-col gap-12
-/* MD */ md:self-center md:gap-8
+/* MD */ md:self-center md:gap-16
 }
 .profile-img {
   @apply w-48 h-48 absolute -top-32 -right-16 object-cover rounded-bl-[75%]
@@ -194,7 +191,7 @@
 /*********************** Sub-Components ************************/
 
 .callToAction-text {
-  @apply px-4 py-2 outline outline-1 rounded-md
+  @apply px-4 py-2 outline outline-1 rounded-md  
 /* MD */ md:px-6 md:py-4 
 }
 .callToAction-svg {
