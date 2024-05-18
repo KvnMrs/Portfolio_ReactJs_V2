@@ -8,7 +8,9 @@ const ProjectCard = ({ projectData }) => {
     <article
       id={projectData.id}
       className={
-        projectData.id % 2 === 0 ? "project lg:flex-row-reverse" : "project"
+        projectData.id % 2 === 0
+          ? "project-container lg:flex-row-reverse"
+          : "project-container"
       }
     >
       <h3 className="project-title md:hidden">{projectData.title}</h3>
