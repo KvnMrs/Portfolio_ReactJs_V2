@@ -35,28 +35,24 @@ function About() {
   return (
     <>
       <section id="home" className="section-containers">
-        <article className="article-containers gap-16 justify-between | lg:pr-0 lg:pl-16 lg:gap-0 lg:flex-row lg:self-start">
+        <article className="article-containers lg:gap-0 lg:flex-row">
           <aside className="presentation-container">
-            <div className="flex flex-col gap-8 justify-center | md:gap-16">
-              <div className=" w-fit flex gap-2 text-2xl home-surfaces">
-                <span className="test1 inline-block">✌️</span>{" "}
-                <p className="text-2xl font-semibold ">
+            <div className="presentation-box ">
+              <header className="home-surfaces presentation-header ">
+                <span className="emoji-anim">✌️</span>{" "}
+                <h1 className=" presentation-title">
                   Hi there, Moi c'est Kévin !
-                </p>
-              </div>
-              <div>
-                <p className="lg:w-1/2 text-4xl">
-                  <span className="text-5xl ">
-                    Développeur Front-End Junior
-                  </span>{" "}
-                  en recherche d'une{" "}
-                  <span className="text-4xl">alternance</span> en tant que
-                  <span className="text-4xl"> Développeur Full-Stack</span>
-                </p>
-              </div>
+                </h1>
+              </header>
+              <p className="presentation-text">
+                <span className="text-5xl ">Développeur Front-End Junior</span>{" "}
+                en recherche d'une <span className="text-4xl">alternance</span>{" "}
+                en tant que
+                <span className="text-4xl"> Développeur Full-Stack</span>
+              </p>
             </div>
 
-            <div className="flex gap-8 items-center">
+            <div className="home-cta-box ">
               <a href={CV} download>
                 <ButtonCallToActionText
                   text={"Télécharger CV"}
@@ -78,8 +74,8 @@ function About() {
               </div>
             </div>
           </aside>
-          <div className="w-4/5 mx-auto mt-4 mb-8 border border-t-0 | lg:hidden"></div>
-          <div className="flex gap-4 flex-wrap justify-around items-center | md:gap-8 md:self-center | lg:w-1/4 lg:flex-col lg:gap-16  ">
+          <div className="divider"></div>
+          <div className="home-nav-box">
             {navigation.map((el) => (
               <HomeNavButton
                 linkName={el.linkName}

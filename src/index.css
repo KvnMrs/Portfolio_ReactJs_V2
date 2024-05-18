@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/********************** Global ***********************/
+/********************** Commun ***********************/
 
 * {
   @apply text-white text-justify
@@ -17,6 +17,10 @@
 }
 .section-titles {
   @apply w-auto text-2xl border-b
+}
+.divider {
+  @apply w-4/5 mx-auto mt-4 mb-8 border border-t-0 
+/* LG */  lg:hidden
 }
 
 /********************** App ***********************/
@@ -57,12 +61,34 @@
 
 /********************** Home ***********************/
 
+.home-surfaces {
+  @apply bg-slate-400 from-slate-100 to-slate-400  bg-opacity-30 backdrop-blur-md p-4 rounded-xl shadow-2xl 
+}
+.home-nav-box {
+  @apply flex gap-4 flex-wrap justify-around items-center
+/* MD */ md:gap-8 md:self-center
+/* LG */ lg:w-1/4 lg:flex-col lg:gap-16 
+}
 .presentation-container {
   @apply w-fit relative self-center flex flex-col gap-12
 /* MD */ md:self-center md:gap-16
 }
-.home-surfaces {
-  @apply bg-slate-400 from-slate-100 to-slate-400  bg-opacity-30 backdrop-blur-md p-4 rounded-xl shadow-2xl 
+.presentation-box {
+  @apply flex flex-col gap-8 justify-center
+/* MD */ md:gap-16
+}
+.presentation-header {
+  @apply w-fit flex gap-2 text-2xl
+}
+.presentation-title {
+  @apply text-2xl font-semibold 
+}
+.presentation-text {
+  @apply text-4xl 
+/* LG */ lg:w-1/2
+}
+.home-cta-box {
+  @apply flex gap-8 items-center
 }
 
 /*************************** About ****************************/

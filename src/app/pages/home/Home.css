@@ -1,4 +1,5 @@
-.test1 {
+.emoji-anim {
+    display: inline-block;
     transform: translate3d(0%,0,0);
     animation: 3s linear infinite alternate wobble;
 }
