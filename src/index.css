@@ -7,12 +7,6 @@
 * {
   @apply text-white text-justify
 }
-.contrast-bg-0 {
-  @apply bg-slate-400 from-slate-100 to-slate-400  bg-opacity-20 backdrop-blur-md p-8 rounded-xl shadow-2xl 
-}
-.contrast-bg-1 {
-  @apply bg-slate-400 from-slate-100 to-slate-400  bg-opacity-30 backdrop-blur-md p-4 rounded-xl shadow-2xl 
-}
 .section-containers {
   @apply w-full min-h-screen py-8 px-4 flex flex-col gap-12 place-content-center self-center items-center bg-[#0b1121]
 /* MD */ md:px-8 md:py-16
@@ -67,24 +61,18 @@
   @apply w-fit relative self-center flex flex-col gap-12
 /* MD */ md:self-center md:gap-16
 }
-.profile-img {
-  @apply w-48 h-48 absolute -top-32 -right-16 object-cover rounded-bl-[75%]
-/* MD */ md:w-72 md:h-72 md:-top-44 md:-right-44 
+.home-surfaces {
+  @apply bg-slate-400 from-slate-100 to-slate-400  bg-opacity-30 backdrop-blur-md p-4 rounded-xl shadow-2xl 
 }
 
 /*************************** About ****************************/
+
 .about-aside-containers {
 @apply  min-h-screen flex flex-col gap-8 items-center justify-around
 /* MD */ md:w-11/12 md:py-0 md:gap-12 
 }
-.about-img-containers {
-  @apply hidden  
-/* MD */
- /* md:flex md:w-3/4 md:h-20 md:justify-center */
-}
-.about-img {
-  @apply w-3/4 h-full rounded-full bg-gray-700
-/* MD */ md:w-1/2
+.about-surfaces {
+  @apply bg-slate-400 from-slate-100 to-slate-400  bg-opacity-20 backdrop-blur-md p-8 rounded-xl shadow-2xl 
 }
 .about-description-container {
   @apply mb-8 flex flex-col gap-4 self-center

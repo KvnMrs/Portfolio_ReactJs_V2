@@ -62,10 +62,7 @@ function About() {
           <div className="w-4/5 mx-auto my-8 border border-t-0"> </div>
         </aside>
         <aside className="about-aside-containers flex-col |">
-          <div className="contrast-bg-0 about-description-container">
-            <div className="about-img-containers rotate-[16deg] self-end">
-              <div className="about-img"></div>
-            </div>
+          <div className="about-surfaces about-description-container">
             <div className="flex flex-col gap-4">
               <H2>
                 Une Aventure <br></br> avec un grand 'A'
@@ -111,10 +108,7 @@ function About() {
           <div className="w-4/5 mx-auto my-8 border border-t-0"> </div>
         </aside>
         <aside className="about-aside-containers md:gap-36">
-          <div className="contrast-bg-0  about-description-container">
-            <div className="about-img-containers self-start rotate-[168deg]">
-              <div className="about-img"></div>
-            </div>
+          <div className="about-surfaces  about-description-container">
             <div className="flex flex-col gap-4 ">
               <H2>
                 Le développement <span className="line-through">web</span>{" "}

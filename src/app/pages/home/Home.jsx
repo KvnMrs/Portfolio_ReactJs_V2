@@ -38,7 +38,7 @@ function About() {
         <article className="article-containers gap-16 justify-between | lg:pr-0 lg:pl-16 lg:gap-0 lg:flex-row lg:self-start">
           <aside className="presentation-container">
             <div className="flex flex-col gap-8 justify-center | md:gap-16">
-              <div className=" w-fit flex gap-2 text-2xl contrast-bg-1">
+              <div className=" w-fit flex gap-2 text-2xl home-surfaces">
                 <span className="test1 inline-block">✌️</span>{" "}
                 <p className="text-2xl font-semibold ">
                   Hi there, Moi c'est Kévin !
