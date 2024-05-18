@@ -41,14 +41,14 @@ const Contact = () => {
       <section id="contact" className="section-containers">
         <article className="article-containers mt-8">
           <form
-            className="form"
+            className="form-container"
             ref={formRef}
             onSubmit={handleSubmit(() => {
               sendEmail();
             })}
           >
             <header className=" mx-auto z-30 flex justify-center "></header>
-            <div className="md:px-8 md:py-8">
+            <div className="form-boxes | md:px-8 md:py-8">
               <label htmlFor="reason">Motif :</label>
               <select
                 id="reason"
@@ -100,9 +100,14 @@ const Contact = () => {
                 <p className="mb-4 -mt-4 text-red-500">L'email obligatoire.</p>
               )}
             </div>
-            <div variants={texteAreaAnim} initial="initial">
+            <div
+              className="form-boxes"
+              variants={texteAreaAnim}
+              initial="initial"
+            >
               <label htmlFor="message">Votre message :</label>
               <textarea
+                className="form-textarea"
                 id="message"
                 type="text"
                 name="message"

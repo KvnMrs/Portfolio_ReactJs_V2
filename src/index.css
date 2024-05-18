@@ -123,28 +123,24 @@
 
 /*********************** Contact ************************/
 
-.contact-text {
-  @apply w-5/6 text-center self-center text-xl
-/* MD */ md:mb-5 md:text-xl
-}
-.form {
+.form-container {
   @apply w-5/6 pb-16 mx-auto gap-4 flex flex-col rounded-xl bg-transparent place-content-center
 /* MD */ md:w-10/12 md:mt-8 md:flex-row 
 }
-.form div {
+.form-boxes {
   @apply w-full self-center flex flex-col
 /* SM */ sm:px-2
 /* MD */ md:px-4
 }
-.form label {
+.form-labels {
   @apply w-fit mb-1 text-lg
 /* MD */ md:text-base
 }
-.form input, select, option {
+.form-container input, select, option {
   @apply p-2 mb-2 rounded-lg text-black cursor-pointer transition duration-500 focus:scale-x-105 hover:scale-x-105
 /* MD */ md:mb-4
 }
-.form textarea {
+.form-textarea {
   @apply h-28 rounded-lg text-black cursor-pointer transition duration-500 focus:scale-x-105 hover:scale-x-105 focus:shadow-lg
 /* MD */ md:h-64
 }
