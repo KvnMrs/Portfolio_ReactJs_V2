@@ -20,7 +20,6 @@
 }
 .divider {
   @apply w-4/5 mx-auto mt-4 mb-8 border border-t-0 
-/* LG */  lg:hidden
 }
 
 /********************** App ***********************/
@@ -93,22 +92,54 @@
 
 /*************************** About ****************************/
 
+.about-surfaces {
+  @apply bg-slate-400 from-slate-100 to-slate-400  bg-opacity-20 backdrop-blur-md p-8 rounded-xl shadow-2xl 
+}
 .about-aside-containers {
 @apply  min-h-screen flex flex-col gap-8 items-center justify-around
 /* MD */ md:w-11/12 md:py-0 md:gap-12 
 }
-.about-surfaces {
-  @apply bg-slate-400 from-slate-100 to-slate-400  bg-opacity-20 backdrop-blur-md p-8 rounded-xl shadow-2xl 
+.about-me-box {
+  @apply flex flex-col gap-4 items-center justify-center 
+  /* MD */ md:gap-8
+  /* LG */ lg:flex-row-reverse lg:gap-8
 }
-.about-description-container {
+.about-me-img {
+  @apply w-40 h-40 object-cover self-center
+  /* LG */ lg:w-80 lg:h-[20.5rem]
+}
+.about-me-text {
+  @apply px-4 flex flex-col gap-3 italic
+  /* LG */ lg:w-1/2 lg:px-8
+}
+.about-paragph-container {
   @apply mb-8 flex flex-col gap-4 self-center
+}
+.about-paragph {
+  @apply flex flex-col gap-4 
+/* MD */ md:flex-row md:gap-8
+}
+.paragraph-frameworks-logos {
+  @apply max-h-full -bottom-14 inset-x-0 m-auto md:flex absolute bg-cover opacity-20 
+/* MD */  md:-bottom-32
+}
+.hardSkills-container {
+  @apply w-11/12 flex flex-col gap-12
+/* MD */ md:gap-20
+}
+.hardSkills-box {
+  @apply flex flex-col gap-4 
+/* MD */ md:gap-8
+}
+.hardSkills-elements {
+  @apply flex flex-wrap gap-8 
 }
 
 /*********************** Skills ************************/
 
-.skill-container {
-  @apply w-max grid-cols-1 mx-auto my-1
-/* MD */ md:my-3
+.skills-box {
+  @apply  py-4 flex gap-4 flex-wrap justify-evenly
+/* MD */  md:gap-8
 }
 .skill-name {
   @apply mx-auto mb-3 text-lg

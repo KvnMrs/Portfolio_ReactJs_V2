@@ -74,7 +74,7 @@ function About() {
               </div>
             </div>
           </aside>
-          <div className="divider"></div>
+          <div className="divider lg:hidden"></div>
           <div className="home-nav-box">
             {navigation.map((el) => (
               <HomeNavButton
