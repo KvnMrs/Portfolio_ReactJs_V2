@@ -7,12 +7,15 @@
 * {
   @apply text-white text-justify
 }
+.f-col {
+  @apply  flex flex-col
+}
 .section-containers {
-  @apply w-full min-h-screen py-8 px-4 flex flex-col gap-12 place-content-center self-center items-center bg-[#0b1121]
+  @apply w-full min-h-screen py-8 px-4 f-col gap-12 place-content-center self-center items-center bg-[#0b1121]
 /* MD */ md:px-8 md:py-16
 }
 .article-containers {
-  @apply w-full py-8 px-4 flex flex-col gap-12 self-center items-center 
+  @apply w-full py-8 px-4 f-col gap-12 self-center items-center 
 /* MD */ md:w-11/12 md:py-20
 }
 .section-titles {
@@ -38,7 +41,7 @@
   }
 }
 .sideBar-container {
-  @apply w-full h-5/6 fixed flex flex-col z-30 bg-dark_blue shadow-md shadow-cyan-300 rounded-sm
+  @apply w-full h-5/6 fixed f-col z-30 bg-dark_blue shadow-md shadow-cyan-300 rounded-sm
 /* MD */ md:hidden
 }
 .burger-button-container {
@@ -49,7 +52,7 @@
   @apply w-5
 }
 .links-container {
-  @apply h-auto absolute top-20 left-10 flex flex-col gap-6 justify-start
+  @apply h-auto absolute top-20 left-10 f-col gap-6 justify-start
 }
 .links {
   @apply flex gap-4
@@ -63,17 +66,27 @@
 .home-surfaces {
   @apply bg-slate-400 from-slate-100 to-slate-400  bg-opacity-30 backdrop-blur-md p-4 rounded-xl shadow-2xl 
 }
-.home-nav-box {
+.home-links-box {
   @apply flex gap-4 flex-wrap justify-around items-center
 /* MD */ md:gap-8 md:self-center
 /* LG */ lg:w-1/4 lg:flex-col lg:gap-16 
 }
+.home-link {
+  @apply home-surfaces w-48 h-36 f-col place-content-center items-center border border-t-0 border-transparent rounded-md 
+/* HOVER */ duration-300 ease-in hover:scale-110 hover:border-sky-500 hover:bg-opacity-40 hover:rounded-2xl hover:shadow-md hover:shadow-sky-900
+/* MD */ md:gap-2 md:self-center
+/* LG */ lg:w-56 lg:h-40 lg:flex-col lg:gap-16 
+}
+.home-link-name {
+  @apply font-semibold text-lg 
+/* MD */ md:gap-2 md:self-center md:text-xl
+}
 .presentation-container {
-  @apply w-fit relative self-center flex flex-col gap-12
+  @apply w-fit relative self-center f-col gap-12
 /* MD */ md:self-center md:gap-16
 }
 .presentation-box {
-  @apply flex flex-col gap-8 justify-center
+  @apply f-col gap-8 justify-center
 /* MD */ md:gap-16
 }
 .presentation-header {
@@ -96,11 +109,11 @@
   @apply bg-slate-400 from-slate-100 to-slate-400  bg-opacity-20 backdrop-blur-md p-8 rounded-xl shadow-2xl 
 }
 .about-aside-containers {
-@apply  min-h-screen flex flex-col gap-8 items-center justify-around
+@apply  min-h-screen f-col gap-8 items-center justify-around
 /* MD */ md:w-11/12 md:py-0 md:gap-12 
 }
 .about-me-box {
-  @apply flex flex-col gap-4 items-center justify-center 
+  @apply f-col gap-4 items-center justify-center 
   /* MD */ md:gap-8
   /* LG */ lg:flex-row-reverse lg:gap-8
 }
@@ -109,14 +122,14 @@
   /* LG */ lg:w-80 lg:h-[20.5rem]
 }
 .about-me-text {
-  @apply px-4 flex flex-col gap-3 italic
+  @apply px-4 f-col gap-3 italic
   /* LG */ lg:w-1/2 lg:px-8
 }
 .about-paragph-container {
-  @apply mb-8 flex flex-col gap-4 self-center
+  @apply mb-8 f-col gap-4 self-center
 }
 .about-paragph {
-  @apply flex flex-col gap-4 
+  @apply f-col gap-4 
 /* MD */ md:flex-row md:gap-8
 }
 .paragraph-frameworks-logos {
@@ -124,68 +137,91 @@
 /* MD */  md:-bottom-32
 }
 .hardSkills-container {
-  @apply w-11/12 flex flex-col gap-12
+  @apply w-11/12 f-col gap-12
 /* MD */ md:gap-20
 }
 .hardSkills-box {
-  @apply flex flex-col gap-4 
+  @apply f-col gap-4 
 /* MD */ md:gap-8
 }
 .hardSkills-elements {
   @apply flex flex-wrap gap-8 
 }
+.hardSkill-box {
+  @apply f-col gap-4 items-center justify-center
+}
+.hardSkill-img {
+  @apply w-14 h-14 cursor-pointer content-center 
+/* LG */ lg:w-24 lg:h-24 lg:p-4 
+}
 
 /*********************** Skills ************************/
 
-.skills-box {
-  @apply  py-4 flex gap-4 flex-wrap justify-evenly
-/* MD */  md:gap-8
+.softSkills-box {
+  @apply py-4 flex gap-4 flex-wrap justify-evenly
+/* MD */ md:gap-8
+}
+.softSkill-box {
+  @apply min-w-[10rem] f-col gap-4 items-center justify-center rounded-lg  p-4 pb-8 lg:shadow-xl
+/* MD */ md:gap-8 
+/* MD */ lg:gap-8 lg:bg-[#0d152d]
 }
 .skill-name {
   @apply mx-auto mb-3 text-lg
 }
-.skill-img {
-  @apply w-12 h-12 mx-auto object-contain
-/* MD */ md:w-20 md:h-16
+.softSkill-img {
+  @apply w-16 h-16 content-center cursor-pointer 
+/* HOVER */ duration-500 ease-in
+/* LG */ lg:w-28 lg:h-28 lg:p-6 lg:bg-slate-500 lg:hover:bg-slate-700
 }
 
 /*********************** Projects ************************/
 
-.project-container {
-  @apply w-10/12 h-screen90 flex flex-col justify-evenly 
-/* MD */ md:w-11/12 lg:flex-row 
+.projectS-container {
+  @apply f-col items-center
+}
+.project-box {
+  @apply w-10/12 h-screen90 f-col justify-evenly 
+/* MD */ md:w-11/12 
+}
+.project-img-box {
+  @apply f-col gap-4 self-center 
+/* MD */ md:w-1/2  
 }
 .project-img {
   @apply object-cover self-center rounded-lg shadow-white shadow-2xl duration-300 ease-in
 /* MD */ md:w-9/12 
+}
+.project-description-part {
+  @apply f-col self-center
+/* MD */ md:w-1/2 md:p-8 
+/* LG */ lg:w-2/5 lg:gap-8 
 }
 .project-infos {
   @apply w-fit mt-16 flex justify-center self-center
 }
 .project-title {
   @apply text-2xl font-bold justify-center 
-/* MD */ md:text-3xl md:font-extrabold
-}
-.project-technos {
-  @apply w-full flex justify-end
-}
-.project-techno-icon {
-  @apply w-8 h-8 mx-1 object-cover
-/* SM */ sm:w-10 sm:h-10
+/* MD */ md:mb-8 md:text-3xl md:font-extrabold
 }
 .project-description {
   @apply text-justify text-lg
+/* MD */md:text-xl
+}
+.btn-visit {
+  @apply py-2 px-8 text-xl font-bold rounded-lg shadow-md shadow-white bg-white text-dark_blue
+/* HOVER */ transition-all hover:scale-110
 /* MD */md:text-xl
 }
 
 /*********************** Contact ************************/
 
 .form-container {
-  @apply w-5/6 pb-16 mx-auto gap-4 flex flex-col rounded-xl bg-transparent place-content-center
+  @apply w-5/6 pb-16 mx-auto gap-4 f-col rounded-xl bg-transparent place-content-center
 /* MD */ md:w-10/12 md:mt-8 md:flex-row 
 }
 .form-boxes {
-  @apply w-full self-center flex flex-col
+  @apply w-full self-center f-col
 /* SM */ sm:px-2
 /* MD */ md:px-4
 }

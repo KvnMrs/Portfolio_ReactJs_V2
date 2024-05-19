@@ -15,7 +15,7 @@ const ProjectCard = ({ projectData }) => {
     >
       <h3 className="project-title md:hidden">{projectData.title}</h3>
 
-      <div className="flex flex-col gap-4 self-center | md:w-1/2 | ">
+      <div className="project-img-box ">
         <motion.img
           className={
             projectData.id % 2 === 0
