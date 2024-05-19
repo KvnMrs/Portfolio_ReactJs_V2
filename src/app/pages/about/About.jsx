@@ -43,7 +43,7 @@ function About() {
               </p>
             </div>
           </div>
-          <div className="w-full10 softSkills-box">
+          <div className="w-full softSkills-box">
             {dataSkills
               .filter((atout) => atout.part === 1)
               .map((el) => (
@@ -87,7 +87,7 @@ function About() {
               </p>
             </div>
           </div>
-          <div className="w-full10 softSkills-box ">
+          <div className="softSkills-box">
             {dataSkills
               .filter((atout) => atout.part === 2)
               .map((el) => (

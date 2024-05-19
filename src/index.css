@@ -7,15 +7,22 @@
 * {
   @apply text-white text-justify;
 }
+.gap-4-8 {
+  @apply gap-4
+/* MD */ md:gap-8;
+}
 .f-col {
   @apply flex flex-col;
 }
+.e-center {
+  @apply items-center self-center place-content-center;
+}
 .section-containers {
-  @apply w-full min-h-screen py-8 px-4 f-col gap-12 place-content-center self-center items-center bg-[#0b1121]
+  @apply w-full min-h-screen py-8 px-4 f-col gap-12 e-center bg-[#0b1121]
 /* MD */ md:px-8 md:py-16;
 }
 .article-containers {
-  @apply w-full py-8 px-4 f-col gap-12 self-center items-center 
+  @apply w-full py-8 px-4 f-col gap-12 e-center
 /* MD */ md:w-11/12 md:py-20;
 }
 .section-titles {
@@ -28,7 +35,7 @@
 /********************** App ***********************/
 
 .main-container {
-  @apply w-screen min-h-screen place-content-center text-center
+  @apply w-screen min-h-screen e-center
 /* MD */ md:w-full;
 }
 
@@ -66,14 +73,13 @@
   @apply bg-slate-400 from-slate-100 to-slate-400  bg-opacity-30 backdrop-blur-md p-4 rounded-xl shadow-2xl;
 }
 .home-links-box {
-  @apply flex gap-4 flex-wrap justify-around items-center
-/* MD */ md:gap-8 md:self-center
+  @apply flex gap-4-8 flex-wrap justify-around e-center
 /* LG */ lg:w-1/4 lg:flex-col lg:gap-16;
 }
 .home-link {
-  @apply home-surfaces w-48 h-36 f-col place-content-center items-center border border-t-0 border-transparent rounded-md 
+  @apply home-surfaces w-48 h-36 f-col e-center border border-t-0 border-transparent rounded-md 
 /* HOVER */ duration-300 ease-in hover:scale-110 hover:border-sky-500 hover:bg-opacity-40 hover:rounded-2xl hover:shadow-md hover:shadow-sky-900
-/* MD */ md:gap-2 md:self-center
+/* MD */ md:gap-2 
 /* LG */ lg:w-56 lg:h-40 lg:flex-col lg:gap-16;
 }
 .home-link-name {
@@ -112,8 +118,7 @@
 /* MD */ md:w-11/12 md:py-0 md:gap-12;
 }
 .about-me-box {
-  @apply f-col gap-4 items-center justify-center 
-  /* MD */ md:gap-8
+  @apply f-col gap-4-8 items-center justify-center 
   /* LG */ lg:flex-row-reverse lg:gap-8;
 }
 .about-me-img {
@@ -125,10 +130,10 @@
   /* LG */ lg:w-1/2 lg:px-8;
 }
 .about-paragph-container {
-  @apply mb-8 f-col gap-4 self-center;
+  @apply mb-8 f-col gap-4-8 self-center;
 }
 .about-paragph {
-  @apply f-col gap-4 
+  @apply f-col gap-4-8 
 /* MD */ md:flex-row md:gap-8;
 }
 .paragraph-frameworks-logos {
@@ -140,8 +145,7 @@
 /* MD */ md:gap-20;
 }
 .hardSkills-box {
-  @apply f-col gap-4 
-/* MD */ md:gap-8;
+  @apply f-col gap-4-8;
 }
 .hardSkills-elements {
   @apply flex flex-wrap gap-8;
@@ -157,13 +161,12 @@
 /*********************** Skills ************************/
 
 .softSkills-box {
-  @apply py-4 flex gap-4 flex-wrap justify-evenly
-/* MD */ md:gap-8;
+  @apply py-4 flex gap-4-8 flex-wrap justify-evenly
+/* MD */ md:w-full;
 }
 .softSkill-box {
-  @apply min-w-[10rem] f-col gap-4 items-center justify-center rounded-lg  p-4 pb-8 lg:shadow-xl
-/* MD */ md:gap-8 
-/* MD */ lg:gap-8 lg:bg-[#0d152d];
+  @apply min-w-[12rem] p-4 pb-8 f-col gap-4-8 e-center rounded-lg 
+/* LG */ lg:bg-[#0d152d] lg:shadow-xl;
 }
 .skill-name {
   @apply mx-auto mb-3 text-lg;
@@ -176,7 +179,7 @@
 
 /*********************** Projects ************************/
 
-.projectS-container {
+.projects-container {
   @apply f-col items-center;
 }
 .project-box {
@@ -184,11 +187,11 @@
 /* MD */ md:w-11/12;
 }
 .project-img-box {
-  @apply f-col gap-4 self-center 
+  @apply f-col self-center 
 /* MD */ md:w-1/2;
 }
 .project-img {
-  @apply object-cover self-center rounded-lg shadow-white shadow-2xl duration-300 ease-in
+  @apply object-cover self-center rounded-lg shadow-white shadow-2xl 
 /* MD */ md:w-9/12;
 }
 .project-description-part {
@@ -216,7 +219,7 @@
 /*********************** Contact ************************/
 
 .form-container {
-  @apply w-5/6 pb-16 mx-auto gap-4 f-col rounded-xl bg-transparent place-content-center
+  @apply w-5/6 pb-16 mx-auto gap-4-8 f-col rounded-xl
 /* MD */ md:w-10/12 md:mt-8 md:flex-row;
 }
 .form-boxes {
@@ -231,11 +234,13 @@
 .form-container input,
 select,
 option {
-  @apply p-2 mb-2 rounded-lg text-black cursor-pointer transition duration-500 focus:scale-x-105 hover:scale-x-105
+  @apply p-2 mb-2 rounded-lg text-black cursor-pointer  
+/* HOVER */ duration-300 hover:scale-x-105 focus:scale-x-105
 /* MD */ md:mb-4;
 }
 .form-textarea {
-  @apply h-28 rounded-lg text-black cursor-pointer transition duration-500 focus:scale-x-105 hover:scale-x-105 focus:shadow-lg
+  @apply h-28 rounded-lg text-black cursor-pointer transition focus:shadow-lg
+/* HOVER */ duration-300 hover:scale-x-105 focus:scale-x-105
 /* MD */ md:h-64;
 }
 .submit-button {
