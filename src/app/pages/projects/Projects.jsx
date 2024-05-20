@@ -11,7 +11,7 @@ export default function App() {
     <>
       <SideBar />
       <section className="section-containers">
-        <div className="flex flex-col items-center">
+        <div className="projects-container">
           <AnimatePresence exitBeforeEnter>
             {dataProjects.map((el) => (
               <>
