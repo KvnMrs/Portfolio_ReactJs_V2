@@ -16,7 +16,6 @@ import SideBar from "../../../app/components/common/navigation/SideBar";
 function About() {
   return (
     <>
-      <SideBar />
       <section id="about" className="section-containers">
         <aside className="about-aside-containers">
           <div className="about-me-box">

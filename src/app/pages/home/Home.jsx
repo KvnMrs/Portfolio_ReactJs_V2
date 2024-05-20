@@ -34,7 +34,10 @@ function About() {
 
   return (
     <>
-      <section id="home" className="section-containers lg:px-16 lg:flex-row">
+      <section
+        id="home"
+        className="section-containers lg:px-16 lg:flex-row z-50"
+      >
         <aside className="presentation-container">
           <div className="presentation-box ">
             <header className="home-surfaces presentation-header ">

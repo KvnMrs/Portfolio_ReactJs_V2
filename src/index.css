@@ -53,9 +53,12 @@
     margin-block: auto;
   }
 }
-.sideBar-container {
-  @apply w-full h-5/6 fixed f-col z-30 bg-dark_blue shadow-md shadow-cyan-300 rounded-sm
+.menu-nav-container {
+  @apply w-screen h-screen fixed f-col z-40 blur-lg bg-wild_red
 /* MD */ md:hidden;
+}
+.links-container {
+  @apply h-auto bg-white f-col gap-8 justify-start;
 }
 .burger-button-container {
   @apply flex self-center mx-auto
@@ -64,9 +67,7 @@
 .burger-button-container svg {
   @apply w-5;
 }
-.links-container {
-  @apply h-auto absolute top-20 left-10 f-col gap-8 justify-start;
-}
+
 .links {
   @apply flex gap-4;
 }

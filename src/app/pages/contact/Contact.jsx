@@ -37,7 +37,6 @@ const Contact = () => {
 
   return (
     <>
-      <SideBar />
       <section id="contact" className="section-containers">
         <form
           className="form-container"

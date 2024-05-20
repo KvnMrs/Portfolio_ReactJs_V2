@@ -9,7 +9,6 @@ import SideBar from "../../../app/components/common/navigation/SideBar";
 export default function App() {
   return (
     <>
-      <SideBar />
       <section className="section-containers">
         <div className="projects-container">
           <AnimatePresence exitBeforeEnter>
