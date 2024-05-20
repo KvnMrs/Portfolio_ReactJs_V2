@@ -7,9 +7,19 @@
 * {
   @apply text-white text-justify;
 }
+.bg-slate-xl {
+  @apply bg-slate-400 from-slate-100 to-slate-400 bg-opacity-30 backdrop-blur-md rounded-xl shadow-2xl
+}
+.bg-slate-lg {
+  @apply bg-slate-400 from-slate-100 to-slate-400 bg-opacity-40 backdrop-blur-md rounded-lg shadow-xl
+}
 .gap-4-8 {
   @apply gap-4
 /* MD */ md:gap-8;
+}
+.py-2-4 {
+  @apply py-2
+/* MD */ md:py-4;
 }
 .px-4-8 {
   @apply px-4
@@ -46,7 +56,7 @@
 /* MD */ md:w-full;
 }
 
-/********************** SideBar ***********************/
+/********************** NAVIGATION ***********************/
 
 @media screen and (min-width: 780px) {
   .margin-block {
@@ -54,11 +64,14 @@
   }
 }
 .menu-nav-container {
-  @apply w-screen h-screen fixed f-col z-40 blur-lg bg-wild_red
+  @apply w-screen h-screen e-center fixed f-col z-40 backdrop-blur-md
 /* MD */ md:hidden;
 }
 .links-container {
-  @apply h-auto bg-white f-col gap-8 justify-start;
+  @apply w-auto h-auto pt-4 p-8 f-col gap-8 justify-start bg-slate-lg ;
+}
+.menu-nav-link {
+  @apply w-full px-4-8 flex gap-4-8;
 }
 .burger-button-container {
   @apply flex self-center mx-auto
@@ -68,24 +81,24 @@
   @apply w-5;
 }
 
-.links {
-  @apply flex gap-4;
+.link-name {
+  @apply text-3xl
+/* HOVER */ duration-300 ease-in hover:scale-110 hover:text-sky-500;
+
 }
 .sidebar-svg {
-  @apply w-5 h-auto;
+  @apply w-8 ;
 }
 
 /********************** Home ***********************/
 
-.home-surfaces {
-  @apply bg-slate-400 from-slate-100 to-slate-400  bg-opacity-30 backdrop-blur-md p-4 rounded-xl shadow-2xl;
-}
+
 .home-links-box {
   @apply f-wrap gap-4-8 justify-around e-center
 /* LG */ lg:w-1/4 lg:flex-col lg:gap-16;
 }
 .home-link {
-  @apply home-surfaces w-48 h-36 f-col e-center border border-t-0 border-transparent rounded-md 
+  @apply  w-48 h-36 px-4-8 py-2-4 f-col e-center border border-t-0 border-transparent bg-slate-xl 
 /* HOVER */ duration-300 ease-in hover:scale-110 hover:border-sky-500 hover:bg-opacity-40 hover:rounded-2xl hover:shadow-md hover:shadow-sky-900
 /* MD */ md:gap-2 
 /* LG */ lg:w-56 lg:h-40 lg:flex-col;

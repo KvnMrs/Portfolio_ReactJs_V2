@@ -13,8 +13,8 @@ import MenuNav from "./app/components/common/navigation/SideBar";
 function App() {
   return (
     <>
+      <MenuNav />
       <div className="main-container ">
-        <MenuNav />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

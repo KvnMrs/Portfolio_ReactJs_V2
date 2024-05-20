@@ -38,48 +38,54 @@ function BarNav() {
         </div>
       )}
       {openSidebar && (
-        <motion.div
-          className="sideBar-container "
-          initial="initial"
-          animate="animate"
-          exit="exit"
-        >
+        <div className="menu-nav-container">
           {/* Links Section */}
           <ol className="links-container">
+            <button
+              type="button"
+              onClick={toggleSidebar}
+              className="-mb-4 text-2xl font-semibold self-end font-sans"
+            >
+              X
+            </button>
             <li>
-              <Link className="links" to="/">
+              <Link className="menu-nav-link" onClick={toggleSidebar} to="/">
                 <SvgHome className={"sidebar-svg"} />
-                <p className="text-xl hover:text-sky-500 duration-300 hover:scale-110">
-                  Accueil
-                </p>
+                <p className="link-name">Accueil</p>
               </Link>
             </li>
             <li>
-              <Link className="links" to="/about">
+              <Link
+                className="menu-nav-link"
+                onClick={toggleSidebar}
+                to="/about"
+              >
                 <SvgProfile className={"sidebar-svg"} />
-                <p className="text-xl hover:text-sky-500 duration-300 hover:scale-110">
-                  A propos
-                </p>
+                <p className="link-name">A propos</p>
               </Link>
             </li>
             <li>
-              <Link className="links" to="/projects">
+              <Link
+                className="menu-nav-link"
+                onClick={toggleSidebar}
+                to="/projects"
+              >
                 <SvgProject className={"sidebar-svg"} />
-                <p className="text-xl hover:text-sky-500 duration-300 hover:scale-110">
-                  Projets
-                </p>
+                <p className="link-name">Projets</p>
               </Link>
             </li>
             <li>
-              <Link className="links" to="/contact">
+              <Link
+                className="menu-nav-link"
+                onClick={toggleSidebar}
+                to="/contact"
+              >
                 <SvgContact className={"sidebar-svg"} />
-                <p className="text-xl hover:text-sky-500 duration-300 hover:scale-110">
-                  Contact
-                </p>
+                <p className="link-name">Contact</p>
               </Link>
             </li>
           </ol>
-        </motion.div>
+        </div>
       )}
       {/* DESKTOP */}
       {showMenu && (
