@@ -34,57 +34,51 @@ function About() {
 
   return (
     <>
-      <section id="home" className="section-containers">
-        <article className="article-containers lg:gap-0 lg:flex-row">
-          <aside className="presentation-container">
-            <div className="presentation-box ">
-              <header className="home-surfaces presentation-header ">
-                <span className="emoji-anim">✌️</span>{" "}
-                <h1 className=" presentation-title">
-                  Hi there, Moi c'est Kévin !
-                </h1>
-              </header>
-              <p className="presentation-text">
-                <span className="text-5xl ">Développeur Front-End Junior</span>{" "}
-                en recherche d'une <span className="text-4xl">alternance</span>{" "}
-                en tant que
-                <span className="text-4xl"> Développeur Full-Stack</span>
-              </p>
-            </div>
-
-            <div className="home-cta-box ">
-              <a href={CV} download>
-                <ButtonCallToActionText
-                  text={"Télécharger CV"}
-                ></ButtonCallToActionText>
-              </a>
-              <div className="flex gap-4">
-                <SocialMediasLinks
-                  link={
-                    "https://www.linkedin.com/in/k%C3%A9vin-marais-861314216/"
-                  }
-                  img={Linkedin}
-                  alt={"Lien vers Linkedin"}
-                />
-                <SocialMediasLinks
-                  link={"https://github.com/KvnMrs"}
-                  img={Github}
-                  alt={"Lien vers Github"}
-                />
-              </div>
-            </div>
-          </aside>
-          <div className="divider lg:hidden"></div>
-          <div className="home-links-box">
-            {navigation.map((el) => (
-              <HomeNavButton
-                linkName={el.linkName}
-                svg={el.svg}
-                link={el.link}
-              />
-            ))}
+      <section id="home" className="section-containers lg:px-16 lg:flex-row">
+        <aside className="presentation-container">
+          <div className="presentation-box ">
+            <header className="home-surfaces presentation-header ">
+              <span className="emoji-anim">✌️</span>{" "}
+              <h1 className=" presentation-title">
+                Hi there, Moi c'est Kévin !
+              </h1>
+            </header>
+            <p className="presentation-text">
+              <span className="text-5xl ">Développeur Front-End Junior</span> en
+              recherche d'une <span className="text-4xl">alternance</span> en
+              tant que
+              <span className="text-4xl"> Développeur Full-Stack</span>
+            </p>
           </div>
-        </article>
+
+          <div className="home-cta-box ">
+            <a href={CV} download>
+              <ButtonCallToActionText
+                text={"Télécharger CV"}
+              ></ButtonCallToActionText>
+            </a>
+            <div className="flex gap-4">
+              <SocialMediasLinks
+                link={
+                  "https://www.linkedin.com/in/k%C3%A9vin-marais-861314216/"
+                }
+                img={Linkedin}
+                alt={"Lien vers Linkedin"}
+              />
+              <SocialMediasLinks
+                link={"https://github.com/KvnMrs"}
+                img={Github}
+                alt={"Lien vers Github"}
+              />
+            </div>
+          </div>
+        </aside>
+        <div className="divider lg:hidden"></div>
+        <div className="home-links-box">
+          {navigation.map((el) => (
+            <HomeNavButton linkName={el.linkName} svg={el.svg} link={el.link} />
+          ))}
+        </div>
       </section>
     </>
   );

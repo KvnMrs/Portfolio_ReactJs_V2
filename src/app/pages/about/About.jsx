@@ -18,7 +18,7 @@ function About() {
     <>
       <SideBar />
       <section id="about" className="section-containers">
-        <aside className="about-aside-containers | lg:gap-20">
+        <aside className="about-aside-containers">
           <div className="about-me-box">
             <img className="about-me-img " alt="Profil" src={imgProfil} />
             <div className="about-me-text">

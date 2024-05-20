@@ -11,19 +11,26 @@
   @apply gap-4
 /* MD */ md:gap-8;
 }
+.px-4-8 {
+  @apply px-4
+/* MD */ md:px-8;
+}
 .f-col {
   @apply flex flex-col;
+}
+.f-wrap {
+  @apply flex flex-wrap;
 }
 .e-center {
   @apply items-center self-center place-content-center;
 }
 .section-containers {
-  @apply w-full min-h-screen py-8 px-4 f-col gap-12 e-center bg-[#0b1121]
-/* MD */ md:px-8 md:py-16;
+  @apply w-full min-h-screen py-8 px-4-8 f-col gap-12 e-center bg-[#0b1121]
+/* MD */  md:py-16;
 }
 .article-containers {
-  @apply w-full py-8 px-4 f-col gap-12 e-center
-/* MD */ md:w-11/12 md:py-20;
+  @apply w-full py-8 px-4-8 f-col gap-12 e-center
+/* MD */ md:w-11/12 md:py-16;
 }
 .section-titles {
   @apply w-auto text-2xl border-b;
@@ -58,7 +65,7 @@
   @apply w-5;
 }
 .links-container {
-  @apply h-auto absolute top-20 left-10 f-col gap-6 justify-start;
+  @apply h-auto absolute top-20 left-10 f-col gap-8 justify-start;
 }
 .links {
   @apply flex gap-4;
@@ -73,14 +80,14 @@
   @apply bg-slate-400 from-slate-100 to-slate-400  bg-opacity-30 backdrop-blur-md p-4 rounded-xl shadow-2xl;
 }
 .home-links-box {
-  @apply flex gap-4-8 flex-wrap justify-around e-center
+  @apply f-wrap gap-4-8 justify-around e-center
 /* LG */ lg:w-1/4 lg:flex-col lg:gap-16;
 }
 .home-link {
   @apply home-surfaces w-48 h-36 f-col e-center border border-t-0 border-transparent rounded-md 
 /* HOVER */ duration-300 ease-in hover:scale-110 hover:border-sky-500 hover:bg-opacity-40 hover:rounded-2xl hover:shadow-md hover:shadow-sky-900
 /* MD */ md:gap-2 
-/* LG */ lg:w-56 lg:h-40 lg:flex-col lg:gap-16;
+/* LG */ lg:w-56 lg:h-40 lg:flex-col;
 }
 .home-link-name {
   @apply font-semibold text-lg 
@@ -111,34 +118,35 @@
 /*************************** About ****************************/
 
 .about-surfaces {
-  @apply bg-slate-400 from-slate-100 to-slate-400  bg-opacity-20 backdrop-blur-md p-8 rounded-xl shadow-2xl;
+  @apply bg-slate-400 from-slate-100 to-slate-400 bg-opacity-20 backdrop-blur-md p-8 rounded-xl shadow-2xl;
 }
 .about-aside-containers {
   @apply min-h-screen f-col gap-8 items-center justify-around
-/* MD */ md:w-11/12 md:py-0 md:gap-12;
+/* MD */ md:w-11/12 md:py-0 md:gap-16
+/* MD */ lg:gap-20;
 }
 .about-me-box {
   @apply f-col gap-4-8 items-center justify-center 
-  /* LG */ lg:flex-row-reverse lg:gap-8;
+  /* LG */ lg:flex-row-reverse;
 }
 .about-me-img {
   @apply w-40 h-40 object-cover self-center
   /* LG */ lg:w-80 lg:h-[20.5rem];
 }
 .about-me-text {
-  @apply px-4 f-col gap-3 italic
+  @apply px-4 f-col gap-4-8 italic
   /* LG */ lg:w-1/2 lg:px-8;
 }
 .about-paragph-container {
-  @apply mb-8 f-col gap-4-8 self-center;
+  @apply f-col gap-4-8 self-center;
 }
 .about-paragph {
   @apply f-col gap-4-8 
-/* MD */ md:flex-row md:gap-8;
+/* MD */ md:flex-row;
 }
 .paragraph-frameworks-logos {
-  @apply max-h-full -bottom-14 inset-x-0 m-auto md:flex absolute bg-cover opacity-20 
-/* MD */  md:-bottom-32;
+  @apply max-h-full -bottom-14 inset-x-0 m-auto absolute bg-cover opacity-20 
+/* MD */ md:flex md:-bottom-32;
 }
 .hardSkills-container {
   @apply w-11/12 f-col gap-12
@@ -148,7 +156,7 @@
   @apply f-col gap-4-8;
 }
 .hardSkills-elements {
-  @apply flex flex-wrap gap-8;
+  @apply f-wrap gap-8;
 }
 .hardSkill-box {
   @apply f-col gap-4 items-center justify-center;
@@ -161,7 +169,7 @@
 /*********************** Skills ************************/
 
 .softSkills-box {
-  @apply py-4 flex gap-4-8 flex-wrap justify-evenly
+  @apply py-4 f-wrap gap-4-8 justify-evenly
 /* MD */ md:w-full;
 }
 .softSkill-box {
@@ -173,7 +181,7 @@
 }
 .softSkill-img {
   @apply w-16 h-16 content-center cursor-pointer 
-/* HOVER */ duration-500 ease-in
+/* HOVER */ duration-300 ease-in
 /* LG */ lg:w-28 lg:h-28 lg:p-6 lg:bg-slate-500 lg:hover:bg-slate-700;
 }
 
@@ -184,7 +192,6 @@
 }
 .project-box {
   @apply w-10/12 h-screen90 f-col justify-evenly 
-/* MD */ md:w-11/12;
 }
 .project-img-box {
   @apply f-col self-center 
@@ -196,8 +203,8 @@
 }
 .project-description-part {
   @apply f-col self-center
-/* MD */ md:w-1/2 md:p-8 
-/* LG */ lg:w-2/5 lg:gap-8;
+/* MD */ md:w-1/2 
+/* LG */ lg:w-2/5 lg:p-8 lg:gap-8;
 }
 .project-infos {
   @apply w-fit mt-16 flex justify-center self-center;
@@ -213,23 +220,20 @@
 .btn-visit {
   @apply py-2 px-8 text-xl font-bold rounded-lg shadow-md shadow-white bg-white text-dark_blue
 /* HOVER */ transition-all hover:scale-110
-/* MD */md:text-xl;
 }
 
 /*********************** Contact ************************/
 
 .form-container {
-  @apply w-5/6 pb-16 mx-auto gap-4-8 f-col rounded-xl
-/* MD */ md:w-10/12 md:mt-8 md:flex-row;
+  @apply w-5/6 f-col rounded-xl
+/* MD */ md:w-full md:gap-8 md:flex-row
+/* LG */ lg:w-8/12 lg:gap-16
 }
 .form-boxes {
-  @apply w-full self-center f-col
-/* SM */ sm:px-2
-/* MD */ md:px-4;
+  @apply w-full self-start f-col
 }
 .form-labels {
   @apply w-fit mb-1 text-lg
-/* MD */ md:text-base;
 }
 .form-container input,
 select,
@@ -239,7 +243,7 @@ option {
 /* MD */ md:mb-4;
 }
 .form-textarea {
-  @apply h-28 rounded-lg text-black cursor-pointer transition focus:shadow-lg
+  @apply h-28 rounded-lg text-black cursor-pointer
 /* HOVER */ duration-300 hover:scale-x-105 focus:scale-x-105
 /* MD */ md:h-64;
 }
