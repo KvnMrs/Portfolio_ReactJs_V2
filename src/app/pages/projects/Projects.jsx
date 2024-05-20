@@ -4,9 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import ProjectCard from "../../components/projects/ProjectCard";
 import dataProjects from "../../../datas/datasProjects";
 
-import SideBar from "../../../app/components/common/navigation/SideBar";
-
-export default function App() {
+function Projects() {
   return (
     <>
       <section className="section-containers">
@@ -23,3 +21,5 @@ export default function App() {
     </>
   );
 }
+
+export default Projects;
