@@ -39,52 +39,51 @@ function BarNav() {
       )}
       {openSidebar && (
         <div className="menu-nav-container">
-          {/* Links Section */}
-          <ol className="links-container">
+          <div className="menu-nav-box">
             <button
               type="button"
               onClick={toggleSidebar}
-              className="-mb-4 text-2xl font-semibold self-end font-sans"
+              className="menu-nav-cross"
             >
               X
             </button>
-            <li>
-              <Link className="menu-nav-link" onClick={toggleSidebar} to="/">
-                <SvgHome className={"sidebar-svg"} />
-                <p className="link-name">Accueil</p>
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="menu-nav-link"
-                onClick={toggleSidebar}
-                to="/about"
-              >
-                <SvgProfile className={"sidebar-svg"} />
-                <p className="link-name">A propos</p>
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="menu-nav-link"
-                onClick={toggleSidebar}
-                to="/projects"
-              >
-                <SvgProject className={"sidebar-svg"} />
-                <p className="link-name">Projets</p>
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="menu-nav-link"
-                onClick={toggleSidebar}
-                to="/contact"
-              >
-                <SvgContact className={"sidebar-svg"} />
-                <p className="link-name">Contact</p>
-              </Link>
-            </li>
-          </ol>
+            {/* Links Section */}
+
+            <ol className="links-container">
+              <li>
+                <Link className="link-box" onClick={toggleSidebar} to="/">
+                  <SvgHome className={"link-svg"} />
+                  <p className="link-name">Accueil</p>
+                </Link>
+              </li>
+              <li>
+                <Link className="link-box" onClick={toggleSidebar} to="/about">
+                  <SvgProfile className={"link-svg"} />
+                  <p className="link-name">A propos</p>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="link-box"
+                  onClick={toggleSidebar}
+                  to="/projects"
+                >
+                  <SvgProject className={"link-svg"} />
+                  <p className="link-name">Projets</p>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="link-box"
+                  onClick={toggleSidebar}
+                  to="/contact"
+                >
+                  <SvgContact className={"link-svg"} />
+                  <p className="link-name">Contact</p>
+                </Link>
+              </li>
+            </ol>
+          </div>
         </div>
       )}
       {/* DESKTOP */}
