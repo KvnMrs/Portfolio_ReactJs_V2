@@ -13,6 +13,9 @@
 .bg-slate-lg {
   @apply bg-slate-400 from-slate-100 to-slate-400 bg-opacity-40 backdrop-blur-md rounded-lg shadow-xl
 }
+.hover-sky-125 {
+  @apply  duration-300 ease-in hover:scale-125 hover:text-sky-500;
+}
 .gap-4-8 {
   @apply gap-4
 /* MD */ md:gap-8;
@@ -35,12 +38,7 @@
   @apply items-center self-center place-content-center;
 }
 .section-containers {
-  @apply w-full min-h-screen py-8 px-4-8 f-col gap-12 e-center bg-[#0b1121]
-/* MD */  md:py-16;
-}
-.article-containers {
-  @apply w-full py-8 px-4-8 f-col gap-12 e-center
-/* MD */ md:w-11/12 md:py-16;
+  @apply w-full min-h-screen p-4 lg:p-8 f-col gap-12 e-center bg-[#0b1121]
 }
 .section-titles {
   @apply w-auto text-2xl border-b;
@@ -65,20 +63,25 @@
 }
 .burger-button-container {
   @apply flex self-center mx-auto
-/* MD */ md:hidden;
 }
 .burger-button-container svg {
-  @apply w-5;
+  @apply w-6
+/* MD */ md:w-8;
+}
+.logo {
+  @apply hidden fixed h-auto left-16 top-4 text-xl font-bold z-50 hover-sky-125
+/* LG */ lg:lg:flex;
 }
 .menu-nav-container {
   @apply w-screen h-screen e-center fixed f-col z-40 backdrop-blur-md
-/* MD */ md:hidden;
 }
 .menu-nav-box {
-  @apply min-w-[80%] p-8 f-col gap-8 e-center bg-slate-lg border-2 border-white;
+  @apply min-w-[80%] p-8 f-col gap-8 e-center bg-slate-lg border-2 border-white
+/* MD */ md:min-w-[30%];
 }
 .menu-nav-cross {
   @apply absolute -top-5 -right-5 text-2xl font-semibold font-sans rounded-full py-2 px-4 bg-dark_blue border border-white
+  /* HOVER */ duration-300 ease-in hover:text-sky-500
 }
 .links-container {
   @apply f-col gap-8;
@@ -87,15 +90,13 @@
   @apply flex gap-4-8 ;
 }
 .link-name {
-  @apply text-3xl 
-/* HOVER */ duration-300 ease-in hover:scale-110 hover:text-sky-500;
+  @apply text-3xl hover-sky-125
 }
 .link-svg {
   @apply w-8 ;
 }
 
 /********************** Home ***********************/
-
 
 .home-links-box {
   @apply f-wrap gap-4-8 justify-around e-center
@@ -120,7 +121,7 @@
 /* MD */ md:gap-16;
 }
 .presentation-header {
-  @apply w-fit flex gap-2 text-2xl;
+  @apply w-fit flex gap-2 text-2xl p-4 bg-slate-xl;
 }
 .presentation-title {
   @apply text-2xl font-semibold;

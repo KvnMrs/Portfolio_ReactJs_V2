@@ -40,9 +40,9 @@ function About() {
       >
         <aside className="presentation-container">
           <div className="presentation-box ">
-            <header className="home-surfaces presentation-header ">
+            <header className=" presentation-header">
               <span className="emoji-anim">✌️</span>{" "}
-              <h1 className=" presentation-title">
+              <h1 className="presentation-title">
                 Hi there, Moi c'est Kévin !
               </h1>
             </header>

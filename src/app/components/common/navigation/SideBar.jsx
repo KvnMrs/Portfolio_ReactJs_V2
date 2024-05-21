@@ -25,17 +25,21 @@ function BarNav() {
   };
   return (
     <>
-      {/* MOBILE */}
       {showMenu && (
-        <div className="burger-button-container">
-          <button
-            className="fixed z-50 h-auto left-4 top-4"
-            type="button"
-            onClick={toggleSidebar}
-          >
-            <SvgBurger />
-          </button>
-        </div>
+        <>
+          <div className="burger-button-container">
+            <button
+              className="fixed z-50 h-auto left-4 top-4"
+              type="button"
+              onClick={toggleSidebar}
+            >
+              <SvgBurger />
+            </button>
+          </div>
+          <Link to="/">
+            <h1 className="logo">KM</h1>
+          </Link>
+        </>
       )}
       {openSidebar && (
         <div className="menu-nav-container">
@@ -80,46 +84,6 @@ function BarNav() {
                 >
                   <SvgContact className={"link-svg"} />
                   <p className="link-name">Contact</p>
-                </Link>
-              </li>
-            </ol>
-          </div>
-        </div>
-      )}
-      {/* DESKTOP */}
-      {showMenu && (
-        <div className="hidden bg-gradient-to-l from-transparent rounded-md via-black z-40 w-full px-8 py-4 pr-8  | md:flex md:fixed md:justify-center">
-          <div className="flex | md:w-10/12 | lg:w-1/2">
-            <Link to="/">
-              <h1 className="text-xl font-bold z-50">KM</h1>
-            </Link>
-            <ol className="flex gap-8 ml-auto place-content-end">
-              <li>
-                <Link to="/">
-                  <p className="text-xl hover:text-sky-500 duration-300 hover:scale-110">
-                    Accueil
-                  </p>
-                </Link>
-              </li>
-              <li>
-                <Link to="/about">
-                  <p className="text-xl hover:text-sky-500 duration-300 hover:scale-110">
-                    A propos
-                  </p>
-                </Link>
-              </li>
-              <li>
-                <Link to="/projects">
-                  <p className="text-xl hover:text-sky-500 duration-300 hover:scale-110">
-                    Projets
-                  </p>
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact">
-                  <p className="text-xl hover:text-sky-500 duration-300 hover:scale-110">
-                    Contact
-                  </p>
                 </Link>
               </li>
             </ol>
