@@ -15,7 +15,7 @@ function SvgSkills() {
         clipRule: "evenodd",
       }}
       fill="white"
-      className="sidebar-svg"
+      className="link-svg"
     >
       <g>
         <path

@@ -4,12 +4,9 @@ import { AnimatePresence } from "framer-motion";
 import ProjectCard from "../../components/projects/ProjectCard";
 import dataProjects from "../../../datas/datasProjects";
 
-import SideBar from "../../../app/components/common/navigation/SideBar";
-
-export default function App() {
+function Projects() {
   return (
     <>
-      <SideBar />
       <section className="section-containers">
         <div className="projects-container">
           <AnimatePresence exitBeforeEnter>
@@ -24,3 +21,5 @@ export default function App() {
     </>
   );
 }
+
+export default Projects;

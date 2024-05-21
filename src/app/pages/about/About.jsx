@@ -11,13 +11,10 @@ import img_ReactJs from "../../../assets/img/imgHardSkills/ReactJs.png";
 import img_Angular from "../../../assets/img/imgHardSkills/Angular.png";
 import img_VueJs from "../../../assets/img/imgHardSkills/VueJs.png";
 
-import SideBar from "../../../app/components/common/navigation/SideBar";
-
 function About() {
   return (
     <>
-      <SideBar />
-      <section id="about" className="section-containers">
+      <section id="about" className="section-containers py-8 lg:py-16">
         <aside className="about-aside-containers">
           <div className="about-me-box">
             <img className="about-me-img " alt="Profil" src={imgProfil} />

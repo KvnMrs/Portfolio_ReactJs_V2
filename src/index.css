@@ -7,9 +7,22 @@
 * {
   @apply text-white text-justify;
 }
+.bg-slate-xl {
+  @apply bg-slate-400 from-slate-100 to-slate-400 bg-opacity-30 backdrop-blur-md rounded-xl shadow-2xl
+}
+.bg-slate-lg {
+  @apply bg-slate-400 from-slate-100 to-slate-400 bg-opacity-40 backdrop-blur-md rounded-lg shadow-xl
+}
+.hover-sky-125 {
+  @apply  duration-300 ease-in hover:scale-125 hover:text-sky-500;
+}
 .gap-4-8 {
   @apply gap-4
 /* MD */ md:gap-8;
+}
+.py-2-4 {
+  @apply py-2
+/* MD */ md:py-4;
 }
 .px-4-8 {
   @apply px-4
@@ -25,12 +38,7 @@
   @apply items-center self-center place-content-center;
 }
 .section-containers {
-  @apply w-full min-h-screen py-8 px-4-8 f-col gap-12 e-center bg-[#0b1121]
-/* MD */  md:py-16;
-}
-.article-containers {
-  @apply w-full py-8 px-4-8 f-col gap-12 e-center
-/* MD */ md:w-11/12 md:py-16;
+  @apply w-full min-h-screen p-4 lg:p-8 f-col gap-12 e-center bg-[#0b1121]
 }
 .section-titles {
   @apply w-auto text-2xl border-b;
@@ -46,45 +54,56 @@
 /* MD */ md:w-full;
 }
 
-/********************** SideBar ***********************/
+/********************** NAVIGATION ***********************/
 
 @media screen and (min-width: 780px) {
   .margin-block {
     margin-block: auto;
   }
 }
-.sideBar-container {
-  @apply w-full h-5/6 fixed f-col z-30 bg-dark_blue shadow-md shadow-cyan-300 rounded-sm
-/* MD */ md:hidden;
-}
 .burger-button-container {
   @apply flex self-center mx-auto
-/* MD */ md:hidden;
 }
 .burger-button-container svg {
-  @apply w-5;
+  @apply w-6
+/* MD */ md:w-8;
+}
+.logo {
+  @apply hidden fixed h-auto left-16 top-4 text-xl font-bold z-50 hover-sky-125
+/* LG */ lg:lg:flex;
+}
+.menu-nav-container {
+  @apply w-screen h-screen e-center fixed f-col z-40 backdrop-blur-md
+}
+.menu-nav-box {
+  @apply min-w-[80%] p-8 f-col gap-8 e-center bg-slate-lg border-2 border-white
+/* MD */ md:min-w-[30%];
+}
+.menu-nav-cross {
+  @apply absolute -top-5 -right-5 text-2xl font-semibold font-sans rounded-full py-2 px-4 bg-dark_blue border border-white
+  /* HOVER */ duration-300 ease-in hover:text-sky-500
 }
 .links-container {
-  @apply h-auto absolute top-20 left-10 f-col gap-8 justify-start;
+  @apply f-col gap-8;
 }
-.links {
-  @apply flex gap-4;
+.link-box {
+  @apply flex gap-4-8 ;
 }
-.sidebar-svg {
-  @apply w-5 h-auto;
+.link-name {
+  @apply text-3xl hover-sky-125
+}
+.link-svg {
+  @apply w-8 ;
 }
 
 /********************** Home ***********************/
 
-.home-surfaces {
-  @apply bg-slate-400 from-slate-100 to-slate-400  bg-opacity-30 backdrop-blur-md p-4 rounded-xl shadow-2xl;
-}
 .home-links-box {
   @apply f-wrap gap-4-8 justify-around e-center
 /* LG */ lg:w-1/4 lg:flex-col lg:gap-16;
 }
 .home-link {
-  @apply home-surfaces w-48 h-36 f-col e-center border border-t-0 border-transparent rounded-md 
+  @apply  w-48 h-36 px-4-8 py-2-4 f-col e-center border border-t-0 border-transparent bg-slate-xl 
 /* HOVER */ duration-300 ease-in hover:scale-110 hover:border-sky-500 hover:bg-opacity-40 hover:rounded-2xl hover:shadow-md hover:shadow-sky-900
 /* MD */ md:gap-2 
 /* LG */ lg:w-56 lg:h-40 lg:flex-col;
@@ -102,7 +121,7 @@
 /* MD */ md:gap-16;
 }
 .presentation-header {
-  @apply w-fit flex gap-2 text-2xl;
+  @apply w-fit flex gap-2 text-2xl p-4 bg-slate-xl;
 }
 .presentation-title {
   @apply text-2xl font-semibold;

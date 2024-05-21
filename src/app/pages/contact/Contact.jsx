@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import { texteAreaAnim } from "../../animations/contactAnimation";
 // Components
 import ButtonCallToActionText from "../../components/common/button/ButtonCallToActionText";
-import SideBar from "../../../app/components/common/navigation/SideBar";
 // Libraries
 import emailjs from "emailjs-com";
 
@@ -37,7 +36,6 @@ const Contact = () => {
 
   return (
     <>
-      <SideBar />
       <section id="contact" className="section-containers">
         <form
           className="form-container"
