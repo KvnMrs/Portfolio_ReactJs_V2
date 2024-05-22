@@ -44,13 +44,15 @@ function BarNav() {
       {openSidebar && (
         <div className="menu-nav-container">
           <div className="menu-nav-box">
-            <button
-              type="button"
-              onClick={toggleSidebar}
-              className="menu-nav-cross"
-            >
-              X
-            </button>
+            <div className="group">
+              <button
+                type="button"
+                onClick={toggleSidebar}
+                className="menu-nav-cross"
+              >
+                X
+              </button>
+            </div>
             {/* Links Section */}
             <ol className="links-container">
               <li className="group">

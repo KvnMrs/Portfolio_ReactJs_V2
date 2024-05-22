@@ -81,7 +81,7 @@
 }
 .menu-nav-cross {
   @apply absolute -top-5 -right-5 text-2xl font-semibold font-sans rounded-full py-2 px-4 bg-dark_blue border border-white
-  /* HOVER */ duration-300 ease-in 
+  /* HOVER */ duration-300 ease-in group-hover:text-sky-500 group-hover:bg-slate-300 group-hover:border-sky-500
 }
 .links-container {
   @apply f-col gap-8;
