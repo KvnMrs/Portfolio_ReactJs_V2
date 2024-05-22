@@ -52,37 +52,36 @@ function BarNav() {
               X
             </button>
             {/* Links Section */}
-
             <ol className="links-container">
-              <li>
-                <Link className="link-box" onClick={toggleSidebar} to="/">
-                  <SvgHome className={"link-svg"} />
+              <li className="group">
+                <Link className="link-box " onClick={toggleSidebar} to="/">
+                  <SvgHome />
                   <p className="link-name">Accueil</p>
                 </Link>
               </li>
-              <li>
-                <Link className="link-box" onClick={toggleSidebar} to="/about">
+              <li className="group">
+                <Link className="link-box " onClick={toggleSidebar} to="/about">
                   <SvgProfile className={"link-svg"} />
                   <p className="link-name">A propos</p>
                 </Link>
               </li>
-              <li>
+              <li className="group">
                 <Link
-                  className="link-box"
+                  className="link-box "
                   onClick={toggleSidebar}
                   to="/projects"
                 >
-                  <SvgProject className={"link-svg"} />
+                  <SvgProject />
                   <p className="link-name">Projets</p>
                 </Link>
               </li>
-              <li>
+              <li className="group">
                 <Link
-                  className="link-box"
+                  className="link-box "
                   onClick={toggleSidebar}
                   to="/contact"
                 >
-                  <SvgContact className={"link-svg"} />
+                  <SvgContact />
                   <p className="link-name">Contact</p>
                 </Link>
               </li>

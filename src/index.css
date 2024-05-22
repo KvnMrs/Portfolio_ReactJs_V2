@@ -70,7 +70,7 @@
 }
 .logo {
   @apply hidden fixed h-auto left-16 top-4 text-xl font-bold z-50 hover-sky-125
-/* LG */ lg:lg:flex;
+/* LG */ lg:flex;
 }
 .menu-nav-container {
   @apply w-screen h-screen e-center fixed f-col z-40 backdrop-blur-md
@@ -81,19 +81,22 @@
 }
 .menu-nav-cross {
   @apply absolute -top-5 -right-5 text-2xl font-semibold font-sans rounded-full py-2 px-4 bg-dark_blue border border-white
-  /* HOVER */ duration-300 ease-in hover:text-sky-500
+  /* HOVER */ duration-300 ease-in 
 }
 .links-container {
   @apply f-col gap-8;
 }
 .link-box {
-  @apply flex gap-4-8 ;
+  @apply w-full flex py-2-4 px-4-8 gap-4-8 rounded-lg 
+  /* HOVER */ duration-300 ease-in group-hover:bg-slate-300 group-hover:scale-110;
 }
 .link-name {
-  @apply text-3xl hover-sky-125
+  @apply text-3xl 
+  /* HOVER */ duration-300 ease-in group-hover:text-sky-500 group-hover:scale-110;
 }
 .link-svg {
-  @apply w-8 ;
+  @apply w-8 fill-white 
+  /* HOVER */ duration-300 ease-in group-hover:fill-sky-500 group-hover:scale-125;
 }
 
 /********************** Home ***********************/
