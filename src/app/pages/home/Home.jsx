@@ -1,11 +1,13 @@
 import "./Home.css";
-
 import React from "react";
-//Sub-components
+// Animations
+import { motion } from "framer-motion";
+import { onNavigateAnim } from "../../animations/common/commonAnimations.js";
+// Components
 import SocialMediasLinks from "../../components/common/Link/SocialMediasLinks.jsx";
 import ButtonCallToActionText from "../../components/common/button/ButtonCallToActionText.jsx";
 import HomeNavButton from "../../components/common/navigation/HomeNavButton.jsx";
-//Assets
+// Assets
 import Github from "../../../assets/img/imgSocialMedias/Github.png";
 import Linkedin from "../../../assets/img/imgSocialMedias/Linkedin.png";
 import CV from "../../../assets/document/Kévin_MARAIS_CV_FR.pdf";
@@ -13,7 +15,7 @@ import SvgProfile from "../../../assets/svg/sidebar/links-section/SvgProfile";
 import SvgProject from "../../../assets/svg/sidebar/links-section/SvgProject";
 import SvgContact from "../../../assets/svg/sidebar/links-section/SvgContact";
 
-function About() {
+function Home() {
   const navigation = [
     {
       linkName: "<A propos/> ",
@@ -34,11 +36,18 @@ function About() {
 
   return (
     <>
-      <section
+      <motion.section
+        variants={onNavigateAnim}
+        initial="initial"
+        animate="animate"
         id="home"
         className="section-containers lg:px-16 lg:flex-row z-50"
       >
-        <aside className="presentation-container">
+        <aside
+          initial="initial"
+          animate="animate"
+          className="presentation-container"
+        >
           <div className="presentation-box ">
             <header className=" presentation-header">
               <span className="emoji-anim">✌️</span>{" "}
@@ -82,9 +91,9 @@ function About() {
             <HomeNavButton linkName={el.linkName} svg={el.svg} link={el.link} />
           ))}
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }
 
-export default About;
+export default Home;

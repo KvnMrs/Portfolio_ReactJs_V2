@@ -1,4 +1,7 @@
 import React from "react";
+// Animations
+import { motion } from "framer-motion";
+import { onNavigateAnim } from "../../animations/common/commonAnimations.js";
 // Components
 import SoftSkill from "../../components/about/skills/SoftSkill";
 import HardSkill from "../../components/about/skills/HardSkill";
@@ -14,7 +17,13 @@ import img_VueJs from "../../../assets/img/imgHardSkills/VueJs.png";
 function About() {
   return (
     <>
-      <section id="about" className="section-containers py-8 lg:py-16">
+      <motion.section
+        variants={onNavigateAnim}
+        initial="initial"
+        animate="animate"
+        id="about"
+        className="section-containers py-8 lg:py-16"
+      >
         <aside className="about-aside-containers">
           <div className="about-me-box">
             <img className="about-me-img " alt="Profil" src={imgProfil} />
@@ -198,7 +207,7 @@ function About() {
             </div>
           </div>
         </aside>
-      </section>
+      </motion.section>
     </>
   );
 }

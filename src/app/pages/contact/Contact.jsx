@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
 // Animations
+import { motion, AnimatePresence } from "framer-motion";
+import { onNavigateAnim } from "../../animations/common/commonAnimations.js";
 import { texteAreaAnim } from "../../animations/contactAnimation";
 // Components
 import ButtonCallToActionText from "../../components/common/button/ButtonCallToActionText";
@@ -36,7 +38,13 @@ const Contact = () => {
 
   return (
     <>
-      <section id="contact" className="section-containers">
+      <motion.section
+        variants={onNavigateAnim}
+        initial="initial"
+        animate="animate"
+        id="contact"
+        className="section-containers"
+      >
         <form
           className="form-container"
           ref={formRef}
@@ -118,7 +126,7 @@ const Contact = () => {
             </ButtonCallToActionText>
           </div>
         </form>
-      </section>
+      </motion.section>
     </>
   );
 };
