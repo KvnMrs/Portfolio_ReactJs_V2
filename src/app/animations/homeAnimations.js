@@ -1,83 +1,68 @@
-export const nameAnim = {
-  initial: { opacity: 0, x: -50 },
-  animate: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      delay: 0.4,
-      duration: 0.8,
-    },
+export const afterPresentation = {
+  initial: {
+    opacity: 0,
   },
-};
-export const jobAnim = {
-  initial: { opacity: 0 },
   animate: {
     opacity: 1,
     transition: {
-      delay: 1.4,
-      duration: 1,
-    },
-  },
-};
-export const buttonAnim = {
-  initial: { opacity: 0, x: -200 },
-  animate: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      delay: 2,
-      duration: 1,
+      delay: 2, duration: 0.5
     },
   },
 };
 
-// background lines
-export const div1 = {
-  initial: { opacity: 0, height: 0 },
+export const boxPresentationAnim1 = {
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
   animate: {
     opacity: 1,
-    height: 1000,
+    y: 0,
     transition: {
-      duration: 7,
-      repeat: Infinity,
+      delay: 0,
+      duration: 0.5,
     },
   },
 };
-export const div2 = {
-  initial: { opacity: 0, height: 0 },
+export const boxPresentationAnim2 = {
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
   animate: {
     opacity: 1,
-    height: 800,
+    y: 0,
     transition: {
-      repeatDelay: 1,
-      duration: 5,
-      repeat: Infinity,
+      delay: 0.5,
+      duration: 0.5,
     },
   },
 };
-export const div3 = {
-  initial: { opacity: 0, height: 0, y: 0 },
+export const boxPresentationAnim3 = {
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
   animate: {
     opacity: 1,
-    height: 900,
-    y: -1000,
+    y: 0,
     transition: {
-      repeatDelay: 1,
-      duration: 4,
-      repeat: Infinity,
+      delay: 1,
+      duration: 0.5,
     },
   },
 };
-export const div4 = {
-  initial: { opacity: 0, height: 0, y: 0 },
+export const boxPresentationAnim4 = {
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
   animate: {
     opacity: 1,
-    height: 1000,
-    y: -2000,
+    y: 0,
     transition: {
-      repeatDelay: 1,
-      duration: 7,
-      repeat: Infinity,
+      delay: 1.5,
+      duration: 0.5,
     },
   },
 };

@@ -3,6 +3,13 @@ import React from "react";
 // Animations
 import { motion } from "framer-motion";
 import { onNavigateAnim } from "../../animations/common/commonAnimations.js";
+import {
+  afterPresentation,
+  boxPresentationAnim1,
+  boxPresentationAnim2,
+  boxPresentationAnim3,
+  boxPresentationAnim4,
+} from "../../animations/homeAnimations.js";
 // Components
 import SocialMediasLinks from "../../components/common/Link/SocialMediasLinks.jsx";
 import ButtonCallToActionText from "../../components/common/button/ButtonCallToActionText.jsx";
@@ -43,31 +50,40 @@ function Home() {
         id="home"
         className="section-containers lg:px-16 lg:flex-row lg:justify-between"
       >
-        <aside
-          initial="initial"
-          animate="animate"
-          className="presentation-container"
-        >
+        <aside className="presentation-container">
           <div className="presentation-box ">
-            <header className=" presentation-header">
+            <motion.header
+              variants={afterPresentation}
+              className=" presentation-header"
+            >
               <span className="emoji-anim">✌️</span>{" "}
               <h1 className="presentation-title">
                 Hi there ! Moi c'est Kévin !
               </h1>
-            </header>
+            </motion.header>
             <div className="presentation-text">
-              <p className="text-5xl text-start">
+              <motion.p
+                variants={boxPresentationAnim1}
+                className="text-5xl text-start"
+              >
                 Développeur Front-End Junior
-              </p>
-              <p className="text-3xl">
-                en recherche d'une <span className="text-4xl">alternance</span>
-              </p>
-              <p className="text-3xl"> en tant que</p>
-              <p className="text-4xl"> Développeur Full-Stack</p>
+              </motion.p>
+              <motion.p variants={boxPresentationAnim2} className="text-3xl">
+                En recherche d'une{" "}
+                <span className="text-wild_red">alternance</span>
+              </motion.p>
+              <motion.p variants={boxPresentationAnim3} className="text-3xl">
+                {" "}
+                en tant que
+              </motion.p>
+              <motion.p variants={boxPresentationAnim4} className="text-4xl">
+                {" "}
+                Développeur Full-Stack
+              </motion.p>
             </div>
           </div>
 
-          <div className="home-cta-box ">
+          <motion.div variants={afterPresentation} className="home-cta-box">
             <a href={CV} download>
               <ButtonCallToActionText
                 text={"Télécharger CV"}
@@ -87,14 +103,14 @@ function Home() {
                 alt={"Lien vers Github"}
               />
             </div>
-          </div>
+          </motion.div>
         </aside>
         <div className="divider lg:hidden"></div>
-        <div className="home-links-box">
+        <motion.div variants={afterPresentation} className="home-links-box">
           {navigation.map((el) => (
             <HomeNavButton linkName={el.linkName} svg={el.svg} link={el.link} />
           ))}
-        </div>
+        </motion.div>
       </motion.section>
     </>
   );
