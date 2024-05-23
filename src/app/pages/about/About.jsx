@@ -1,7 +1,14 @@
 import React from "react";
 // Animations
 import { motion } from "framer-motion";
-import { onNavigateAnim } from "../../animations/common/commonAnimations.js";
+import {
+  onNavigateAnim,
+  skillsContainerAnim,
+} from "../../animations/common/commonAnimations.js";
+import {
+  aboutMeDescriptionAnim,
+  aboutMeImgAnim,
+} from "../../animations/aboutAnimations.js";
 // Components
 import SoftSkill from "../../components/about/skills/SoftSkill";
 import HardSkill from "../../components/about/skills/HardSkill";
@@ -26,8 +33,18 @@ function About() {
       >
         <aside className="about-aside-containers">
           <div className="about-me-box">
-            <img className="about-me-img " alt="Profil" src={imgProfil} />
-            <div className="about-me-text">
+            <motion.img
+              variants={aboutMeImgAnim}
+              className="about-me-img "
+              alt="Profil"
+              src={imgProfil}
+            />
+            <motion.div
+              variants={aboutMeDescriptionAnim}
+              initial="initial"
+              animate="animate"
+              className="about-me-text"
+            >
               <p className="text-xl">
                 Je m'appelle Kévin, j'ai 30 ans et j'habite la ville culturelle
                 et historique de Nantes. C'est peut être de la que vient mon
@@ -47,9 +64,12 @@ function About() {
                 autonomie et par le biais de différents supports que j'ai
                 commencé à m'initier à ces bases.
               </p>
-            </div>
+            </motion.div>
           </div>
-          <div className="w-full softSkills-box">
+          <motion.div
+            variants={skillsContainerAnim}
+            className="w-full softSkills-box"
+          >
             {dataSkills
               .filter((atout) => atout.part === 1)
               .map((el) => (
@@ -60,7 +80,7 @@ function About() {
                   img={el.image}
                 />
               ))}
-          </div>
+          </motion.div>
           <div className="divider"> </div>
         </aside>
         <aside className="about-aside-containers">
