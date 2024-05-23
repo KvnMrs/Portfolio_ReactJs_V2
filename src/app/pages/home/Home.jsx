@@ -4,11 +4,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { onNavigateAnim } from "../../animations/common/commonAnimations.js";
 import {
+  presentationContainerAnim,
   afterPresentation,
-  boxPresentationAnim1,
-  boxPresentationAnim2,
-  boxPresentationAnim3,
-  boxPresentationAnim4,
+  presentationBoxAnim,
 } from "../../animations/homeAnimations.js";
 // Components
 import SocialMediasLinks from "../../components/common/Link/SocialMediasLinks.jsx";
@@ -27,17 +25,17 @@ function Home() {
     {
       linkName: "<A propos/> ",
       link: "about",
-      svg: <SvgProfile className={"w-10 h-10"} />,
+      svg: <SvgProfile />,
     },
     {
       linkName: "<Mes projets/>",
       link: "projects",
-      svg: <SvgProject className={"w-10 h-10"} />,
+      svg: <SvgProject />,
     },
     {
       linkName: "<Contact/>",
       link: "contact",
-      svg: <SvgContact className={"w-10 h-10"} />,
+      svg: <SvgContact />,
     },
   ];
 
@@ -61,26 +59,29 @@ function Home() {
                 Hi there ! Moi c'est Kévin !
               </h1>
             </motion.header>
-            <div className="presentation-text">
+            <motion.div
+              variants={presentationContainerAnim}
+              className="presentation-text"
+            >
               <motion.p
-                variants={boxPresentationAnim1}
+                variants={presentationBoxAnim}
                 className="text-5xl text-start"
               >
                 Développeur Front-End Junior
               </motion.p>
-              <motion.p variants={boxPresentationAnim2} className="text-3xl">
+              <motion.p variants={presentationBoxAnim} className="text-3xl">
                 En recherche d'une{" "}
                 <span className="text-wild_red">alternance</span>
               </motion.p>
-              <motion.p variants={boxPresentationAnim3} className="text-3xl">
+              <motion.p variants={presentationBoxAnim} className="text-3xl">
                 {" "}
                 en tant que
               </motion.p>
-              <motion.p variants={boxPresentationAnim4} className="text-4xl">
+              <motion.p variants={presentationBoxAnim} className="text-4xl">
                 {" "}
                 Développeur Full-Stack
               </motion.p>
-            </div>
+            </motion.div>
           </div>
 
           <motion.div variants={afterPresentation} className="home-cta-box">

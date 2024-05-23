@@ -10,21 +10,20 @@ export const afterPresentation = {
   },
 };
 
-export const boxPresentationAnim1 = {
+export const presentationContainerAnim = {
   initial: {
-    opacity: 0,
-    y: 20,
+    opacity: 1,
   },
   animate: {
     opacity: 1,
-    y: 0,
     transition: {
-      delay: 0,
-      duration: 0.5,
+      staggerChildren: 0.5,
+
     },
   },
 };
-export const boxPresentationAnim2 = {
+
+export const presentationBoxAnim = {
   initial: {
     opacity: 0,
     y: 20,
@@ -33,36 +32,7 @@ export const boxPresentationAnim2 = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.5,
-      duration: 0.5,
-    },
-  },
-};
-export const boxPresentationAnim3 = {
-  initial: {
-    opacity: 0,
-    y: 20,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 1,
-      duration: 0.5,
-    },
-  },
-};
-export const boxPresentationAnim4 = {
-  initial: {
-    opacity: 0,
-    y: 20,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 1.5,
-      duration: 0.5,
+      duration: 0.4,
     },
   },
 };
