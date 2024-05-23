@@ -38,7 +38,8 @@
   @apply items-center self-center place-content-center;
 }
 .section-containers {
-  @apply w-full min-h-screen p-4 lg:p-8 f-col gap-12 e-center bg-[#0b1121]
+  @apply w-full min-h-screen p-4 f-col gap-12 e-center bg-[#0b1121]
+/* LG */ lg:p-8;
 }
 .section-titles {
   @apply w-auto text-2xl border-b;
@@ -133,8 +134,8 @@
   @apply text-2xl font-semibold;
 }
 .presentation-text {
-  @apply text-4xl 
-/* LG */ lg:w-1/2;
+  @apply f-col
+/* LG */ lg:w-10/12
 }
 .home-cta-box {
   @apply flex gap-8 items-center;

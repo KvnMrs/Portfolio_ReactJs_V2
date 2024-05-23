@@ -41,7 +41,7 @@ function Home() {
         initial="initial"
         animate="animate"
         id="home"
-        className="section-containers lg:px-16 lg:flex-row z-50"
+        className="section-containers lg:px-16 lg:flex-row lg:justify-between"
       >
         <aside
           initial="initial"
@@ -52,15 +52,19 @@ function Home() {
             <header className=" presentation-header">
               <span className="emoji-anim">✌️</span>{" "}
               <h1 className="presentation-title">
-                Hi there, Moi c'est Kévin !
+                Hi there ! Moi c'est Kévin !
               </h1>
             </header>
-            <p className="presentation-text">
-              <span className="text-5xl ">Développeur Front-End Junior</span> en
-              recherche d'une <span className="text-4xl">alternance</span> en
-              tant que
-              <span className="text-4xl"> Développeur Full-Stack</span>
-            </p>
+            <div className="presentation-text">
+              <p className="text-5xl text-start">
+                Développeur Front-End Junior
+              </p>
+              <p className="text-3xl">
+                en recherche d'une <span className="text-4xl">alternance</span>
+              </p>
+              <p className="text-3xl"> en tant que</p>
+              <p className="text-4xl"> Développeur Full-Stack</p>
+            </div>
           </div>
 
           <div className="home-cta-box ">
