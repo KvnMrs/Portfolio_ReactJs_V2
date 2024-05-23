@@ -9,7 +9,7 @@ import SvgBurger from "../../../../assets/svg/sidebar/SvgBurger";
 // Packages
 import { motion } from "framer-motion";
 
-function BarNav() {
+function NavMenu() {
   const [openSidebar, setOpenSideBar] = useState(false);
   const [showMenu, setShowMenu] = useState(true);
   const location = useLocation();
@@ -95,4 +95,4 @@ function BarNav() {
   );
 }
 
-export default BarNav;
+export default NavMenu;

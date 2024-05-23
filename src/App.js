@@ -8,12 +8,12 @@ import Home from "./app/pages/home/Home";
 import About from "./app/pages/about/About";
 import Contact from "./app/pages/contact/Contact";
 import Projects from "./app/pages/projects/Projects";
-import MenuNav from "./app/components/common/navigation/SideBar";
+import NavMenu from "./app/components/common/navigation/NavMenu";
 
 function App() {
   return (
     <>
-      <MenuNav />
+      <NavMenu />
       <div className="main-container ">
           <Routes>
             <Route path="/" element={<Home />} />
