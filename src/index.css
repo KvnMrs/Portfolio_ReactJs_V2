@@ -61,15 +61,18 @@
     margin-block: auto;
   }
 }
-.burger-button-container {
+.btn-burger-container {
   @apply flex self-center mx-auto
 }
-.burger-button-container svg {
+.btn-burger {
+  @apply fixed z-50 h-auto left-8 top-8
+}
+.btn-burger-container svg {
   @apply w-6
 /* MD */ md:w-8;
 }
 .logo {
-  @apply hidden fixed h-auto left-16 top-4 text-xl font-bold z-50 hover-sky-125
+  @apply hidden fixed h-auto left-8 top-16 text-xl font-bold z-50 hover-sky-125
 /* LG */ lg:flex;
 }
 .menu-nav-container {

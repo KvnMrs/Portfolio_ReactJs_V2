@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+// Animations
+import { motion } from "framer-motion";
+import { onNavigateAnim, openNavAnim } from "../../../animations/common/commonAnimations.js";
 // Assets
 import SvgHome from "../../../../assets/svg/sidebar/links-section/SvgHome";
 import SvgProfile from "../../../../assets/svg/sidebar/links-section/SvgProfile";
 import SvgProject from "../../../../assets/svg/sidebar/links-section/SvgProject";
 import SvgContact from "../../../../assets/svg/sidebar/links-section/SvgContact";
 import SvgBurger from "../../../../assets/svg/sidebar/SvgBurger";
-// Packages
-import { motion } from "framer-motion";
 
 function NavMenu() {
-  const [openSidebar, setOpenSideBar] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showMenu, setShowMenu] = useState(true);
   const location = useLocation();
 
@@ -20,34 +21,53 @@ function NavMenu() {
     } else setShowMenu(true);
   }, [location]);
 
-  const toggleSidebar = () => {
-    setOpenSideBar(!openSidebar);
+  const toggleNavMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    return () => {
+      document.body.classList.remove('overflow-hidden');
+    };
+  }, [isMenuOpen]);
+
   return (
     <>
       {showMenu && (
         <>
-          <div className="burger-button-container">
+          <div className="btn-burger-container">
             <button
-              className="fixed z-50 h-auto left-4 top-4"
+            className="btn-burger"
               type="button"
-              onClick={toggleSidebar}
+              onClick={toggleNavMenu}
             >
               <SvgBurger />
             </button>
           </div>
           <Link to="/">
-            <h1 className="logo">KM</h1>
+            <button onClick={() => setIsMenuOpen(false)} type="button" className="logo">KM</button>
           </Link>
         </>
       )}
-      {openSidebar && (
-        <div className="menu-nav-container">
-          <div className="menu-nav-box">
+      {isMenuOpen && (
+              <motion.nav
+              variants={onNavigateAnim}
+              initial="initial"
+              animate="animate" className="menu-nav-container">
+         <motion.div
+              variants={openNavAnim}
+              initial="initial"
+              animate="animate" className="menu-nav-box">
             <div className="group">
               <button
                 type="button"
-                onClick={toggleSidebar}
+                onClick={toggleNavMenu}
                 className="menu-nav-cross"
               >
                 X
@@ -56,13 +76,13 @@ function NavMenu() {
             {/* Links Section */}
             <ol className="links-container">
               <li className="group">
-                <Link className="link-box " onClick={toggleSidebar} to="/">
+                <Link className="link-box " onClick={toggleNavMenu} to="/">
                   <SvgHome />
                   <p className="link-name">Accueil</p>
                 </Link>
               </li>
               <li className="group">
-                <Link className="link-box " onClick={toggleSidebar} to="/about">
+                <Link className="link-box " onClick={toggleNavMenu} to="/about">
                   <SvgProfile className={"link-svg"} />
                   <p className="link-name">A propos</p>
                 </Link>
@@ -70,7 +90,7 @@ function NavMenu() {
               <li className="group">
                 <Link
                   className="link-box "
-                  onClick={toggleSidebar}
+                  onClick={toggleNavMenu}
                   to="/projects"
                 >
                   <SvgProject />
@@ -80,7 +100,7 @@ function NavMenu() {
               <li className="group">
                 <Link
                   className="link-box "
-                  onClick={toggleSidebar}
+                  onClick={toggleNavMenu}
                   to="/contact"
                 >
                   <SvgContact />
@@ -88,8 +108,8 @@ function NavMenu() {
                 </Link>
               </li>
             </ol>
-          </div>
-        </div>
+          </motion.div>
+        </motion.nav>
       )}
     </>
   );
