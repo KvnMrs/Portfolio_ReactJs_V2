@@ -10,6 +10,7 @@
 .bg-slate-xl {
   @apply bg-slate-400 from-slate-100 to-slate-400 bg-opacity-30 backdrop-blur-md rounded-xl shadow-2xl
 }
+
 .bg-slate-lg {
   @apply bg-slate-400 from-slate-100 to-slate-400 bg-opacity-40 backdrop-blur-md rounded-lg shadow-xl
 }

@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <NavMenu />
-      <div className="main-container bg-dark_blue">
+      <div className="main-container">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
