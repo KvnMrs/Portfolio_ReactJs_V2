@@ -23,17 +23,18 @@ function NavMenu() {
 
   const toggleNavMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    return window.scrollTo(0, 0);
   };
 
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.classList.add('overflow-hidden');
+      document.body.classList.add("overflow-hidden");
     } else {
-      document.body.classList.remove('overflow-hidden');
+      document.body.classList.remove("overflow-hidden");
     }
 
     return () => {
-      document.body.classList.remove('overflow-hidden');
+      document.body.classList.remove("overflow-hidden");
     };
   }, [isMenuOpen]);
 
@@ -43,27 +44,37 @@ function NavMenu() {
         <>
           <div className="btn-burger-container">
             <button
-            className="btn-burger"
+              className="btn-burger"
               type="button"
-              onClick={toggleNavMenu}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <SvgBurger />
             </button>
           </div>
           <Link to="/">
-            <button onClick={() => setIsMenuOpen(false)} type="button" className="logo">KM</button>
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              type="button"
+              className="logo"
+            >
+              KM
+            </button>
           </Link>
         </>
       )}
       {isMenuOpen && (
-              <motion.nav
-              variants={onNavigateAnim}
-              initial="initial"
-              animate="animate" className="menu-nav-container">
-         <motion.div
-              variants={openNavAnim}
-              initial="initial"
-              animate="animate" className="menu-nav-box">
+        <motion.nav
+          variants={onNavigateAnim}
+          initial="initial"
+          animate="animate"
+          className="menu-nav-container"
+        >
+          <motion.div
+            variants={openNavAnim}
+            initial="initial"
+            animate="animate"
+            className="menu-nav-box"
+          >
             <div className="group">
               <button
                 type="button"
