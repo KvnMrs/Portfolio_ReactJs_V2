@@ -1,8 +1,6 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const colors = ["white", "cyan"];
-
 function H2({ children }) {
   return (
     <AnimatePresence exitBeforeEnter>

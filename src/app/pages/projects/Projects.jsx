@@ -1,17 +1,21 @@
 import React from "react";
-import { AnimatePresence } from "framer-motion";
+// Animations
+import { motion, AnimatePresence } from "framer-motion";
+import { onNavigateAnim } from "../../animations/common/commonAnimations.js";
 // Components
 import ProjectCard from "../../components/projects/ProjectCard";
 import dataProjects from "../../../datas/datasProjects";
 
-import SideBar from "../../../app/components/common/navigation/SideBar";
-
-export default function App() {
+function Projects() {
   return (
     <>
-      <SideBar />
-      <section className="section-containers">
-        <div className="flex flex-col items-center">
+      <motion.section
+        variants={onNavigateAnim}
+        initial="initial"
+        animate="animate"
+        className="section-containers"
+      >
+        <div className="projects-container">
           <AnimatePresence exitBeforeEnter>
             {dataProjects.map((el) => (
               <>
@@ -20,7 +24,9 @@ export default function App() {
             ))}
           </AnimatePresence>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }
+
+export default Projects;

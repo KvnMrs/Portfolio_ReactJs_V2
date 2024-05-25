@@ -1,16 +1,14 @@
-import React from "react";
+import React from "react"; // Animations
+import { motion } from "framer-motion";
+import { skillsBoxAnim } from "../../../animations/common/commonAnimations.js";
 
 const HardSkill = ({ hardSkill, categorie, img }) => {
   return (
     <>
-      <div className={" flex flex-col gap-4 items-center justify-center  "}>
-        <img
-          className="w-14 h-14 cursor-pointer | lg:w-24 lg:h-24 lg:p-4 content-center "
-          alt={categorie}
-          src={img}
-        />
+      <motion.div variants={skillsBoxAnim} className="hardSkill-box">
+        <img className="hardSkill-img" alt={categorie} src={img} />
         <h4 className="text-xl">{hardSkill}</h4>
-      </div>
+      </motion.div>
     </>
   );
 };

@@ -1,4 +1,17 @@
-import React from "react";
+import React, { useRef } from "react";
+// Animations
+import { motion, useInView } from "framer-motion";
+import {
+  onNavigateAnim,
+  comeFromLeftAnim,
+  comeFromRightAnim,
+} from "../../animations/common/commonAnimations.js";
+import {
+  aboutMeDescriptionAnim,
+  aboutMeImgAnim,
+  skillsContainerAnim,
+  logoBoxAnim,
+} from "../../animations/aboutAnimations.js";
 // Components
 import SoftSkill from "../../components/about/skills/SoftSkill";
 import HardSkill from "../../components/about/skills/HardSkill";
@@ -11,21 +24,76 @@ import img_ReactJs from "../../../assets/img/imgHardSkills/ReactJs.png";
 import img_Angular from "../../../assets/img/imgHardSkills/Angular.png";
 import img_VueJs from "../../../assets/img/imgHardSkills/VueJs.png";
 
-import SideBar from "../../../app/components/common/navigation/SideBar";
-
 function About() {
+  const refParagraph1 = useRef(null);
+  const isInViewParagph1 = useInView(refParagraph1, {
+    once: true,
+    margin: "-20% 0px",
+  });
+  const refSoftSkills = useRef(null);
+  const isInViewSoftSkills = useInView(refSoftSkills, {
+    once: true,
+    margin: "-10% 0px",
+  });
+  const refParagraph2 = useRef(null);
+  const isInViewParagph2 = useInView(refParagraph2, {
+    once: true,
+    margin: "-40% 0px",
+  });
+  const refLogo1 = useRef(null);
+  const isInViewLogo1 = useInView(refLogo1, {
+    once: true,
+    margin: "10% 0px",
+  });
+  const refLogo2 = useRef(null);
+  const isInViewLogo2 = useInView(refLogo2, {
+    once: true,
+    margin: "10% 0px",
+  });
+  const refLogo3 = useRef(null);
+  const isInViewLogo3 = useInView(refLogo3, {
+    once: true,
+    margin: "10% 0px",
+  });
+  const refHardSkills1 = useRef(null);
+  const isInViewHardSkills1 = useInView(refHardSkills1, {
+    once: true,
+    margin: "10% 0px",
+  });
+  const refHardSkills2 = useRef(null);
+  const isInViewHardSkills2 = useInView(refHardSkills2, {
+    once: true,
+    margin: "0% 0px",
+  });
+  const refHardSkills3 = useRef(null);
+  const isInViewHardSkills3 = useInView(refHardSkills3, {
+    once: true,
+    margin: "20% 0px",
+  });
+
   return (
     <>
-      <SideBar />
-      <section id="about" className="section-containers">
-        <aside className="about-aside-containers | md:self-center lg:gap-16">
-          <div className="flex flex-col gap-4 items-center justify-center | md:gap-8 | lg:flex-row-reverse ">
-            <img
-              className="w-40 h-40 object-cover self-center | lg:w-80 lg:h-[20.5rem]"
+      <motion.section
+        variants={onNavigateAnim}
+        initial="initial"
+        animate="animate"
+        id="about"
+        className="section-containers py-8 lg:py-16"
+      >
+        <aside className="about-aside-containers">
+          <div className="about-me-box">
+            <motion.img
+              variants={aboutMeImgAnim}
+              className="about-me-img"
               alt="Profil"
               src={imgProfil}
             />
-            <div className="px-4 flex flex-col gap-3 | lg:w-1/2 lg:px-8 italic">
+            <motion.div
+              variants={aboutMeDescriptionAnim}
+              initial="initial"
+              animate="animate"
+              className="about-me-text"
+            >
               <p className="text-xl">
                 Je m'appelle Kévin, j'ai 30 ans et j'habite la ville culturelle
                 et historique de Nantes. C'est peut être de la que vient mon
@@ -45,9 +113,12 @@ function About() {
                 autonomie et par le biais de différents supports que j'ai
                 commencé à m'initier à ces bases.
               </p>
-            </div>
+            </motion.div>
           </div>
-          <div className="w-full10 py-4 flex gap-4 flex-wrap justify-evenly | md:gap-8 ">
+          <motion.div
+            variants={skillsContainerAnim}
+            className="w-full softSkills-box"
+          >
             {dataSkills
               .filter((atout) => atout.part === 1)
               .map((el) => (
@@ -58,45 +129,52 @@ function About() {
                   img={el.image}
                 />
               ))}
-          </div>
-          <div className="w-4/5 mx-auto my-8 border border-t-0"> </div>
+          </motion.div>
+          <div className="divider"> </div>
         </aside>
-        <aside className="about-aside-containers flex-col |">
-          <div className="contrast-bg-0 about-description-container">
-            <div className="about-img-containers rotate-[16deg] self-end">
-              <div className="about-img"></div>
+        <aside className="about-aside-containers">
+          <motion.div
+            ref={refParagraph1}
+            variants={comeFromLeftAnim}
+            initial="initial"
+            animate={isInViewParagph1 ? "animate" : "initial"}
+            className="about-surfaces about-paragph-container"
+          >
+            <H2>
+              Une Aventure <br></br> avec un grand 'A'
+            </H2>
+            <div className="about-paragph">
+              <p className="text-xl | md:w-1/3">
+                C'est après dix années passées dans le domaine du commerce et
+                suite à mon engouement pour le développement web que j'ai choisi
+                de me réorienter dans ce domaine, encore nouveau pour moi il y a
+                quelques années.
+              </p>
+              <p className="text-xl | md:w-1/3 md:mr-2">
+                Si dans un premier temps mes sept années passées en tant que
+                coiffeur/barbier semblent loin du développement web, je me suis
+                très vite rendu compte que mon expérience dans le suivi
+                clientèle (relationnel, diagnostic, conseils, adaptation,
+                réalisation) pourrait m'être utile. Soucieux de celui-ci par le
+                passé, j'apporte aujourd'hui un réel intérêt à l'UI/UX.
+              </p>
+              <p className="text-xl | md:w-1/3">
+                Ma réorientation actuelle n'est pas ma première. Je me suis
+                aussi épanoui en tant que serveur en restauration. Un domaine
+                demandant de la rigueur, une bonne estimation des timings et le
+                respect de ces derniers pour le bon déroulement des services.
+                Mais aussi un esprit d'équipe et une analyse rapide des
+                priorités par instants.
+              </p>
             </div>
-            <div className="flex flex-col gap-4">
-              <H2>
-                Une Aventure <br></br> avec un grand 'A'
-              </H2>
-              <div className="flex flex-col gap-3 | md:flex-row md:gap-6">
-                <p className="text-xl | md:w-1/3">
-                  C'est après dix années passées dans le domaine du commerce et
-                  suite à mon engouement pour le développement web que j'ai
-                  choisi de me réorienter dans ce domaine, encore nouveau pour
-                  moi il y a quelques années.
-                </p>
-                <p className="text-xl | md:w-1/3 md:mr-2">
-                  Si dans un premier temps mes sept années passées en tant que
-                  coiffeur/barbier semblent loin du développement web, je me
-                  suis très vite rendu compte que mon expérience dans le suivi
-                  clientèle (relationnel, diagnostic, conseils, adaptation,
-                  réalisation) pourrait m'être utile. Soucieux de celui-ci par
-                  le passé, j'apporte aujourd'hui un réel intérêt à l'UI/UX.
-                </p>
-                <p className="text-xl | md:w-1/3">
-                  Ma réorientation actuelle n'est pas ma première. Je me suis
-                  aussi épanoui en tant que serveur en restauration. Un domaine
-                  demandant de la rigueur, une bonne estimation des timings et
-                  le respect de ces derniers pour le bon déroulement des
-                  services. Mais aussi un esprit d'équipe et une analyse rapide
-                  des priorités par instants.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="w-full py-4 flex gap-4 flex-wrap justify-evenly | md:gap-8 ">
+          </motion.div>
+          <motion.div
+            ref={refSoftSkills}
+            variants={skillsContainerAnim}
+            initial="inital"
+            animate={isInViewSoftSkills ? "animate" : "initial"}
+            className="softSkills-box"
+          >
             {dataSkills
               .filter((atout) => atout.part === 2)
               .map((el) => (
@@ -107,84 +185,83 @@ function About() {
                   img={el.image}
                 />
               ))}
-          </div>
-          <div className="w-4/5 mx-auto my-8 border border-t-0"> </div>
+          </motion.div>
+          <div className="divider"> </div>
         </aside>
-        <aside className="about-aside-containers md:gap-36">
-          <div className="contrast-bg-0  about-description-container">
-            <div className="about-img-containers self-start rotate-[168deg]">
-              <div className="about-img"></div>
+        <aside className="about-aside-containers | md:gap-36">
+          <motion.div
+            ref={refParagraph2}
+            variants={comeFromRightAnim}
+            initial="inital"
+            animate={isInViewParagph2 ? "animate" : "initial"}
+            className="about-surfaces about-paragph-container"
+          >
+            <H2>
+              Le développement <span className="line-through">web</span>{" "}
+              <br></br>des compétences
+            </H2>
+            <div className="about-paragph">
+              <p className="relative text-xl md:w-1/3 ">
+                Tout comme le web, les compétences se développent avec le temps.
+                Depuis mes débuts en autodidacte, j'ai autofinancé ma formation
+                au sein de la Wild Code School. Une formation Full-Stack d'une
+                durée de 5 mois, axée sur l'environnement JavaScript avec React,
+                NodeJs et MySQL pour les bases de donées relationnel.
+                <motion.img
+                  ref={refLogo1}
+                  variants={logoBoxAnim}
+                  initial="inital"
+                  animate={isInViewLogo1 ? "animate" : "initial"}
+                  src={img_ReactJs}
+                  className="paragraph-frameworks-logos"
+                  alt="ReactJs"
+                />
+              </p>
+              <p className="relative text-xl | md:w-1/3">
+                À la suite de cette formation, j'ai eu l'opportunité d'intégrer
+                l'équipe de Cascade8, une start-up travaillant dans le domaine
+                du cinéma. Un stage d'une durée de 5 mois, dans un environnement
+                JavaScript avec Angular. C'est également durant ce stage que
+                j'ai eu le plaisir de découvrir le 'NoSQL' avec Firebase.
+                <motion.img
+                  ref={refLogo2}
+                  variants={logoBoxAnim}
+                  initial="inital"
+                  animate={isInViewLogo2 ? "animate" : "initial"}
+                  src={img_Angular}
+                  className="paragraph-frameworks-logos"
+                  alt="Angular"
+                />
+              </p>
+              <p className="relative text-xl | md:w-1/3">
+                J'ai eu l'occasion d'accomplir un second stage en tant que
+                développeur Front-End au sein de XRATOR, une start-up opérant
+                dans le domaine de la cybersécurité. D'une durée de 4 mois, ce
+                stage m'a permis de me familiariser avec le dernier framework
+                JavaScript : Vue.js, ainsi qu'avec Prisma pour les bases de
+                données relationnelles.
+                <motion.img
+                  ref={refLogo3}
+                  variants={logoBoxAnim}
+                  initial="inital"
+                  animate={isInViewLogo3 ? "animate" : "initial"}
+                  src={img_VueJs}
+                  className="paragraph-frameworks-logos"
+                  alt="VueJs"
+                />
+              </p>
             </div>
-            <div className="flex flex-col gap-4 ">
-              <H2>
-                Le développement <span className="line-through">web</span>{" "}
-                <br></br>des compétences
-              </H2>
-              <div className="flex flex-col gap-16 | md:flex-row md:gap-6">
-                <p className="text-xl md:w-1/3 relative">
-                  Tout comme le web, les compétences se développent avec le
-                  temps. Depuis mes débuts en autodidacte, j'ai autofinancé ma
-                  formation au sein de la Wild Code School. Une formation
-                  Full-Stack d'une durée de 5 mois, axée sur l'environnement
-                  JavaScript avec React, NodeJs et MySQL pour les bases de
-                  donées relationnel.
-                  <img
-                    src={img_ReactJs}
-                    className="max-h-full -bottom-14 inset-x-0 m-auto md:flex absolute bg-cover opacity-20 | md:-bottom-32"
-                    alt="ReactJs"
-                  />
-                </p>
-                <p className="relative text-xl | md:w-1/3">
-                  À la suite de cette formation, j'ai eu l'opportunité
-                  d'intégrer l'équipe de Cascade8, une start-up travaillant dans
-                  le domaine du cinéma. Un stage d'une durée de 5 mois, dans un
-                  environnement JavaScript avec Angular. C'est également durant
-                  ce stage que j'ai eu le plaisir de découvrir le 'NoSQL' avec
-                  Firebase.
-                  <img
-                    src={img_Angular}
-                    className="max-h-full -bottom-14 inset-x-0 m-auto md:flex absolute bg-cover opacity-20 | md:-bottom-32"
-                    alt="Angular"
-                  />
-                </p>
-                <p className="relative text-xl | md:w-1/3">
-                  J'ai eu l'occasion d'accomplir un second stage en tant que
-                  développeur Front-End au sein de XRATOR, une start-up opérant
-                  dans le domaine de la cybersécurité. D'une durée de 4 mois, ce
-                  stage m'a permis de me familiariser avec le dernier framework
-                  JavaScript : Vue.js, ainsi qu'avec Prisma pour les bases de
-                  données relationnelles.
-                  <img
-                    src={img_VueJs}
-                    className="max-h-full absolute -bottom-14 inset-x-0 m-auto bg-cover opacity-20 | md:flex md:-bottom-32 "
-                    alt="VueJs"
-                  />
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="w-11/12 flex flex-col gap-12 | md:gap-20">
-            <div className="flex flex-col gap-4 | md:gap-8">
-              <H2>Front-End</H2>
-              <div className=" flex flex-wrap gap-8 | md:gap-8 ">
-                {dataSkills
-                  .filter(
-                    (atout) =>
-                      atout.stack === "front-end" || atout.stack === "full"
-                  )
-                  .map((el) => (
-                    <HardSkill
-                      key={el.element}
-                      hardSkill={el.element}
-                      categorie={el.catégorie}
-                      img={el.image}
-                    />
-                  ))}
-              </div>
-            </div>
-            <div className="flex flex-col gap-4 | md:gap-8">
-              <H2 className="w-1/3 white-night-surface text-2xl">Back-End</H2>
-              <div className="flex flex-wrap gap-8 | md:gap-8 ">
+          </motion.div>
+          <div className="hardSkills-container">
+            <div className="hardSkills-boxes">
+              <H2>Back-End</H2>
+              <motion.div
+                ref={refHardSkills2}
+                variants={skillsContainerAnim}
+                initial="inital"
+                animate={isInViewHardSkills2 ? "animate" : "initial"}
+                className="hardSkills-elements"
+              >
                 {dataSkills
                   .filter(
                     (atout) =>
@@ -198,11 +275,41 @@ function About() {
                       img={el.image}
                     />
                   ))}
-              </div>
+              </motion.div>
             </div>
-            <div className="w-11/12 flex flex-col gap-4 | md:gap-8">
-              <H2 className="w-1/3 white-night-surface text-2xl">Outils</H2>
-              <div className="flex flex-wrap gap-8 | md:gap-8 ">
+            <div className="hardSkills-boxes">
+              <H2>Front-End</H2>
+              <motion.div
+                ref={refHardSkills1}
+                variants={skillsContainerAnim}
+                initial="inital"
+                animate={isInViewHardSkills1 ? "animate" : "initial"}
+                className="hardSkills-elements"
+              >
+                {dataSkills
+                  .filter(
+                    (atout) =>
+                      atout.stack === "front-end" || atout.stack === "full"
+                  )
+                  .map((el) => (
+                    <HardSkill
+                      key={el.element}
+                      hardSkill={el.element}
+                      categorie={el.catégorie}
+                      img={el.image}
+                    />
+                  ))}
+              </motion.div>
+            </div>
+            <div className="hardSkills-boxes">
+              <H2>Outils</H2>
+              <motion.div
+                ref={refHardSkills3}
+                variants={skillsContainerAnim}
+                initial="inital"
+                animate={isInViewHardSkills3 ? "animate" : "initial"}
+                className="hardSkills-elements"
+              >
                 {dataSkills
                   .filter((atout) => atout.catégorie === "Outil")
                   .map((el) => (
@@ -213,11 +320,11 @@ function About() {
                       img={el.image}
                     />
                   ))}
-              </div>
+              </motion.div>
             </div>
           </div>
         </aside>
-      </section>
+      </motion.section>
     </>
   );
 }

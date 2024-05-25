@@ -10,8 +10,7 @@ function SvgBurger() {
       y="0px"
       viewBox="0 0 122.88 95.95"
       style={{ enableBackground: "new 0 0 122.88 95.95" }}
-      fill="white"
-      className="hover:scale-110 duration-700 "
+      className="fill-white hover-sky-125 hover:fill-sky-500"
     >
       <g>
         <path
