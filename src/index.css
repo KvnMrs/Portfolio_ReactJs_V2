@@ -38,7 +38,8 @@
   @apply items-center self-center place-content-center;
 }
 .section-containers {
-  @apply w-full min-h-screen p-4 lg:p-8 f-col gap-12 e-center bg-[#0b1121]
+  @apply w-full min-h-screen p-4 f-col gap-12 e-center bg-[#0b1121]
+/* LG */ lg:p-8;
 }
 .section-titles {
   @apply w-auto text-2xl border-b;
@@ -61,15 +62,18 @@
     margin-block: auto;
   }
 }
-.burger-button-container {
+.btn-burger-container {
   @apply flex self-center mx-auto
 }
-.burger-button-container svg {
+.btn-burger {
+  @apply fixed z-50 h-auto left-8 top-8
+}
+.btn-burger-container svg {
   @apply w-6
 /* MD */ md:w-8;
 }
 .logo {
-  @apply hidden fixed h-auto left-16 top-4 text-xl font-bold z-50 hover-sky-125
+  @apply hidden fixed h-auto left-8 top-16 text-xl font-bold z-50 hover-sky-125
 /* LG */ lg:flex;
 }
 .menu-nav-container {
@@ -87,7 +91,7 @@
   @apply f-col gap-8;
 }
 .link-box {
-  @apply w-full flex py-2-4 px-4-8 gap-4-8 rounded-lg 
+  @apply w-full flex py-2-4 px-4-8 gap-4-8 items-center rounded-lg 
   /* HOVER */ duration-300 ease-in group-hover:bg-slate-300 group-hover:scale-110;
 }
 .link-name {
@@ -95,8 +99,8 @@
   /* HOVER */ duration-300 ease-in group-hover:text-sky-500 group-hover:scale-110;
 }
 .link-svg {
-  @apply w-8 fill-white 
-  /* HOVER */ duration-300 ease-in group-hover:fill-sky-500 group-hover:scale-125;
+  @apply w-8 lg:w-10 fill-white 
+  /* HOVER */ duration-300 ease-in group-hover:fill-sky-500 group-hover:scale-110;
 }
 
 /********************** Home ***********************/
@@ -113,6 +117,7 @@
 }
 .home-link-name {
   @apply font-semibold text-lg 
+/* HOVER */ duration-300 ease-in group-hover:text-sky-500
 /* MD */ md:gap-2 md:self-center md:text-xl;
 }
 .presentation-container {
@@ -130,8 +135,8 @@
   @apply text-2xl font-semibold;
 }
 .presentation-text {
-  @apply text-4xl 
-/* LG */ lg:w-1/2;
+  @apply f-col
+/* LG */ lg:w-10/12
 }
 .home-cta-box {
   @apply flex gap-8 items-center;

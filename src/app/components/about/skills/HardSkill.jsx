@@ -1,12 +1,14 @@
-import React from "react";
+import React from "react"; // Animations
+import { motion } from "framer-motion";
+import { skillsBoxAnim } from "../../../animations/common/commonAnimations.js";
 
 const HardSkill = ({ hardSkill, categorie, img }) => {
   return (
     <>
-      <div className="hardSkill-box">
+      <motion.div variants={skillsBoxAnim} className="hardSkill-box">
         <img className="hardSkill-img" alt={categorie} src={img} />
         <h4 className="text-xl">{hardSkill}</h4>
-      </div>
+      </motion.div>
     </>
   );
 };

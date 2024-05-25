@@ -1,16 +1,19 @@
 import React from "react";
-import "./Skill.css"; // Importez le fichier CSS
+import "./Skill.css";
+// Animations
+import { motion } from "framer-motion";
+import { skillsBoxAnim } from "../../../animations/common/commonAnimations.js";
 
 const SoftSkill = ({ softSkill, categorie, img }) => {
   return (
     <>
-      <div className="softSkill-box">
+      <motion.div variants={skillsBoxAnim} className="softSkill-box">
         <div className="softSkill-img softSkill-img-polygon">
           <img alt={categorie} src={img} />
         </div>
 
         <h4 className="text-xl">{softSkill}</h4>
-      </div>
+      </motion.div>
     </>
   );
 };
