@@ -1,7 +1,15 @@
 
+
 .home-title {
-    text-shadow: 5px 5px #F76C6C;
+    text-shadow: 3px 3px #F76C6C;
 }
+
+@media screen and (min-width: 640px) {
+    .home-title {
+        text-shadow: 4px 4px #F76C6C;
+    }
+}
+
 .emoji-anim {
     display: inline-block;
     transform: translate3d(0%,0,0);

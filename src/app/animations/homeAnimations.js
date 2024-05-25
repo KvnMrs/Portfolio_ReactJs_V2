@@ -1,5 +1,3 @@
-import { delay } from "framer-motion";
-
 export const homeTitleAnim = {
   initial: {
     opacity: 0,
