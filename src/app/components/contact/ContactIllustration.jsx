@@ -21,7 +21,7 @@ function ContactIllustration() {
 
   return (
     <div
-      className=" md:self-center | md:absolute md:bottom-0 md:left-[35%] md:w-80  xl:scale-105 "
+      className="md:self-center md:absolute md:-bottom-4 md:left-[35%] md:w-80 md:scale-105 "
       id="lottie-container"
     ></div>
   );

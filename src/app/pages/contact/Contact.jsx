@@ -106,7 +106,7 @@ const Contact = () => {
             )}
           </div>
           <div
-            className="form-boxes"
+            className="form-boxes -mb-8 | md:mb-0"
             variants={texteAreaAnim}
             initial="initial"
           >
@@ -128,8 +128,7 @@ const Contact = () => {
               Envoyer
             </ButtonCallToActionText>
           </div>
-          <ContactIllustration/>
-
+          <ContactIllustration />
         </form>
       </motion.section>
     </>

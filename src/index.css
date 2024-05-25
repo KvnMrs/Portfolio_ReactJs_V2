@@ -252,8 +252,8 @@
 /*********************** Contact ************************/
 
 .form-container {
-  @apply w-5/6 f-col rounded-xl
-/* MD */ md:w-full md:gap-8 md:flex-row
+  @apply w-5/6 py-20 f-col rounded-xl
+/* MD */ md:w-full md:py-0 md:gap-8 md:flex-row
 /* LG */ lg:w-8/12 lg:gap-16
 }
 .form-boxes {
