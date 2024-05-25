@@ -86,7 +86,7 @@ export const lettersNameAnim2 = {
   },
   animate: {
     transition: {
-      duration: 0.8,
+      duration: 0.6,
       type: "spring",
     },
     opacity: 1,
