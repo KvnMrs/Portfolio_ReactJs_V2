@@ -4,9 +4,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import { onNavigateAnim } from "../../animations/common/commonAnimations.js";
 import {
+  homeTitleAnim,
   presentationContainerAnim,
   afterPresentation,
   presentationBoxAnim,
+  lettersNameAnim,
+  lettersNameAnim2,
 } from "../../animations/homeAnimations.js";
 // Components
 import SocialMediasLinks from "../../components/common/Link/SocialMediasLinks.jsx";
@@ -53,12 +56,49 @@ function Home() {
           <HomeIllustration />
           <div className="presentation-box ">
             <motion.header
-              variants={afterPresentation}
+              variants={homeTitleAnim}
               className=" presentation-header"
             >
               <span className="emoji-anim">✌️</span>{" "}
               <h1 className="presentation-title">
-                Hi there ! Moi c'est Kévin !
+                Hi there ! Moi c'est{" "}
+                <span className="text-transparent">____________</span>
+                <motion.span
+                  variants={lettersNameAnim}
+                  className="text-3xl md:text-4xl absolute top-[0.75rem] md:top-3 right-[6.75rem]"
+                >
+                  K
+                </motion.span>
+                <motion.span
+                  variants={lettersNameAnim}
+                  className="text-3xl md:text-4xl absolute top-[0.75rem] md:top-3 right-[5.6rem]"
+                >
+                  é
+                </motion.span>
+                <motion.span
+                  variants={lettersNameAnim}
+                  className="text-3xl md:text-4xl absolute top-[0.75rem] md:top-3 right-[4.25rem]"
+                >
+                  v
+                </motion.span>
+                <motion.span
+                  variants={lettersNameAnim}
+                  className="text-3xl md:text-4xl absolute top-[0.75rem] md:top-3 right-[3.55rem]"
+                >
+                  i
+                </motion.span>
+                <motion.span
+                  variants={lettersNameAnim}
+                  className="text-3xl md:text-4xl absolute top-[0.75rem] md:top-3 right-[2.25rem]"
+                >
+                  n
+                </motion.span>{" "}
+                <motion.span
+                  variants={lettersNameAnim2}
+                  className="text-3xl md:text-4xl absolute top-[0.75rem]  md:top-3 right-[1.25rem]"
+                >
+                  !
+                </motion.span>
               </h1>
             </motion.header>
             <motion.div
