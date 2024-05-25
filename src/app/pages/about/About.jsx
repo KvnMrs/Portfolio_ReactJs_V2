@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 // Animations
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import {
   onNavigateAnim,
-  skillsContainerAnim,
+  comeFromLeftAnim,
+  comeFromRightAnim,
 } from "../../animations/common/commonAnimations.js";
 import {
   aboutMeDescriptionAnim,
   aboutMeImgAnim,
+  skillsContainerAnim,
+  logoBoxAnim,
 } from "../../animations/aboutAnimations.js";
 // Components
 import SoftSkill from "../../components/about/skills/SoftSkill";
@@ -22,6 +25,52 @@ import img_Angular from "../../../assets/img/imgHardSkills/Angular.png";
 import img_VueJs from "../../../assets/img/imgHardSkills/VueJs.png";
 
 function About() {
+  const refParagraph1 = useRef(null);
+  const isInViewParagph1 = useInView(refParagraph1, {
+    once: true,
+    margin: "-20% 0px",
+  });
+  const refSoftSkills = useRef(null);
+  const isInViewSoftSkills = useInView(refSoftSkills, {
+    once: true,
+    margin: "-10% 0px",
+  });
+  const refParagraph2 = useRef(null);
+  const isInViewParagph2 = useInView(refParagraph2, {
+    once: true,
+    margin: "-40% 0px",
+  });
+  const refLogo1 = useRef(null);
+  const isInViewLogo1 = useInView(refLogo1, {
+    once: true,
+    margin: "10% 0px",
+  });
+  const refLogo2 = useRef(null);
+  const isInViewLogo2 = useInView(refLogo2, {
+    once: true,
+    margin: "10% 0px",
+  });
+  const refLogo3 = useRef(null);
+  const isInViewLogo3 = useInView(refLogo3, {
+    once: true,
+    margin: "10% 0px",
+  });
+  const refHardSkills1 = useRef(null);
+  const isInViewHardSkills1 = useInView(refHardSkills1, {
+    once: true,
+    margin: "10% 0px",
+  });
+  const refHardSkills2 = useRef(null);
+  const isInViewHardSkills2 = useInView(refHardSkills2, {
+    once: true,
+    margin: "0% 0px",
+  });
+  const refHardSkills3 = useRef(null);
+  const isInViewHardSkills3 = useInView(refHardSkills3, {
+    once: true,
+    margin: "20% 0px",
+  });
+
   return (
     <>
       <motion.section
@@ -35,7 +84,7 @@ function About() {
           <div className="about-me-box">
             <motion.img
               variants={aboutMeImgAnim}
-              className="about-me-img "
+              className="about-me-img"
               alt="Profil"
               src={imgProfil}
             />
@@ -84,7 +133,13 @@ function About() {
           <div className="divider"> </div>
         </aside>
         <aside className="about-aside-containers">
-          <div className="about-surfaces about-paragph-container">
+          <motion.div
+            ref={refParagraph1}
+            variants={comeFromLeftAnim}
+            initial="initial"
+            animate={isInViewParagph1 ? "animate" : "initial"}
+            className="about-surfaces about-paragph-container"
+          >
             <H2>
               Une Aventure <br></br> avec un grand 'A'
             </H2>
@@ -112,8 +167,14 @@ function About() {
                 priorités par instants.
               </p>
             </div>
-          </div>
-          <div className="softSkills-box">
+          </motion.div>
+          <motion.div
+            ref={refSoftSkills}
+            variants={skillsContainerAnim}
+            initial="inital"
+            animate={isInViewSoftSkills ? "animate" : "initial"}
+            className="softSkills-box"
+          >
             {dataSkills
               .filter((atout) => atout.part === 2)
               .map((el) => (
@@ -124,11 +185,17 @@ function About() {
                   img={el.image}
                 />
               ))}
-          </div>
+          </motion.div>
           <div className="divider"> </div>
         </aside>
         <aside className="about-aside-containers | md:gap-36">
-          <div className="about-surfaces about-paragph-container">
+          <motion.div
+            ref={refParagraph2}
+            variants={comeFromRightAnim}
+            initial="inital"
+            animate={isInViewParagph2 ? "animate" : "initial"}
+            className="about-surfaces about-paragph-container"
+          >
             <H2>
               Le développement <span className="line-through">web</span>{" "}
               <br></br>des compétences
@@ -140,7 +207,11 @@ function About() {
                 au sein de la Wild Code School. Une formation Full-Stack d'une
                 durée de 5 mois, axée sur l'environnement JavaScript avec React,
                 NodeJs et MySQL pour les bases de donées relationnel.
-                <img
+                <motion.img
+                  ref={refLogo1}
+                  variants={logoBoxAnim}
+                  initial="inital"
+                  animate={isInViewLogo1 ? "animate" : "initial"}
                   src={img_ReactJs}
                   className="paragraph-frameworks-logos"
                   alt="ReactJs"
@@ -152,7 +223,11 @@ function About() {
                 du cinéma. Un stage d'une durée de 5 mois, dans un environnement
                 JavaScript avec Angular. C'est également durant ce stage que
                 j'ai eu le plaisir de découvrir le 'NoSQL' avec Firebase.
-                <img
+                <motion.img
+                  ref={refLogo2}
+                  variants={logoBoxAnim}
+                  initial="inital"
+                  animate={isInViewLogo2 ? "animate" : "initial"}
                   src={img_Angular}
                   className="paragraph-frameworks-logos"
                   alt="Angular"
@@ -165,36 +240,28 @@ function About() {
                 stage m'a permis de me familiariser avec le dernier framework
                 JavaScript : Vue.js, ainsi qu'avec Prisma pour les bases de
                 données relationnelles.
-                <img
+                <motion.img
+                  ref={refLogo3}
+                  variants={logoBoxAnim}
+                  initial="inital"
+                  animate={isInViewLogo3 ? "animate" : "initial"}
                   src={img_VueJs}
                   className="paragraph-frameworks-logos"
                   alt="VueJs"
                 />
               </p>
             </div>
-          </div>
+          </motion.div>
           <div className="hardSkills-container">
             <div className="hardSkills-boxes">
-              <H2>Front-End</H2>
-              <div className="hardSkills-elements">
-                {dataSkills
-                  .filter(
-                    (atout) =>
-                      atout.stack === "front-end" || atout.stack === "full"
-                  )
-                  .map((el) => (
-                    <HardSkill
-                      key={el.element}
-                      hardSkill={el.element}
-                      categorie={el.catégorie}
-                      img={el.image}
-                    />
-                  ))}
-              </div>
-            </div>
-            <div className="hardSkills-boxes">
               <H2>Back-End</H2>
-              <div className="hardSkills-elements">
+              <motion.div
+                ref={refHardSkills2}
+                variants={skillsContainerAnim}
+                initial="inital"
+                animate={isInViewHardSkills2 ? "animate" : "initial"}
+                className="hardSkills-elements"
+              >
                 {dataSkills
                   .filter(
                     (atout) =>
@@ -208,11 +275,41 @@ function About() {
                       img={el.image}
                     />
                   ))}
-              </div>
+              </motion.div>
+            </div>
+            <div className="hardSkills-boxes">
+              <H2>Front-End</H2>
+              <motion.div
+                ref={refHardSkills1}
+                variants={skillsContainerAnim}
+                initial="inital"
+                animate={isInViewHardSkills1 ? "animate" : "initial"}
+                className="hardSkills-elements"
+              >
+                {dataSkills
+                  .filter(
+                    (atout) =>
+                      atout.stack === "front-end" || atout.stack === "full"
+                  )
+                  .map((el) => (
+                    <HardSkill
+                      key={el.element}
+                      hardSkill={el.element}
+                      categorie={el.catégorie}
+                      img={el.image}
+                    />
+                  ))}
+              </motion.div>
             </div>
             <div className="hardSkills-boxes">
               <H2>Outils</H2>
-              <div className="hardSkills-elements">
+              <motion.div
+                ref={refHardSkills3}
+                variants={skillsContainerAnim}
+                initial="inital"
+                animate={isInViewHardSkills3 ? "animate" : "initial"}
+                className="hardSkills-elements"
+              >
                 {dataSkills
                   .filter((atout) => atout.catégorie === "Outil")
                   .map((el) => (
@@ -223,7 +320,7 @@ function About() {
                       img={el.image}
                     />
                   ))}
-              </div>
+              </motion.div>
             </div>
           </div>
         </aside>

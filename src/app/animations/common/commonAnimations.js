@@ -1,10 +1,33 @@
+export const comeFromLeftAnim = {
+    initial: { opacity: 0, x: -80 },
+    animate: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            ease: "linear",
+            duration: 0.8,
+        },
+    },
+};
+export const comeFromRightAnim = {
+    initial: { opacity: 0, x: 80 },
+    animate: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            ease: "linear",
+            duration: 0.8,
+        },
+    },
+};
+
 export const openNavAnim = {
     initial: { scale: 0 },
     animate: {
         scale: 1,
         transition: {
             ease: "linear",
-            duration: 0.4,
+            duration: 0.8,
         },
     },
 };
@@ -26,9 +49,9 @@ export const skillsContainerAnim = {
         opacity: 1,
         x: 0,
         transition: {
+            delay: 1,
             ease: "linear",
             staggerChildren: 0.4,
-            delayChildren: 0.8
         },
     },
 };
@@ -42,7 +65,7 @@ export const skillsBoxAnim = {
         opacity: 1,
         y: 0,
         transition: {
-            duration: 0.4, // Durée de l'animation pour chaque enfant
+            duration: 0.4, 
         },
     },
 };
