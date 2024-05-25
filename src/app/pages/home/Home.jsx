@@ -77,7 +77,7 @@ function Home() {
                 </motion.span>
                 <motion.span
                   variants={lettersNameAnim}
-                  className="text-3xl md:text-4xl absolute top-[0.75rem] md:top-3 right-[4.25rem]"
+                  className="text-3xl md:text-4xl absolute top-[0.75rem] md:top-3 right-[4.3rem] md:right-[4.25rem]"
                 >
                   v
                 </motion.span>
