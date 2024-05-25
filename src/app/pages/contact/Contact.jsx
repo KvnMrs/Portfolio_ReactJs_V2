@@ -46,10 +46,10 @@ const Contact = () => {
         initial="initial"
         animate="animate"
         id="contact"
-        className="section-containers"
+        className="section-containers xl:py-0"
       >
         <form
-          className="form-container"
+          className="form-container xl:mb-24"
           ref={formRef}
           onSubmit={handleSubmit(() => {
             sendEmail();
