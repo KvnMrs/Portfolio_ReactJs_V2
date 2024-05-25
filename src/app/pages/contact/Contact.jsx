@@ -8,6 +8,9 @@ import { texteAreaAnim } from "../../animations/contactAnimation";
 import ButtonCallToActionText from "../../components/common/button/ButtonCallToActionText";
 // Libraries
 import emailjs from "emailjs-com";
+// Assets
+import ContactIllustration from "../../components/contact/ContactIllustration.jsx";
+
 
 const Contact = () => {
   const formRef = useRef();
@@ -125,6 +128,8 @@ const Contact = () => {
               Envoyer
             </ButtonCallToActionText>
           </div>
+          <ContactIllustration/>
+
         </form>
       </motion.section>
     </>

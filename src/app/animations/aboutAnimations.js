@@ -44,7 +44,7 @@ export const logoBoxAnim = {
     opacity: 0.2,
     y: 0,
     transition: {
-      delay: 0.6,
+      delay: 0.8,
       duration: 0.4,
     },
   },

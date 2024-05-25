@@ -19,6 +19,7 @@ import CV from "../../../assets/document/Kévin_MARAIS_CV_FR.pdf";
 import SvgProfile from "../../../assets/svg/sidebar/links-section/SvgProfile";
 import SvgProject from "../../../assets/svg/sidebar/links-section/SvgProject";
 import SvgContact from "../../../assets/svg/sidebar/links-section/SvgContact";
+import HomeIllustration from "../../components/home/HomeIllustration.jsx";
 
 function Home() {
   const navigation = [
@@ -46,9 +47,10 @@ function Home() {
         initial="initial"
         animate="animate"
         id="home"
-        className="section-containers lg:px-16 lg:flex-row lg:justify-between"
+        className="section-containers lg:px-16 lg:justify-between | xl:flex-row"
       >
         <aside className="presentation-container">
+          <HomeIllustration />
           <div className="presentation-box ">
             <motion.header
               variants={afterPresentation}
@@ -65,46 +67,54 @@ function Home() {
             >
               <motion.p
                 variants={presentationBoxAnim}
-                className="text-5xl text-start"
+                className="text-5xl text-start "
               >
                 Développeur Front-End Junior
               </motion.p>
-              <motion.p variants={presentationBoxAnim} className="text-3xl">
+              <motion.p
+                variants={presentationBoxAnim}
+                className="text-3xl text-start"
+              >
                 En recherche d'une{" "}
                 <span className="text-wild_red">alternance</span>
               </motion.p>
-              <motion.p variants={presentationBoxAnim} className="text-3xl">
+              <motion.p
+                variants={presentationBoxAnim}
+                className="text-3xl text-start"
+              >
                 {" "}
                 en tant que
               </motion.p>
-              <motion.p variants={presentationBoxAnim} className="text-4xl">
+              <motion.p
+                variants={presentationBoxAnim}
+                className="text-4xl text-start home-title"
+              >
                 {" "}
                 Développeur Full-Stack
               </motion.p>
             </motion.div>
+            <motion.div variants={afterPresentation} className="home-cta-box">
+              <a href={CV} download>
+                <ButtonCallToActionText
+                  text={"Télécharger CV"}
+                ></ButtonCallToActionText>
+              </a>
+              <div className="flex gap-4">
+                <SocialMediasLinks
+                  link={
+                    "https://www.linkedin.com/in/k%C3%A9vin-marais-861314216/"
+                  }
+                  img={Linkedin}
+                  alt={"Lien vers Linkedin"}
+                />
+                <SocialMediasLinks
+                  link={"https://github.com/KvnMrs"}
+                  img={Github}
+                  alt={"Lien vers Github"}
+                />
+              </div>
+            </motion.div>
           </div>
-
-          <motion.div variants={afterPresentation} className="home-cta-box">
-            <a href={CV} download>
-              <ButtonCallToActionText
-                text={"Télécharger CV"}
-              ></ButtonCallToActionText>
-            </a>
-            <div className="flex gap-4">
-              <SocialMediasLinks
-                link={
-                  "https://www.linkedin.com/in/k%C3%A9vin-marais-861314216/"
-                }
-                img={Linkedin}
-                alt={"Lien vers Linkedin"}
-              />
-              <SocialMediasLinks
-                link={"https://github.com/KvnMrs"}
-                img={Github}
-                alt={"Lien vers Github"}
-              />
-            </div>
-          </motion.div>
         </aside>
         <div className="divider lg:hidden"></div>
         <motion.div variants={afterPresentation} className="home-links-box">
