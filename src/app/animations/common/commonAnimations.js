@@ -5,7 +5,7 @@ export const comeFromLeftAnim = {
         x: 0,
         transition: {
             ease: "linear",
-            duration: 0.8,
+            duration: 0.4,
         },
     },
 };
@@ -16,7 +16,7 @@ export const comeFromRightAnim = {
         x: 0,
         transition: {
             ease: "linear",
-            duration: 0.8,
+            duration: 0.4,
         },
     },
 };

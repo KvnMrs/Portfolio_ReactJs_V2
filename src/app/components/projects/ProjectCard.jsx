@@ -1,8 +1,18 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
 import "./ProjectCard.css";
+// Animations
+import { motion, useInView } from "framer-motion";
+import {
+  comeFromLeftAnim,
+  comeFromRightAnim,
+} from "../../animations/common/commonAnimations.js";
 
 const ProjectCard = ({ projectData }) => {
+  const refProjectDescipt = useRef(null);
+  const isInViewProjectDescript = useInView(refProjectDescipt, {
+    once: true,
+    margin: "-20% 0px",
+  });
   if (!projectData) return null;
   return (
     <article
@@ -29,8 +39,28 @@ const ProjectCard = ({ projectData }) => {
 
       <div className="project-description-part">
         <h3 className="hidden | md:flex project-title">{projectData.title}</h3>
-        <p className="project-description">{projectData.description}</p>
-        <p className="project-description">{projectData.note}</p>
+        <motion.p
+          ref={refProjectDescipt}
+          variants={
+            projectData.id % 2 === 0 ? comeFromLeftAnim : comeFromRightAnim
+          }
+          initial="initial"
+          animate={isInViewProjectDescript ? "animate" : "initial"}
+          className="project-description"
+        >
+          {projectData.description}
+        </motion.p>
+        <motion.p
+          ref={refProjectDescipt}
+          variants={
+            projectData.id % 2 === 0 ? comeFromLeftAnim : comeFromRightAnim
+          }
+          initial="initial"
+          animate={isInViewProjectDescript ? "animate" : "initial"}
+          className="project-description"
+        >
+          {projectData.note}
+        </motion.p>
         <aside className="project-infos ">
           <button className="btn-visit button-ping move-shadow">Visiter</button>
         </aside>
