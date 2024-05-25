@@ -27,7 +27,7 @@ export const openNavAnim = {
         scale: 1,
         transition: {
             ease: "linear",
-            duration: 0.8,
+            duration: 0.4,
         },
     },
 };
