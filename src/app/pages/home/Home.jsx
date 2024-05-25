@@ -12,7 +12,6 @@ import {
 import SocialMediasLinks from "../../components/common/Link/SocialMediasLinks.jsx";
 import ButtonCallToActionText from "../../components/common/button/ButtonCallToActionText.jsx";
 import HomeNavButton from "../../components/common/navigation/HomeNavButton.jsx";
-import HomeIllustration from "../../components/home/HomeIllustration.jsx";
 // Assets
 import Github from "../../../assets/img/imgSocialMedias/Github.png";
 import Linkedin from "../../../assets/img/imgSocialMedias/Linkedin.png";
@@ -20,6 +19,7 @@ import CV from "../../../assets/document/Kévin_MARAIS_CV_FR.pdf";
 import SvgProfile from "../../../assets/svg/sidebar/links-section/SvgProfile";
 import SvgProject from "../../../assets/svg/sidebar/links-section/SvgProject";
 import SvgContact from "../../../assets/svg/sidebar/links-section/SvgContact";
+import HomeIllustration from "../../components/home/HomeIllustration.jsx";
 
 function Home() {
   const navigation = [
