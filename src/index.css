@@ -107,7 +107,7 @@
 
 .home-links-box {
   @apply f-wrap gap-4-8 justify-around e-center
-/* LG */ lg:w-1/4 lg:flex-col lg:gap-16;
+/* LG */ xl:w-1/4 xl:flex-col lg:gap-16;
 }
 .home-link {
   @apply  w-48 h-36 px-4-8 py-2-4 f-col e-center border border-t-0 border-transparent bg-slate-xl 
@@ -125,7 +125,7 @@
 /* MD */ md:self-center md:gap-16;
 }
 .presentation-box {
-  @apply f-col gap-8 justify-center
+  @apply f-col gap-8 justify-center self-center
 /* MD */ md:gap-16;
 }
 .presentation-header {
