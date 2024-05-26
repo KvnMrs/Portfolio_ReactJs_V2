@@ -67,37 +67,37 @@ function Home() {
                 </span>
                 <motion.span
                   variants={lettersNameAnim}
-                  className="text-3xl md:text-4xl md:absolute top-[0.75rem] md:top-3 right-[6.75rem]"
+                  className="text-3xl md:text-4xl md:absolute top-[0.75rem] md:top-2 right-[6.75rem]"
                 >
                   K
                 </motion.span>
                 <motion.span
                   variants={lettersNameAnim}
-                  className="text-3xl md:text-4xl md:absolute top-[0.75rem] md:top-3 right-[5.6rem]"
+                  className="text-3xl md:text-4xl md:absolute top-[0.75rem] md:top-2 right-[5.6rem]"
                 >
                   é
                 </motion.span>
                 <motion.span
                   variants={lettersNameAnim}
-                  className="text-3xl md:text-4xl md:absolute top-[0.75rem] md:top-3 right-[4.3rem] md:right-[4.25rem]"
+                  className="text-3xl md:text-4xl md:absolute top-[0.75rem] md:top-2 right-[4.3rem] md:right-[4.25rem]"
                 >
                   v
                 </motion.span>
                 <motion.span
                   variants={lettersNameAnim}
-                  className="text-3xl md:text-4xl md:absolute top-[0.75rem] md:top-3 right-[3.55rem]"
+                  className="text-3xl md:text-4xl md:absolute top-[0.75rem] md:top-2 right-[3.55rem]"
                 >
                   i
                 </motion.span>
                 <motion.span
                   variants={lettersNameAnim}
-                  className="text-3xl md:text-4xl md:absolute top-[0.75rem] md:top-3 right-[2.25rem]"
+                  className="text-3xl md:text-4xl md:absolute top-[0.75rem] md:top-2 right-[2.25rem]"
                 >
                   n
                 </motion.span>{" "}
                 <motion.span
                   variants={lettersNameAnim2}
-                  className="text-3xl md:text-4xl md:absolute top-[0.75rem]  md:top-3 right-[1.25rem]"
+                  className="text-3xl md:text-4xl md:absolute top-[0.75rem]  md:top-2 right-[1.25rem]"
                 >
                   !
                 </motion.span>
