@@ -129,7 +129,7 @@ function Home() {
               </motion.p>
               <motion.p
                 variants={presentationBoxAnim}
-                className="text-4xl text-start home-title"
+                className="text-4xl text-start"
               >
                 {" "}
                 Développeur Full-Stack
