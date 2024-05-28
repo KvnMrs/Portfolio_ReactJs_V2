@@ -59,10 +59,16 @@ const ProjectCard = ({ projectData }) => {
           animate={isInViewProjectDescript ? "animate" : "initial"}
           className="project-description"
         >
-          {projectData.note}
+          Etat: {projectData.note}
         </motion.p>
         <aside className="project-infos ">
-          <button className="btn-visit button-ping move-shadow">Visiter</button>
+          <a
+            href={projectData.link}
+            target="_blank"
+            className="btn-visit button-ping move-shadow"
+          >
+            Visiter
+          </a>
         </aside>
       </div>
     </article>

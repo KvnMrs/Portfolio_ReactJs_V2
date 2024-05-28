@@ -10,9 +10,11 @@
 .bg-slate-xl {
   @apply bg-slate-400 from-slate-100 to-slate-400 bg-opacity-30 backdrop-blur-md rounded-xl shadow-2xl
 }
-
 .bg-slate-lg {
   @apply bg-slate-400 from-slate-100 to-slate-400 bg-opacity-40 backdrop-blur-md rounded-lg shadow-xl
+}
+.bg-sky-lg {
+  @apply bg-sky-400 from-sky-100 to-sky-400 bg-opacity-40 backdrop-blur-md rounded-lg shadow-xl
 }
 .hover-sky-125 {
   @apply  duration-300 ease-in hover:scale-125 hover:text-sky-500;
@@ -219,7 +221,7 @@
   @apply f-col items-center;
 }
 .project-box {
-  @apply w-10/12 h-screen90 f-col justify-evenly 
+  @apply w-11/12 h-screen90 f-col justify-evenly 
 }
 .project-img-box {
   @apply f-col self-center 

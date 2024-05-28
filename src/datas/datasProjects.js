@@ -14,13 +14,13 @@ import img_GitHub from "../assets/img/imgTools/GitHub.png";
 const dataProjects = [
   {
     id: 1,
-    img: img_Project1,
+    img: img_Project2,
     link: "https://wcs-weather.netlify.app/",
     title: "WCS-Weather",
     technologies: [img_ReactJs, img_tailwindcss, img_Git],
     description:
-      "Projet réalisé au cours de ma formation à la Wild Code School, en équipe de 4. Notre but était de développer un",
-    note: "- Le compte Supabase, utilisé pour l'authentification, n'étant plus actif vous aurez accès qu'aux pages Home et LogIn/SignUp donnant un aperçu du site.",
+      "Projet réalisé au cours de ma formation à la Wild Code School, en équipe de 4. Notre but était de développé un site sur lequel les utilisateur pouvait examiner la qualité de l'air dans les ville ou se trouvait un campus de la wild. ",
+    note: "Inactif",
   },
 
   {
@@ -31,7 +31,8 @@ const dataProjects = [
     technologies: [img_HTML, img_CSS, img_Git],
     description:
       "Projet réalisé en entrée en formation, en équipe de 4. Un site vitrine, dont le but était de répertorier les endroits sympathiques et insolites de Nantes.",
-    note: "- Non fonctionnel",
+    note: "Inactif",
+
   },
   {
     id: 3,
