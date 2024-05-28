@@ -95,24 +95,26 @@ function About() {
               className="about-me-text"
             >
               <p className="text-xl">
-                Je m'appelle Kévin, j'ai 30 ans et j'habite la ville culturelle
-                et historique de Nantes. C'est peut être de la que vient mon
-                intêret pour l'histoire et ces différentes époques, qui par
-                moment nous amêne à l'interogation, parfois à la compréhention
-                de certaines choses.
+                Je m'appelle Kévin, j'ai 30 ans et je suis originaire de Nantes.
+                Fort de dix années d'expériences dans le secteur du commerce,
+                j'ai exercé principalement les métiers de barbier et de serveur.
+                Ces expériences m'ont permis de développer un sens aigu du
+                service client, de la précision et une capacité à travailler
+                sous pression.
               </p>
               <p className="text-xl">
-                De nature curieuse, j'aime aussi beaucoup voyager dans le but de
-                découvrir et de m'adapter à de nouveaux environnements. Il est
-                également possible que ma variable 'lookingForChallenge' soit
-                une constante initialisée à 'true'.
+                De nature curieux, j'aime voyager pour découvrir et m'adapter à
+                de nouveaux environnements, quitter ma zone de confort me fais
+                me sentir plus vivant. Professionnellement, cette soif de
+                découverte m'a conduit à me réorienter vers le développement
+                web, un domaine qui m'a toujours intrigué..
               </p>
-              <p className="text-xl">
-                Vous l'avez peut-être compris, cette même curiosité m'a amené un
-                jour à découvrir le domaine du développement web. C'est en
-                autonomie et par le biais de différents supports que j'ai
-                commencé à m'initier à ces bases.
-              </p>
+              {/* <p className="text-xl">
+                J'ai commencé a me former en autodidacte Aujourd'hui, je me
+                forme intensivement pour devenir développeur full stack, en
+                suivant diverses formations et en travaillant sur des projets
+                personnels.
+              </p> */}
             </motion.div>
           </div>
           <motion.div
@@ -140,9 +142,7 @@ function About() {
             animate={isInViewParagph1 ? "animate" : "initial"}
             className="about-surfaces about-paragph-container"
           >
-            <H2>
-              Une Aventure <br></br> avec un grand 'A'
-            </H2>
+            <H2>De serveur aux serveurs</H2>
             <div className="about-paragph">
               <p className="text-xl | md:w-1/3">
                 C'est après dix années passées dans le domaine du commerce et
