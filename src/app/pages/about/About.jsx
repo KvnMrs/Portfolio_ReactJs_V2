@@ -11,6 +11,7 @@ import {
   aboutMeImgAnim,
   skillsContainerAnim,
   logoBoxAnim,
+  skillsContainerAnim2,
 } from "../../animations/aboutAnimations.js";
 // Components
 import SoftSkill from "../../components/about/skills/SoftSkill";
@@ -107,14 +108,8 @@ function About() {
                 de nouveaux environnements, quitter ma zone de confort me fais
                 me sentir plus vivant. Professionnellement, cette soif de
                 découverte m'a conduit à me réorienter vers le développement
-                web, un domaine qui m'a toujours intrigué..
+                web, un domaine qui m'a toujours intrigué...
               </p>
-              {/* <p className="text-xl">
-                J'ai commencé a me former en autodidacte Aujourd'hui, je me
-                forme intensivement pour devenir développeur full stack, en
-                suivant diverses formations et en travaillant sur des projets
-                personnels.
-              </p> */}
             </motion.div>
           </div>
           <motion.div
@@ -158,18 +153,18 @@ function About() {
                 technologique dans notre quotidien.
               </p>
               <p className="text-xl | md:w-1/3">
-                Mon passé professionel m'a permis de développer un atrait pour
+                Mon passé professionel m'a permis de développer un attrait pour
                 la création, en équipe et en autonomie, souvent dans des temps
                 impartis. Elles m'ont aussi appris l'importance et l'enjeu d'un
-                bon relationnel et d'un bon suivi client afin de délvré la
-                meilleur expérience à ce dernier. Soucieux de celle-ci par le
+                bon relationnel et d'un bon suivi client afin de délivrer la
+                meilleure expérience à ce dernier. Soucieux de celle-ci par le
                 passé, j'apporte aujourd'hui un réel intérêt à l'UI/UX.
               </p>
             </div>
           </motion.div>
           <motion.div
             ref={refSoftSkills}
-            variants={skillsContainerAnim}
+            variants={skillsContainerAnim2}
             initial="inital"
             animate={isInViewSoftSkills ? "animate" : "initial"}
             className="softSkills-box"
@@ -205,7 +200,7 @@ function About() {
                 Depuis mes débuts en autodidacte, j'ai autofinancé ma formation
                 au sein de la Wild Code School. Une formation Full-Stack d'une
                 durée de 5 mois, axée sur l'environnement JavaScript avec React,
-                NodeJs et MySQL pour les bases de donées relationnel.
+                NodeJs et MySQL pour les bases de données relationnelles.
                 <motion.img
                   ref={refLogo1}
                   variants={logoBoxAnim}
@@ -219,9 +214,10 @@ function About() {
               <p className="relative text-xl | md:w-1/3">
                 À la suite de cette formation, j'ai eu l'opportunité d'intégrer
                 l'équipe de Cascade8, une start-up travaillant dans le domaine
-                du cinéma. Un stage d'une durée de 5 mois, dans un environnement
-                JavaScript avec Angular. C'est également durant ce stage que
-                j'ai eu le plaisir de découvrir le 'NoSQL' avec Firebase.
+                du cinéma, dans le cadre d'un stage d'une durée de 5 mois.
+                Durant celui-ci, j'ai eu le plaisir d'utiliser un nouveau
+                framework JavaScript avec Angular, ainsi que de découvrir le
+                'NoSQL' avec Firebase.
                 <motion.img
                   ref={refLogo2}
                   variants={logoBoxAnim}
@@ -233,7 +229,7 @@ function About() {
                 />
               </p>
               <p className="relative text-xl | md:w-1/3">
-                J'ai eu l'occasion d'accomplir un second stage en tant que
+                J'ai eu l'occasion d'éffectuer un second stage en tant que
                 développeur Front-End au sein de XRATOR, une start-up opérant
                 dans le domaine de la cybersécurité. D'une durée de 4 mois, ce
                 stage m'a permis de me familiariser avec le dernier framework

@@ -6,7 +6,7 @@ export const projectsContainer = {
     transition: {
       duration: 0.7,
       delayChildren: 0.3,
-      staggerChildren: 0.2,
+      staggerChildren: 0.3,
     },
   },
 };
