@@ -145,26 +145,25 @@ function About() {
             <H2>De serveur aux serveurs</H2>
             <div className="about-paragph">
               <p className="text-xl | md:w-1/3">
-                C'est après dix années passées dans le domaine du commerce et
-                suite à mon engouement pour le développement web que j'ai choisi
-                de me réorienter dans ce domaine, encore nouveau pour moi il y a
-                quelques années.
+                C'est au cours d'un voyage de plusieurs mois en Asie du sud-est,
+                que mon questionnement sur une reconversion est né, conscient
+                que je ne projetterais pas le reste de ma vie professionnelle
+                dans ce même domaine.
               </p>
               <p className="text-xl | md:w-1/3 md:mr-2">
-                Si dans un premier temps mes sept années passées en tant que
-                coiffeur/barbier semblent loin du développement web, je me suis
-                très vite rendu compte que mon expérience dans le suivi
-                clientèle (relationnel, diagnostic, conseils, adaptation,
-                réalisation) pourrait m'être utile. Soucieux de celui-ci par le
-                passé, j'apporte aujourd'hui un réel intérêt à l'UI/UX.
+                Mon choix pour le développement web s'est présenté de manière
+                naturelle. Je me suis souvent demandé comment les choses qui
+                m'entouraient et avec lesquelles j’interagissais fonctionnaient.
+                Cette curiosité s'est développée proportionnellement à l'avancée
+                technologique dans notre quotidien.
               </p>
               <p className="text-xl | md:w-1/3">
-                Ma réorientation actuelle n'est pas ma première. Je me suis
-                aussi épanoui en tant que serveur en restauration. Un domaine
-                demandant de la rigueur, une bonne estimation des timings et le
-                respect de ces derniers pour le bon déroulement des services.
-                Mais aussi un esprit d'équipe et une analyse rapide des
-                priorités par instants.
+                Mon passé professionel m'a permis de développer un atrait pour
+                la création, en équipe et en autonomie, souvent dans des temps
+                impartis. Elles m'ont aussi appris l'importance et l'enjeu d'un
+                bon relationnel et d'un bon suivi client afin de délvré la
+                meilleur expérience à ce dernier. Soucieux de celle-ci par le
+                passé, j'apporte aujourd'hui un réel intérêt à l'UI/UX.
               </p>
             </div>
           </motion.div>
@@ -198,11 +197,11 @@ function About() {
           >
             <H2>
               Le développement <span className="line-through">web</span>{" "}
-              <br></br>des compétences
+              <br></br>de mes compétences
             </H2>
             <div className="about-paragph">
               <p className="relative text-xl md:w-1/3 ">
-                Tout comme le web, les compétences se développent avec le temps.
+                Tout comme le web, mes compétences se développent avec le temps.
                 Depuis mes débuts en autodidacte, j'ai autofinancé ma formation
                 au sein de la Wild Code School. Une formation Full-Stack d'une
                 durée de 5 mois, axée sur l'environnement JavaScript avec React,
