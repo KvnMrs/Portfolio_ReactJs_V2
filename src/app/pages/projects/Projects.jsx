@@ -20,6 +20,7 @@ function Projects() {
             {dataProjects.map((el) => (
               <>
                 <ProjectCard projectData={el} />
+                <div className="divider"></div>
               </>
             ))}
           </AnimatePresence>

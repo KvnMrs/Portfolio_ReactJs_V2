@@ -219,7 +219,7 @@
   @apply f-col items-center;
 }
 .project-box {
-  @apply w-10/12 h-screen90 f-col justify-evenly 
+  @apply w-11/12 h-screen90 f-col justify-evenly 
 }
 .project-img-box {
   @apply f-col self-center 
