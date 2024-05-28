@@ -34,16 +34,16 @@ const dataProjects = [
     note: "Inactif",
 
   },
-  // {
-  //   id: 3,
-  //   img: img_Project1,
-  //   link: "https://kvnmrs.github.io/WCS_Projet_1/",
-  //   title: "NantesAutrement",
-  //   technologies: [img_HTML, img_CSS, img_Git],
-  //   description:
-  //     "Projet réalisé en entrée en formation, en équipe de 4. Un site vitrine, dont le but était de répertorier les endroits sympathiques et insolites de Nantes.",
-  //   note: "- Non fonctionnel",
-  // },
+  {
+    id: 3,
+    img: img_Project1,
+    link: "https://kvnmrs.github.io/WCS_Projet_1/",
+    title: "NantesAutrement",
+    technologies: [img_HTML, img_CSS, img_Git],
+    description:
+      "Projet réalisé en entrée en formation, en équipe de 4. Un site vitrine, dont le but était de répertorier les endroits sympathiques et insolites de Nantes.",
+    note: "- Non fonctionnel",
+  },
 ];
 
 export default dataProjects;
