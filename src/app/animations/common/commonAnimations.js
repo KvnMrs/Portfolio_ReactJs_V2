@@ -37,12 +37,11 @@ export const onNavigateAnim = {
     animate: {
         opacity: 1,
         transition: {
-            ease: "linear",
+            ease: "easeIn", // Utilisez un easing plus doux ici
             duration: 0.4,
         },
     },
 };
-
 export const skillsContainerAnim = {
     initial: { opacity: 0, x: -40 },
     animate: {
