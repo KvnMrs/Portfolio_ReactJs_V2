@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
 // Animations
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { onNavigateAnim } from "../../animations/common/commonAnimations.js";
 import { texteAreaAnim } from "../../animations/contactAnimation";
 // Components
@@ -10,7 +10,6 @@ import ButtonCallToActionText from "../../components/common/button/ButtonCallToA
 import emailjs from "emailjs-com";
 // Assets
 import ContactIllustration from "../../components/contact/ContactIllustration.jsx";
-
 
 const Contact = () => {
   const formRef = useRef();
@@ -49,14 +48,16 @@ const Contact = () => {
         className="section-containers xl:py-0"
       >
         <form
-          className="form-container xl:mb-24"
+          className="form-container lg:mb-32"
           ref={formRef}
           onSubmit={handleSubmit(() => {
             sendEmail();
           })}
         >
           <div className="form-boxes">
-            <label htmlFor="reason">Motif :</label>
+            <label className="form-labels" htmlFor="reason">
+              Motif :
+            </label>
             <select
               id="reason"
               name="reason"
@@ -72,7 +73,9 @@ const Contact = () => {
               </p>
             )}
 
-            <label htmlFor="firstname">Prénom :</label>
+            <label className="form-labels" htmlFor="firstname">
+              Prénom :
+            </label>
             <input
               id="firstname"
               name="firstname"
@@ -84,7 +87,9 @@ const Contact = () => {
               </p>
             )}
 
-            <label htmlFor="lastname">Nom :</label>
+            <label className="form-labels" htmlFor="lastname">
+              Nom :
+            </label>
             <input
               id="lastname"
               type="lastname"
@@ -94,7 +99,9 @@ const Contact = () => {
             {errors.lastname && (
               <p className="mb-4 -mt-4 text-red-500">Le nom est obligatoire.</p>
             )}
-            <label htmlFor="email">Adresse Mail :</label>
+            <label className="form-labels" htmlFor="email">
+              Adresse Mail :
+            </label>
             <input
               id="email"
               type="email"
@@ -110,7 +117,9 @@ const Contact = () => {
             variants={texteAreaAnim}
             initial="initial"
           >
-            <label htmlFor="message">Votre message :</label>
+            <label className="form-labels" htmlFor="message">
+              Votre message :
+            </label>
             <textarea
               className="form-textarea"
               id="message"
@@ -121,12 +130,12 @@ const Contact = () => {
             {errors.message && (
               <p className="mb-4 text-red-500">Un message est obligatoire.</p>
             )}
+
             <ButtonCallToActionText
               type={"submit"}
+              text={"Envoyer"}
               customClass={"submit-button"}
-            >
-              Envoyer
-            </ButtonCallToActionText>
+            ></ButtonCallToActionText>
           </div>
           <ContactIllustration />
         </form>
