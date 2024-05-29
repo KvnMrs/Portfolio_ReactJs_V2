@@ -260,7 +260,7 @@
 /* LG */ lg:w-8/12 lg:gap-16
 }
 .form-boxes {
-  @apply w-full self-start f-col
+  @apply w-full self-start f-col gap-1
 }
 .form-labels {
   @apply w-fit mb-1 text-lg
@@ -278,8 +278,8 @@ option {
 /* MD */ md:h-64;
 }
 .submit-button {
-  @apply text-lg mt-5 mx-2 py-1 px-4
-/* MD */ md:text-xl md:mt-8
+  @apply text-lg mt-4
+/* MD */ md:text-xl 
 /* LG */ lg:px-7;
 }
 
