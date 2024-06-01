@@ -17,7 +17,7 @@ const dataProjects = [
     img: img_Project2,
     link: "https://wcs-weather.netlify.app/",
     title: "WCS-Weather",
-    technologies: [img_ReactJs, img_tailwindcss, img_Git],
+    technologies: [img_ReactJs, img_tailwindcss, img_Git, img_GitHub],
     description:
       "Projet réalisé au cours de ma formation à la Wild Code School, en équipe de 4. Notre but était de développé un site sur lequel les utilisateur pouvait examiner la qualité de l'air dans les ville ou se trouvait un campus de la wild. ",
     note: "Inactif",
@@ -28,7 +28,7 @@ const dataProjects = [
     img: img_Project1,
     link: "https://kvnmrs.github.io/WCS_Projet_1/",
     title: "NantesAutrement",
-    technologies: [img_HTML, img_CSS, img_Git],
+    technologies: [img_HTML, img_CSS, img_Git, img_GitHub],
     description:
       "Projet réalisé en entrée en formation, en équipe de 4. Un site vitrine, dont le but était de répertorier les endroits sympathiques et insolites de Nantes.",
     note: "Inactif",
@@ -39,7 +39,7 @@ const dataProjects = [
     img: img_Project1,
     link: "https://kvnmrs.github.io/WCS_Projet_1/",
     title: "NantesAutrement",
-    technologies: [img_HTML, img_CSS, img_Git],
+    technologies: [img_HTML, img_CSS, img_Git, img_GitHub],
     description:
       "Projet réalisé en entrée en formation, en équipe de 4. Un site vitrine, dont le but était de répertorier les endroits sympathiques et insolites de Nantes.",
     note: "- Non fonctionnel",

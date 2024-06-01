@@ -65,6 +65,7 @@ const ProjectCard = ({ projectData }) => {
           <a
             href={projectData.link}
             target="_blank"
+            rel="noreferrer"
             className="btn-visit button-ping move-shadow"
           >
             Visiter
