@@ -23,7 +23,6 @@ function NavMenu() {
 
   const toggleNavMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    return window.scrollTo(0, 0);
   };
 
   useEffect(() => {

@@ -1,7 +1,8 @@
 import "./App.css";
+import { useEffect } from "react";
 
 // Package
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 // Pages
 import Home from "./app/pages/home/Home";
@@ -11,6 +12,12 @@ import Projects from "./app/pages/projects/Projects";
 import NavMenu from "./app/components/common/navigation/NavMenu";
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <>
       <NavMenu />
