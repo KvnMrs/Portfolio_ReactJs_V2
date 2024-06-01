@@ -12,7 +12,7 @@ const SoftSkill = ({ softSkill, categorie, img }) => {
           <img alt={categorie} src={img} />
         </div>
 
-        <h4 className="text-xl">{softSkill}</h4>
+        <h4 className="text-xl text-center">{softSkill}</h4>
       </motion.div>
     </>
   );

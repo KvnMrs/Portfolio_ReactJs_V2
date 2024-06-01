@@ -50,14 +50,14 @@ function Home() {
         initial="initial"
         animate="animate"
         id="home"
-        className="section-containers lg:px-16 lg:justify-between | xl:flex-row"
+        className="section-containers | lg:px-16 lg:justify-between | xl:flex-row"
       >
         <aside className="presentation-container">
           <HomeIllustration />
-          <div className="presentation-box ">
+          <div className="presentation-box">
             <motion.header
               variants={homeTitleAnim}
-              className=" presentation-header"
+              className="presentation-header"
             >
               <span className="emoji-anim">✌️</span>{" "}
               <h1 className="presentation-title text-start md:flex">

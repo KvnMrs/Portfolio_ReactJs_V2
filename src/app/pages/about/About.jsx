@@ -39,7 +39,7 @@ function About() {
   const refParagraph2 = useRef(null);
   const isInViewParagph2 = useInView(refParagraph2, {
     once: true,
-    margin: "-40% 0px",
+    margin: "-20% 0px",
   });
   const refLogo1 = useRef(null);
   const isInViewLogo1 = useInView(refLogo1, {
@@ -79,9 +79,9 @@ function About() {
         initial="initial"
         animate="animate"
         id="about"
-        className="section-containers py-8 lg:py-16"
+        className="section-containers | lg:py-12 lg:gap-12"
       >
-        <aside className="about-aside-containers">
+        <aside className="about-aside-containers lg:h-screen90">
           <div className="about-me-box">
             <motion.img
               variants={aboutMeImgAnim}
@@ -129,7 +129,7 @@ function About() {
           </motion.div>
           <div className="divider"> </div>
         </aside>
-        <aside className="about-aside-containers">
+        <aside className="about-aside-containers lg:h-screen ">
           <motion.div
             ref={refParagraph1}
             variants={comeFromLeftAnim}
@@ -182,7 +182,7 @@ function About() {
           </motion.div>
           <div className="divider"> </div>
         </aside>
-        <aside className="about-aside-containers | md:gap-36">
+        <aside className="about-aside-containers | md:gap-36 md:mt-4">
           <motion.div
             ref={refParagraph2}
             variants={comeFromRightAnim}
