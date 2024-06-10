@@ -42,7 +42,7 @@ const dataProjects = [
     technologies: [img_HTML, img_CSS, img_Git, img_GitHub],
     description:
       "Projet réalisé en entrée en formation, en équipe de 4. Un site vitrine, dont le but était de répertorier les endroits sympathiques et insolites de Nantes.",
-    note: "- Non fonctionnel",
+    note: "Inactif",
   },
 ];
 
